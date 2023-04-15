@@ -78,6 +78,8 @@ public class Main {
     private static void UseCaseStartGame() {
         System.out.println("Start Game use case started!");
         //to do
+        InitGame start=new InitGame();
+        start.StartGame();
         System.out.println("Start Game use case done!");
     }
 
