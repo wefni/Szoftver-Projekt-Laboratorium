@@ -1,6 +1,13 @@
 public abstract class Breakable extends Component{
 
-    public void Break(){}
-    public void Repair(){}
-    public int FlowOut(){return 0;}
+    public void Break(){
+        System.out.print(" $ Breakable.Break()");
+    }
+    public void Repair(){
+        System.out.print(" $ Breakable.Repair()");
+    }
+    public int FlowOut(){
+        System.out.print(" $ Breakable.FlowOut()");
+        return 0;
+    }
 }

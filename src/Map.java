@@ -1,4 +1,6 @@
 public class Map {
 
-    public void Game(){}
+    public void Game(){
+        System.out.print("$ Map.Game()");
+    }
 }

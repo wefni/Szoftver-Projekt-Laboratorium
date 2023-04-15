@@ -77,9 +77,11 @@ public class Main {
     //Work from here!***************************************************************************************************
     private static void UseCaseStartGame() {
         System.out.println("Start Game use case started!");
-        //to do
+
         InitGame start=new InitGame();
+        System.out.print("  initGame ");
         start.StartGame();
+
         System.out.println("Start Game use case done!");
     }
 
