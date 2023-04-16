@@ -117,13 +117,21 @@ public class Main {
 
     private static void UseCaseChangePipe() {
         System.out.println("Change Pipe use case started!");
-        //to do
+
+        Pipe pipe = new Pipe();
+        System.out.print("  pipe ");
+        pipe.ChangePipe();
+
         System.out.println("Change Pipe use case done!");
     }
 
     private static void UseCaseConfigurePump() {
         System.out.println("Configure Pump use case started!");
-        //to do
+
+        Pump pump = new Pump();
+        System.out.print("  pump ");
+        pump.ConfigurePump();
+
         System.out.println("Configure Pump use case done!");
     }
 
