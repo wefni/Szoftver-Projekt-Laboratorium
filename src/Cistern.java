@@ -1,7 +1,7 @@
 public class Cistern extends Component{
 
     public void PickUpPump(){
-        System.out.print("$ Cistern.PickUpPump()");
+        System.out.println("$ Cistern.PickUpPump()");
     }
     public void SpawnPipe(){
         System.out.print("$ Cistern.SpawnPipe()");

@@ -87,13 +87,17 @@ public class Main {
 
     private static void UseCasePickUpPump() {
         System.out.println("Pick Up Pump use case started!");
-        //to do
+        Map map=new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Pick Up Pump use case done!");
     }
 
     private static void UseCaseRandomBreak() {
         System.out.println("Random Break use case started!");
-        //to do
+        Map map=new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Random Break use case done!");
     }
 
