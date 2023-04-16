@@ -7,8 +7,13 @@ public class Mechanic extends Player{
         System.out.println("$ Mechanic.YourTurn()");
 
         Scanner be=new Scanner(System.in);
-        System.out.println("Mit szeretnél csinálni?(pumpát felvenni, pumpát megjavítani, pumpát lerakni)");
+        System.out.println("Mit szeretnél csinálni?(pumpát felvenni, pumpát megjavítani, pumpát lerakni,step)");
         String valasztas=be.nextLine().toLowerCase();
+        if(Objects.equals(valasztas, "step")){
+            Pipe p = new Pipe();
+            System.out.print("$ Pipe.Act()\n");
+            p.Act();
+        }
         if(Objects.equals(valasztas, "pumpát felvenni"))
         {
             Cistern cistern=new Cistern();
@@ -65,5 +70,9 @@ public class Mechanic extends Player{
             System.out.println("->pipe");
 
         }
+    }
+
+    public void ChangeWhere(){
+        System.out.println("$ Mechanic.ChangeWhere()");
     }
 }

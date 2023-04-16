@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Pipe extends Breakable{
@@ -88,5 +89,30 @@ public class Pipe extends Breakable{
         }
 
         return 0;
+    }
+
+    public void Act(){
+        this.Step();
+
+    }
+
+    public void AddNeighbours(){
+        System.out.println("$ Pipe.AddNeighbours()");
+        System.out.println("->cistern");
+        Cistern c = new Cistern();
+        c.AddNeighbours();
+    }
+
+    public void Step(){
+        Pump p = new Pump();
+        Mechanic m = new Mechanic();
+        p.Accept();
+        p.AddPlayer();
+        this.RemovePlayer();
+        m.ChangeWhere();
+    }
+
+    public void RemovePlayer(){
+        System.out.println("$ Pipe.RemovePlayer()");
     }
 }

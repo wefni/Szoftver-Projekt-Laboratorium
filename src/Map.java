@@ -6,7 +6,7 @@ public class Map {
     public void Game(){
         System.out.println("$ Map.Game()");
         Scanner be=new Scanner(System.in);
-        System.out.println("Melyik karakterrel szeretnél lenni?(Mechanic,Saboteur,RandomBreak,Water)");
+        System.out.println("Melyik karakterrel szeretnél lenni?(Mechanic,Saboteur,RandomBreak,Water,spawnPipe)");
         String valasztas=be.nextLine().toLowerCase();
         if(Objects.equals(valasztas, "mechanic"))
         {
@@ -33,7 +33,10 @@ public class Map {
             System.out.print("\t\tsaboteur ");
             saboteur.YourTurn();
         }
-
+        if(Objects.equals(valasztas, "pipe")){
+            Cistern c = new Cistern();
+            c.SpawnPipe();
+        }
 
 
 

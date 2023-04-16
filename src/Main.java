@@ -161,13 +161,16 @@ public class Main {
 
     private static void UseCaseStep() {
         System.out.println("Step use case started!");
-        //to do
+        Map m = new Map();
+        m.Game();
+
         System.out.println("Step use case done!");
     }
 
     private static void UseCaseSpawnPipe() {
         System.out.println("Spawn Pipe use case started!");
-        //to do
+        Map m = new Map();
+        m.Game();
         System.out.println("Spawn Pipe use case done!");
     }
 
