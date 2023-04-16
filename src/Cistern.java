@@ -4,10 +4,10 @@ public class Cistern extends Component{
         System.out.println("$ Cistern.PickUpPump()");
     }
     public void SpawnPipe(){
-        System.out.print("$ Cistern.SpawnPipe()");
+        System.out.println("$ Cistern.SpawnPipe()");
     }
     public int FlowOut(){
-        System.out.print("$ Cistern.FlowOut()");
+        System.out.println("$ Cistern.FlowOut()");
         return 0;
     }
 }

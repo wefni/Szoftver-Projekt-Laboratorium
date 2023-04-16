@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pipe extends Breakable{
 
     public void ChangePipe()
@@ -45,7 +47,24 @@ public class Pipe extends Breakable{
         System.out.print("$ Pipe.PlacePump()");
     }
     public int FlowOut(){
-        System.out.print("$ Pipe.FlowOut()");
+        System.out.println("$ Pipe.FlowOut()");
+        Scanner be=new Scanner(System.in);
+        System.out.println("El van törve a következő elem és az ciszterna?(nem-nem,igen-nem,...)");
+        String valasztas=be.nextLine();
+        if("nem-nem".equals(valasztas))
+        {
+            Pump pump=new Pump();
+            System.out.print("\t\t\t\t\t\t pump ");
+            pump.FlowOut();
+        }
+        if("nem-igen".equals(valasztas))
+        {
+            Cistern cistern=new Cistern();
+            System.out.print("\t\t\t\t\t\t\t\t\t\t cistern ");
+            cistern.FlowOut();
+
+        }
+
         return 0;
     }
 }

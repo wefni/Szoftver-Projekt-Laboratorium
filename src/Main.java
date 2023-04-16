@@ -147,7 +147,9 @@ public class Main {
 
     private static void UseCaseFlowOfWater() {
         System.out.println("Flow Of Water use case started!");
-        //to do
+        Map map=new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Flow Of Water use case done!");
     }
 

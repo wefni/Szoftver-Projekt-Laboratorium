@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pump extends RandomBreakable{
 
     public void ConfigurePump()
@@ -16,7 +18,16 @@ public class Pump extends RandomBreakable{
     }
     public int FlowOut()
     {
-        System.out.print("$ Pump.FlowOut()");
+        System.out.println("$ Pump.FlowOut()");
+        Scanner be=new Scanner(System.in);
+        System.out.println("El van törve a következő cső?");
+        String valasztas=be.nextLine();
+        if("nem".equals(valasztas))
+        {
+            Pipe pipe2=new Pipe();
+            System.out.print("\t\t\t\t\t\t\t\t pipe2 ");
+            pipe2.FlowOut();
+        }
         return 0;
     }
 }
