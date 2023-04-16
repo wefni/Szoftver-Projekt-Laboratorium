@@ -1,12 +1,5 @@
-/**
- * Az osztaly felelos a palyaelemek legeneralasaert.
- */
 public class InitGame {
 
-    /**
-     * A StartGame letrehozza a kezdeti palyaelemeket es osszekapcsolja azokat, ugy,
-     * hogy letrejojjen a palya, amelyen kesobb, majd a jatek fog zajlani.
-     */
     public void StartGame(){
         System.out.print("$ InitGame.StartGame()\n");
 

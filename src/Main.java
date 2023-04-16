@@ -3,12 +3,6 @@ import java.util.Scanner;
 public class Main {
 
     //Do not write code into main, just below it!***********************************************************************
-
-    /**
-     * A main-ben tortenik a menu megvalositasa. A felhasznalo a szamok
-     * megadasaval tud use-case lefutasokat megnezni.
-     * @param args
-     */
     public static void main(String[] args) {
         System.out.println("Welcome!");
         while (true) {
@@ -109,19 +103,25 @@ public class Main {
 
     private static void UseCaseBreakPipe() {
         System.out.println("Break Pipe use case started!");
-
+        Map map = new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Break Pipe use case done!");
     }
 
     private static void UseCaseRepairPump() {
         System.out.println("Repair Pump use case started!");
-        //to do
+        Map map = new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Repair Pump use case done!");
     }
 
     private static void UseCasePlacePump() {
         System.out.println("Place Pump use case started!");
-        //to do
+        Map map = new Map();
+        System.out.print("  map ");
+        map.Game();
         System.out.println("Place Pump use case done!");
     }
 
@@ -167,9 +167,7 @@ public class Main {
 
     private static void UseCaseSpawnPipe() {
         System.out.println("Spawn Pipe use case started!");
-        Map map = new Map();
-        System.out.println("  map  ");
-        map.Game();
+        //to do
         System.out.println("Spawn Pipe use case done!");
     }
 

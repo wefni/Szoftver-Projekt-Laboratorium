@@ -86,7 +86,7 @@ public class Pump extends RandomBreakable{
     }
 
     /**
-     * A víz folyását biztosító függvény.
+     * A
      * @return int típusú, amely a tovabbfolyas sikeresseget jelzi
      */
     public int FlowOut()
