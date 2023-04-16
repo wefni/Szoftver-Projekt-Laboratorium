@@ -1,7 +1,14 @@
 import java.util.Scanner;
 
+/**
+ * A Pump osztaly valositja meg a pumpat.
+ * A RandomBreakable-ből örököl, mivel random idöközönként el tud törni.
+ */
 public class Pump extends RandomBreakable{
 
+    /**
+     * A pumpa ki es bemeneteert felelos fuggveny.
+     */
     public void ConfigurePump()
     {
         System.out.print("$ Pump.ConfigurePump()\n");
@@ -77,6 +84,11 @@ public class Pump extends RandomBreakable{
         }
         System.out.print("\n");
     }
+
+    /**
+     * A
+     * @return int típusú, amely a tovabbfolyas sikeresseget jelzi
+     */
     public int FlowOut()
     {
         System.out.println("$ Pump.FlowOut()");
