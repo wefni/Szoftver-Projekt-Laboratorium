@@ -7,7 +7,7 @@ public class Map {
         System.out.println("$ Map.Game()");
         Mechanic mechanic=new Mechanic();
         Scanner be=new Scanner(System.in);
-        System.out.println("Melyik karakterrel szeretnél lenni?(Mechanic,Saboteur,RandomBreak)");
+        System.out.println("Melyik karakterrel szeretnél lenni?(Mechanic,Saboteur,RandomBreak,Water)");
         String valasztas=be.nextLine();
         if(Objects.equals(valasztas, "Mechanic"))
         {
@@ -21,6 +21,13 @@ public class Map {
             pump.Break();
 
         }
+        if(Objects.equals(valasztas, "Water"))
+        {
+            Source source=new Source();
+            System.out.print("\t\t source ");
+            source.StartFlow();
+        }
+
 
 
     }
