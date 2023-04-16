@@ -109,7 +109,7 @@ public class Main {
 
     private static void UseCaseBreakPipe() {
         System.out.println("Break Pipe use case started!");
-        //to do
+
         System.out.println("Break Pipe use case done!");
     }
 
@@ -167,7 +167,9 @@ public class Main {
 
     private static void UseCaseSpawnPipe() {
         System.out.println("Spawn Pipe use case started!");
-        //to do
+        Map map = new Map();
+        System.out.println("  map  ");
+        map.Game();
         System.out.println("Spawn Pipe use case done!");
     }
 

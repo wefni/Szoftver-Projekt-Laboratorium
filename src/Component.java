@@ -49,10 +49,6 @@ public abstract class Component implements Flow{
      */
     public void AddNeighbours(){
         System.out.print("$ Component.AddNeighbours()");
-        /*System.out.println("Melyik objektumot szeretnéd hozzáadni?");
-        Scanner be=new Scanner(System.in);
-        String info=be.nextLine();*/
-
     }
 
     /**
