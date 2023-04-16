@@ -6,41 +6,63 @@ public class Pipe extends Breakable{
     {
         System.out.print("$ Pipe.ChangePipe()\n");
 
-        //egy variacio
-
-        Pump pump1 = new Pump();
-        Pump pump2 = new Pump();
-        Pipe pipe1 = new Pipe();
+        Mechanic mechanic = new Mechanic();
         Pipe pipe2 = new Pipe();
-        Cistern cistern = new Cistern();
-
+        Pipe pipe1 = new Pipe();
+        Source source = new Source();
+        Pump pump = new Pump();
         System.out.print("\t\tmechanic ");
-        pipe1.Act();
-        System.out.print("->pipe1\n");
+        mechanic.YourTurn();
 
-        System.out.print("\t\t\tpipe ");
-        pipe2.ShowNeighbours();
-        System.out.print("->pipe2\n");
-
-        System.out.print("\t\t\tpump ");
-        pump1.ShowNeighbours();
-        System.out.print("->pump1\n");
-
-        System.out.print("\t\t\tpump ");
-        pump2.AddNeighbours();
-        System.out.print("->pump2\n");
-
-        System.out.print("\t\t\tpipe ");
-        pipe1.AddNeighbours();
-        System.out.print("->pipe1\n");
-
-        System.out.print("\t\t\tpipe ");
-        pipe1.RemoveNeighbours();
-        System.out.print("->pipe1\n");
+        Cistern cistern = new Cistern();
+        Scanner be = new Scanner(System.in);
 
         System.out.print("\t\t\tcistern ");
-        cistern.RemoveNeighbours();
-        System.out.print("->cistern\n");
+        cistern.Act();
+
+        System.out.print("\n\t\t\t\tcistern ");
+        cistern.Step();
+
+        System.out.println("\nRalephet a jatekos?(igen / nem)");
+        String valasztas=be.nextLine();
+        if ("igen".equals(valasztas))
+        {
+            System.out.print("\t\t\t\tpipe ");
+            pipe2.Accept(); //true
+
+            System.out.print("\n\t\t\t\tpipe ");
+            pipe2.AddPlayer();
+
+            System.out.print("\n\t\t\t\tcistern ");
+            cistern.RemovePlayer();
+
+            System.out.print("\n\t\t\tmechanic ");
+            mechanic.ChangeWhere();
+        }
+        else
+        {
+            System.out.print("\t\t\tpipe ");
+            pipe2.Accept(); //false
+        }
+
+        System.out.print("\n\t\t\tpipe ");
+        pipe2.Act();
+
+        System.out.print("\n\t\t\t\tpipe ");
+        pipe1.ShowNeighbours();
+
+        System.out.print("\n\t\t\t\tsource ");
+        source.AddNeighbours();
+
+        System.out.print("\n\t\t\t\tpipe ");
+        pipe2.AddNeighbours();
+
+        System.out.print("\n\t\t\t\tpump ");
+        pump.RemoveNeighbours();
+
+        System.out.print("\n\t\t\t\tpipe ");
+        pipe2.RemoveNeighbours();
+        System.out.print("\n");
 
     }
     public void PlacePump(){

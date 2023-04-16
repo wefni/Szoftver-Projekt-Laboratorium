@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beb800e3-2ec1-402b-9290-a5e737174924" name="Changes" comment="RAndombreak,Pick up Pump" />
+    <list default="true" id="beb800e3-2ec1-402b-9290-a5e737174924" name="Changes" comment="RAndombreak,Pick up Pump">
+      <change beforePath="$PROJECT_DIR$/.idea/proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/proj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="4741" />
+    <option name="naggedAbout" value="1" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +30,7 @@
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2OSdRalZrQDFppGHTyndYkz85KR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,7 +40,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/szoplab/Szoftver-Projekt-Laboratorium/src",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/BME/Projlab2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +74,7 @@
       <updated>1681557912976</updated>
       <workItem from="1681564945190" duration="568000" />
       <workItem from="1681565781956" duration="4905000" />
+      <workItem from="1681671068134" duration="4923000" />
     </task>
     <task id="LOCAL-00001" summary="RAndombreak,Pick up Pump">
       <created>1681656798961</created>
