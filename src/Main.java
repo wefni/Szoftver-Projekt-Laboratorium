@@ -3,6 +3,12 @@ import java.util.Scanner;
 public class Main {
 
     //Do not write code into main, just below it!***********************************************************************
+
+    /**
+     * A main-ben tortenik a menu megvalositasa. A felhasznalo a szamok
+     * megadasaval tud use-case lefutasokat megnezni.
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println("Welcome!");
         while (true) {

@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
+/**
+ * A Pipe osztaly valositja meg a csoveket, amelyekben folyik a viz.
+ * A Breakable osztalybol szarmazik, mivel eltorheto palyaelem.
+ */
 public class Pipe extends Breakable{
 
+
+    /**
+     * A ChangePipe függveny a cső egyik pumparol a masikra valo atköteset vegzi.
+     */
     public void ChangePipe()
     {
         System.out.print("$ Pipe.ChangePipe()\n");
@@ -65,9 +73,18 @@ public class Pipe extends Breakable{
         System.out.print("\n");
 
     }
+
+    /**
+     * Az adott csövet "kettevagja" ez a fuggveny es a kozepere tesz egy pumpat.
+     */
     public void PlacePump(){
         System.out.print("$ Pipe.PlacePump()");
     }
+
+    /**
+     * A víz folyását biztosító függvény.
+     * @return int típusú, amely a tovabbfolyas sikeresseget jelzi
+     */
     public int FlowOut(){
         System.out.println("$ Pipe.FlowOut()");
         Scanner be=new Scanner(System.in);
