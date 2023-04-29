@@ -1,8 +1,12 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Map {
+
+
+    private String logFile; // log file neve
     private int round;
     private int SabWater;
     private int MechWater;
@@ -11,45 +15,19 @@ public class Map {
     private ArrayList<Component> components=new ArrayList<>();
     private ArrayList<Player> players=new ArrayList<>();
 
+    public Map(String file)
+    {
+        logFile = file;
+    }
 
     public void Game(){
-        System.out.println("$ Map.Game()");
-        Scanner be=new Scanner(System.in);
-        System.out.println("Melyik karakterrel szeretnél lenni?(Mechanic,Saboteur,RandomBreak,Water,spawnPipe)");
-        String valasztas=be.nextLine().toLowerCase();
-        if(Objects.equals(valasztas, "mechanic"))
-        {
-            Mechanic mechanic=new Mechanic();
-            System.out.print("\t\tmechanic ");
-            mechanic.YourTurn();
-        }
-        if(Objects.equals(valasztas, "randombreak"))
-        {
-            Pump pump=new Pump();
-            System.out.print("\t\t pump ");
-            pump.Break();
-
-        }
-        if(Objects.equals(valasztas, "water"))
-        {
-            Source source=new Source();
-            System.out.print("\t\t source ");
-            source.StartFlow();
-        }
-        if(Objects.equals(valasztas, "saboteur"))
-        {
-            Saboteur saboteur=new Saboteur();
-            System.out.print("\t\tsaboteur ");
-            saboteur.YourTurn();
-        }
-        if(Objects.equals(valasztas, "pipe")){
-            Cistern c = new Cistern();
-            c.SpawnPipe();
-        }
-
 
     }
-    public void StartGame(){}
+    public void StartGame(){
+
+        //Ebbe a txt-be írjuk a teszt logokat, ami alapján eldöntjük majd, hogy a teszt sikeres volt-e
+        File logF  = new File(logFile);
+    }
     public void SetTeamStarts(){}
 
 }
