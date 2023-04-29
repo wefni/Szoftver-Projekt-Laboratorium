@@ -2,6 +2,18 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Pipe extends Breakable{
+private double capacity;
+private int sticky;
+private int unBreakable;
+private int sloppy;
+private int hasWater;
+private boolean hasWaterPartOne;
+private boolean hasWaterPartTwo;
+
+public boolean Accept()
+{
+    return onComponent.isEmpty();
+}
 
     public void ChangePipe()
     {
@@ -115,4 +127,22 @@ public class Pipe extends Breakable{
     public void RemovePlayer(){
         System.out.println("$ Pipe.RemovePlayer()");
     }
+    public Component RandomEnd(){return null;}
+    public void MakeSloppy(){}
+    public void MakeSticky(){}
+    public void Tick(){}
+    public boolean IsSloppy()
+    {
+        return sloppy>0;
+    }
+    public int GetWater()
+    {
+        if(hasWaterPartOne && hasWaterPartTwo)
+            return 2;
+        if(hasWaterPartOne || hasWaterPartTwo)
+            return 1;
+
+        return 0;
+    }
+
 }

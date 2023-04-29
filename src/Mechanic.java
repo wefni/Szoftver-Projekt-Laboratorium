@@ -2,7 +2,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Mechanic extends Player{
-
+private boolean havePump;
     public void YourTurn(){
         System.out.println("$ Mechanic.YourTurn()");
 
@@ -74,5 +74,9 @@ public class Mechanic extends Player{
 
     public void ChangeWhere(){
         System.out.println("$ Mechanic.ChangeWhere()");
+    }
+    public void AddPump()
+    {
+        havePump=true;
     }
 }

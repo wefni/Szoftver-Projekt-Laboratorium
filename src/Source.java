@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Source extends Component{
-
+private int amountOfWater=0;
     public void StartFlow(){
         System.out.println("$ Source.StartFlow()");
 
@@ -14,5 +14,9 @@ public class Source extends Component{
             System.out.print("\t\t\t\t pipe1 ");
             pipe1.FlowOut();
         }
+    }
+    public int GetWater()
+    {
+        return amountOfWater;
     }
 }
