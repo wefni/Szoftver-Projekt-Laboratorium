@@ -1,7 +1,16 @@
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Map {
+    private int round;
+    private int SabWater;
+    private int MechWater;
+    private Source source;
+    private ArrayList<Cistern> cisterns=new ArrayList<>();
+    private ArrayList<Component> components=new ArrayList<>();
+    private ArrayList<Player> players=new ArrayList<>();
+
 
     public void Game(){
         System.out.println("$ Map.Game()");
@@ -39,6 +48,8 @@ public class Map {
         }
 
 
-
     }
+    public void StartGame(){}
+    public void SetTeamStarts(){}
+
 }

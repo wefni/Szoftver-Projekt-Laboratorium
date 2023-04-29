@@ -6,9 +6,17 @@ import java.util.Scanner;
  */
 public class Pump extends RandomBreakable
 {
+    private Pipe in;
+    private Pipe out;
+    private int tank;
+    private int maxTank;
+    private int randomBreakCounter;
+    private boolean didWaterFlow;
+
     /**
      * A pumpa kimnetet es bemenetet allitani kepes fuggveny.
      */
+
     public void ConfigurePump()
     {
         System.out.print("$ Pump.ConfigurePump()\n");
@@ -116,12 +124,15 @@ public class Pump extends RandomBreakable
     }
 
     public boolean Accept(){
-        System.out.println("$ Pump.Accept()");
         return true;
     }
 
     public void AddPlayer(){
         System.out.println("$ Pump.AddPlayer()");
         System.out.println("->Player");
+    }
+    public int GetWater()
+    {
+        return tank;
     }
 }

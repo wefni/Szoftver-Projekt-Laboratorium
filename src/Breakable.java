@@ -1,5 +1,5 @@
 public abstract class Breakable extends Component{
-
+protected boolean broken;
     public void Break(){
         System.out.println(" $ Breakable.Break()");
     }

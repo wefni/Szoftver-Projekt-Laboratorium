@@ -1,7 +1,9 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public abstract class Component implements Flow{
-
+    protected String id;
+    protected ArrayList<Player> onComponent=new ArrayList<>();
+    protected ArrayList<Component> neighbours=new ArrayList<>();
     public void Act(){
         System.out.println("$ Component.Act()");
     }
@@ -9,25 +11,24 @@ public abstract class Component implements Flow{
         System.out.print("$ Component.Accept()");
         return false;
     }
-    public void RemovePlayer(){
-        System.out.print("$ Component.RemovePlayer()");
+    public void RemovePlayer(Player me)
+    {
+        onComponent.remove(me);
     }
-    public void AddPlayer(){
-        System.out.print("$ Component.AddPlayer()");
+    public void AddPlayer(Player me)
+    {
+        onComponent.add(me);
     }
-    public Component[] ShowNeighbours(){
-        System.out.print("$ Component.ShowNeighbors()");
-        return null;
+    public ArrayList<Component> ShowNeighbours(){
+        return neighbours;
     }
-    public void AddNeighbours(){
-        System.out.print("$ Component.AddNeighbours()");
-        /*System.out.println("Melyik objektumot szeretnéd hozzáadni?");
-        Scanner be=new Scanner(System.in);
-        String info=be.nextLine();*/
+    public void AddNeighbours(Component c){
+        neighbours.add(c);
 
     }
-    public void RemoveNeighbours(){
-        System.out.print("$ Component.RemoveNeighbours()");
+    public void RemoveNeighbours(Component c)
+    {
+        neighbours.remove(c);
     }
     public void Step(){
         System.out.print("$ Component.Step()");
@@ -36,4 +37,6 @@ public abstract class Component implements Flow{
         System.out.print("$ Component.FlowOut()");
         return 0;
     }
+    public int GetWater(){return 0;}
+    public void Tick(){}
 }

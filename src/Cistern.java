@@ -1,7 +1,8 @@
 public class Cistern extends Component{
-
+    private int amountOfWater=0;
     public void PickUpPump(){
-        System.out.println("$ Cistern.PickUpPump()");
+
+
     }
     public void SpawnPipe(){
         System.out.println("$ Cistern.SpawnPipe()");
@@ -18,5 +19,9 @@ public class Cistern extends Component{
     public void AddNeighbours(){
         System.out.println("$ Cistern.AddNeighbours()");
         System.out.println("->pipe");
+    }
+    public int GetWater()
+    {
+        return amountOfWater;
     }
 }
