@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="beb800e3-2ec1-402b-9290-a5e737174924" name="Changes" comment="ChangePipe es ConfigurePump kesz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Breakable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breakable.java" afterDir="false" />
@@ -20,6 +21,9 @@
       <change beforePath="$PROJECT_DIR$/src/Saboteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saboteur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Source.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="beb800e3-2ec1-402b-9290-a5e737174924" name="Changes" comment="ChangePipe es ConfigurePump kesz" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
