@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Pipe extends Breakable {
@@ -19,43 +20,107 @@ public class Pipe extends Breakable {
     }
 
     public void ChangePipe() {
-        ArrayList<Component> tmp = this.ShowNeighbours(); // a pipenak az elso szomszedai
+        ArrayList<Component> tmp0 = new ArrayList<>();
         ArrayList<Component> tmp1 = new ArrayList<>();
+        ArrayList<Component> neighboursside0 = new ArrayList<>();
+        ArrayList<Component> neighboursside1 = new ArrayList<>();
 
-        for (Component i : tmp) //
-        {
-            if (i != this)
-                tmp.addAll(i.ShowNeighbours());  // az elso szomszed Pipe(2. szomszed) szomszédai ami nem az amin álltunk
-        }
-        for (Component i : tmp) {
-            if (i.neighbours.get(0) != this.neighbours.get(0) && i.neighbours.get(0) != this.neighbours.get(1)) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                tmp1.add(i.neighbours.get(0));
-            }
-            if (i.neighbours.get(1) != this.neighbours.get(0) && i.neighbours.get(1) != this.neighbours.get(1))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                tmp1.add(i.neighbours.get(1));
-            }
+                tmp0.addAll(this.neighbours.get(0).ShowNeighbours());// az elso szomszed( a 0-as) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
 
+                tmp1.addAll(this.neighbours.get(1).ShowNeighbours());// az elso szomszed( a 1-es) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
+
+        for (Component i : tmp0) {
+            if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+            {
+                neighboursside0.add(i.neighbours.get(0));
+            }
+            if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+            {
+                neighboursside0.add(i.neighbours.get(1));
+            }
         }
-        // a tmp1 -ben vannak azok a szomszédok ahova át lehet kötni
-        System.out.println("Hány véget akarsz áthelyezni?"); // ezt át lehert rakni az actba
+        for (Component i : tmp1) {
+            if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+            {
+                neighboursside1.add(i.neighbours.get(0));
+            }
+            if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+            {
+                neighboursside1.add(i.neighbours.get(1));
+            }
+        }
+
+        // a neighbourssode1 -ban vannak a 0 oldali szomszédok az 1 ben az 1 oldaliak
+        System.out.println("Hány véget akarsz áthelyezni?");
         Scanner be = new Scanner(System.in);
         int valasz = Integer.parseInt(be.nextLine());
-        System.out.println("Melyik(ekre) szeretnéd rakni");
-        for (Component i : tmp1) {
-            System.out.println(i.id);
-        }
-        Scanner beolvasas = new Scanner(System.in);
-        if (valasz == 1) {
-            String bemenet = be.nextLine();
-        }
-        if(valasz==2)
+        if(valasz==1) // ha csak egy oldalt szeretne áthelyezni
         {
-            String [] bemenet=be.nextLine();
+            System.out.println("Melyik végét szeretnéd átrakni?");
+            int oldal = Integer.parseInt(be.nextLine());
+            System.out.println("Melyik(ekre) szeretnéd rakni");
+            if(oldal==0) {
+                for (Component i : neighboursside0) {
+                    System.out.println(i.id);
+                }
+                String bemenet=be.nextLine();
+                for(Component i: neighboursside0)
+                {
+                    if(Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
+                    {
+                        i.AddNeighbours(this); // átállítjuk a szomszédságot
+                        this.AddNeighbours(i);
+                        this.RemoveNeighbours(this.neighbours.get(0));
+                        this.neighbours.get(0).RemoveNeighbours(this);
+                    }
+
+                }
+            }
+            if(oldal==1)
+            {
+                for (Component i : neighboursside1) {
+                    System.out.println(i.id);
+                }
+                String bemenet=be.nextLine();
+                for(Component i: neighboursside1)
+                {
+                    if(Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
+                    {
+                        i.AddNeighbours(this); // átállítjuk a szomszédságot
+                        this.AddNeighbours(i);
+                        this.RemoveNeighbours(this.neighbours.get(1));
+                        this.neighbours.get(1).RemoveNeighbours(this);
+                    }
+
+                }
+            }
         }
+        if(valasz==2) // ha mindkét végét át akarjuk állítani
+        {
+            System.out.println("Melyik(ekre) szeretnéd rakni");
+            neighboursside0.addAll(neighboursside1); // egyberakjuk
+            for (Component i : neighboursside0) {
+                System.out.println(i.id);
+            }
+            String [] bemenet= new String[2];
+                    bemenet[0]=be.nextLine(); // egyik oldal kiválasztása
+                    bemenet[1]= be.nextLine(); // másik oldal
+                    int j=0;
+                        for (Component i : neighboursside0) {
+                            if (Objects.equals(i.id, bemenet[j]))// megkeressük a kiválasztottat
+                            {
+                                i.AddNeighbours(this); // átállítjuk a szomszédságot
+                                this.AddNeighbours(i);
+                                this.RemoveNeighbours(this.neighbours.get(j));
+                                this.neighbours.get(j).RemoveNeighbours(this);
+                                j++;
+
+                            }
+
+                        }
 
 
+        }
     }
 
     public void PlacePump() {
@@ -69,15 +134,32 @@ public class Pipe extends Breakable {
     public void Act(Player me, int type) {
     }
 
-    public void AddNeighbours() {
-    }
 
-    public void Step(Component c, Player me) {
-        if (c.Accept()) {
-            c.AddPlayer(me);
-            this.RemovePlayer(me);
-            me.ChangeWhere(c);
+
+    public void Step( Player me) {
+        System.out.println("Melyik elemre szeretnél lépni?");
+        Scanner be=new Scanner(System.in);
+        for(Component i: this.neighbours)
+        {
+            System.out.println(i.id);
         }
+        String bemenet=be.nextLine();
+        for(Component i: this.neighbours)
+        {
+            if(Objects.equals(i.id, bemenet))
+            {
+                if (i.Accept()) {
+                    i.AddPlayer(me);
+                    this.RemovePlayer(me);
+                    me.ChangeWhere(i);
+                }
+            else
+                {
+                System.out.println("Nem lehet rálépni");
+                }
+            }
+        }
+
     }
 
     public void RemovePlayer() {
