@@ -9,7 +9,7 @@ public class Main {
       Mechanic m=new Mechanic();
       m.where=p;
       System.out.println(m.where.id);
-      p.Step(p1,m);
+      p.Step(m);
       System.out.println(m.where.id);
     }
 }
