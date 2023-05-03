@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
       Pipe p=new Pipe("1","");  // csak teszt
       Pipe p1=new Pipe("2","");
-      Mechanic m=new Mechanic();
+      Mechanic m=new Mechanic("fitymahuszar69xd","valamike.txt" );
       m.where=p;
       System.out.println(m.where.id);
       p.Step(m);
