@@ -29,6 +29,7 @@ public class Map {
     {
         while (round < endRound)
         {
+            System.out.println("Round: "+round);
             round++;
             for (Player p : players)
             {
