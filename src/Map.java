@@ -1,9 +1,9 @@
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Map {
+public class Map implements Serializable{
     private String logFile; // log file neve
     private int round;
     private int endRound;
@@ -40,7 +40,8 @@ public class Map {
             }
         }
     }
-    public void StartGame(int numOfMechs, int numOfSaboteurs)
+
+    public void GenerateMap()
     {
 
         //Ebbe a txt-be írjuk a teszt logokat, ami alapján eldöntjük majd, hogy a teszt sikeres volt-e
@@ -224,8 +225,9 @@ public class Map {
         components.get(43).AddNeighbours(components.get(12));
         components.get(43).AddNeighbours(components.get(24));
         components.get(43).AddNeighbours(components.get(26));
-
-        //Players
+    }
+    public void AddPlayers(int numOfMechs, int numOfSaboteurs)
+    {
         for(int i=0; i < numOfMechs; i++){
             Mechanic m = new Mechanic("Mechanic - " + i, logFile);
             m.ChangeWhere(components.get(2));
@@ -240,6 +242,27 @@ public class Map {
             components.get(0).AddPlayer(s);
         }
     }
+    public void AddMechToComponent(int componentNumber)
+    {
+        if(componentNumber < 0 || componentNumber >= components.size())
+            throw new IllegalArgumentException("Component number must be between 0 and components.size()");
+
+        Mechanic m = new Mechanic("Mechanic - " + players.size(), logFile);
+        m.ChangeWhere(components.get(componentNumber));
+        players.add(m);
+        components.get(componentNumber).AddPlayer(m);
+    }
+
+    public void AddSabToComponent(int componentNumber)
+    {
+        if(componentNumber < 0 || componentNumber >= components.size())
+            throw new IllegalArgumentException("Component number must be between 0 and components.size()");
+
+        Saboteur s = new Saboteur("Saboteur - " + players.size(), logFile);
+        s.ChangeWhere(components.get(componentNumber));
+        players.add(s);
+        components.get(componentNumber).AddPlayer(s);
+    }
     public void SetTeamStats()
     {
         mechWater =0;
@@ -250,5 +273,33 @@ public class Map {
         for(Component c : components) { sumWaterInComponents += c.GetWater();}
         sabWater = 2 * source.GetWater() - sumWaterInComponents;
     }
-
+    public void Serialize(String fileName) {
+        try {
+            FileOutputStream fileOut = new FileOutputStream(fileName);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(this);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved in " + fileName);
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
+    public static Map Deserialize(String fileName) {
+        try {
+            FileInputStream fileIn = new FileInputStream(fileName);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Map map = (Map) in.readObject();
+            in.close();
+            fileIn.close();
+            return map;
+        } catch (IOException i) {
+            i.printStackTrace();
+            return null;
+        } catch (ClassNotFoundException c) {
+            System.out.println("Map class not found");
+            c.printStackTrace();
+            return null;
+        }
+    }
 }

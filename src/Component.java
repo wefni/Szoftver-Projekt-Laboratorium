@@ -1,8 +1,9 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public abstract class Component implements Flow{
+public abstract class Component implements Flow, Serializable {
     protected String id;
     protected String logFile; //log file neve
     protected ArrayList<Player> onComponent=new ArrayList<>();

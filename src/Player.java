@@ -1,4 +1,5 @@
-public abstract class Player {
+import java.io.Serializable;
+public abstract class Player implements Serializable {
 protected Component where;
 protected String name;
 protected String logFile;

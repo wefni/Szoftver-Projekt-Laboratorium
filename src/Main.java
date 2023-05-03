@@ -1,12 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
 
-        //Itt hozzuk létre a játékot és indítjuk el 2 Sboteur és 2 Mechanic játékossal
-        Map map = new Map("log.txt");
-        map.StartGame(2,2);
-        map.Game();
+        /* TESZTEKHEZ
+        Igy deSerializálunk egy pályát a map.txt fájlból és rakunk ra karaktereket
+
+        * Map map = Map.Deserialize("map.txt");
+        * map.AddSabToComponent(12);
+        * map.AddSabToComponent(13);
+        */
+
+
+        /* UJ PÁLYA KIMENTES
+        Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!
+
+        * Map map = new Map();
+        * map.GenerateMap();
+        * map.Serialize("map2.txt");
+         */
+
+
+        /* NORMAL JATEK
+        Egy normalis jatekmenetet itt tudsz elinditani. A map.txt fájlban lévő pályát fogja használni.
+
+        * Map map = Map.Deserialize("map.txt");
+        * map.AddPlayers(NumOfMechs, NumOfSabs);
+        * map.Game();
+         */
     }
 }

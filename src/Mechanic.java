@@ -9,7 +9,7 @@ private boolean havePump;
         havePump=false;
     }
     public void YourTurn(){
-
+        System.out.println("Your turn, "+name);
     }
 
     public void ChangeWhere(){
