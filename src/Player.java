@@ -13,4 +13,8 @@ protected String logFile;
     public void ChangeWhere(Component c){
         where=c;
     }
+
+    public boolean GetPump() {
+        return false;
+    }
 }

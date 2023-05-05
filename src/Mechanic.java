@@ -19,4 +19,5 @@ private boolean havePump;
     {
         havePump=true;
     }
+    public boolean GetPump(){return havePump;}
 }

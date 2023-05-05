@@ -127,11 +127,68 @@ public class Pipe extends Breakable {
         System.out.print("$ Pipe.PlacePump()");
     }
 
-    public int FlowOut() {
-        return 0;
+    public int FlowOut(Component sender) {
+        if(!hasWaterPartOne)
+        {
+            hasWaterPartOne=true;
+            return 1;
+        }
+        if(broken)
+            return 1;
+
+        if(hasWaterPartTwo)
+        {
+            for(Component i: this.neighbours) // megkeressük azt a szomszédot ahonnan nem jött
+            {
+                if(!Objects.equals(i.id, sender.id))
+                {
+                    return i.FlowOut();
+                }
+            }
+        }
+        hasWaterPartTwo=true;
+        return 1;
     }
 
     public void Act(Player me, int type) {
+        System.out.println("Mit szeretnél cselekedni?");
+        if(sticky>0)
+        {
+            System.out.println("Step");
+        }
+        if(unBreakable==0 && !broken) {
+            System.out.println("BreakPipe");
+        }
+        System.out.println("ChangePipe");
+        System.out.println("MakeSticky");
+        if(type==0) {
+            if(broken)
+            {
+                System.out.println("RepairPipe");
+            }
+            if(me.GetPump())
+            System.out.println("PlacePump");
+
+        }
+        else
+        {
+            System.out.println("MakeSloppy");
+        }
+        Scanner be=new Scanner(System.in);
+        String valasz=be.nextLine();
+        switch (valasz)
+        {
+            case "Step": Step(me);
+            case "BreakPipe": Break();
+            case "ChangePipe": ChangePipe();
+            case "MakeSticky": MakeSticky();
+            case "RepairPipe": Repair();
+            case "PlacePump": PlacePump();
+            case "MakeSloppy": MakeSloppy();
+            default: System.out.println("Nem jó bemenet");
+        }
+
+
     }
 
 
@@ -143,15 +200,18 @@ public class Pipe extends Breakable {
         {
             System.out.println(i.id);
         }
+
         String bemenet=be.nextLine();
-        for(Component i: this.neighbours)
+        for(Component j: this.neighbours)
         {
-            if(Objects.equals(i.id, bemenet))
+
+            if(Objects.equals(j.id, bemenet))
             {
-                if (i.Accept()) {
-                    i.AddPlayer(me);
+
+                if (j.Accept()) {
+                    j.AddPlayer(me);
                     this.RemovePlayer(me);
-                    me.ChangeWhere(i);
+                    me.ChangeWhere(j);
                 }
             else
                 {
@@ -162,8 +222,6 @@ public class Pipe extends Breakable {
 
     }
 
-    public void RemovePlayer() {
-    }
 
     public Component RandomEnd() {
         return null;
@@ -176,6 +234,12 @@ public class Pipe extends Breakable {
     }
 
     public void Tick() {
+        if(sticky>0)
+            sticky--;
+        if(sloppy>0)
+            sloppy--;
+        if(unBreakable>0)
+            unBreakable--;
     }
 
     public boolean IsSloppy() {
@@ -190,5 +254,7 @@ public class Pipe extends Breakable {
 
         return 0;
     }
+    public void Repair()
+    {}
 
 }

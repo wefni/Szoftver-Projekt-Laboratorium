@@ -6,19 +6,22 @@ public class Main {
         /* TESZTEKHEZ
         Igy deSerializálunk egy pályát a map.txt fájlból és rakunk ra karaktereket
 
-        * Map map = Map.Deserialize("map.txt");
-        * map.AddSabToComponent(12);
-        * map.AddSabToComponent(13);
+         //Map map = Map.Deserialize("map.txt");
+         map.AddSabToComponent(12);
+         map.AddSabToComponent(13);
         */
 
 
-        /* UJ PÁLYA KIMENTES
-        Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!
 
-        * Map map = new Map();
-        * map.GenerateMap();
-        * map.Serialize("map2.txt");
-         */
+
+
+        /* UJ PÁLYA KIMENTES
+        Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!*/
+
+        // Map map = new Map("teszt");
+        // map.GenerateMap();
+        // map.Serialize("map2.txt");
+
 
 
         /* NORMAL JATEK

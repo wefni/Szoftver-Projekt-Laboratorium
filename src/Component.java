@@ -87,11 +87,13 @@ public abstract class Component implements Flow, Serializable {
             //Ha hiba van azt egyelőre csak lenyeljük
         }
     }
-    public void Step(){
+    public void Step(Player me){
     }
     public int FlowOut(){
         return 0;
     }
     public int GetWater(){return 0;}
     public void Tick(){}
+
+    public void ChangePipe() {}
 }
