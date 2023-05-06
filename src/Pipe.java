@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Pipe extends Breakable {
+    private Random detvel = new Random(42);
+    private Random vel = new Random();
+    private boolean random;
     private double capacity;
     private int sticky;
     private int unBreakable;
@@ -224,13 +228,36 @@ public class Pipe extends Breakable {
 
 
     public Component RandomEnd() {
-        return null;
+        if(random) {
+            int vel1 = vel.nextInt(0, 1);
+            return this.neighbours.get(vel1);
+        }
+
+        int vel2 = detvel.nextInt(0, 1);
+        return this.neighbours.get(vel2);
     }
 
     public void MakeSloppy() {
+
+        if(sloppy==0 && random)
+        {
+            sloppy=vel.nextInt(2,10);
+        }
+        if(!random && sloppy==0)
+        {
+            sloppy=detvel.nextInt(2,10);
+        }
     }
 
     public void MakeSticky() {
+        if(sticky==0 && random)
+        {
+            sticky=vel.nextInt(2,10);
+        }
+        if(!random && sticky==0)
+        {
+            sticky=detvel.nextInt(2,10);
+        }
     }
 
     public void Tick() {
@@ -254,7 +281,10 @@ public class Pipe extends Breakable {
 
         return 0;
     }
+    public void SetRandom(boolean a)
+    {
+        random=a;
+    }
     public void Repair()
     {}
-
 }
