@@ -1,8 +1,13 @@
+import org.apache.log4j.Logger;
+
 public class Cistern extends Component{
+
+    private static final Logger logger = Logger.getLogger(Cistern.class);
     private int amountOfWater=0;
 
     public Cistern(String ID) {
         super(ID);
+        logger.info(this.id + "@Cistern | "+this.id+" létrejött \n");
     }
 
     public void PickUpPump(){

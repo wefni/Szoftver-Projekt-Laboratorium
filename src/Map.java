@@ -18,6 +18,7 @@ public class Map implements Serializable{
 
     public Map(String file)
     {
+        logger.info("Map@Map | Map létrejött \n");
 
         round = 0;
         mechWater = 0;

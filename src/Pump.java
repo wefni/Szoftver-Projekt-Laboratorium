@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.util.Scanner;
 
 /**
@@ -6,6 +8,7 @@ import java.util.Scanner;
  */
 public class Pump extends RandomBreakable
 {
+    private static final Logger logger = Logger.getLogger(Pump.class);
     private Pipe in;
     private Pipe out;
     private int tank;
@@ -15,6 +18,7 @@ public class Pump extends RandomBreakable
 
     public Pump(String ID) {
         super(ID);
+        logger.info(this.id + "@Pump | "+this.id+" létrejött \n");
     }
 
     /**
