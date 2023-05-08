@@ -111,7 +111,7 @@ public class Pump extends RandomBreakable
 
     public void Act(Player me, int type)
     {
-
+        Step(me);
     }
 
     public void Step(Player me)
@@ -154,8 +154,47 @@ public class Pump extends RandomBreakable
      */
     public int FlowOut(Component sender)
     {
-        //sender.h
-        return 0;
+       if(sender != in)
+       {
+           return 0;
+       }
+       else
+       {
+           if(broken)
+           {
+                return 0;
+           }
+           else
+           {
+                if(maxTank == tank)
+                {
+                    return 0;
+                }
+                else if(tank < maxTank)
+                {
+                    tank++;
+                    if(didWaterFlow)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        didWaterFlow = true;
+                    }
+
+                    if(out == null)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        out.FlowOut();
+                        return 1;
+                    }
+                }
+           }
+       }
+       return 0; //semmikeppen sem fog teljesulni, de kell a hibajelzes miatt
     }
 
     public void Tick()
@@ -166,9 +205,28 @@ public class Pump extends RandomBreakable
             Break();
         }
 
-        if(!didWaterFlow)
+        if(didWaterFlow)
         {
-            
+            didWaterFlow = false;
+        }
+        else
+        {
+            if(tank == 0)
+            {
+                didWaterFlow = false;
+            }
+            else if(tank > 0)
+            {
+                if(out.FlowOut(this) == 0)
+                {
+                    didWaterFlow = false;
+                }
+                else if(out.FlowOut(this) == 1)
+                {
+                    tank--;
+                    didWaterFlow = false;
+                }
+            }
         }
     }
 

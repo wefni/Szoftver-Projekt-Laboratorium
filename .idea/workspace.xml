@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
+    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pump">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Breakable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breakable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +14,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="1291" />
+    <option name="totalTimeSeconds" value="2436" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683566055391</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pump">
+      <created>1683572435580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683572435581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni." />
-    <option name="LAST_COMMIT_MESSAGE" value="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni." />
+    <MESSAGE value="Pump" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pump" />
   </component>
 </project>
