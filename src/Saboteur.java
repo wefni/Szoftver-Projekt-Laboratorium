@@ -8,6 +8,9 @@ public class Saboteur extends Player{
     }
 
     public void YourTurn() {
-
+        where.Act(this,1);
+    }
+    public void ChangeWhere(Component c){
+        where = c;
     }
 }

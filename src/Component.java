@@ -16,7 +16,11 @@ public abstract class Component implements Flow, Serializable {
         id = ID;
     }
 
-    public void Act(){
+    public boolean IsSloppy(){
+        return false;
+    }
+
+    public void Act(Player me, int type){
 
     }
     public boolean Accept(){

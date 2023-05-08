@@ -33,7 +33,7 @@ public class Pipe extends Breakable {
 
                 tmp1.addAll(this.neighbours.get(1).ShowNeighbours());// az elso szomszed( a 1-es) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
 
-        for (Component i : tmp0) {
+        for (Component i : tmp0){
             if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
             {
                 neighboursside0.add(i.neighbours.get(0));
@@ -43,7 +43,7 @@ public class Pipe extends Breakable {
                 neighboursside0.add(i.neighbours.get(1));
             }
         }
-        for (Component i : tmp1) {
+        for (Component i : tmp1){
             if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
             {
                 neighboursside1.add(i.neighbours.get(0));
@@ -211,7 +211,6 @@ public class Pipe extends Breakable {
 
             if(Objects.equals(j.id, bemenet))
             {
-
                 if (j.Accept()) {
                     j.AddPlayer(me);
                     this.RemovePlayer(me);

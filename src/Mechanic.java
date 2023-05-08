@@ -9,11 +9,11 @@ private boolean havePump;
         havePump=false;
     }
     public void YourTurn(){
-        System.out.println("Your turn, "+name);
+        where.Act(this,0);
     }
 
-    public void ChangeWhere(){
-
+    public void ChangeWhere(Component c){
+        where = c;
     }
     public void AddPump()
     {
