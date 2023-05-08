@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Source extends Component{
 private int amountOfWater=0;
 
-    public Source(String ID, String logFILE) {
-        super(ID, logFILE);
+    public Source(String ID) {
+        super(ID);
     }
 
     public void StartFlow(){

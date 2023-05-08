@@ -1,8 +1,8 @@
 public class Cistern extends Component{
     private int amountOfWater=0;
 
-    public Cistern(String ID, String logFILE) {
-        super(ID, logFILE);
+    public Cistern(String ID) {
+        super(ID);
     }
 
     public void PickUpPump(){

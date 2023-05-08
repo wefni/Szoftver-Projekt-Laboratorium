@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Mechanic extends Player{
 private boolean havePump;
 
-    public Mechanic(String name, String logFile) {
-        super(name, logFile);
+    public Mechanic(String name) {
+        super(name);
         havePump=false;
     }
     public void YourTurn(){

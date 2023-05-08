@@ -1,7 +1,7 @@
 public abstract class RandomBreakable extends Breakable{
 
-    public RandomBreakable(String ID, String logFILE) {
-        super(ID, logFILE);
+    public RandomBreakable(String ID) {
+        super(ID);
     }
 
     public int FlowOut(){

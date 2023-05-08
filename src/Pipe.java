@@ -15,8 +15,8 @@ public class Pipe extends Breakable {
     private boolean hasWaterPartOne;
     private boolean hasWaterPartTwo;
 
-    public Pipe(String ID, String logFILE) {
-        super(ID, logFILE);
+    public Pipe(String ID) {
+        super(ID);
     }
 
     public boolean Accept() {

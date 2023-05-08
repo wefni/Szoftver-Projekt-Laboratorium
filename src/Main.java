@@ -1,3 +1,5 @@
+import org.apache.log4j.MDC;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,10 +19,12 @@ public class Main {
 
         /* UJ PÁLYA KIMENTES
         Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!*/
-
-        // Map map = new Map("teszt");
-        // map.GenerateMap();
-        // map.Serialize("map2.txt");
+        /*
+         String fileName = "teszt";
+         Map map = new Map(fileName);
+         map.GenerateMap();
+         map.Serialize("map2.txt");
+         */
 
 
 
@@ -31,5 +35,6 @@ public class Main {
         * map.AddPlayers(NumOfMechs, NumOfSabs);
         * map.Game();
          */
+
     }
 }

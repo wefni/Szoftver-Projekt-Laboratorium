@@ -1,10 +1,12 @@
+import org.apache.log4j.*;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Map implements Serializable{
-    private String logFile; // log file neve
+    private static  final Logger logger = Logger.getLogger(Map.class);
     private int round;
     private int endRound;
     private int sabWater;
@@ -16,7 +18,7 @@ public class Map implements Serializable{
 
     public Map(String file)
     {
-        logFile = file;
+
         round = 0;
         mechWater = 0;
         sabWater = 0;
@@ -43,33 +45,30 @@ public class Map implements Serializable{
 
     public void GenerateMap()
     {
-
-        //Ebbe a txt-be írjuk a teszt logokat, ami alapján eldöntjük majd, hogy a teszt sikeres volt-e
-        File logF  = new File(logFile);
         //ki kene írni hogy létrejött miből mennyi
 
         //Initializing------------------------------------------
         //Source
-        Source source0 = new Source("source - 0", logFile);
+        Source source0 = new Source("source - 0");
         components.add(source0);
         source = source0;
 
         //Cisterns
         for(int i = 1; i<4; i++){
-            Cistern cistern = new Cistern("cistern - "+(i), logFile);
+            Cistern cistern = new Cistern("cistern - "+(i));
             components.add(cistern);
             cisterns.add(cistern);
         }
 
         //Pipes
         for(int i= 4; i < 30; i++){
-            Pipe pipe = new Pipe("pipe - "+(i), logFile);
+            Pipe pipe = new Pipe("pipe - "+(i));
             components.add(pipe);
         }
 
         //Pumps
         for(int i = 30; i < 44; i++){
-            Pump pump = new Pump("pump - "+(i), logFile);
+            Pump pump = new Pump("pump - "+(i));
             components.add(pump);
         }
 
@@ -229,14 +228,14 @@ public class Map implements Serializable{
     public void AddPlayers(int numOfMechs, int numOfSaboteurs)
     {
         for(int i=0; i < numOfMechs; i++){
-            Mechanic m = new Mechanic("Mechanic - " + i, logFile);
+            Mechanic m = new Mechanic("Mechanic - " + i);
             m.ChangeWhere(components.get(2));
             players.add(m);
             components.get(2).AddPlayer(m);
         }
 
         for(int i=0; i < numOfSaboteurs; i++){
-            Saboteur s = new Saboteur("Saboteur - " + i, logFile);
+            Saboteur s = new Saboteur("Saboteur - " + i);
             s.ChangeWhere(components.get(0));
             players.add(s);
             components.get(0).AddPlayer(s);
@@ -247,7 +246,7 @@ public class Map implements Serializable{
         if(componentNumber < 0 || componentNumber >= components.size())
             throw new IllegalArgumentException("Component number must be between 0 and components.size()");
 
-        Mechanic m = new Mechanic("Mechanic - " + players.size(), logFile);
+        Mechanic m = new Mechanic("Mechanic - " + players.size());
         m.ChangeWhere(components.get(componentNumber));
         players.add(m);
         components.get(componentNumber).AddPlayer(m);
@@ -258,7 +257,7 @@ public class Map implements Serializable{
         if(componentNumber < 0 || componentNumber >= components.size())
             throw new IllegalArgumentException("Component number must be between 0 and components.size()");
 
-        Saboteur s = new Saboteur("Saboteur - " + players.size(), logFile);
+        Saboteur s = new Saboteur("Saboteur - " + players.size());
         s.ChangeWhere(components.get(componentNumber));
         players.add(s);
         components.get(componentNumber).AddPlayer(s);

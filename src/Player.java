@@ -2,9 +2,8 @@ import java.io.Serializable;
 public abstract class Player implements Serializable {
 protected Component where;
 protected String name;
-protected String logFile;
 
-    public Player(String name, String logFile) {
+    public Player(String name) {
         this.name = name;
     }
     public void YourTurn(){

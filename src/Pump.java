@@ -13,8 +13,8 @@ public class Pump extends RandomBreakable
     private int randomBreakCounter;
     private boolean didWaterFlow;
 
-    public Pump(String ID, String logFILE) {
-        super(ID, logFILE);
+    public Pump(String ID) {
+        super(ID);
     }
 
     /**

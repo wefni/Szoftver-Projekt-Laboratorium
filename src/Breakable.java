@@ -1,8 +1,8 @@
 public abstract class Breakable extends Component{
 protected boolean broken;
 
-    public Breakable(String ID, String logFILE) {
-        super(ID, logFILE);
+    public Breakable(String ID) {
+        super(ID);
     }
 
     public void Break(){

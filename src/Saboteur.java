@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Saboteur extends Player{
 
-    public Saboteur(String name, String logFile) {
-        super(name, logFile);
+    public Saboteur(String name) {
+        super(name);
     }
 
     public void YourTurn() {

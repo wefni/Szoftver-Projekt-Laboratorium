@@ -1,19 +1,21 @@
+import org.apache.log4j.Logger;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public abstract class Component implements Flow, Serializable {
+
+    private static final Logger logger = Logger.getLogger(Component.class);
     protected String id;
-    protected String logFile; //log file neve
     protected ArrayList<Player> onComponent=new ArrayList<>();
     protected ArrayList<Component> neighbours=new ArrayList<>();
 
-    public Component(String ID, String logFILE)
-    {
+    public Component(String ID) {
         id = ID;
-        logFile = logFILE;
     }
+
     public void Act(){
 
     }
@@ -26,15 +28,7 @@ public abstract class Component implements Flow, Serializable {
         onComponent.remove(me);
 
         //Logolás
-        try {
-            FileWriter myWriter = new FileWriter(logFile, true);
-            myWriter.write(this.id+"@RemovePlayer |"+me.name+" removed from "+this.id+"\n");
-            myWriter.close();
-        }
-        catch (IOException e)
-        {
-            //Ha hiba van azt egyelőre csak lenyeljük
-        }
+        logger.info(this.id+"@RemovePlayer | "+me.name+" lelépett a "+this.id+"-ról/ről | onComponent.contains("+me.name+"): "+ onComponent.contains(me)+"\n");
     }
     public void AddPlayer(Player me)
     {
@@ -42,15 +36,7 @@ public abstract class Component implements Flow, Serializable {
         onComponent.add(me);
 
         //Logolás
-        try {
-            FileWriter myWriter = new FileWriter(logFile, true);
-            myWriter.write(this.id+"@AddPlayer |"+me.name+" added to "+this.id+"\n");
-            myWriter.close();
-        }
-        catch (IOException e)
-        {
-            //Ha hiba van azt egyelőre csak lenyeljük
-        }
+        logger.info(this.id+"@AddPlayer | "+me.name+" rálépett a "+this.id+"-ra/re | onComponent.contains("+me.name+"): "+ onComponent.contains(me)+"\n");
     }
     public ArrayList<Component> ShowNeighbours(){
         return neighbours;
@@ -60,16 +46,7 @@ public abstract class Component implements Flow, Serializable {
         neighbours.add(c);
 
         //Logolás
-        try {
-            FileWriter myWriter = new FileWriter(logFile, true);
-            myWriter.write(this.id+"@AddNeighbour |"+c.id+" added to "+this.id+"'s neighbours\n");
-            myWriter.close();
-        }
-        catch (IOException e)
-        {
-            //Ha hiba van azt egyelőre csak lenyeljük
-        }
-
+        logger.info(this.id+"@AddNeighbour | "+c.id+" hozzáadva "+this.id+" szomszédjához | neighbours.contains("+c.id+"): "+ neighbours.contains(c)+"\n");
     }
     public void RemoveNeighbours(Component c)
     {
@@ -77,15 +54,7 @@ public abstract class Component implements Flow, Serializable {
         neighbours.remove(c);
 
         //Logolás
-        try {
-            FileWriter myWriter = new FileWriter(logFile, true);
-            myWriter.write(this.id+"@RemoveNeighbour |"+c.id+" removed from "+this.id+"'s neighbours\n");
-            myWriter.close();
-        }
-        catch (IOException e)
-        {
-            //Ha hiba van azt egyelőre csak lenyeljük
-        }
+        logger.info(this.id+"@RemoveNeighbour | "+c.id+" eltávolítva a "+this.id+" szomszédai közül | neighbours.contains("+c.id+"): "+ neighbours.contains(c)+"\n");
     }
     public void Step(Player me){
     }
