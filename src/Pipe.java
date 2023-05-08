@@ -1,9 +1,12 @@
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Pipe extends Breakable {
+    private static final Logger logger = Logger.getLogger(Pipe.class);
     private Random detvel = new Random(42);
     private Random vel = new Random();
     private boolean random;
@@ -17,13 +20,21 @@ public class Pipe extends Breakable {
 
     public Pipe(String ID) {
         super(ID);
+        logger.info(this.id + "@Pipe | "+this.id+" létrejött \n");
+
     }
 
     public boolean Accept() {
+
+        //logolás
+        logger.info(this.id+"@Accept | "+this.id+" ra/re ráléphetnek?  | onComponent.isEmpty(): "+ onComponent.isEmpty()+"\n");
+
+        //funkció
         return onComponent.isEmpty();
     }
 
     public void ChangePipe() {
+
         ArrayList<Component> tmp0 = new ArrayList<>();
         ArrayList<Component> tmp1 = new ArrayList<>();
         ArrayList<Component> neighboursside0 = new ArrayList<>();
@@ -76,6 +87,10 @@ public class Pipe extends Breakable {
                         this.AddNeighbours(i);
                         this.RemoveNeighbours(this.neighbours.get(0));
                         this.neighbours.get(0).RemoveNeighbours(this);
+
+                        //logolás
+                        logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
+
                     }
 
                 }
@@ -94,6 +109,10 @@ public class Pipe extends Breakable {
                         this.AddNeighbours(i);
                         this.RemoveNeighbours(this.neighbours.get(1));
                         this.neighbours.get(1).RemoveNeighbours(this);
+
+                        //logolás
+                        logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
+
                     }
 
                 }
@@ -119,6 +138,9 @@ public class Pipe extends Breakable {
                                 this.neighbours.get(j).RemoveNeighbours(this);
                                 j++;
 
+                                //logolás
+                                logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
+
                             }
 
                         }
@@ -131,6 +153,7 @@ public class Pipe extends Breakable {
         System.out.print("$ Pipe.PlacePump()");
     }
 
+    //FlowOutot még logolni kell
     public int FlowOut(Component sender) {
         if(!hasWaterPartOne)
         {
@@ -180,6 +203,11 @@ public class Pipe extends Breakable {
         }
         Scanner be=new Scanner(System.in);
         String valasz=be.nextLine();
+
+        //log
+        logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
+
+
         switch (valasz)
         {
             case "Step": Step(me);
@@ -199,27 +227,30 @@ public class Pipe extends Breakable {
 
     public void Step( Player me) {
         System.out.println("Melyik elemre szeretnél lépni?");
-        Scanner be=new Scanner(System.in);
-        for(Component i: this.neighbours)
-        {
+        Scanner be = new Scanner(System.in);
+        for (Component i : this.neighbours) {
             System.out.println(i.id);
         }
 
-        String bemenet=be.nextLine();
-        for(Component j: this.neighbours)
-        {
+        String bemenet = be.nextLine();
+        for (Component j : this.neighbours) {
 
-            if(Objects.equals(j.id, bemenet))
-            {
+            if (Objects.equals(j.id, bemenet)) {
 
                 if (j.Accept()) {
                     j.AddPlayer(me);
                     this.RemovePlayer(me);
                     me.ChangeWhere(j);
-                }
-            else
-                {
-                System.out.println("Nem lehet rálépni");
+
+                    //logolás
+                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+
+                } else {
+                    System.out.println("Nem lehet rálépni");
+
+                    //logolás
+                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+
                 }
             }
         }
@@ -230,10 +261,12 @@ public class Pipe extends Breakable {
     public Component RandomEnd() {
         if(random) {
             int vel1 = vel.nextInt(0, 1);
+            logger.info(this.id + "@RandomEnd | A következő helyre fog csúszni a játékos: "+vel1+"\n");
             return this.neighbours.get(vel1);
         }
 
         int vel2 = detvel.nextInt(0, 1);
+        logger.info(this.id + "@RandomEnd | A következő helyre fog csúszni a játékos: "+vel2+"\n");
         return this.neighbours.get(vel2);
     }
 
@@ -242,10 +275,14 @@ public class Pipe extends Breakable {
         if(sloppy==0 && random)
         {
             sloppy=vel.nextInt(2,10);
+            logger.info(this.id + "@MakeSloppy | "+sloppy+" körig csúszos lesz a "+this.id+"\n");
+
         }
         if(!random && sloppy==0)
         {
             sloppy=detvel.nextInt(2,10);
+            logger.info(this.id + "@MakeSloppy | "+sloppy+" körig csúszos lesz a "+this.id+"\n");
+
         }
     }
 
@@ -253,32 +290,55 @@ public class Pipe extends Breakable {
         if(sticky==0 && random)
         {
             sticky=vel.nextInt(2,10);
+            logger.info(this.id + "@MakeSticky | "+sticky+" körig ragadós lesz a "+this.id+"\n");
+
         }
         if(!random && sticky==0)
         {
             sticky=detvel.nextInt(2,10);
+            logger.info(this.id + "@MakeSticky | "+sticky+" körig ragadós lesz a "+this.id+"\n");
+
         }
     }
 
     public void Tick() {
-        if(sticky>0)
+        if (sticky > 0) {
+            logger.info(this.id + "@Tick | ragadósság időtartamának csökkentése | "+sticky+" --> ");
             sticky--;
-        if(sloppy>0)
+            logger.info(sticky+"\n");
+        }
+
+        if (sloppy > 0) {
+            logger.info(this.id + "@Tick | csúszósság időtartamának csökkentése | "+sloppy+" --> ");
             sloppy--;
-        if(unBreakable>0)
+            logger.info(sloppy+"\n");
+        }
+
+        if (unBreakable > 0) {
+            logger.info(this.id + "@Tick | törhetetlenség időtartamának csökkentése | "+unBreakable+" --> ");
             unBreakable--;
+            logger.info(unBreakable+"\n");
+        }
+
     }
 
     public boolean IsSloppy() {
+        logger.info(this.id + "@IsSloppy | csúszósság lekérdezése | "+(sloppy > 0)+"\n");
         return sloppy > 0;
     }
 
     public int GetWater() {
         if (hasWaterPartOne && hasWaterPartTwo)
+        {
+            logger.info(this.id + "@GetWater | A "+this.id+"-ben ennyi víz van: "+2+"\n");
             return 2;
+        }
         if (hasWaterPartOne || hasWaterPartTwo)
+        {
+            logger.info(this.id + "@GetWater | A "+this.id+"-ben ennyi víz van: "+1+"\n");
             return 1;
-
+        }
+        logger.info(this.id + "@GetWater | A "+this.id+"-ben ennyi víz van: "+0+"\n");
         return 0;
     }
     public void SetRandom(boolean a)
