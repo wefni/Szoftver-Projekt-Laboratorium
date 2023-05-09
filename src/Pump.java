@@ -150,7 +150,7 @@ public class Pump extends RandomBreakable
         {
             valasz = be.nextLine(); //bekér a választ
             valasz = valasz.toLowerCase(); //kisbetűsít
-            logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
+            logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
             switch (valasz)
             {
                 case "step" ->
@@ -170,7 +170,7 @@ public class Pump extends RandomBreakable
                 }
                 default -> {
                     System.out.println("Nem jó bemenet. Add meg újra:");
-                    logger.info(this.id+"@Act | "+me+" nem jó bemenetet adott: "+valasz+"\n");
+                    logger.info(this.id+"@Act | "+me.name+" nem jó bemenetet adott: "+valasz+"\n");
                 }
             }
         }
@@ -201,14 +201,14 @@ public class Pump extends RandomBreakable
                     me.ChangeWhere(j);
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
                 }
                 else
                 {
                     System.out.println("Nem lehet rálépni");
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
                 }
             }
         }

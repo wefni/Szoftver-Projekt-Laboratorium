@@ -17,7 +17,7 @@ public class Source extends Component {
            System.out.println("Mit szeretnél cselekedni?\nStep");
            Scanner be=new Scanner(System.in);
            String valasz=be.nextLine();
-           logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
+           logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
 
            if(valasz.equals("Step")) {
                Step(me);
@@ -25,7 +25,7 @@ public class Source extends Component {
            }
            if(!t){
                System.out.println("Rossz input");
-               logger.info(this.id+"@Act | "+me+" játékos nem jó bemenetet adott: "+valasz+"\n");
+               logger.info(this.id+"@Act | "+me.name+" játékos nem jó bemenetet adott: "+valasz+"\n");
            }
        }
 
@@ -54,12 +54,12 @@ public class Source extends Component {
                         this.RemovePlayer(me);
                         me.ChangeWhere(j);
                         t = false;
-                        logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+                        logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
                     }
                     else
                     {
                         System.out.println("Nem lehet rálépni");
-                        logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                        logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
                     }
                 }
             }
