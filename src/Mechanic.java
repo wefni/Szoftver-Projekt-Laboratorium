@@ -12,12 +12,12 @@ public class Mechanic extends Player {
         havePump = false;
         logger.info(this.name + "@Mechanic | " + this.name + " létrejött \n");
     }
-
-    public void YourTurn() {
-        System.out.println("Your turn, " + name);
+    public void YourTurn(){
+        where.Act(this,0);
     }
 
-    public void ChangeWhere() {
+    public void ChangeWhere(Component c){
+        where = c;
 
     }
 
