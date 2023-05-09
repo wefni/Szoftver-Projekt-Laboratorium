@@ -5,9 +5,13 @@ protected boolean broken;
         super(ID);
     }
 
-    public void Break(){
+    public void Break()
+    {
+        broken = true;
     }
-    public void Repair(){
+    public void Repair()
+    {
+        broken = false;
     }
     public int FlowOut(){
         return 0;

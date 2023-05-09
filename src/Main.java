@@ -19,12 +19,15 @@ public class Main {
 
         /* UJ PÁLYA KIMENTES
         Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!*/
-        /* a
+
+
+/*
+
          String fileName = "teszt";
          Map map = new Map(fileName);
          map.GenerateMap();
          map.Serialize("map2.txt");
-         */
+*/
 
 
 
