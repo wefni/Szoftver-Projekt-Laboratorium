@@ -1,0 +1,118 @@
+2023-05-09 20:05:36 INFO  Component:13 - Mechanic - 0@Mechanic | Mechanic - 0 létrejött 
+
+2023-05-09 20:05:36 INFO  Component:43 - cistern - 2@AddPlayer | Mechanic - 0 rálépett a cistern - 2-ra/re | onComponent.contains(Mechanic - 0): true
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 0
+
+2023-05-09 20:05:47 INFO  Pipe:364 - pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:30 - pipe - 5@Accept | pipe - 5 ra/re ráléphetnek?  | onComponent.isEmpty(): true
+
+2023-05-09 20:06:47 INFO  Pipe:349 - pipe - 5@IsSloppy | csúszósság lekérdezése | false
+
+2023-05-09 20:06:47 INFO  Component:43 - pipe - 5@AddPlayer | Mechanic - 0 rálépett a pipe - 5-ra/re | onComponent.contains(Mechanic - 0): true
+
+2023-05-09 20:06:47 INFO  Component:35 - cistern - 2@RemovePlayer | Mechanic - 0 lelépett a cistern - 2-ról/ről | onComponent.contains(Mechanic - 0): false
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 0
+
+2023-05-09 20:06:47 INFO  Pipe:364 - pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 0
+
+2023-05-09 20:06:57 INFO  Pipe:233 - pipe - 5@Act | Mechanic@2ef5e5e3 játékos a következő opciót választotta: BreakPipe
+

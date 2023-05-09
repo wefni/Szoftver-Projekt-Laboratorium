@@ -233,16 +233,15 @@ public class Pipe extends Breakable {
         logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
 
 
-        switch (valasz)
-        {
-            case "Step": Step(me);
-            case "BreakPipe": Break();
-            case "ChangePipe": ChangePipe();
-            case "MakeSticky": MakeSticky();
-            case "RepairPipe": Repair();
-            case "PlacePump": PlacePump();
-            case "MakeSloppy": MakeSloppy();
-            default: System.out.println("Nem jó bemenet");
+        switch (valasz) {
+            case "Step" -> Step(me);
+            case "BreakPipe" -> Break();
+            case "ChangePipe" -> ChangePipe();
+            case "MakeSticky" -> MakeSticky();
+            case "RepairPipe" -> Repair();
+            case "PlacePump" -> PlacePump();
+            case "MakeSloppy" -> MakeSloppy();
+            default -> System.out.println("Nem jó bemenet");
         }
 
 

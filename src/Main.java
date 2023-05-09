@@ -31,13 +31,13 @@ public class Main {
 
 
 
-        /* NORMAL JATEK
-        Egy normalis jatekmenetet itt tudsz elinditani. A map.txt fájlban lévő pályát fogja használni.
 
-        * Map map = Map.Deserialize("map.txt");
-        * map.AddPlayers(NumOfMechs, NumOfSabs);
-        * map.Game();
-         */
+
+
+        Map map = Map.Deserialize("map2.txt");
+        map.AddPlayers(1, 0);
+        map.Game();
+
 
     }
 }
