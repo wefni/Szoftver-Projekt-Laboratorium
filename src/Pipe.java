@@ -149,13 +149,16 @@ public class Pipe extends Breakable {
         }
     }
 
+    /**
+     * Ez a függvény felelős egy pumpa lerakásáért.
+     */
     public void PlacePump()
     {
         Pump new_pump = new Pump("1250"); //ID?
         Pipe new_pipe = new Pipe("1251"); //ID?
 
         ArrayList<Component> neighbours = this.ShowNeighbours();
-        Component [] szomszedok = new Component [2];
+        Component[] szomszedok = new Component[2];
         int k = 0;
         for(Component i : neighbours)
         {
