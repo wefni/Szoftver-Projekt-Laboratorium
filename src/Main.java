@@ -13,10 +13,6 @@ public class Main {
          map.AddSabToComponent(13);
         */
 
-
-
-
-
         /* UJ PÁLYA KIMENTES
         Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!*/
 

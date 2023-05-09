@@ -218,8 +218,7 @@ public class Pipe extends Breakable {
             {
                 System.out.println("RepairPipe");
             }
-            if(me.GetPump())
-            System.out.println("PlacePump");
+            if(me.GetPump()) System.out.println("PlacePump");
 
         }
         else
@@ -244,8 +243,6 @@ public class Pipe extends Breakable {
             case "MakeSloppy": MakeSloppy();
             default: System.out.println("Nem jó bemenet");
         }
-
-
     }
 
 

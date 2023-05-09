@@ -85,10 +85,8 @@ public class Cistern extends Component{
                         System.out.println("Nem lehet rálépni");
                     }
                 }
-                else{
-                    System.out.println("Rossz input!\n");
-                }
             }
+            if(t) System.out.println("Rossz input!\n");
         }
     }
 }
