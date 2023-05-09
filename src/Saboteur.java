@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Saboteur extends Player{
-    private static final Logger logger = Logger.getLogger(Component.class);
+    private static final Logger logger = Logger.getLogger(Saboteur.class);
 
     public Saboteur(String name) {
         super(name);
@@ -13,6 +13,11 @@ public class Saboteur extends Player{
     }
 
     public void YourTurn() {
-
+        logger.info(this.name + "@YourTurn | " + this.name + " következik \n");
+        where.Act(this,1);
+    }
+    public void ChangeWhere(Component c){
+        where = c;
+        logger.info(this.name + "@ChangeWhere | " + this.name + " helyzete megváltoztatva a következőre: "+c.id+"\n");
     }
 }

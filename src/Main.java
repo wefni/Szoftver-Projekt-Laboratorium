@@ -13,28 +13,30 @@ public class Main {
          map.AddSabToComponent(13);
         */
 
-
-
-
-
         /* UJ PÁLYA KIMENTES
         Igy lehet kimenteni egy később serialiálható pályát. Ezt csak akkor kell hasznánod, ha új pályát raktál össze és ki akarod menteni, de amúgy soha!*/
-        /* a
-         String fileName = "teszt";
+
+
+/*
+
+
          Map map = new Map(fileName);
          map.GenerateMap();
          map.Serialize("map2.txt");
-         */
 
 
 
-        /* NORMAL JATEK
-        Egy normalis jatekmenetet itt tudsz elinditani. A map.txt fájlban lévő pályát fogja használni.
 
-        * Map map = Map.Deserialize("map.txt");
-        * map.AddPlayers(NumOfMechs, NumOfSabs);
-        * map.Game();
-         */
+
+
+*/
+        String fileName = "teszt";
+        Map map = new Map(fileName);
+        map.GenerateMap();
+        map.AddSabToComponent(33);
+        //map.AddPlayers(0, 1);
+        map.Game();
+
 
     }
 }

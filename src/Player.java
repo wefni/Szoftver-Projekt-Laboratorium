@@ -7,7 +7,6 @@ protected String name;
         this.name = name;
     }
     public void YourTurn(){
-
     }
     public void ChangeWhere(Component c){
         where=c;

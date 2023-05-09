@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="">
+    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pump bemenet kezelés">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="8493" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -24,22 +33,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/BME/4. félév/Projlab/Szoftver-Projekt-Laboratorium/log4j-1.2.17.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Baráth Zsolt/OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Tanulmányok/BME/4. félév/Projlab/Sivatag&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -58,7 +67,11 @@
       <option name="presentableId" value="Default" />
       <updated>1682875451836</updated>
       <workItem from="1683558323869" duration="7301000" />
-      <workItem from="1683565763375" duration="5263000" />
+      <workItem from="1683565763375" duration="4758000" />
+      <workItem from="1683619640974" duration="2682000" />
+      <workItem from="1683622871407" duration="3162000" />
+      <workItem from="1683642823983" duration="2987000" />
+      <workItem from="1683653427237" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
       <created>1683565801929</created>
@@ -74,14 +87,35 @@
       <option name="project" value="LOCAL" />
       <updated>1683566055391</updated>
     </task>
-    <task id="LOCAL-00003" summary="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
-      <created>1683570660849</created>
+    <task id="LOCAL-00003" summary="Pump">
+      <created>1683572435580</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1683570660849</updated>
+      <updated>1683572435581</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pump majdnem kesz">
+      <created>1683573610679</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683573610679</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Placepump kesz">
+      <created>1683627256477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683627256477</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Pump bemenet kezelés">
+      <created>1683668754605</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683668754605</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +126,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="asd" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -100,6 +146,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni." />
-    <option name="LAST_COMMIT_MESSAGE" value="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni." />
+    <MESSAGE value="Pump" />
+    <MESSAGE value="Pump majdnem kesz" />
+    <MESSAGE value="Placepump kesz" />
+    <MESSAGE value="Pump bemenet kezelés" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pump bemenet kezelés" />
   </component>
 </project>
