@@ -24,19 +24,19 @@ public class Cistern extends Component{
 
             switch (valasz) {
                 case "Step" -> {
-                    logger.info(this.id + " @Act | "+me+" Step menüpontot választotta \n");
+                    logger.info(this.id + " @Act | "+me.name+" Step menüpontot választotta \n");
                     Step(me);
                     t = true;
                 }
                 case "PickUpPump" -> {
-                    logger.info(this.id + " @Act | "+me+" PickUpPump menüpontot választotta \n");
+                    logger.info(this.id + " @Act | "+me.name+" PickUpPump menüpontot választotta \n");
                     PickUpPump((Mechanic) me);
                     t = true;
                 }
             }
 
             if(!t){
-                logger.info(this.id + " @Act | "+me+" rossz inputot ütött be \n");
+                logger.info(this.id + " @Act | "+me.name+" rossz inputot ütött be \n");
                 System.out.println("Rossz input!");
             }
         }

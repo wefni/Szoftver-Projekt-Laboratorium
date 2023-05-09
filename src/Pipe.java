@@ -239,7 +239,7 @@ public class Pipe extends Breakable {
         String valasz=be.nextLine();
 
         //log
-        logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
+        logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
 
         switch (valasz) {
             case "Step" -> Step(me);
@@ -251,7 +251,7 @@ public class Pipe extends Breakable {
             case "MakeSloppy" -> MakeSloppy();
             default -> {
                 System.out.println("Nem jó bemenet");
-                logger.info(this.id+"@Act | "+me+" játékos nem jó bemenetet adott: "+valasz+"\n");
+                logger.info(this.id+"@Act | "+me.name+" játékos nem jó bemenetet adott: "+valasz+"\n");
             }
         }
     }
@@ -274,13 +274,13 @@ public class Pipe extends Breakable {
                     me.ChangeWhere(j);
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
 
                 } else {
                     System.out.println("Nem lehet rálépni");
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
 
                 }
             }
