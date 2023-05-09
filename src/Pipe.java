@@ -149,8 +149,30 @@ public class Pipe extends Breakable {
         }
     }
 
-    public void PlacePump() {
-        System.out.print("$ Pipe.PlacePump()");
+    public void PlacePump()
+    {
+        Pump new_pump = new Pump("1250"); //ID?
+        Pipe new_pipe = new Pipe("1251"); //ID?
+
+        ArrayList<Component> neighbours = this.ShowNeighbours();
+        Component [] szomszedok = new Component [2];
+        int k = 0;
+        for(Component i : neighbours)
+        {
+            szomszedok[k] = i;
+            k++;
+        }
+        new_pipe.AddNeighbours(new_pump);
+        new_pump.AddNeighbours(new_pipe);
+
+        szomszedok[1].RemoveNeighbours(this);
+        this.RemoveNeighbours(szomszedok[1]);
+
+        new_pump.AddNeighbours(this);
+        this.AddNeighbours(new_pump);
+
+        new_pipe.AddNeighbours(szomszedok[1]);
+        szomszedok[1].AddNeighbours(new_pipe);
     }
 
     //FlowOutot még logolni kell

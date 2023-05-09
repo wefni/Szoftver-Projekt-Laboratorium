@@ -116,7 +116,7 @@ public class Pump extends RandomBreakable
 
     public void Step(Player me)
     {
-        System.out.println("Melyik elemre szeretnél lépni?");
+        /*System.out.println("Melyik elemre szeretnél lépni?");
         for (Component i : this.neighbours)
         {
             System.out.println(i.id);
@@ -145,6 +145,23 @@ public class Pump extends RandomBreakable
                     logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
                 }
             }
+        }*/
+        if(Accept()) //engedi ralepni
+        {
+            if(in.IsSloppy())
+            {
+                in.RandomEnd();
+            }
+            else
+            {
+                AddPlayer(me);
+                RemovePlayer(me);
+
+            }
+        }
+        else
+        {
+            Act();
         }
     }
 
