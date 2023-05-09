@@ -123,6 +123,10 @@ public class Pump extends RandomBreakable
                         }
                     }
                 }
+                default ->
+                {
+                    System.out.println("Érvénytelen bemenet. Add meg újra: ");
+                }
             }
         }
     }
@@ -169,7 +173,7 @@ public class Pump extends RandomBreakable
                     ConfigurePump();
                 }
                 default -> {
-                    System.out.println("Nem jó bemenet. Add meg újra:");
+                    System.out.println("Érvénytelen bemenet. Add meg újra: ");
                     logger.info(this.id+"@Act | "+me.name+" nem jó bemenetet adott: "+valasz+"\n");
                 }
             }
@@ -189,27 +193,42 @@ public class Pump extends RandomBreakable
         }
 
         Scanner be = new Scanner(System.in);
-        String bemenet = be.nextLine();
-        for (Component j : this.neighbours)
+        String valasz;
+        boolean jo = false;
+        boolean ervenyes_bemenet = false;
+        while(!jo)
         {
-            if (Objects.equals(j.id, bemenet))
+            valasz = be.nextLine();
+            for (Component j : this.neighbours)
             {
-                if (j.Accept())
+                if (Objects.equals(j.id, valasz))
                 {
-                    j.AddPlayer(me);
-                    this.RemovePlayer(me);
-                    me.ChangeWhere(j);
+                    ervenyes_bemenet = true;
+                    if (j.Accept())
+                    {
+                        j.AddPlayer(me);
+                        this.RemovePlayer(me);
+                        me.ChangeWhere(j);
 
-                    //logolás
-                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
-                }
-                else
-                {
-                    System.out.println("Nem lehet rálépni");
+                        //logolás
+                        logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+                    }
+                    else
+                    {
+                        System.out.println("Nem lehet rálépni!");
 
-                    //logolás
-                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                        //logolás
+                        logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                    }
                 }
+            }
+            if(ervenyes_bemenet)
+            {
+                jo = true;
+            }
+            else
+            {
+                System.out.println("Érvénytelen bemenet. Add meg újra: ");
             }
         }
     }
