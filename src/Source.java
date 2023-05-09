@@ -9,37 +9,52 @@ private int amountOfWater=0;
     }
 
     public void Act(Player me, int type){
-        System.out.println("Mit szeretnél cselekedni?\nLépés");
+       boolean t = false;
+       while(!t){
+           System.out.println("Mit szeretnél cselekedni?\nStep");
+           Scanner be=new Scanner(System.in);
+           String valasz=be.nextLine();
 
-        Scanner be=new Scanner(System.in);
-        String valasz=be.nextLine();
+           if(valasz.equals("1. Step")) {
+               Step(me);
+               t = true;
+           }
+           if(!t) System.out.println("Rossz input");
+       }
 
-        if(valasz.equals("Lépés")) Step(me);
     }
 
     public void Step(Player me){
-        System.out.println("Melyik elemre szeretnél lépni?");
-        Scanner be=new Scanner(System.in);
+        boolean t = true;
+        while(t){
+            System.out.println("Melyik elemre szeretnél lépni?");
+            Scanner be=new Scanner(System.in);
 
-        for(Component i: this.neighbours)
-        {
-            System.out.println(i.id);
-        }
-
-        String bemenet=be.nextLine();
-        for(Component j: this.neighbours)
-        {
-            if(Objects.equals(j.id, bemenet))
+            for(Component i: this.neighbours)
             {
-                if (j.Accept()) {
-                    j.IsSloppy();
-                    j.AddPlayer(me);
-                    this.RemovePlayer(me);
-                    me.ChangeWhere(j);
-                }
-                else
+                System.out.println(i.id);
+            }
+
+            String bemenet = be.nextLine();
+
+            for(Component j: this.neighbours)
+            {
+                if(Objects.equals(j.id, bemenet))
                 {
-                    System.out.println("Nem lehet rálépni");
+                    if (j.Accept()) {
+                        j.IsSloppy();
+                        j.AddPlayer(me);
+                        this.RemovePlayer(me);
+                        me.ChangeWhere(j);
+                        t = false;
+                    }
+                    else
+                    {
+                        System.out.println("Nem lehet rálépni");
+                    }
+                }
+                else{
+                    System.out.println("Rossz input!\n");
                 }
             }
         }

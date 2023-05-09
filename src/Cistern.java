@@ -3,21 +3,33 @@ import java.util.Scanner;
 
 public class Cistern extends Component{
     private int amountOfWater=0;
+    private int spawnedPipes = 0;
 
     public Cistern(String ID) {
         super(ID);
     }
 
     public void Act(Player me, int type){
-        System.out.println("Mit szeretnél cselekedni?\nLépés");
-        if(type==0) System.out.println("Pumpa felvétele");
+        boolean t = false;
+        while(!t){
+            System.out.println("Mit szeretnél cselekedni?\nStep");
+            if(type==0) System.out.println("PickUpPump");
 
-        Scanner be=new Scanner(System.in);
-        String valasz=be.nextLine();
+            Scanner be=new Scanner(System.in);
+            String valasz=be.nextLine();
 
-        switch (valasz) {
-            case "Lépés" -> Step(me);
-            case "Pumpa felvétele" -> PickUpPump((Mechanic) me);
+            switch (valasz) {
+                case "Step" -> {
+                    Step(me);
+                    t = true;
+                }
+                case "PickUpPump" -> {
+                    PickUpPump((Mechanic) me);
+                    t = true;
+                }
+            }
+
+            if(!t) System.out.println("Rossz input!");
         }
     }
 
@@ -25,7 +37,7 @@ public class Cistern extends Component{
         me.AddPump();
     }
     public void SpawnPipe(){
-        Pipe p = new Pipe("29");  // Itt az ID-t lehet valtoztatni kell
+        Pipe p = new Pipe(""+spawnedPipes++);  // Itt az ID-t lehet valtoztatni kell
         this.AddNeighbours(p);
         p.AddNeighbours(this);
     }
@@ -41,31 +53,38 @@ public class Cistern extends Component{
     }
 
     public void Step(Player me){
-        System.out.println("Melyik elemre szeretnél lépni?");
-        Scanner be=new Scanner(System.in);
+        boolean t = true;
+        while(t){
+            System.out.println("Melyik elemre szeretnél lépni?");
+            Scanner be=new Scanner(System.in);
 
-        for(Component i: this.neighbours)
-        {
-            System.out.println(i.id);
-        }
-
-        String bemenet=be.nextLine();
-        for(Component j: this.neighbours)
-        {
-            if(Objects.equals(j.id, bemenet))
+            for(Component i: this.neighbours)
             {
-                if (j.Accept()) {
-                    j.IsSloppy();
-                    j.AddPlayer(me);
-                    this.RemovePlayer(me);
-                    me.ChangeWhere(j);
-                }
-                else
+                System.out.println(i.id);
+            }
+
+            String bemenet = be.nextLine();
+
+            for(Component j: this.neighbours)
+            {
+                if(Objects.equals(j.id, bemenet))
                 {
-                    System.out.println("Nem lehet rálépni");
+                    if (j.Accept()) {
+                        j.IsSloppy();
+                        j.AddPlayer(me);
+                        this.RemovePlayer(me);
+                        me.ChangeWhere(j);
+                        t = false;
+                    }
+                    else
+                    {
+                        System.out.println("Nem lehet rálépni");
+                    }
+                }
+                else{
+                    System.out.println("Rossz input!\n");
                 }
             }
         }
-
     }
 }
