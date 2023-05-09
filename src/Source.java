@@ -18,7 +18,7 @@ public class Source extends Component {
            Scanner be=new Scanner(System.in);
            String valasz=be.nextLine();
 
-           if(valasz.equals("1. Step")) {
+           if(valasz.equals("Step")) {
                Step(me);
                t = true;
            }
@@ -56,10 +56,8 @@ public class Source extends Component {
                         System.out.println("Nem lehet rálépni");
                     }
                 }
-                else{
-                    System.out.println("Rossz input!\n");
-                }
             }
+            if(t) System.out.println("Rossz input!\n");
         }
     }
 
