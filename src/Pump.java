@@ -43,7 +43,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális bemenet:");
-                    System.out.println(this.in.id + "\n");
+                    //System.out.println(this.in.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges bemenetek:");
@@ -69,7 +69,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális kimenet:");
-                    System.out.println(this.out.id + "\n");
+                   // System.out.println(this.out.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges kimenetek:");
@@ -95,7 +95,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális be- és kimenet:");
-                    System.out.println(this.in.id + ", " + this.out.id + "\n");
+                    //System.out.println(this.in.id + ", " + this.out.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges be- és kimenetek:");
@@ -105,7 +105,7 @@ public class Pump extends RandomBreakable
                     }
                     System.out.println("Kérlek add meg a be- és kimenetet szóközzel elválasztva!");
                     String mindketto = be.nextLine();
-                    String[] uj_bemenet = mindketto.split(" ", 2);
+                    String[] uj_bemenet = mindketto.split(",", 2);
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, uj_bemenet[0])) //megfelelot beallit
@@ -157,7 +157,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     Repair();
                 }
-                case "changepump" ->
+                case "configurepump" ->
                 {
                     jo = true;
                     ConfigurePump();

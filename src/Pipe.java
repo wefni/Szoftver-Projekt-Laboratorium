@@ -15,8 +15,8 @@ public class Pipe extends Breakable {
     private int unBreakable;
     private int sloppy;
     private int hasWater;
-    private boolean hasWaterPartOne;
-    private boolean hasWaterPartTwo;
+    private boolean hasWaterPartOne = false;
+    private boolean hasWaterPartTwo = false;
 
     public Pipe(String ID) {
         super(ID);
@@ -194,10 +194,11 @@ public class Pipe extends Breakable {
             {
                 if(!Objects.equals(i.id, sender.id))
                 {
-                    return i.FlowOut();
+                    return i.FlowOut(this);
                 }
             }
         }
+
         hasWaterPartTwo=true;
         return 1;
     }

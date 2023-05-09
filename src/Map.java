@@ -37,7 +37,7 @@ public class Map implements Serializable{
             for (Player p : players)
             {
                 p.YourTurn();
-                source.FlowOut();
+                source.FlowOut(null);
                 for(Component c : components) { c.Tick(); }
                 SetTeamStats();
             }
@@ -225,6 +225,8 @@ public class Map implements Serializable{
         components.get(43).AddNeighbours(components.get(12));
         components.get(43).AddNeighbours(components.get(24));
         components.get(43).AddNeighbours(components.get(26));
+
+
     }
     public void AddPlayers(int numOfMechs, int numOfSaboteurs)
     {

@@ -64,8 +64,8 @@ public class Source extends Component {
     public int FlowOut(Component sender){
 
         for(Component i : this.neighbours){
-            i.FlowOut();
-            if(i.FlowOut()==1) amountOfWater+=1;
+            i.FlowOut(this);
+            if(i.FlowOut(this)==1) amountOfWater=1;
         }
 
         return 1;

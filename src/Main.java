@@ -19,19 +19,22 @@ public class Main {
 
 /*
 
-         String fileName = "teszt";
+
          Map map = new Map(fileName);
          map.GenerateMap();
          map.Serialize("map2.txt");
+
+
+
+
+
+
 */
-
-
-
-
-
-
-        Map map = Map.Deserialize("map2.txt");
-        map.AddPlayers(1, 0);
+        String fileName = "teszt";
+        Map map = new Map(fileName);
+        map.GenerateMap();
+        map.AddSabToComponent(33);
+        //map.AddPlayers(0, 1);
         map.Game();
 
 

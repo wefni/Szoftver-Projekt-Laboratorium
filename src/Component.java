@@ -62,11 +62,16 @@ public abstract class Component implements Flow, Serializable {
     }
     public void Step(Player me){
     }
-    public int FlowOut(){
+    public int FlowOut(Component sender){
         return 0;
     }
     public int GetWater(){return 0;}
     public void Tick(){}
 
     public void ChangePipe() {}
+
+    public void ConfigurePump() {
+        return
+                ;
+    }
 }

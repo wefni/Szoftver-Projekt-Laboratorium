@@ -1,6 +1,6 @@
 public interface Flow {
 
-    public int FlowOut();
+    public int FlowOut(Component sender);
 
 
 }
