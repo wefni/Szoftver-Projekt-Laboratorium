@@ -20,6 +20,7 @@ public class Pump extends RandomBreakable
     public Pump(String ID)
     {
         super(ID);
+        randomBreakCounter=new Random().nextInt(20,40);
         logger.info(this.id + "@Pump | "+this.id+" létrejött \n");
     }
 
@@ -61,6 +62,7 @@ public class Pump extends RandomBreakable
                         if (Objects.equals(i.id, bemenet)) //megfelelot beallit
                         {
                             this.in = (Pipe) i;
+                            logger.info(this.id+"@ConfigurePump |"+this.id+" bemenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
                 }
@@ -78,6 +80,7 @@ public class Pump extends RandomBreakable
                         if(!Objects.equals(this.out.id, i.id)) //aktuálisat nem ír ki
                         {
                             System.out.print(i.id + ", ");
+                            logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
                     System.out.println("Kérlek add meg a kimenetet!");
@@ -111,10 +114,12 @@ public class Pump extends RandomBreakable
                         if (Objects.equals(i.id, uj_bemenet[0])) //megfelelot beallit
                         {
                             this.in = (Pipe) i;
+                            logger.info(this.id+"@ConfigurePump |"+this.id+" bemenete beállítva: "+i.id+"-ra/re\n");
                         }
                         if (Objects.equals(i.id, uj_bemenet[1])) //megfelelot beallit
                         {
                             this.out = (Pipe) i;
+                            logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
                 }
@@ -145,6 +150,7 @@ public class Pump extends RandomBreakable
         {
             valasz = be.nextLine(); //bekér a választ
             valasz = valasz.toLowerCase(); //kisbetűsít
+            logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
             switch (valasz)
             {
                 case "step" ->
@@ -162,7 +168,10 @@ public class Pump extends RandomBreakable
                     jo = true;
                     ConfigurePump();
                 }
-                default -> System.out.println("Nem jó bemenet. Add meg újra:");
+                default -> {
+                    System.out.println("Nem jó bemenet. Add meg újra:");
+                    logger.info(this.id+"@Act | "+me+" nem jó bemenetet adott: "+valasz+"\n");
+                }
             }
         }
     }
@@ -214,45 +223,53 @@ public class Pump extends RandomBreakable
     {
        if(sender != in)
        {
+           logger.info(this.id+"@FlowOut | "+sender.id+" nem a "+this.id+" bemenetére van kötve | pumpa bemenete: "+this.in+"\n");
            return 0;
        }
        else
        {
            if(broken)
            {
+               logger.info(this.id+"@FlowOut | "+this.id+"-ba/be nem tud víz folyni mert rossz\n");
                 return 0;
            }
            else
            {
                 if(maxTank == tank)
                 {
+                    logger.info(this.id+"@FlowOut | "+this.id+"-ba/be nem tud víz folyni mert tele van a tartálya\n");
                     return 0;
                 }
                 else if(tank < maxTank)
                 {
                     tank++;
+                    logger.info(this.id+"@FlowOut | "+this.id+" tank tartalma növelve | tank: "+this.tank+"\n");
                     if(didWaterFlow)
                     {
+                        logger.info(this.id+"@FlowOut | didWaterFlow=true volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
                         return 1;
                     }
                     else
                     {
+                        logger.info(this.id+"@FlowOut | didWaterFlow=true DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
                         didWaterFlow = true;
                     }
 
                     if(out == null)
                     {
+                        logger.info(this.id+"@FlowOut | "+this.id+"-ból/ből nem tud víz kifolyni mert nincs kimenet beállítva\n");
                         return 1;
                     }
                     else
                     {
                         out.FlowOut();
+                        logger.info(this.id+"@FlowOut | "+this.id+"-ból/ből tovább folyt a víz\n");
                         return 1;
                     }
                 }
+               return 0;
            }
        }
-       return 0; //semmikeppen sem fog teljesulni, de kell a hibajelzes miatt
     }
 
     /**
@@ -269,26 +286,31 @@ public class Pump extends RandomBreakable
         if(randomBreakCounter == 0)
         {
             Break();
+            logger.info(this.id+"@Tick | "+this.id+" véletlenszerűen elromlott | broken= "+broken+"\n");
         }
 
         if(didWaterFlow)
         {
+            logger.info(this.id+"@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
             didWaterFlow = false;
         }
         else
         {
             if(tank == 0)
             {
+                logger.info(this.id+"@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
                 didWaterFlow = false;
             }
             else if(tank > 0)
             {
                 if(out.FlowOut(this) == 0)
                 {
+                    logger.info(this.id+"@Tick | out.FlowOut==0(true) DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
                     didWaterFlow = false;
                 }
                 else if(out.FlowOut(this) == 1)
                 {
+                    logger.info(this.id+"@Tick | out.FlowOut==0(false) DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
                     tank--;
                     didWaterFlow = false;
                 }
@@ -305,6 +327,7 @@ public class Pump extends RandomBreakable
         broken = false;
         Random rand = new Random();
         randomBreakCounter = rand.nextInt(20, 40);
+        logger.info(this.id+"@Repair |"+this.id+" megjavítva | broken= "+this.broken+", randomBreakCounter= "+rand+"\n");
     }
 
     /**
@@ -313,6 +336,7 @@ public class Pump extends RandomBreakable
      */
     public boolean Accept()
     {
+        logger.info(this.id+"@Accept | "+this.id+" ra/re ráléphetnek?  | Igen mert PUMPA \n");
         return true;
     }
 
@@ -322,6 +346,7 @@ public class Pump extends RandomBreakable
      */
     public int GetWater()
     {
+        logger.info(this.id + "@GetWater | A "+this.id+"-ben ennyi víz van: "+tank+"\n");
         return tank;
     }
 }
