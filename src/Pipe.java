@@ -176,6 +176,9 @@ public class Pipe extends Breakable {
 
         new_pipe.AddNeighbours(szomszedok[1]);
         szomszedok[1].AddNeighbours(new_pipe);
+
+        logger.info(this.id+"@PlacePump | pumpa lehelyezve a "+this.id+"-ra/re | új pumpa ID: "+new_pump.id+"\n");
+        logger.info(this.id+"@PlacePump |"+new_pump+" szomszédai: "+new_pump.neighbours.get(0).id+", "+new_pump.neighbours.get(1).id+"\n");
     }
 
     //FlowOutot még logolni kell
@@ -183,10 +186,15 @@ public class Pipe extends Breakable {
         if(!hasWaterPartOne)
         {
             hasWaterPartOne=true;
+            logger.info(this.id+"@FlowOut | "+sender.id+"-ból/ből víz érkezett a "+this.id+" első részébe\n");
             return 1;
         }
         if(broken)
+        {
+            logger.info(this.id+"@FlowOut | Törött a "+this.id+" ezért nem folyik benne tovább a víz\n");
             return 1;
+        }
+
 
         if(hasWaterPartTwo)
         {
@@ -194,11 +202,12 @@ public class Pipe extends Breakable {
             {
                 if(!Objects.equals(i.id, sender.id))
                 {
+                    logger.info(this.id+"@FlowOut |"+this.id+"-ból/ből a víz tovább folyik a "+i.id+"-ba/be\n");
                     return i.FlowOut(this);
                 }
             }
         }
-
+        logger.info(this.id+"@FlowOut | A víz tovább foly a "+this.id+" második részébe\n");
         hasWaterPartTwo=true;
         return 1;
     }
@@ -232,7 +241,6 @@ public class Pipe extends Breakable {
         //log
         logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
 
-
         switch (valasz) {
             case "Step" -> Step(me);
             case "BreakPipe" -> Break();
@@ -241,7 +249,10 @@ public class Pipe extends Breakable {
             case "RepairPipe" -> Repair();
             case "PlacePump" -> PlacePump();
             case "MakeSloppy" -> MakeSloppy();
-            default -> System.out.println("Nem jó bemenet");
+            default -> {
+                System.out.println("Nem jó bemenet");
+                logger.info(this.id+"@Act | "+me+" játékos nem jó bemenetet adott: "+valasz+"\n");
+            }
         }
     }
 
@@ -364,7 +375,10 @@ public class Pipe extends Breakable {
     public void SetRandom(boolean a)
     {
         random=a;
+        logger.info(this.id+"@SetRandom |"+this.id+" random értéke beállítva: "+random+"-ra/re\n");
     }
     public void Repair()
-    {}
+    {
+        logger.info(this.id+"@Repair |"+this.id+" megjavítva | broken: "+this.broken+"\n");
+    }
 }

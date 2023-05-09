@@ -30,6 +30,7 @@ public class Map implements Serializable{
     }
     public void Game()
     {
+        logger.info(" Map @Game | Játék elindítva\n");
         while (round < endRound)
         {
             System.out.println("Round: "+round);
@@ -46,6 +47,7 @@ public class Map implements Serializable{
 
     public void GenerateMap()
     {
+        logger.info("Map @GenerateMap | Pálya generálása \n");
         //ki kene írni hogy létrejött miből mennyi
 
         //Initializing------------------------------------------
@@ -230,6 +232,7 @@ public class Map implements Serializable{
     }
     public void AddPlayers(int numOfMechs, int numOfSaboteurs)
     {
+        logger.info("Map @GenerateMap | Játékosok hozzáadása \n");
         for(int i=0; i < numOfMechs; i++){
             Mechanic m = new Mechanic("Mechanic - " + i);
             m.ChangeWhere(components.get(2));
@@ -253,6 +256,7 @@ public class Map implements Serializable{
         m.ChangeWhere(components.get(componentNumber));
         players.add(m);
         components.get(componentNumber).AddPlayer(m);
+        logger.info("Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(m): "+components.get(componentNumber).onComponent.contains(m)+"\n");
     }
 
     public void AddSabToComponent(int componentNumber)
@@ -264,16 +268,19 @@ public class Map implements Serializable{
         s.ChangeWhere(components.get(componentNumber));
         players.add(s);
         components.get(componentNumber).AddPlayer(s);
+        logger.info("Map @AddSabToComponent | saboteur elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(s): "+components.get(componentNumber).onComponent.contains(s)+"\n");
+
     }
     public void SetTeamStats()
     {
         mechWater =0;
         for(Cistern c : cisterns) { mechWater += c.GetWater();}
-
+        logger.info("Map @SetTeamStats | mechanic pontszáma: "+mechWater+"\n");
         sabWater = 0;
         int sumWaterInComponents = 0;
         for(Component c : components) { sumWaterInComponents += c.GetWater();}
         sabWater = 2 * source.GetWater() - sumWaterInComponents;
+        logger.info("Map @SetTeamStats | saboteur pontszáma: "+sabWater+"\n");
     }
     public void Serialize(String fileName) {
         try {
