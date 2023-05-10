@@ -10,6 +10,10 @@ import java.util.Scanner;
 public class Pump extends RandomBreakable
 {
     private static final Logger logger = Logger.getLogger(Pump.class);
+
+    /**
+     * Pumpa bemeneti csöve
+     */
     private Pipe in;
     private Pipe out;
     private int tank;
@@ -55,7 +59,7 @@ public class Pump extends RandomBreakable
                             System.out.println(i.id);
                         }
                     }
-                    System.out.println("Kérlek add meg a bemenetet!");
+                    System.out.println("\nKérlek add meg a bemenetet!");
                     String bemenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -83,7 +87,7 @@ public class Pump extends RandomBreakable
                             logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
-                    System.out.println("Kérlek add meg a kimenetet!");
+                    System.out.println("\nKérlek add meg a kimenetet!");
                     String kimenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -106,7 +110,7 @@ public class Pump extends RandomBreakable
                     {
                             System.out.println(i.id); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
                     }
-                    System.out.println("Kérlek add meg a be- és kimenetet vesszővel elválasztva!");
+                    System.out.println("\nKérlek add meg a be- és kimenetet vesszővel elválasztva!");
                     String mindketto = be.nextLine();
                     String[] uj_bemenet = mindketto.split(",", 2);
                     for (Component i : neighbours)
