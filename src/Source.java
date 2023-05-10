@@ -71,13 +71,12 @@ public class Source extends Component {
 
         for(Component i : this.neighbours)
         {
-            i.FlowOut(this);
-            if(i.FlowOut(this)==1) {
+            int flowResult = i.FlowOut(this);
+            if(flowResult == 1) {
                 logger.info(this.id+"@FlowOut |"+this.id+"-ból/ből a víz tovább folyik a "+i.id+"-ba/be\n");
                 amountOfWater+=1;
             }
         }
-
         return 1;
     }
 

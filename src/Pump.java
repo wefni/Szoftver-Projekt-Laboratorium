@@ -10,10 +10,14 @@ import java.util.Scanner;
 public class Pump extends RandomBreakable
 {
     private static final Logger logger = Logger.getLogger(Pump.class);
+
+    /**
+     * Pumpa bemeneti csöve
+     */
     private Pipe in;
     private Pipe out;
-    private int tank;
-    private int maxTank;
+    private int tank = 0;
+    private int maxTank = 10;
     private int randomBreakCounter;
     private boolean didWaterFlow;
 
@@ -52,10 +56,10 @@ public class Pump extends RandomBreakable
                     {
                         if(!Objects.equals(this.in.id, i.id)) //aktuálisat nem ír ki
                         {
-                            System.out.print(i.id + ", ");
+                            System.out.println(i.id);
                         }
                     }
-                    System.out.println("Kérlek add meg a bemenetet!");
+                    System.out.println("\nKérlek add meg a bemenetet!");
                     String bemenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -79,11 +83,11 @@ public class Pump extends RandomBreakable
                     {
                         if(!Objects.equals(this.out.id, i.id)) //aktuálisat nem ír ki
                         {
-                            System.out.print(i.id + ", ");
+                            System.out.println(i.id);
                             logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
-                    System.out.println("Kérlek add meg a kimenetet!");
+                    System.out.println("\nKérlek add meg a kimenetet!");
                     String kimenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -104,9 +108,9 @@ public class Pump extends RandomBreakable
                     System.out.println("Lehetséges be- és kimenetek:");
                     for (Component i : neighbours)
                     {
-                            System.out.print(i.id + ", "); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
+                            System.out.println(i.id); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
                     }
-                    System.out.println("Kérlek add meg a be- és kimenetet szóközzel elválasztva!");
+                    System.out.println("\nKérlek add meg a be- és kimenetet vesszővel elválasztva!");
                     String mindketto = be.nextLine();
                     String[] uj_bemenet = mindketto.split(",", 2);
                     for (Component i : neighbours)
@@ -171,6 +175,10 @@ public class Pump extends RandomBreakable
                 {
                     jo = true;
                     ConfigurePump();
+                }
+                case "" ->
+                {
+                    jo = true; //idő léptetés cheat code
                 }
                 default -> {
                     System.out.println("Érvénytelen bemenet. Add meg újra: ");
@@ -245,51 +253,46 @@ public class Pump extends RandomBreakable
            logger.info(this.id+"@FlowOut | "+sender.id+" nem a "+this.id+" bemenetére van kötve | pumpa bemenete: "+this.in+"\n");
            return 0;
        }
-       else
-       {
-           if(broken)
-           {
-               logger.info(this.id+"@FlowOut | "+this.id+"-ba/be nem tud víz folyni mert rossz\n");
-                return 0;
-           }
-           else
-           {
-                if(maxTank == tank)
-                {
-                    logger.info(this.id+"@FlowOut | "+this.id+"-ba/be nem tud víz folyni mert tele van a tartálya\n");
-                    return 0;
-                }
-                else if(tank < maxTank)
-                {
-                    tank++;
-                    logger.info(this.id+"@FlowOut | "+this.id+" tank tartalma növelve | tank: "+this.tank+"\n");
-                    if(didWaterFlow)
-                    {
-                        logger.info(this.id+"@FlowOut | didWaterFlow=true volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
-                        return 1;
-                    }
-                    else
-                    {
-                        logger.info(this.id+"@FlowOut | didWaterFlow=true DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI\n");
-                        didWaterFlow = true;
-                    }
 
-                    if(out == null)
-                    {
-                        logger.info(this.id+"@FlowOut | "+this.id+"-ból/ből nem tud víz kifolyni mert nincs kimenet beállítva\n");
-                        return 1;
-                    }
-                    else
-                    {
-                        out.FlowOut();
-                        logger.info(this.id+"@FlowOut | "+this.id+"-ból/ből tovább folyt a víz\n");
-                        return 1;
-                    }
-                }
+       if(broken) {
+           logger.info(this.id + "@FlowOut | " + this.id + "-ba/be nem tud víz folyni mert rossz\n");
+           return 0;
+       }
+       if(!broken)
+       {
+           if(maxTank == tank)
+           {
+               logger.info(this.id+"@FlowOut | "+this.id+"-ba/be nem tud víz folyni mert tele van a tartálya\n");
                return 0;
            }
+           else if(tank < maxTank)
+           {
+               tank++;
+               logger.info(this.id+"@FlowOut | "+this.id+" tank tartalma növelve | tank: "+this.tank+"\n");
+               if(didWaterFlow)
+               {
+                   logger.info(this.id+"@FlowOut | didWaterFlow=true volt, azaz nem indít tovabb FlowOut()-ot.\n");
+               }
+               else {
+                   logger.info(this.id + "@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.\n");
+                   didWaterFlow = true;
+                   if (out == null) {
+                       logger.info(this.id + "@FlowOut | " + this.id + "-ból/ből nem tud víz kifolyni mert nincs kimenet beállítva\n");
+                   }
+                   else {
+                       logger.info(this.id + "@FlowOut | " + this.id + "-ból/ből tovább folyt a víz\n");
+                       tank -= out.FlowOut(this);
+                   }
+               }
+               return 1;
+           }
+           //should never run
+           return 0;
        }
+       //should never run
+       return 0;
     }
+
 
     /**
      * Csökkenti a randomBreakCounter értékét 1-el és, ha az eléri a nullát, akkor meghívja
