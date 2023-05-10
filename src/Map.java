@@ -30,7 +30,7 @@ public class Map implements Serializable{
     }
     public void Game()
     {
-        logger.info(" Map @Game | Játék elindítva\n");
+        logger.info("Map @Game | Játék elindítva\n");
         while (round < endRound)
         {
             System.out.println("Round: "+round);
