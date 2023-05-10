@@ -192,7 +192,21 @@ public class Pipe extends Breakable {
         if(broken)
         {
             logger.info(this.id+"@FlowOut | Törött a "+this.id+" ezért nem folyik benne tovább a víz\n");
+            if(hasWaterPartTwo)
+            {
+                for(Component i: this.neighbours) // megkeressük azt a szomszédot ahonnan nem jött
+                {
+                    if(!Objects.equals(i.id, sender.id))
+                    {
+                        logger.info(this.id+"@FlowOut |"+this.id+"-ból/ből a víz tovább folyik a "+i.id+"-ba/be\n");
+                        if(i.FlowOut(this) == 1){
+                            hasWaterPartTwo = false;
+                        }
+                    }
+                }
+            }
             return 1;
+
         }
 
 
@@ -379,6 +393,8 @@ public class Pipe extends Breakable {
     }
     public void Repair()
     {
+        this.broken = false;
         logger.info(this.id+"@Repair |"+this.id+" megjavítva | broken: "+this.broken+"\n");
+
     }
 }

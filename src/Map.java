@@ -275,11 +275,11 @@ public class Map implements Serializable{
     {
         mechWater =0;
         for(Cistern c : cisterns) { mechWater += c.GetWater();}
-        logger.info("Map @SetTeamStats | mechanic pontszáma: "+mechWater+"\n");
         sabWater = 0;
         int sumWaterInComponents = 0;
         for(Component c : components) { sumWaterInComponents += c.GetWater();}
         sabWater = 2 * source.GetWater() - sumWaterInComponents;
+        logger.info("Map @SetTeamStats | mechanic pontszáma: "+mechWater+"\n");
         logger.info("Map @SetTeamStats | saboteur pontszáma: "+sabWater+"\n");
     }
     public void Serialize(String fileName) {
