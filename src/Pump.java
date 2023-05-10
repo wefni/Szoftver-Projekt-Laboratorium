@@ -10,6 +10,10 @@ import java.util.Scanner;
 public class Pump extends RandomBreakable
 {
     private static final Logger logger = Logger.getLogger(Pump.class);
+
+    /**
+     * Pumpa bemeneti csöve
+     */
     private Pipe in;
     private Pipe out;
     private int tank = 0;
@@ -52,10 +56,10 @@ public class Pump extends RandomBreakable
                     {
                         if(!Objects.equals(this.in.id, i.id)) //aktuálisat nem ír ki
                         {
-                            System.out.print(i.id + ", ");
+                            System.out.println(i.id);
                         }
                     }
-                    System.out.println("Kérlek add meg a bemenetet!");
+                    System.out.println("\nKérlek add meg a bemenetet!");
                     String bemenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -79,11 +83,11 @@ public class Pump extends RandomBreakable
                     {
                         if(!Objects.equals(this.out.id, i.id)) //aktuálisat nem ír ki
                         {
-                            System.out.print(i.id + ", ");
+                            System.out.println(i.id);
                             logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
-                    System.out.println("Kérlek add meg a kimenetet!");
+                    System.out.println("\nKérlek add meg a kimenetet!");
                     String kimenet = be.nextLine();
                     for (Component i : neighbours)
                     {
@@ -104,9 +108,9 @@ public class Pump extends RandomBreakable
                     System.out.println("Lehetséges be- és kimenetek:");
                     for (Component i : neighbours)
                     {
-                            System.out.print(i.id + ", "); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
+                            System.out.println(i.id); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
                     }
-                    System.out.println("Kérlek add meg a be- és kimenetet szóközzel elválasztva!");
+                    System.out.println("\nKérlek add meg a be- és kimenetet vesszővel elválasztva!");
                     String mindketto = be.nextLine();
                     String[] uj_bemenet = mindketto.split(",", 2);
                     for (Component i : neighbours)
@@ -171,6 +175,10 @@ public class Pump extends RandomBreakable
                 {
                     jo = true;
                     ConfigurePump();
+                }
+                case "" ->
+                {
+                    jo = true; //idő léptetés cheat code
                 }
                 default -> {
                     System.out.println("Érvénytelen bemenet. Add meg újra: ");
