@@ -9,6 +9,9 @@ import java.util.Scanner;
  */
 public class Pump extends RandomBreakable
 {
+    private  boolean random=false;
+    Random rand = new Random();
+    Random detrand= new Random(42);
     private static final Logger logger = Logger.getLogger(Pump.class);
 
     /**
@@ -354,9 +357,14 @@ public class Pump extends RandomBreakable
     public void Repair()
     {
         broken = false;
-        Random rand = new Random();
-        randomBreakCounter = rand.nextInt(20, 40);
-        logger.info(this.id+"@Repair |"+this.id+" megjavítva | broken= "+this.broken+", randomBreakCounter= "+rand+"\n");
+        if(random) {
+            randomBreakCounter = rand.nextInt(20, 40);
+        }
+        if(!random)
+        {
+            randomBreakCounter = detrand.nextInt(20, 40);
+        }
+
     }
 
     /**
@@ -377,5 +385,9 @@ public class Pump extends RandomBreakable
     {
         logger.info(this.id + "@GetWater | A "+this.id+"-ben ennyi víz van: "+tank+"\n");
         return tank;
+    }
+    public void SetRandom(boolean a)
+    {
+        random=a;
     }
 }
