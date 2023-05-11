@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pump osztály és Placepump kesz">
+
+    <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pump javítások">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.bat" beforeDir="false" afterPath="$PROJECT_DIR$/log.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +20,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="8515" />
+
+    <option name="totalTimeSeconds" value="10392" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="pump1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +48,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Baráth Zsolt/OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Tanulmányok/BME/4. félév/Projlab/Program&quot;,
+
+    &quot;last_opened_file_path&quot;: &quot;D:/BME/Projlab/Projlab4&quot;
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,16 +82,17 @@
       <workItem from="1683565763375" duration="4758000" />
       <workItem from="1683619640974" duration="2682000" />
       <workItem from="1683622871407" duration="3162000" />
-      <workItem from="1683642823983" duration="3130000" />
-      <workItem from="1683650199401" duration="97000" />
-      <workItem from="1683652190204" duration="2681000" />
-      <workItem from="1683656767419" duration="1473000" />
-      <workItem from="1683665302439" duration="917000" />
-      <workItem from="1683666277880" duration="34000" />
-      <workItem from="1683666427397" duration="191000" />
-      <workItem from="1683666650226" duration="18000" />
-      <workItem from="1683667113475" duration="59000" />
-      <workItem from="1683834069426" duration="947000" />
+
+      <workItem from="1683642823983" duration="2987000" />
+      <workItem from="1683653427237" duration="2250000" />
+      <workItem from="1683724705915" duration="434000" />
+      <workItem from="1683726115552" duration="310000" />
+      <workItem from="1683726643817" duration="108000" />
+      <workItem from="1683732613850" duration="15000" />
+      <workItem from="1683735655281" duration="168000" />
+      <workItem from="1683827751569" duration="973000" />
+      <workItem from="1683829070628" duration="1390000" />
+
     </task>
     <task id="LOCAL-00001" summary="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
       <created>1683565801929</created>
@@ -120,14 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683627256477</updated>
     </task>
-    <task id="LOCAL-00006" summary="Pump osztály és Placepump kesz">
-      <created>1683645867745</created>
+    <task id="LOCAL-00006" summary="Pump bemenet kezelés">
+      <created>1683668754605</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1683645867745</updated>
+      <updated>1683668754605</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pump javítások">
+      <created>1683724735603</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683724735603</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Pump javítások">
+      <created>1683724924779</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683724924779</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +161,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="asd" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -149,7 +184,8 @@
     <MESSAGE value="Pump" />
     <MESSAGE value="Pump majdnem kesz" />
     <MESSAGE value="Placepump kesz" />
-    <MESSAGE value="Pump osztály és Placepump kesz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pump osztály és Placepump kesz" />
+    <MESSAGE value="Pump bemenet kezelés" />
+    <MESSAGE value="Pump javítások" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pump javítások" />
   </component>
 </project>

@@ -15,8 +15,8 @@ public class Pipe extends Breakable {
     private int unBreakable;
     private int sloppy;
     private int hasWater;
-    private boolean hasWaterPartOne;
-    private boolean hasWaterPartTwo;
+    private boolean hasWaterPartOne = false;
+    private boolean hasWaterPartTwo = false;
 
     public Pipe(String ID) {
         super(ID);
@@ -44,7 +44,7 @@ public class Pipe extends Breakable {
 
                 tmp1.addAll(this.neighbours.get(1).ShowNeighbours());// az elso szomszed( a 1-es) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
 
-        for (Component i : tmp0) {
+        for (Component i : tmp0){
             if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
             {
                 neighboursside0.add(i.neighbours.get(0));
@@ -54,7 +54,7 @@ public class Pipe extends Breakable {
                 neighboursside0.add(i.neighbours.get(1));
             }
         }
-        for (Component i : tmp1) {
+        for (Component i : tmp1){
             if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
             {
                 neighboursside1.add(i.neighbours.get(0));
@@ -66,84 +66,103 @@ public class Pipe extends Breakable {
         }
 
         // a neighbourssode1 -ban vannak a 0 oldali szomszédok az 1 ben az 1 oldaliak
-        System.out.println("Hány véget akarsz áthelyezni?");
+        boolean jo = true;
         Scanner be = new Scanner(System.in);
-        int valasz = Integer.parseInt(be.nextLine());
+        int valasz=0;
+        while(jo) {
+            System.out.println("Hány véget akarsz áthelyezni?");
+             valasz = Integer.parseInt(be.nextLine());
+            if(valasz==1 || valasz == 2)
+                jo=false;
+        }
         if(valasz==1) // ha csak egy oldalt szeretne áthelyezni
         {
-            System.out.println("Melyik végét szeretnéd átrakni?");
-            int oldal = Integer.parseInt(be.nextLine());
-            System.out.println("Melyik(ekre) szeretnéd rakni");
-            if(oldal==0) {
-                for (Component i : neighboursside0) {
-                    System.out.println(i.id);
-                }
-                String bemenet=be.nextLine();
-                for(Component i: neighboursside0)
-                {
-                    if(Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
-                    {
-                        i.AddNeighbours(this); // átállítjuk a szomszédságot
-                        this.AddNeighbours(i);
-                        this.RemoveNeighbours(this.neighbours.get(0));
-                        this.neighbours.get(0).RemoveNeighbours(this);
-
-                        //logolás
-                        logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
-
-                    }
-
-                }
+             // az input helyessegere
+            int oldal = 0; // melyik odallal szeretnel foglalkozni
+            while (jo) {
+                System.out.println("Melyik végét szeretnéd átrakni?");
+                oldal = Integer.parseInt(be.nextLine());
+                if (oldal == 1 || oldal == 0)
+                    jo = false;
             }
-            if(oldal==1)
-            {
-                for (Component i : neighboursside1) {
-                    System.out.println(i.id);
-                }
-                String bemenet=be.nextLine();
-                for(Component i: neighboursside1)
-                {
-                    if(Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
-                    {
-                        i.AddNeighbours(this); // átállítjuk a szomszédságot
-                        this.AddNeighbours(i);
-                        this.RemoveNeighbours(this.neighbours.get(1));
-                        this.neighbours.get(1).RemoveNeighbours(this);
+            jo = true;
+            System.out.println("Melyik(ekre) szeretnéd rakni");
+            while (jo) { // jo input biztositasa
 
-                        //logolás
-                        logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
+                if (oldal == 0) {
+                    for (Component i : neighboursside0) {
+                        System.out.println(i.id);
+                    }
+                    String bemenet = be.nextLine();
+                    for (Component i : neighboursside0) {
+                        if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
+                        {
+                            jo = false;
+                            i.AddNeighbours(this); // átállítjuk a szomszédságot
+                            this.AddNeighbours(i);
+                            this.RemoveNeighbours(this.neighbours.get(0));
+                            this.neighbours.get(0).RemoveNeighbours(this);
+
+                            //logolás
+                            logger.info(this.id + "@ChangePipe | " + this.id + " egyik vége átkötve " + i.id + "-ra/re | " + this.id + " neighbours.contains(" + i + "): " + this.neighbours.contains(i) + "\n");
+
+                        }
 
                     }
+                }
+                if (oldal == 1) {
+                    for (Component i : neighboursside1) {
+                        System.out.println(i.id);
+                    }
+                    String bemenet = be.nextLine();
+                    for (Component i : neighboursside1) {
+                        if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
+                        {
+                            jo=false;
+                            i.AddNeighbours(this); // átállítjuk a szomszédságot
+                            this.AddNeighbours(i);
+                            this.RemoveNeighbours(this.neighbours.get(1));
+                            this.neighbours.get(1).RemoveNeighbours(this);
 
+                            //logolás
+                            logger.info(this.id + "@ChangePipe | " + this.id + " egyik vége átkötve " + i.id + "-ra/re | " + this.id + " neighbours.contains(" + i + "): " + this.neighbours.contains(i) + "\n");
+
+                        }
+
+                    }
                 }
             }
         }
+        jo=true;
         if(valasz==2) // ha mindkét végét át akarjuk állítani
         {
-            System.out.println("Melyik(ekre) szeretnéd rakni");
-            neighboursside0.addAll(neighboursside1); // egyberakjuk
-            for (Component i : neighboursside0) {
-                System.out.println(i.id);
+            while(jo) {
+                System.out.println("Melyik(ekre) szeretnéd rakni");
+                neighboursside0.addAll(neighboursside1); // egyberakjuk
+                for (Component i : neighboursside0) {
+                    System.out.println(i.id);
+                }
+                String[] bemenet = new String[2];
+                bemenet[0] = be.nextLine(); // egyik oldal kiválasztása
+                bemenet[1] = be.nextLine(); // másik oldal
+                int j = 0;
+                for (Component i : neighboursside0) {
+                    if (Objects.equals(i.id, bemenet[j]))// megkeressük a kiválasztottat
+                    {
+                        jo=false;
+                        i.AddNeighbours(this); // átállítjuk a szomszédságot
+                        this.AddNeighbours(i);
+                        this.RemoveNeighbours(this.neighbours.get(j));
+                        this.neighbours.get(j).RemoveNeighbours(this);
+                        j++;
+
+                        //logolás
+                        logger.info(this.id + "@ChangePipe | " + this.id + " egyik vége átkötve " + i.id + "-ra/re | " + this.id + " neighbours.contains(" + i + "): " + this.neighbours.contains(i) + "\n");
+
+                    }
+
+                }
             }
-            String [] bemenet= new String[2];
-                    bemenet[0]=be.nextLine(); // egyik oldal kiválasztása
-                    bemenet[1]= be.nextLine(); // másik oldal
-                    int j=0;
-                        for (Component i : neighboursside0) {
-                            if (Objects.equals(i.id, bemenet[j]))// megkeressük a kiválasztottat
-                            {
-                                i.AddNeighbours(this); // átállítjuk a szomszédságot
-                                this.AddNeighbours(i);
-                                this.RemoveNeighbours(this.neighbours.get(j));
-                                this.neighbours.get(j).RemoveNeighbours(this);
-                                j++;
-
-                                //logolás
-                                logger.info(this.id+"@ChangePipe | "+this.id+" egyik vége átkötve "+i.id+"-ra/re | "+this.id+" neighbours.contains("+i+"): "+ this.neighbours.contains(i)+"\n");
-
-                            }
-
-                        }
 
 
         }
@@ -176,6 +195,9 @@ public class Pipe extends Breakable {
 
         new_pipe.AddNeighbours(szomszedok[1]);
         szomszedok[1].AddNeighbours(new_pipe);
+
+        logger.info(this.id+"@PlacePump | pumpa lehelyezve a "+this.id+"-ra/re | új pumpa ID: "+new_pump.id+"\n");
+        logger.info(this.id+"@PlacePump |"+new_pump+" szomszédai: "+new_pump.neighbours.get(0).id+", "+new_pump.neighbours.get(1).id+"\n");
     }
 
     //FlowOutot még logolni kell
@@ -183,10 +205,29 @@ public class Pipe extends Breakable {
         if(!hasWaterPartOne)
         {
             hasWaterPartOne=true;
+            logger.info(this.id+"@FlowOut | "+sender.id+"-ból/ből víz érkezett a "+this.id+" első részébe\n");
             return 1;
         }
         if(broken)
+        {
+            logger.info(this.id+"@FlowOut | Törött a "+this.id+" ezért nem folyik benne tovább a víz\n");
+            if(hasWaterPartTwo)
+            {
+                for(Component i: this.neighbours) // megkeressük azt a szomszédot ahonnan nem jött
+                {
+                    if(!Objects.equals(i.id, sender.id))
+                    {
+                        logger.info(this.id+"@FlowOut |"+this.id+"-ból/ből a víz tovább folyik a "+i.id+"-ba/be\n");
+                        if(i.FlowOut(this) == 1){
+                            hasWaterPartTwo = false;
+                        }
+                    }
+                }
+            }
             return 1;
+
+        }
+
 
         if(hasWaterPartTwo)
         {
@@ -194,17 +235,19 @@ public class Pipe extends Breakable {
             {
                 if(!Objects.equals(i.id, sender.id))
                 {
-                    return i.FlowOut();
+                    logger.info(this.id+"@FlowOut |"+this.id+"-ból/ből a víz tovább folyik a "+i.id+"-ba/be\n");
+                    return i.FlowOut(this);
                 }
             }
         }
+        logger.info(this.id+"@FlowOut | A víz tovább foly a "+this.id+" második részébe\n");
         hasWaterPartTwo=true;
         return 1;
     }
 
     public void Act(Player me, int type) {
         System.out.println("Mit szeretnél cselekedni?");
-        if(sticky>0)
+        if(sticky==0)
         {
             System.out.println("Step");
         }
@@ -218,8 +261,7 @@ public class Pipe extends Breakable {
             {
                 System.out.println("RepairPipe");
             }
-            if(me.GetPump())
-            System.out.println("PlacePump");
+            if(me.GetPump()) System.out.println("PlacePump");
 
         }
         else
@@ -227,25 +269,30 @@ public class Pipe extends Breakable {
             System.out.println("MakeSloppy");
         }
         Scanner be=new Scanner(System.in);
-        String valasz=be.nextLine();
 
-        //log
-        logger.info(this.id+"@Act | "+me+" játékos a következő opciót választotta: "+valasz+"\n");
+        String valasz;
 
 
-        switch (valasz)
-        {
-            case "Step": Step(me);
-            case "BreakPipe": Break();
-            case "ChangePipe": ChangePipe();
-            case "MakeSticky": MakeSticky();
-            case "RepairPipe": Repair();
-            case "PlacePump": PlacePump();
-            case "MakeSloppy": MakeSloppy();
-            default: System.out.println("Nem jó bemenet");
-        }
-
-
+        boolean jo;
+        do {
+            valasz=be.nextLine();
+            jo=false;
+            switch (valasz) {
+                case "Step" -> Step(me);
+                case "BreakPipe" -> Break();
+                case "ChangePipe" -> ChangePipe();
+                case "MakeSticky" -> MakeSticky();
+                case "RepairPipe" -> Repair();
+                case "PlacePump" -> PlacePump();
+                case "MakeSloppy" -> MakeSloppy();
+                default -> {
+                    jo=true;
+                    System.out.println("Nem jó bemenet");
+                    logger.info(this.id + "@Act | " + me.name + " játékos nem jó bemenetet adott: " + valasz + "\n");
+                }
+            }
+        } while(jo);
+        logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");//log
     }
 
 
@@ -259,22 +306,20 @@ public class Pipe extends Breakable {
 
         String bemenet = be.nextLine();
         for (Component j : this.neighbours) {
-
             if (Objects.equals(j.id, bemenet)) {
-
                 if (j.Accept()) {
                     j.AddPlayer(me);
                     this.RemovePlayer(me);
                     me.ChangeWhere(j);
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
 
                 } else {
                     System.out.println("Nem lehet rálépni");
 
                     //logolás
-                    logger.info(this.id + "@Step | "+me+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
+                    logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | nem tudott rálépni \n");
 
                 }
             }
@@ -369,7 +414,22 @@ public class Pipe extends Breakable {
     public void SetRandom(boolean a)
     {
         random=a;
+        logger.info(this.id+"@SetRandom |"+this.id+" random értéke beállítva: "+random+"-ra/re\n");
     }
     public void Repair()
-    {}
+    {
+        this.broken = false;
+        if(random)
+            unBreakable=vel.nextInt(2,10);
+
+        if(!random)
+            unBreakable= detvel.nextInt(2,10);
+        logger.info(this.id+"@Repair |"+this.id+" megjavítva | broken: "+this.broken+"\n");
+
+    }
+    public void Break()
+    {
+        if(unBreakable==0)
+            broken=true;
+    }
 }

@@ -30,6 +30,7 @@ public class Map implements Serializable{
     }
     public void Game()
     {
+        logger.info("Map @Game | Játék elindítva\n");
         while (round < endRound)
         {
             System.out.println("Round: "+round);
@@ -37,7 +38,7 @@ public class Map implements Serializable{
             for (Player p : players)
             {
                 p.YourTurn();
-                source.FlowOut();
+                source.FlowOut(null);
                 for(Component c : components) { c.Tick(); }
                 SetTeamStats();
             }
@@ -46,30 +47,31 @@ public class Map implements Serializable{
 
     public void GenerateMap()
     {
+        logger.info("Map @GenerateMap | Pálya generálása \n");
         //ki kene írni hogy létrejött miből mennyi
 
         //Initializing------------------------------------------
         //Source
-        Source source0 = new Source("source - 0");
+        Source source0 = new Source("source-0");
         components.add(source0);
         source = source0;
 
         //Cisterns
         for(int i = 1; i<4; i++){
-            Cistern cistern = new Cistern("cistern - "+(i));
+            Cistern cistern = new Cistern("cistern-"+(i));
             components.add(cistern);
             cisterns.add(cistern);
         }
 
         //Pipes
         for(int i= 4; i < 30; i++){
-            Pipe pipe = new Pipe("pipe - "+(i));
+            Pipe pipe = new Pipe("pipe-"+(i));
             components.add(pipe);
         }
 
         //Pumps
         for(int i = 30; i < 44; i++){
-            Pump pump = new Pump("pump - "+(i));
+            Pump pump = new Pump("pump-"+(i));
             components.add(pump);
         }
 
@@ -225,9 +227,26 @@ public class Map implements Serializable{
         components.get(43).AddNeighbours(components.get(12));
         components.get(43).AddNeighbours(components.get(24));
         components.get(43).AddNeighbours(components.get(26));
+
+        //Pump in and out
+        components.get(30).ConfigurePumpWithParameters(components.get(29), components.get(27));
+        components.get(42).ConfigurePumpWithParameters(components.get(27), components.get(26));
+        components.get(32).ConfigurePumpWithParameters(components.get(28), components.get(24));
+        components.get(31).ConfigurePumpWithParameters(components.get(21), components.get(14));
+        components.get(33).ConfigurePumpWithParameters(components.get(22), components.get(19));
+        components.get(34).ConfigurePumpWithParameters(components.get(19), components.get(18));
+        components.get(35).ConfigurePumpWithParameters(components.get(20), components.get(13));
+        components.get(36).ConfigurePumpWithParameters(components.get(18), components.get(16));
+        components.get(43).ConfigurePumpWithParameters(components.get(24), components.get(11));
+        components.get(38).ConfigurePumpWithParameters(components.get(14), components.get(6));
+        components.get(37).ConfigurePumpWithParameters(components.get(16), components.get(4));
+        components.get(39).ConfigurePumpWithParameters(components.get(11), components.get(10));
+        components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
+        components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
     }
     public void AddPlayers(int numOfMechs, int numOfSaboteurs)
     {
+        logger.info("Map @GenerateMap | Játékosok hozzáadása \n");
         for(int i=0; i < numOfMechs; i++){
             Mechanic m = new Mechanic("Mechanic - " + i);
             m.ChangeWhere(components.get(2));
@@ -251,6 +270,7 @@ public class Map implements Serializable{
         m.ChangeWhere(components.get(componentNumber));
         players.add(m);
         components.get(componentNumber).AddPlayer(m);
+        logger.info("Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(m): "+components.get(componentNumber).onComponent.contains(m)+"\n");
     }
 
     public void AddSabToComponent(int componentNumber)
@@ -262,16 +282,19 @@ public class Map implements Serializable{
         s.ChangeWhere(components.get(componentNumber));
         players.add(s);
         components.get(componentNumber).AddPlayer(s);
+        logger.info("Map @AddSabToComponent | saboteur elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(s): "+components.get(componentNumber).onComponent.contains(s)+"\n");
+
     }
     public void SetTeamStats()
     {
         mechWater =0;
         for(Cistern c : cisterns) { mechWater += c.GetWater();}
-
         sabWater = 0;
         int sumWaterInComponents = 0;
         for(Component c : components) { sumWaterInComponents += c.GetWater();}
         sabWater = 2 * source.GetWater() - sumWaterInComponents;
+        logger.info("Map @SetTeamStats | mechanic pontszáma: "+mechWater+"\n");
+        logger.info("Map @SetTeamStats | saboteur pontszáma: "+sabWater+"\n");
     }
     public void Serialize(String fileName) {
         try {
