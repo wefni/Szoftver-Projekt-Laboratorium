@@ -32,6 +32,9 @@ public class Main
 
 
 */
+        String fileName = "teszt";
+        Map map = new Map(fileName);
+        map.GenerateMap();
 
         System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
         Scanner be = new Scanner(System.in);
@@ -56,12 +59,15 @@ public class Main
                             case "be" -> //Random bekapcsolás
                             {
                                 jol_valaszoltak = true;
-
+                                System.out.println("Random bekapcsolva.");
                             }
                             case "ki" -> //Random bekapcsolás
                             {
                                 jol_valaszoltak = true;
 
+                                //map.
+
+                                System.out.println("Random kikapcsolva.");
                             }
                             default ->
                             {
@@ -110,10 +116,6 @@ public class Main
                         i++;
                     }
 
-                    String fileName = "teszt";
-                    Map map = new Map(fileName);
-                    map.GenerateMap();
-
                     //Jatekosok map-ra lerakása
                     for (int k = 0; k < i - 1; k++)
                     {
@@ -141,10 +143,5 @@ public class Main
                 }
             }
         }
-
-
-
-
-
     }
 }
