@@ -2,307 +2,307 @@ Map@Map | Map létrejött
 
 Map @GenerateMap | Pálya generálása 
 
-source - 0@Source | source - 0 létrejött 
+source-0@Source | source-0 létrejött 
 
-cistern - 1 @Cistern | cistern - 1 létrejött 
+cistern-1 @Cistern | cistern-1 létrejött 
 
-cistern - 2 @Cistern | cistern - 2 létrejött 
+cistern-2 @Cistern | cistern-2 létrejött 
 
-cistern - 3 @Cistern | cistern - 3 létrejött 
+cistern-3 @Cistern | cistern-3 létrejött 
 
-pipe - 4@Pipe | pipe - 4 létrejött 
+pipe-4@Pipe | pipe-4 létrejött 
 
-pipe - 5@Pipe | pipe - 5 létrejött 
+pipe-5@Pipe | pipe-5 létrejött 
 
-pipe - 6@Pipe | pipe - 6 létrejött 
+pipe-6@Pipe | pipe-6 létrejött 
 
-pipe - 7@Pipe | pipe - 7 létrejött 
+pipe-7@Pipe | pipe-7 létrejött 
 
-pipe - 8@Pipe | pipe - 8 létrejött 
+pipe-8@Pipe | pipe-8 létrejött 
 
-pipe - 9@Pipe | pipe - 9 létrejött 
+pipe-9@Pipe | pipe-9 létrejött 
 
-pipe - 10@Pipe | pipe - 10 létrejött 
+pipe-10@Pipe | pipe-10 létrejött 
 
-pipe - 11@Pipe | pipe - 11 létrejött 
+pipe-11@Pipe | pipe-11 létrejött 
 
-pipe - 12@Pipe | pipe - 12 létrejött 
+pipe-12@Pipe | pipe-12 létrejött 
 
-pipe - 13@Pipe | pipe - 13 létrejött 
+pipe-13@Pipe | pipe-13 létrejött 
 
-pipe - 14@Pipe | pipe - 14 létrejött 
+pipe-14@Pipe | pipe-14 létrejött 
 
-pipe - 15@Pipe | pipe - 15 létrejött 
+pipe-15@Pipe | pipe-15 létrejött 
 
-pipe - 16@Pipe | pipe - 16 létrejött 
+pipe-16@Pipe | pipe-16 létrejött 
 
-pipe - 17@Pipe | pipe - 17 létrejött 
+pipe-17@Pipe | pipe-17 létrejött 
 
-pipe - 18@Pipe | pipe - 18 létrejött 
+pipe-18@Pipe | pipe-18 létrejött 
 
-pipe - 19@Pipe | pipe - 19 létrejött 
+pipe-19@Pipe | pipe-19 létrejött 
 
-pipe - 20@Pipe | pipe - 20 létrejött 
+pipe-20@Pipe | pipe-20 létrejött 
 
-pipe - 21@Pipe | pipe - 21 létrejött 
+pipe-21@Pipe | pipe-21 létrejött 
 
-pipe - 22@Pipe | pipe - 22 létrejött 
+pipe-22@Pipe | pipe-22 létrejött 
 
-pipe - 23@Pipe | pipe - 23 létrejött 
+pipe-23@Pipe | pipe-23 létrejött 
 
-pipe - 24@Pipe | pipe - 24 létrejött 
+pipe-24@Pipe | pipe-24 létrejött 
 
-pipe - 25@Pipe | pipe - 25 létrejött 
+pipe-25@Pipe | pipe-25 létrejött 
 
-pipe - 26@Pipe | pipe - 26 létrejött 
+pipe-26@Pipe | pipe-26 létrejött 
 
-pipe - 27@Pipe | pipe - 27 létrejött 
+pipe-27@Pipe | pipe-27 létrejött 
 
-pipe - 28@Pipe | pipe - 28 létrejött 
+pipe-28@Pipe | pipe-28 létrejött 
 
-pipe - 29@Pipe | pipe - 29 létrejött 
+pipe-29@Pipe | pipe-29 létrejött 
 
-pump - 30@Pump | pump - 30 létrejött 
+pump-30@Pump | pump-30 létrejött 
 
-pump - 31@Pump | pump - 31 létrejött 
+pump-31@Pump | pump-31 létrejött 
 
-pump - 32@Pump | pump - 32 létrejött 
+pump-32@Pump | pump-32 létrejött 
 
-pump - 33@Pump | pump - 33 létrejött 
+pump-33@Pump | pump-33 létrejött 
 
-pump - 34@Pump | pump - 34 létrejött 
+pump-34@Pump | pump-34 létrejött 
 
-pump - 35@Pump | pump - 35 létrejött 
+pump-35@Pump | pump-35 létrejött 
 
-pump - 36@Pump | pump - 36 létrejött 
+pump-36@Pump | pump-36 létrejött 
 
-pump - 37@Pump | pump - 37 létrejött 
+pump-37@Pump | pump-37 létrejött 
 
-pump - 38@Pump | pump - 38 létrejött 
+pump-38@Pump | pump-38 létrejött 
 
-pump - 39@Pump | pump - 39 létrejött 
+pump-39@Pump | pump-39 létrejött 
 
-pump - 40@Pump | pump - 40 létrejött 
+pump-40@Pump | pump-40 létrejött 
 
-pump - 41@Pump | pump - 41 létrejött 
+pump-41@Pump | pump-41 létrejött 
 
-pump - 42@Pump | pump - 42 létrejött 
+pump-42@Pump | pump-42 létrejött 
 
-pump - 43@Pump | pump - 43 létrejött 
+pump-43@Pump | pump-43 létrejött 
 
-source - 0@AddNeighbour | pipe - 22 hozzáadva source - 0 szomszédjához | neighbours.contains(pipe - 22): true
+source-0@AddNeighbour | pipe-22 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-22): true
 
-source - 0@AddNeighbour | pipe - 28 hozzáadva source - 0 szomszédjához | neighbours.contains(pipe - 28): true
+source-0@AddNeighbour | pipe-28 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-28): true
 
-source - 0@AddNeighbour | pipe - 29 hozzáadva source - 0 szomszédjához | neighbours.contains(pipe - 29): true
+source-0@AddNeighbour | pipe-29 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-29): true
 
-cistern - 1@AddNeighbour | pipe - 7 hozzáadva cistern - 1 szomszédjához | neighbours.contains(pipe - 7): true
+cistern-1@AddNeighbour | pipe-7 hozzáadva cistern-1 szomszédjához | neighbours.contains(pipe-7): true
 
-cistern - 1@AddNeighbour | pipe - 8 hozzáadva cistern - 1 szomszédjához | neighbours.contains(pipe - 8): true
+cistern-1@AddNeighbour | pipe-8 hozzáadva cistern-1 szomszédjához | neighbours.contains(pipe-8): true
 
-cistern - 2@AddNeighbour | pipe - 6 hozzáadva cistern - 2 szomszédjához | neighbours.contains(pipe - 6): true
+cistern-2@AddNeighbour | pipe-6 hozzáadva cistern-2 szomszédjához | neighbours.contains(pipe-6): true
 
-cistern - 2@AddNeighbour | pipe - 5 hozzáadva cistern - 2 szomszédjához | neighbours.contains(pipe - 5): true
+cistern-2@AddNeighbour | pipe-5 hozzáadva cistern-2 szomszédjához | neighbours.contains(pipe-5): true
 
-cistern - 3@AddNeighbour | pipe - 4 hozzáadva cistern - 3 szomszédjához | neighbours.contains(pipe - 4): true
+cistern-3@AddNeighbour | pipe-4 hozzáadva cistern-3 szomszédjához | neighbours.contains(pipe-4): true
 
-pipe - 4@AddNeighbour | cistern - 3 hozzáadva pipe - 4 szomszédjához | neighbours.contains(cistern - 3): true
+pipe-4@AddNeighbour | cistern-3 hozzáadva pipe-4 szomszédjához | neighbours.contains(cistern-3): true
 
-pipe - 4@AddNeighbour | pump - 37 hozzáadva pipe - 4 szomszédjához | neighbours.contains(pump - 37): true
+pipe-4@AddNeighbour | pump-37 hozzáadva pipe-4 szomszédjához | neighbours.contains(pump-37): true
 
-pipe - 5@AddNeighbour | cistern - 2 hozzáadva pipe - 5 szomszédjához | neighbours.contains(cistern - 2): true
+pipe-5@AddNeighbour | cistern-2 hozzáadva pipe-5 szomszédjához | neighbours.contains(cistern-2): true
 
-pipe - 5@AddNeighbour | pump - 37 hozzáadva pipe - 5 szomszédjához | neighbours.contains(pump - 37): true
+pipe-5@AddNeighbour | pump-37 hozzáadva pipe-5 szomszédjához | neighbours.contains(pump-37): true
 
-pipe - 6@AddNeighbour | cistern - 2 hozzáadva pipe - 6 szomszédjához | neighbours.contains(cistern - 2): true
+pipe-6@AddNeighbour | cistern-2 hozzáadva pipe-6 szomszédjához | neighbours.contains(cistern-2): true
 
-pipe - 6@AddNeighbour | pump - 38 hozzáadva pipe - 6 szomszédjához | neighbours.contains(pump - 38): true
+pipe-6@AddNeighbour | pump-38 hozzáadva pipe-6 szomszédjához | neighbours.contains(pump-38): true
 
-pipe - 7@AddNeighbour | cistern - 1 hozzáadva pipe - 7 szomszédjához | neighbours.contains(cistern - 1): true
+pipe-7@AddNeighbour | cistern-1 hozzáadva pipe-7 szomszédjához | neighbours.contains(cistern-1): true
 
-pipe - 7@AddNeighbour | pump - 39 hozzáadva pipe - 7 szomszédjához | neighbours.contains(pump - 39): true
+pipe-7@AddNeighbour | pump-39 hozzáadva pipe-7 szomszédjához | neighbours.contains(pump-39): true
 
-pipe - 8@AddNeighbour | cistern - 1 hozzáadva pipe - 8 szomszédjához | neighbours.contains(cistern - 1): true
+pipe-8@AddNeighbour | cistern-1 hozzáadva pipe-8 szomszédjához | neighbours.contains(cistern-1): true
 
-pipe - 8@AddNeighbour | pump - 40 hozzáadva pipe - 8 szomszédjához | neighbours.contains(pump - 40): true
+pipe-8@AddNeighbour | pump-40 hozzáadva pipe-8 szomszédjához | neighbours.contains(pump-40): true
 
-pipe - 9@AddNeighbour | pump - 40 hozzáadva pipe - 9 szomszédjához | neighbours.contains(pump - 40): true
+pipe-9@AddNeighbour | pump-40 hozzáadva pipe-9 szomszédjához | neighbours.contains(pump-40): true
 
-pipe - 9@AddNeighbour | pump - 41 hozzáadva pipe - 9 szomszédjához | neighbours.contains(pump - 41): true
+pipe-9@AddNeighbour | pump-41 hozzáadva pipe-9 szomszédjához | neighbours.contains(pump-41): true
 
-pipe - 10@AddNeighbour | pump - 41 hozzáadva pipe - 10 szomszédjához | neighbours.contains(pump - 41): true
+pipe-10@AddNeighbour | pump-41 hozzáadva pipe-10 szomszédjához | neighbours.contains(pump-41): true
 
-pipe - 10@AddNeighbour | pump - 39 hozzáadva pipe - 10 szomszédjához | neighbours.contains(pump - 39): true
+pipe-10@AddNeighbour | pump-39 hozzáadva pipe-10 szomszédjához | neighbours.contains(pump-39): true
 
-pipe - 11@AddNeighbour | pump - 39 hozzáadva pipe - 11 szomszédjához | neighbours.contains(pump - 39): true
+pipe-11@AddNeighbour | pump-39 hozzáadva pipe-11 szomszédjához | neighbours.contains(pump-39): true
 
-pipe - 11@AddNeighbour | pump - 43 hozzáadva pipe - 11 szomszédjához | neighbours.contains(pump - 43): true
+pipe-11@AddNeighbour | pump-43 hozzáadva pipe-11 szomszédjához | neighbours.contains(pump-43): true
 
-pipe - 12@AddNeighbour | pump - 43 hozzáadva pipe - 12 szomszédjához | neighbours.contains(pump - 43): true
+pipe-12@AddNeighbour | pump-43 hozzáadva pipe-12 szomszédjához | neighbours.contains(pump-43): true
 
-pipe - 12@AddNeighbour | pump - 38 hozzáadva pipe - 12 szomszédjához | neighbours.contains(pump - 38): true
+pipe-12@AddNeighbour | pump-38 hozzáadva pipe-12 szomszédjához | neighbours.contains(pump-38): true
 
-pipe - 13@AddNeighbour | pump - 38 hozzáadva pipe - 13 szomszédjához | neighbours.contains(pump - 38): true
+pipe-13@AddNeighbour | pump-38 hozzáadva pipe-13 szomszédjához | neighbours.contains(pump-38): true
 
-pipe - 13@AddNeighbour | pump - 35 hozzáadva pipe - 13 szomszédjához | neighbours.contains(pump - 35): true
+pipe-13@AddNeighbour | pump-35 hozzáadva pipe-13 szomszédjához | neighbours.contains(pump-35): true
 
-pipe - 14@AddNeighbour | pump - 38 hozzáadva pipe - 14 szomszédjához | neighbours.contains(pump - 38): true
+pipe-14@AddNeighbour | pump-38 hozzáadva pipe-14 szomszédjához | neighbours.contains(pump-38): true
 
-pipe - 14@AddNeighbour | pump - 31 hozzáadva pipe - 14 szomszédjához | neighbours.contains(pump - 31): true
+pipe-14@AddNeighbour | pump-31 hozzáadva pipe-14 szomszédjához | neighbours.contains(pump-31): true
 
-pipe - 15@AddNeighbour | pump - 37 hozzáadva pipe - 15 szomszédjához | neighbours.contains(pump - 37): true
+pipe-15@AddNeighbour | pump-37 hozzáadva pipe-15 szomszédjához | neighbours.contains(pump-37): true
 
-pipe - 15@AddNeighbour | pump - 35 hozzáadva pipe - 15 szomszédjához | neighbours.contains(pump - 35): true
+pipe-15@AddNeighbour | pump-35 hozzáadva pipe-15 szomszédjához | neighbours.contains(pump-35): true
 
-pipe - 16@AddNeighbour | pump - 37 hozzáadva pipe - 16 szomszédjához | neighbours.contains(pump - 37): true
+pipe-16@AddNeighbour | pump-37 hozzáadva pipe-16 szomszédjához | neighbours.contains(pump-37): true
 
-pipe - 16@AddNeighbour | pump - 36 hozzáadva pipe - 16 szomszédjához | neighbours.contains(pump - 36): true
+pipe-16@AddNeighbour | pump-36 hozzáadva pipe-16 szomszédjához | neighbours.contains(pump-36): true
 
-pipe - 17@AddNeighbour | pump - 36 hozzáadva pipe - 17 szomszédjához | neighbours.contains(pump - 36): true
+pipe-17@AddNeighbour | pump-36 hozzáadva pipe-17 szomszédjához | neighbours.contains(pump-36): true
 
-pipe - 17@AddNeighbour | pump - 33 hozzáadva pipe - 17 szomszédjához | neighbours.contains(pump - 33): true
+pipe-17@AddNeighbour | pump-33 hozzáadva pipe-17 szomszédjához | neighbours.contains(pump-33): true
 
-pipe - 18@AddNeighbour | pump - 36 hozzáadva pipe - 18 szomszédjához | neighbours.contains(pump - 36): true
+pipe-18@AddNeighbour | pump-36 hozzáadva pipe-18 szomszédjához | neighbours.contains(pump-36): true
 
-pipe - 18@AddNeighbour | pump - 34 hozzáadva pipe - 18 szomszédjához | neighbours.contains(pump - 34): true
+pipe-18@AddNeighbour | pump-34 hozzáadva pipe-18 szomszédjához | neighbours.contains(pump-34): true
 
-pipe - 19@AddNeighbour | pump - 34 hozzáadva pipe - 19 szomszédjához | neighbours.contains(pump - 34): true
+pipe-19@AddNeighbour | pump-34 hozzáadva pipe-19 szomszédjához | neighbours.contains(pump-34): true
 
-pipe - 19@AddNeighbour | pump - 33 hozzáadva pipe - 19 szomszédjához | neighbours.contains(pump - 33): true
+pipe-19@AddNeighbour | pump-33 hozzáadva pipe-19 szomszédjához | neighbours.contains(pump-33): true
 
-pipe - 20@AddNeighbour | pump - 34 hozzáadva pipe - 20 szomszédjához | neighbours.contains(pump - 34): true
+pipe-20@AddNeighbour | pump-34 hozzáadva pipe-20 szomszédjához | neighbours.contains(pump-34): true
 
-pipe - 20@AddNeighbour | pump - 35 hozzáadva pipe - 20 szomszédjához | neighbours.contains(pump - 35): true
+pipe-20@AddNeighbour | pump-35 hozzáadva pipe-20 szomszédjához | neighbours.contains(pump-35): true
 
-pipe - 21@AddNeighbour | pump - 33 hozzáadva pipe - 21 szomszédjához | neighbours.contains(pump - 33): true
+pipe-21@AddNeighbour | pump-33 hozzáadva pipe-21 szomszédjához | neighbours.contains(pump-33): true
 
-pipe - 21@AddNeighbour | pump - 31 hozzáadva pipe - 21 szomszédjához | neighbours.contains(pump - 31): true
+pipe-21@AddNeighbour | pump-31 hozzáadva pipe-21 szomszédjához | neighbours.contains(pump-31): true
 
-pipe - 22@AddNeighbour | source - 0 hozzáadva pipe - 22 szomszédjához | neighbours.contains(source - 0): true
+pipe-22@AddNeighbour | source-0 hozzáadva pipe-22 szomszédjához | neighbours.contains(source-0): true
 
-pipe - 22@AddNeighbour | pump - 33 hozzáadva pipe - 22 szomszédjához | neighbours.contains(pump - 33): true
+pipe-22@AddNeighbour | pump-33 hozzáadva pipe-22 szomszédjához | neighbours.contains(pump-33): true
 
-pipe - 23@AddNeighbour | pump - 31 hozzáadva pipe - 23 szomszédjához | neighbours.contains(pump - 31): true
+pipe-23@AddNeighbour | pump-31 hozzáadva pipe-23 szomszédjához | neighbours.contains(pump-31): true
 
-pipe - 23@AddNeighbour | pump - 32 hozzáadva pipe - 23 szomszédjához | neighbours.contains(pump - 32): true
+pipe-23@AddNeighbour | pump-32 hozzáadva pipe-23 szomszédjához | neighbours.contains(pump-32): true
 
-pipe - 24@AddNeighbour | pump - 32 hozzáadva pipe - 24 szomszédjához | neighbours.contains(pump - 32): true
+pipe-24@AddNeighbour | pump-32 hozzáadva pipe-24 szomszédjához | neighbours.contains(pump-32): true
 
-pipe - 24@AddNeighbour | pump - 43 hozzáadva pipe - 24 szomszédjához | neighbours.contains(pump - 43): true
+pipe-24@AddNeighbour | pump-43 hozzáadva pipe-24 szomszédjához | neighbours.contains(pump-43): true
 
-pipe - 25@AddNeighbour | pump - 32 hozzáadva pipe - 25 szomszédjához | neighbours.contains(pump - 32): true
+pipe-25@AddNeighbour | pump-32 hozzáadva pipe-25 szomszédjához | neighbours.contains(pump-32): true
 
-pipe - 25@AddNeighbour | pump - 42 hozzáadva pipe - 25 szomszédjához | neighbours.contains(pump - 42): true
+pipe-25@AddNeighbour | pump-42 hozzáadva pipe-25 szomszédjához | neighbours.contains(pump-42): true
 
-pipe - 26@AddNeighbour | pump - 42 hozzáadva pipe - 26 szomszédjához | neighbours.contains(pump - 42): true
+pipe-26@AddNeighbour | pump-42 hozzáadva pipe-26 szomszédjához | neighbours.contains(pump-42): true
 
-pipe - 26@AddNeighbour | pump - 43 hozzáadva pipe - 26 szomszédjához | neighbours.contains(pump - 43): true
+pipe-26@AddNeighbour | pump-43 hozzáadva pipe-26 szomszédjához | neighbours.contains(pump-43): true
 
-pipe - 27@AddNeighbour | pump - 42 hozzáadva pipe - 27 szomszédjához | neighbours.contains(pump - 42): true
+pipe-27@AddNeighbour | pump-42 hozzáadva pipe-27 szomszédjához | neighbours.contains(pump-42): true
 
-pipe - 27@AddNeighbour | pump - 30 hozzáadva pipe - 27 szomszédjához | neighbours.contains(pump - 30): true
+pipe-27@AddNeighbour | pump-30 hozzáadva pipe-27 szomszédjához | neighbours.contains(pump-30): true
 
-pipe - 28@AddNeighbour | source - 0 hozzáadva pipe - 28 szomszédjához | neighbours.contains(source - 0): true
+pipe-28@AddNeighbour | source-0 hozzáadva pipe-28 szomszédjához | neighbours.contains(source-0): true
 
-pipe - 28@AddNeighbour | pump - 32 hozzáadva pipe - 28 szomszédjához | neighbours.contains(pump - 32): true
+pipe-28@AddNeighbour | pump-32 hozzáadva pipe-28 szomszédjához | neighbours.contains(pump-32): true
 
-pipe - 29@AddNeighbour | source - 0 hozzáadva pipe - 29 szomszédjához | neighbours.contains(source - 0): true
+pipe-29@AddNeighbour | source-0 hozzáadva pipe-29 szomszédjához | neighbours.contains(source-0): true
 
-pipe - 29@AddNeighbour | pump - 30 hozzáadva pipe - 29 szomszédjához | neighbours.contains(pump - 30): true
+pipe-29@AddNeighbour | pump-30 hozzáadva pipe-29 szomszédjához | neighbours.contains(pump-30): true
 
-pump - 30@AddNeighbour | pipe - 29 hozzáadva pump - 30 szomszédjához | neighbours.contains(pipe - 29): true
+pump-30@AddNeighbour | pipe-29 hozzáadva pump-30 szomszédjához | neighbours.contains(pipe-29): true
 
-pump - 30@AddNeighbour | pipe - 27 hozzáadva pump - 30 szomszédjához | neighbours.contains(pipe - 27): true
+pump-30@AddNeighbour | pipe-27 hozzáadva pump-30 szomszédjához | neighbours.contains(pipe-27): true
 
-pump - 31@AddNeighbour | pipe - 14 hozzáadva pump - 31 szomszédjához | neighbours.contains(pipe - 14): true
+pump-31@AddNeighbour | pipe-14 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-14): true
 
-pump - 31@AddNeighbour | pipe - 21 hozzáadva pump - 31 szomszédjához | neighbours.contains(pipe - 21): true
+pump-31@AddNeighbour | pipe-21 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-21): true
 
-pump - 31@AddNeighbour | pipe - 23 hozzáadva pump - 31 szomszédjához | neighbours.contains(pipe - 23): true
+pump-31@AddNeighbour | pipe-23 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-23): true
 
-pump - 32@AddNeighbour | pipe - 23 hozzáadva pump - 32 szomszédjához | neighbours.contains(pipe - 23): true
+pump-32@AddNeighbour | pipe-23 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-23): true
 
-pump - 32@AddNeighbour | pipe - 24 hozzáadva pump - 32 szomszédjához | neighbours.contains(pipe - 24): true
+pump-32@AddNeighbour | pipe-24 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-24): true
 
-pump - 32@AddNeighbour | pipe - 25 hozzáadva pump - 32 szomszédjához | neighbours.contains(pipe - 25): true
+pump-32@AddNeighbour | pipe-25 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-25): true
 
-pump - 32@AddNeighbour | pipe - 28 hozzáadva pump - 32 szomszédjához | neighbours.contains(pipe - 28): true
+pump-32@AddNeighbour | pipe-28 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-28): true
 
-pump - 33@AddNeighbour | pipe - 17 hozzáadva pump - 33 szomszédjához | neighbours.contains(pipe - 17): true
+pump-33@AddNeighbour | pipe-17 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-17): true
 
-pump - 33@AddNeighbour | pipe - 19 hozzáadva pump - 33 szomszédjához | neighbours.contains(pipe - 19): true
+pump-33@AddNeighbour | pipe-19 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-19): true
 
-pump - 33@AddNeighbour | pipe - 21 hozzáadva pump - 33 szomszédjához | neighbours.contains(pipe - 21): true
+pump-33@AddNeighbour | pipe-21 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-21): true
 
-pump - 33@AddNeighbour | pipe - 22 hozzáadva pump - 33 szomszédjához | neighbours.contains(pipe - 22): true
+pump-33@AddNeighbour | pipe-22 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-22): true
 
-pump - 34@AddNeighbour | pipe - 18 hozzáadva pump - 34 szomszédjához | neighbours.contains(pipe - 18): true
+pump-34@AddNeighbour | pipe-18 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-18): true
 
-pump - 34@AddNeighbour | pipe - 19 hozzáadva pump - 34 szomszédjához | neighbours.contains(pipe - 19): true
+pump-34@AddNeighbour | pipe-19 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-19): true
 
-pump - 34@AddNeighbour | pipe - 20 hozzáadva pump - 34 szomszédjához | neighbours.contains(pipe - 20): true
+pump-34@AddNeighbour | pipe-20 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-20): true
 
-pump - 35@AddNeighbour | pipe - 13 hozzáadva pump - 35 szomszédjához | neighbours.contains(pipe - 13): true
+pump-35@AddNeighbour | pipe-13 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-13): true
 
-pump - 35@AddNeighbour | pipe - 15 hozzáadva pump - 35 szomszédjához | neighbours.contains(pipe - 15): true
+pump-35@AddNeighbour | pipe-15 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-15): true
 
-pump - 35@AddNeighbour | pipe - 20 hozzáadva pump - 35 szomszédjához | neighbours.contains(pipe - 20): true
+pump-35@AddNeighbour | pipe-20 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-20): true
 
-pump - 36@AddNeighbour | pipe - 16 hozzáadva pump - 36 szomszédjához | neighbours.contains(pipe - 16): true
+pump-36@AddNeighbour | pipe-16 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-16): true
 
-pump - 36@AddNeighbour | pipe - 17 hozzáadva pump - 36 szomszédjához | neighbours.contains(pipe - 17): true
+pump-36@AddNeighbour | pipe-17 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-17): true
 
-pump - 36@AddNeighbour | pipe - 18 hozzáadva pump - 36 szomszédjához | neighbours.contains(pipe - 18): true
+pump-36@AddNeighbour | pipe-18 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-18): true
 
-pump - 37@AddNeighbour | pipe - 4 hozzáadva pump - 37 szomszédjához | neighbours.contains(pipe - 4): true
+pump-37@AddNeighbour | pipe-4 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-4): true
 
-pump - 37@AddNeighbour | pipe - 5 hozzáadva pump - 37 szomszédjához | neighbours.contains(pipe - 5): true
+pump-37@AddNeighbour | pipe-5 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-5): true
 
-pump - 37@AddNeighbour | pipe - 15 hozzáadva pump - 37 szomszédjához | neighbours.contains(pipe - 15): true
+pump-37@AddNeighbour | pipe-15 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-15): true
 
-pump - 37@AddNeighbour | pipe - 16 hozzáadva pump - 37 szomszédjához | neighbours.contains(pipe - 16): true
+pump-37@AddNeighbour | pipe-16 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-16): true
 
-pump - 38@AddNeighbour | pipe - 6 hozzáadva pump - 38 szomszédjához | neighbours.contains(pipe - 6): true
+pump-38@AddNeighbour | pipe-6 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-6): true
 
-pump - 38@AddNeighbour | pipe - 12 hozzáadva pump - 38 szomszédjához | neighbours.contains(pipe - 12): true
+pump-38@AddNeighbour | pipe-12 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-12): true
 
-pump - 38@AddNeighbour | pipe - 13 hozzáadva pump - 38 szomszédjához | neighbours.contains(pipe - 13): true
+pump-38@AddNeighbour | pipe-13 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-13): true
 
-pump - 38@AddNeighbour | pipe - 14 hozzáadva pump - 38 szomszédjához | neighbours.contains(pipe - 14): true
+pump-38@AddNeighbour | pipe-14 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-14): true
 
-pump - 39@AddNeighbour | pipe - 7 hozzáadva pump - 39 szomszédjához | neighbours.contains(pipe - 7): true
+pump-39@AddNeighbour | pipe-7 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-7): true
 
-pump - 39@AddNeighbour | pipe - 10 hozzáadva pump - 39 szomszédjához | neighbours.contains(pipe - 10): true
+pump-39@AddNeighbour | pipe-10 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-10): true
 
-pump - 39@AddNeighbour | pipe - 11 hozzáadva pump - 39 szomszédjához | neighbours.contains(pipe - 11): true
+pump-39@AddNeighbour | pipe-11 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-11): true
 
-pump - 40@AddNeighbour | pipe - 8 hozzáadva pump - 40 szomszédjához | neighbours.contains(pipe - 8): true
+pump-40@AddNeighbour | pipe-8 hozzáadva pump-40 szomszédjához | neighbours.contains(pipe-8): true
 
-pump - 40@AddNeighbour | pipe - 9 hozzáadva pump - 40 szomszédjához | neighbours.contains(pipe - 9): true
+pump-40@AddNeighbour | pipe-9 hozzáadva pump-40 szomszédjához | neighbours.contains(pipe-9): true
 
-pump - 41@AddNeighbour | pipe - 9 hozzáadva pump - 41 szomszédjához | neighbours.contains(pipe - 9): true
+pump-41@AddNeighbour | pipe-9 hozzáadva pump-41 szomszédjához | neighbours.contains(pipe-9): true
 
-pump - 41@AddNeighbour | pipe - 10 hozzáadva pump - 41 szomszédjához | neighbours.contains(pipe - 10): true
+pump-41@AddNeighbour | pipe-10 hozzáadva pump-41 szomszédjához | neighbours.contains(pipe-10): true
 
-pump - 42@AddNeighbour | pipe - 25 hozzáadva pump - 42 szomszédjához | neighbours.contains(pipe - 25): true
+pump-42@AddNeighbour | pipe-25 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-25): true
 
-pump - 42@AddNeighbour | pipe - 26 hozzáadva pump - 42 szomszédjához | neighbours.contains(pipe - 26): true
+pump-42@AddNeighbour | pipe-26 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-26): true
 
-pump - 42@AddNeighbour | pipe - 27 hozzáadva pump - 42 szomszédjához | neighbours.contains(pipe - 27): true
+pump-42@AddNeighbour | pipe-27 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-27): true
 
-pump - 43@AddNeighbour | pipe - 11 hozzáadva pump - 43 szomszédjához | neighbours.contains(pipe - 11): true
+pump-43@AddNeighbour | pipe-11 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-11): true
 
-pump - 43@AddNeighbour | pipe - 12 hozzáadva pump - 43 szomszédjához | neighbours.contains(pipe - 12): true
+pump-43@AddNeighbour | pipe-12 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-12): true
 
-pump - 43@AddNeighbour | pipe - 24 hozzáadva pump - 43 szomszédjához | neighbours.contains(pipe - 24): true
+pump-43@AddNeighbour | pipe-24 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-24): true
 
-pump - 43@AddNeighbour | pipe - 26 hozzáadva pump - 43 szomszédjához | neighbours.contains(pipe - 26): true
+pump-43@AddNeighbour | pipe-26 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-26): true
 
 Saboteur - 0@Saboteur | Saboteur - 0 létrejött 
 
-Saboteur - 0@ChangeWhere | Saboteur - 0 helyzete megváltoztatva a következőre: pump - 33
+Saboteur - 0@ChangeWhere | Saboteur - 0 helyzete megváltoztatva a következőre: pump-33
 
-pump - 33@AddPlayer | Saboteur - 0 rálépett a pump - 33-ra/re | onComponent.contains(Saboteur - 0): true
+pump-33@AddPlayer | Saboteur - 0 rálépett a pump-33-ra/re | onComponent.contains(Saboteur - 0): true
 
 Map @AddSabToComponent | saboteur elhelyezve a következő pályarészre: 33 | components.get(componentNumber).onComponent.contains(s): true
 
@@ -310,2353 +310,155 @@ Map @Game | Játék elindítva
 
 Saboteur - 0@YourTurn | Saboteur - 0 következik 
 
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
+pump-33@Act | Saboteur - 0 játékos a következő opciót választotta: step
 
-pipe - 22@FlowOut | source - 0-ból/ből víz érkezett a pipe - 22 első részébe
+pipe-22@Accept | pipe-22 ra/re ráléphetnek?  | onComponent.isEmpty(): true
 
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
+pipe-22@AddPlayer | Saboteur - 0 rálépett a pipe-22-ra/re | onComponent.contains(Saboteur - 0): true
 
-pipe - 28@FlowOut | source - 0-ból/ből víz érkezett a pipe - 28 első részébe
+pump-33@RemovePlayer | Saboteur - 0 lelépett a pump-33-ról/ről | onComponent.contains(Saboteur - 0): false
 
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
+Saboteur - 0@ChangeWhere | Saboteur - 0 helyzete megváltoztatva a következőre: pipe-22
 
-pipe - 29@FlowOut | source - 0-ból/ből víz érkezett a pipe - 29 első részébe
+pump-33@Step | Saboteur - 0  játékos pipe-22-re szeretne lépni | rá tudott lépni 
 
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
+pipe-22@FlowOut | source-0-ból/ből víz érkezett a pipe-22 első részébe
 
-pump - 30@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-22-ba/be
 
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pipe-28@FlowOut | source-0-ból/ből víz érkezett a pipe-28 első részébe
 
-pump - 32@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-28-ba/be
 
-pump - 33@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pipe-29@FlowOut | source-0-ból/ből víz érkezett a pipe-29 első részébe
 
-pump - 34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
 
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-30@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-32@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-33@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-pump - 43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 3
+pump-42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+pump-43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
 
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
+cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
+cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
+source-0@GetWater | A source-0-ból ennyi víz folyt ki: 3
 
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
+cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
+cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
+cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
+pipe-4@GetWater | A pipe-4-ben ennyi víz van: 0
 
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
+pipe-5@GetWater | A pipe-5-ben ennyi víz van: 0
 
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
+pipe-6@GetWater | A pipe-6-ben ennyi víz van: 0
 
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
+pipe-7@GetWater | A pipe-7-ben ennyi víz van: 0
 
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
+pipe-8@GetWater | A pipe-8-ben ennyi víz van: 0
 
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
+pipe-9@GetWater | A pipe-9-ben ennyi víz van: 0
 
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
+pipe-10@GetWater | A pipe-10-ben ennyi víz van: 0
 
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
+pipe-11@GetWater | A pipe-11-ben ennyi víz van: 0
 
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
+pipe-12@GetWater | A pipe-12-ben ennyi víz van: 0
 
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
+pipe-13@GetWater | A pipe-13-ben ennyi víz van: 0
 
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 0
+pipe-14@GetWater | A pipe-14-ben ennyi víz van: 0
 
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
+pipe-15@GetWater | A pipe-15-ben ennyi víz van: 0
 
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
+pipe-16@GetWater | A pipe-16-ben ennyi víz van: 0
 
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 1
+pipe-17@GetWater | A pipe-17-ben ennyi víz van: 0
 
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
+pipe-18@GetWater | A pipe-18-ben ennyi víz van: 0
 
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 0
+pipe-19@GetWater | A pipe-19-ben ennyi víz van: 0
 
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
+pipe-20@GetWater | A pipe-20-ben ennyi víz van: 0
 
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
+pipe-21@GetWater | A pipe-21-ben ennyi víz van: 0
 
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 0
+pipe-22@GetWater | A pipe-22-ben ennyi víz van: 1
 
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 1
+pipe-23@GetWater | A pipe-23-ben ennyi víz van: 0
 
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 1
+pipe-24@GetWater | A pipe-24-ben ennyi víz van: 0
 
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
+pipe-25@GetWater | A pipe-25-ben ennyi víz van: 0
 
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
+pipe-26@GetWater | A pipe-26-ben ennyi víz van: 0
 
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
+pipe-27@GetWater | A pipe-27-ben ennyi víz van: 0
 
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
+pipe-28@GetWater | A pipe-28-ben ennyi víz van: 1
 
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
+pipe-29@GetWater | A pipe-29-ben ennyi víz van: 1
 
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
+pump-30@GetWater | A pump-30-ben ennyi víz van: 0
 
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
+pump-31@GetWater | A pump-31-ben ennyi víz van: 0
 
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
+pump-32@GetWater | A pump-32-ben ennyi víz van: 0
 
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
+pump-33@GetWater | A pump-33-ben ennyi víz van: 0
 
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
+pump-34@GetWater | A pump-34-ben ennyi víz van: 0
 
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
+pump-35@GetWater | A pump-35-ben ennyi víz van: 0
 
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
+pump-36@GetWater | A pump-36-ben ennyi víz van: 0
 
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
+pump-37@GetWater | A pump-37-ben ennyi víz van: 0
 
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
+pump-38@GetWater | A pump-38-ben ennyi víz van: 0
 
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 3
+pump-39@GetWater | A pump-39-ben ennyi víz van: 0
+
+pump-40@GetWater | A pump-40-ben ennyi víz van: 0
+
+pump-41@GetWater | A pump-41-ben ennyi víz van: 0
+
+pump-42@GetWater | A pump-42-ben ennyi víz van: 0
+
+pump-43@GetWater | A pump-43-ben ennyi víz van: 0
+
+source-0@GetWater | A source-0-ból ennyi víz folyt ki: 3
 
 Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut | A víz tovább foly a pipe - 22 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut | A víz tovább foly a pipe - 28 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut | A víz tovább foly a pipe - 29 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 6
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 0
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 0
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 0
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 6
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut | pump - 33-ból/ből víz érkezett a pipe - 19 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut | pump - 32-ból/ből víz érkezett a pipe - 24 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut | pump - 30-ból/ből víz érkezett a pipe - 27 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 9
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 1
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 1
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 1
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 9
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut | A víz tovább foly a pipe - 19 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut | A víz tovább foly a pipe - 24 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut | A víz tovább foly a pipe - 27 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 12
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 0
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 0
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 0
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 12
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut | pump - 34-ból/ből víz érkezett a pipe - 18 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut | pump - 43-ból/ből víz érkezett a pipe - 11 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 1
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut | pump - 42-ból/ből víz érkezett a pipe - 26 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 15
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 1
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 1
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 1
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 15
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut | A víz tovább foly a pipe - 18 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut | A víz tovább foly a pipe - 11 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 1
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut | A víz tovább foly a pipe - 26 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 18
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 0
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 0
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 0
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 18
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut | pump - 36-ból/ből víz érkezett a pipe - 16 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut | pump - 39-ból/ből víz érkezett a pipe - 10 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 1
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 21
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 1
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 1
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 1
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 21
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut | A víz tovább foly a pipe - 16 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut | A víz tovább foly a pipe - 10 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 2
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 24
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 0
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 0
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 2
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 2
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 2
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 24
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut |pipe - 16-ból/ből a víz tovább folyik a pump - 37-ba/be
-
-pump - 37@FlowOut | pump - 37 tank tartalma növelve | tank: 1
-
-pump - 37@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 37@FlowOut | pump - 37-ból/ből tovább folyt a víz
-
-pipe - 4@FlowOut | pump - 37-ból/ből víz érkezett a pipe - 4 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut |pipe - 10-ból/ből a víz tovább folyik a pump - 41-ba/be
-
-pump - 41@FlowOut | pump - 41 tank tartalma növelve | tank: 1
-
-pump - 41@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 41@FlowOut | pump - 41-ból/ből tovább folyt a víz
-
-pipe - 9@FlowOut | pump - 41-ból/ből víz érkezett a pipe - 9 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 3
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 27
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 1
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 1
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 2
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 2
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 3
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 27
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut |pipe - 16-ból/ből a víz tovább folyik a pump - 37-ba/be
-
-pump - 37@FlowOut | pump - 37 tank tartalma növelve | tank: 1
-
-pump - 37@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 37@FlowOut | pump - 37-ból/ből tovább folyt a víz
-
-pipe - 4@FlowOut | A víz tovább foly a pipe - 4 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut |pipe - 10-ból/ből a víz tovább folyik a pump - 41-ba/be
-
-pump - 41@FlowOut | pump - 41 tank tartalma növelve | tank: 1
-
-pump - 41@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 41@FlowOut | pump - 41-ból/ből tovább folyt a víz
-
-pipe - 9@FlowOut | A víz tovább foly a pipe - 9 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 4
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 30
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 2
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 0
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 2
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 2
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 2
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 4
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 30
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut |pipe - 16-ból/ből a víz tovább folyik a pump - 37-ba/be
-
-pump - 37@FlowOut | pump - 37 tank tartalma növelve | tank: 1
-
-pump - 37@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 37@FlowOut | pump - 37-ból/ből tovább folyt a víz
-
-pipe - 4@FlowOut |pipe - 4-ból/ből a víz tovább folyik a cistern - 3-ba/be
-
-cistern - 3 @FlowOut | Pipe@2752f6e2-tól/től víz érkezett a ciszternába | víz mennyisége: 1
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut |pipe - 10-ból/ből a víz tovább folyik a pump - 41-ba/be
-
-pump - 41@FlowOut | pump - 41 tank tartalma növelve | tank: 1
-
-pump - 41@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 41@FlowOut | pump - 41-ból/ből tovább folyt a víz
-
-pipe - 9@FlowOut |pipe - 9-ból/ből a víz tovább folyik a pump - 40-ba/be
-
-pump - 40@FlowOut | pump - 40 tank tartalma növelve | tank: 1
-
-pump - 40@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 40@FlowOut | pump - 40-ból/ből tovább folyt a víz
-
-pipe - 8@FlowOut | pump - 40-ból/ből víz érkezett a pipe - 8 első részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 5
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 1
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 33
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 1
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 2
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 1
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 2
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 2
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 2
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 5
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 33
-
-Map @SetTeamStats | mechanic pontszáma: 1
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-Saboteur - 0@YourTurn | Saboteur - 0 következik 
-
-pump - 33@Act | Saboteur - 0 játékos a következő opciót választotta: 
-
-pipe - 22@FlowOut |pipe - 22-ból/ből a víz tovább folyik a pump - 33-ba/be
-
-pump - 33@FlowOut | pump - 33 tank tartalma növelve | tank: 1
-
-pump - 33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 33@FlowOut | pump - 33-ból/ből tovább folyt a víz
-
-pipe - 19@FlowOut |pipe - 19-ból/ből a víz tovább folyik a pump - 34-ba/be
-
-pump - 34@FlowOut | pump - 34 tank tartalma növelve | tank: 1
-
-pump - 34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 34@FlowOut | pump - 34-ból/ből tovább folyt a víz
-
-pipe - 18@FlowOut |pipe - 18-ból/ből a víz tovább folyik a pump - 36-ba/be
-
-pump - 36@FlowOut | pump - 36 tank tartalma növelve | tank: 1
-
-pump - 36@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 36@FlowOut | pump - 36-ból/ből tovább folyt a víz
-
-pipe - 16@FlowOut |pipe - 16-ból/ből a víz tovább folyik a pump - 37-ba/be
-
-pump - 37@FlowOut | pump - 37 tank tartalma növelve | tank: 1
-
-pump - 37@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 37@FlowOut | pump - 37-ból/ből tovább folyt a víz
-
-pipe - 4@FlowOut |pipe - 4-ból/ből a víz tovább folyik a cistern - 3-ba/be
-
-cistern - 3 @FlowOut | Pipe@2752f6e2-tól/től víz érkezett a ciszternába | víz mennyisége: 2
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 22-ba/be
-
-pipe - 28@FlowOut |pipe - 28-ból/ből a víz tovább folyik a pump - 32-ba/be
-
-pump - 32@FlowOut | pump - 32 tank tartalma növelve | tank: 1
-
-pump - 32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 32@FlowOut | pump - 32-ból/ből tovább folyt a víz
-
-pipe - 24@FlowOut |pipe - 24-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pump - 43 tank tartalma növelve | tank: 1
-
-pump - 43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 43@FlowOut | pump - 43-ból/ből tovább folyt a víz
-
-pipe - 11@FlowOut |pipe - 11-ból/ből a víz tovább folyik a pump - 39-ba/be
-
-pump - 39@FlowOut | pump - 39 tank tartalma növelve | tank: 1
-
-pump - 39@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 39@FlowOut | pump - 39-ból/ből tovább folyt a víz
-
-pipe - 10@FlowOut |pipe - 10-ból/ből a víz tovább folyik a pump - 41-ba/be
-
-pump - 41@FlowOut | pump - 41 tank tartalma növelve | tank: 1
-
-pump - 41@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 41@FlowOut | pump - 41-ból/ből tovább folyt a víz
-
-pipe - 9@FlowOut |pipe - 9-ból/ből a víz tovább folyik a pump - 40-ba/be
-
-pump - 40@FlowOut | pump - 40 tank tartalma növelve | tank: 1
-
-pump - 40@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 40@FlowOut | pump - 40-ból/ből tovább folyt a víz
-
-pipe - 8@FlowOut | A víz tovább foly a pipe - 8 második részébe
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 28-ba/be
-
-pipe - 29@FlowOut |pipe - 29-ból/ből a víz tovább folyik a pump - 30-ba/be
-
-pump - 30@FlowOut | pump - 30 tank tartalma növelve | tank: 1
-
-pump - 30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 30@FlowOut | pump - 30-ból/ből tovább folyt a víz
-
-pipe - 27@FlowOut |pipe - 27-ból/ből a víz tovább folyik a pump - 42-ba/be
-
-pump - 42@FlowOut | pump - 42 tank tartalma növelve | tank: 6
-
-pump - 42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump - 42@FlowOut | pump - 42-ból/ből tovább folyt a víz
-
-pipe - 26@FlowOut |pipe - 26-ból/ből a víz tovább folyik a pump - 43-ba/be
-
-pump - 43@FlowOut | pipe - 26 nem a pump - 43 bemenetére van kötve | pumpa bemenete: Pipe@6b71769e
-
-source - 0@FlowOut |source - 0-ból/ből a víz tovább folyik a pipe - 29-ba/be
-
-pump - 30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 36@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 37@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 39@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 40@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 41@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump - 43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 2
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 36
-
-cistern - 1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern - 3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 2
-
-pipe - 4@GetWater | A pipe - 4-ben ennyi víz van: 2
-
-pipe - 5@GetWater | A pipe - 5-ben ennyi víz van: 0
-
-pipe - 6@GetWater | A pipe - 6-ben ennyi víz van: 0
-
-pipe - 7@GetWater | A pipe - 7-ben ennyi víz van: 0
-
-pipe - 8@GetWater | A pipe - 8-ben ennyi víz van: 2
-
-pipe - 9@GetWater | A pipe - 9-ben ennyi víz van: 2
-
-pipe - 10@GetWater | A pipe - 10-ben ennyi víz van: 2
-
-pipe - 11@GetWater | A pipe - 11-ben ennyi víz van: 2
-
-pipe - 12@GetWater | A pipe - 12-ben ennyi víz van: 0
-
-pipe - 13@GetWater | A pipe - 13-ben ennyi víz van: 0
-
-pipe - 14@GetWater | A pipe - 14-ben ennyi víz van: 0
-
-pipe - 15@GetWater | A pipe - 15-ben ennyi víz van: 0
-
-pipe - 16@GetWater | A pipe - 16-ben ennyi víz van: 2
-
-pipe - 17@GetWater | A pipe - 17-ben ennyi víz van: 0
-
-pipe - 18@GetWater | A pipe - 18-ben ennyi víz van: 2
-
-pipe - 19@GetWater | A pipe - 19-ben ennyi víz van: 2
-
-pipe - 20@GetWater | A pipe - 20-ben ennyi víz van: 0
-
-pipe - 21@GetWater | A pipe - 21-ben ennyi víz van: 0
-
-pipe - 22@GetWater | A pipe - 22-ben ennyi víz van: 2
-
-pipe - 23@GetWater | A pipe - 23-ben ennyi víz van: 0
-
-pipe - 24@GetWater | A pipe - 24-ben ennyi víz van: 2
-
-pipe - 25@GetWater | A pipe - 25-ben ennyi víz van: 0
-
-pipe - 26@GetWater | A pipe - 26-ben ennyi víz van: 2
-
-pipe - 27@GetWater | A pipe - 27-ben ennyi víz van: 2
-
-pipe - 28@GetWater | A pipe - 28-ben ennyi víz van: 2
-
-pipe - 29@GetWater | A pipe - 29-ben ennyi víz van: 2
-
-pump - 30@GetWater | A pump - 30-ben ennyi víz van: 0
-
-pump - 31@GetWater | A pump - 31-ben ennyi víz van: 0
-
-pump - 32@GetWater | A pump - 32-ben ennyi víz van: 0
-
-pump - 33@GetWater | A pump - 33-ben ennyi víz van: 0
-
-pump - 34@GetWater | A pump - 34-ben ennyi víz van: 0
-
-pump - 35@GetWater | A pump - 35-ben ennyi víz van: 0
-
-pump - 36@GetWater | A pump - 36-ben ennyi víz van: 0
-
-pump - 37@GetWater | A pump - 37-ben ennyi víz van: 0
-
-pump - 38@GetWater | A pump - 38-ben ennyi víz van: 0
-
-pump - 39@GetWater | A pump - 39-ben ennyi víz van: 0
-
-pump - 40@GetWater | A pump - 40-ben ennyi víz van: 0
-
-pump - 41@GetWater | A pump - 41-ben ennyi víz van: 0
-
-pump - 42@GetWater | A pump - 42-ben ennyi víz van: 6
-
-pump - 43@GetWater | A pump - 43-ben ennyi víz van: 0
-
-source - 0@GetWater | A source - 0-ból ennyi víz folyt ki: 36
-
-Map @SetTeamStats | mechanic pontszáma: 2
 
 Map @SetTeamStats | saboteur pontszáma: 0
 
