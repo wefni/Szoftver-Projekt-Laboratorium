@@ -32,6 +32,7 @@ public class Main {
         Map map = new Map(fileName);
         map.GenerateMap();
         map.AddSabToComponent(33);
+        map.AddSabToComponent(33);
         //map.AddPlayers(0, 1);
         map.Game();
 

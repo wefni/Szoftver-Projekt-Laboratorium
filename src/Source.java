@@ -14,6 +14,7 @@ public class Source extends Component {
     public void Act(Player me, int type){
        boolean t = false;
        while(!t){
+           System.out.println("Helye: " + this.id + "-n tartózkodik");
            System.out.println("Mit szeretnél cselekedni?\nStep");
            Scanner be=new Scanner(System.in);
            String valasz=be.nextLine();
@@ -49,10 +50,18 @@ public class Source extends Component {
                 if(Objects.equals(j.id, bemenet))
                 {
                     if (j.Accept()) {
-                        j.IsSloppy();
-                        j.AddPlayer(me);
-                        this.RemovePlayer(me);
-                        me.ChangeWhere(j);
+                        if(j.IsSloppy()){
+                            Component temp = ((Pipe) j).RandomEnd();
+                            if(!temp.equals(this)){
+                                temp.AddPlayer(me);
+                                this.RemovePlayer(me);
+                                me.ChangeWhere(temp);
+                            }
+                        }else {
+                            j.AddPlayer(me);
+                            this.RemovePlayer(me);
+                            me.ChangeWhere(j);
+                        }
                         t = false;
                         logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
                     }

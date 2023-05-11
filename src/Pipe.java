@@ -246,6 +246,8 @@ public class Pipe extends Breakable {
     }
 
     public void Act(Player me, int type) {
+
+        System.out.println("Helye: " + this.id + "-n tartózkodik");
         System.out.println("Mit szeretnél cselekedni?");
         if(sticky==0)
         {
@@ -254,6 +256,8 @@ public class Pipe extends Breakable {
         if(unBreakable==0 && !broken) {
             System.out.println("BreakPipe");
         }
+
+
         System.out.println("ChangePipe");
         System.out.println("MakeSticky");
         if(type==0) {

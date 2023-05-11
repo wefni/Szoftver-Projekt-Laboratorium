@@ -37,6 +37,7 @@ public class Map implements Serializable{
             round++;
             for (Player p : players)
             {
+                System.out.println("Player: " + p.name);
                 p.YourTurn();
                 source.FlowOut(null);
                 for(Component c : components) { c.Tick(); }

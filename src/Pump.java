@@ -150,6 +150,7 @@ public class Pump extends RandomBreakable
      */
     public void Act(Player me, int type)
     {
+        System.out.println("Helye: " + this.id + "-n tartózkodik");
         System.out.println("Mit szeretnél cselekedni?");
         if(broken && type == 0)
         {
@@ -219,11 +220,19 @@ public class Pump extends RandomBreakable
                 if (Objects.equals(j.id, valasz))
                 {
                     ervenyes_bemenet = true;
-                    if (j.Accept())
-                    {
-                        j.AddPlayer(me);
-                        this.RemovePlayer(me);
-                        me.ChangeWhere(j);
+                    if (j.Accept()) {
+                        if(j.IsSloppy()){
+                            Component temp = ((Pipe) j).RandomEnd();
+                            if(!temp.equals(this)){
+                                temp.AddPlayer(me);
+                                this.RemovePlayer(me);
+                                me.ChangeWhere(temp);
+                            }
+                        }else {
+                            j.AddPlayer(me);
+                            this.RemovePlayer(me);
+                            me.ChangeWhere(j);
+                        }
 
                         //logolás
                         logger.info(this.id + "@Step | "+me.name+"  játékos "+ j.id +"-re szeretne lépni | rá tudott lépni \n");
