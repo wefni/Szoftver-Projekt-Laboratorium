@@ -8,7 +8,7 @@ public class Cistern extends Component{
     private int amountOfWater=0;
     private int spawnedPipes = 0;
 
-    public Cistern(String ID) {
+    public Cistern(String ID)  {
         super(ID);
         logger.info(this.id + " @Cistern | "+this.id+" létrejött \n");
     }
