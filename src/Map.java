@@ -33,10 +33,12 @@ public class Map implements Serializable{
         logger.info("Map @Game | Játék elindítva\n");
         while (round < endRound)
         {
-            System.out.println("Round: "+round);
+            System.out.println("Round: " + round);
+
             round++;
             for (Player p : players)
             {
+                System.out.println(p.name);
                 p.YourTurn();
                 source.FlowOut(null);
                 for(Component c : components) { c.Tick(); }
@@ -261,24 +263,24 @@ public class Map implements Serializable{
             components.get(0).AddPlayer(s);
         }
     }
-    public void AddMechToComponent(int componentNumber)
+    public void AddMechToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
             throw new IllegalArgumentException("Component number must be between 0 and components.size()");
 
-        Mechanic m = new Mechanic("Mechanic - " + players.size());
+        Mechanic m = new Mechanic(nev + ": Mechanic");
         m.ChangeWhere(components.get(componentNumber));
         players.add(m);
         components.get(componentNumber).AddPlayer(m);
         logger.info("Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(m): "+components.get(componentNumber).onComponent.contains(m)+"\n");
     }
 
-    public void AddSabToComponent(int componentNumber)
+    public void AddSabToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
             throw new IllegalArgumentException("Component number must be between 0 and components.size()");
 
-        Saboteur s = new Saboteur("Saboteur - " + players.size());
+        Saboteur s = new Saboteur(nev + ": Saboteur");
         s.ChangeWhere(components.get(componentNumber));
         players.add(s);
         components.get(componentNumber).AddPlayer(s);
