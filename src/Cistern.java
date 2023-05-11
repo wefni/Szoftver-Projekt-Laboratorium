@@ -1,15 +1,27 @@
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 public class Cistern extends Component{
 
+    private Random rand=new Random();
+    private Random detrand=new Random(42);
+    private boolean random=false;
+    private int randomCount;
     private static final Logger logger = Logger.getLogger(Cistern.class);
     private int amountOfWater=0;
     private int spawnedPipes = 0;
 
     public Cistern(String ID)  {
         super(ID);
+
+        if(random)
+            randomCount=rand.nextInt(5,10);
+
+        if(!random)
+            randomCount=detrand.nextInt(5,10);
+
         logger.info(this.id + " @Cistern | "+this.id+" létrejött \n");
     }
 
@@ -110,5 +122,23 @@ public class Cistern extends Component{
             if(t) System.out.println("Rossz input!\n");
             logger.info(this.id + " @Act | "+me+" rossz inputot ütött be \n");
         }
+    }
+    public void Tick()
+    {
+        randomCount--;
+        if(randomCount==0)
+        {
+            if(random)
+                randomCount=rand.nextInt(5,10);
+
+            if(!random)
+                randomCount=detrand.nextInt(5,10);
+
+            SpawnPipe();
+        }
+    }
+    public void SetRandom(boolean a)
+    {
+        random=a;
     }
 }

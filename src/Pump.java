@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class Pump extends RandomBreakable
 {
     private  boolean random=false;
-    Random rand = new Random();
-    Random detrand= new Random(42);
+    private Random rand = new Random();
+    private Random detrand= new Random(42);
     private static final Logger logger = Logger.getLogger(Pump.class);
 
     /**
@@ -27,7 +27,12 @@ public class Pump extends RandomBreakable
     public Pump(String ID)
     {
         super(ID);
-        randomBreakCounter=new Random().nextInt(20,40);
+        if(random)
+        randomBreakCounter=rand.nextInt(5,10);
+
+        if(!random)
+            randomBreakCounter= detrand.nextInt(5,10);
+
         logger.info(this.id + "@Pump | "+this.id+" létrejött \n");
 
     }
@@ -367,11 +372,11 @@ public class Pump extends RandomBreakable
     {
         broken = false;
         if(random) {
-            randomBreakCounter = rand.nextInt(20, 40);
+            randomBreakCounter = rand.nextInt(5, 10);
         }
         if(!random)
         {
-            randomBreakCounter = detrand.nextInt(20, 40);
+            randomBreakCounter = detrand.nextInt(5, 10);
         }
 
     }
