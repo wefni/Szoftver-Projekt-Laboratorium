@@ -147,7 +147,23 @@ public class Main
                 case "2" -> //Tesztek
                 {
                     jo = true;
-
+                    System.out.println("Hány darab mechanicot és saboteurt szeretnél lerakni? Add meg vesszővel elválasztva: ");
+                    valasz = be.nextLine();
+                    String[] karakterek_szama = valasz.split(",", 2);
+                    System.out.println("Add meg a mechanic-ok spawnolási helyét: ");
+                    for (int i = 0; i < Integer.parseInt(karakterek_szama[0]); i++)
+                    {
+                        System.out.println(i + ". " + "Mechanic spawn helye: ");
+                        valasz = be.nextLine();
+                        map.AddMechToComponent(Integer.parseInt(valasz), "teszt" + i + "Mech");
+                    }
+                    for (int i = 0; i < Integer.parseInt(karakterek_szama[1]); i++)
+                    {
+                        System.out.println(i + ". " + "Saboteur spawn helye: ");
+                        valasz = be.nextLine();
+                        map.AddMechToComponent(Integer.parseInt(valasz), "teszt" + i + "Sab");
+                    }
+                    map.Game();
                 }
                 default ->
                 {
