@@ -79,4 +79,9 @@ public abstract class Component implements Flow, Serializable {
     {
 
     }
+
+    public void SetRandom(boolean a)
+    {
+
+    }
 }

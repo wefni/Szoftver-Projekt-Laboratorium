@@ -28,6 +28,11 @@ public class Map implements Serializable{
         components=new ArrayList<>();
         players=new ArrayList<>();
     }
+
+    public ArrayList<Component> getComponents()
+    {
+        return components;
+    }
     public void Game()
     {
         logger.info("Map @Game | Játék elindítva\n");

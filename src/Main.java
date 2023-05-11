@@ -65,7 +65,10 @@ public class Main
                             {
                                 jol_valaszoltak = true;
 
-                                //map.
+                                for (Component i: map.getComponents()) //mindegyiket kikapcsol
+                                {
+                                    i.SetRandom(false);
+                                }
 
                                 System.out.println("Random kikapcsolva.");
                             }
@@ -76,19 +79,30 @@ public class Main
                         }
                     }
 
-
                     //Jatekosok bekerese
                     boolean felvette_a_jatekosokat = false;
                     String[] karakterek = new String[2];
                     karakterek[0] = "Saboteur";
                     karakterek[1] = "Mechanic";
                     ArrayList<String> karakter_nevek = new ArrayList<String>();
-                    int[] karakterek_szama = new int[2];
                     int i = 1;
                     while (!felvette_a_jatekosokat)
                     {
                         System.out.print(i + ". játékos: " + karakterek[i % 2] + "\nNév: ");
-                        valasz = be.nextLine(); //bekér
+                         //bekér
+                        boolean nem_ures = false;
+                        while(!nem_ures)
+                        {
+                            valasz = be.nextLine();
+                            if(valasz.equals(""))
+                            {
+                                System.out.print("A név nem lehet üres! Add meg újra:\nNév: ");
+                            }
+                            else
+                            {
+                                nem_ures = true;
+                            }
+                        }
                         karakter_nevek.add(valasz);
                         if(i > 3)
                         {
@@ -128,8 +142,6 @@ public class Main
                             map.AddSabToComponent(0, karakter_nevek.get(k));
                         }
                     }
-
-                    //map.AddPlayers(0, 1);
                     map.Game();
                 }
                 case "2" -> //Tesztek
