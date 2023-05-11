@@ -26,6 +26,13 @@ public class Pump extends RandomBreakable
         super(ID);
         randomBreakCounter=new Random().nextInt(20,40);
         logger.info(this.id + "@Pump | "+this.id+" létrejött \n");
+
+    }
+
+    public void ConfigurePumpWithParameters(Component _in, Component _out)
+    {
+        in = (Pipe) _in;
+        out = (Pipe) _out;
     }
 
     /**
@@ -48,7 +55,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális bemenet:");
-                    //System.out.println(this.in.id + "\n");
+                    System.out.println(this.in.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges bemenetek:");
@@ -75,7 +82,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális kimenet:");
-                   // System.out.println(this.out.id + "\n");
+                    System.out.println(this.out.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges kimenetek:");
@@ -102,7 +109,7 @@ public class Pump extends RandomBreakable
                     jo = true;
                     //kiir aktualisat
                     System.out.println("Aktuális be- és kimenet:");
-                    //System.out.println(this.in.id + ", " + this.out.id + "\n");
+                    System.out.println(this.in.id + ", " + this.out.id + "\n");
 
                     //kiir lehetosegeket
                     System.out.println("Lehetséges be- és kimenetek:");

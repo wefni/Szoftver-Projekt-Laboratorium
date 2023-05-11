@@ -52,26 +52,26 @@ public class Map implements Serializable{
 
         //Initializing------------------------------------------
         //Source
-        Source source0 = new Source("source - 0");
+        Source source0 = new Source("source-0");
         components.add(source0);
         source = source0;
 
         //Cisterns
         for(int i = 1; i<4; i++){
-            Cistern cistern = new Cistern("cistern - "+(i));
+            Cistern cistern = new Cistern("cistern-"+(i));
             components.add(cistern);
             cisterns.add(cistern);
         }
 
         //Pipes
         for(int i= 4; i < 30; i++){
-            Pipe pipe = new Pipe("pipe - "+(i));
+            Pipe pipe = new Pipe("pipe-"+(i));
             components.add(pipe);
         }
 
         //Pumps
         for(int i = 30; i < 44; i++){
-            Pump pump = new Pump("pump - "+(i));
+            Pump pump = new Pump("pump-"+(i));
             components.add(pump);
         }
 
@@ -228,7 +228,21 @@ public class Map implements Serializable{
         components.get(43).AddNeighbours(components.get(24));
         components.get(43).AddNeighbours(components.get(26));
 
-
+        //Pump in and out
+        components.get(30).ConfigurePumpWithParameters(components.get(29), components.get(27));
+        components.get(42).ConfigurePumpWithParameters(components.get(27), components.get(26));
+        components.get(32).ConfigurePumpWithParameters(components.get(28), components.get(24));
+        components.get(31).ConfigurePumpWithParameters(components.get(21), components.get(14));
+        components.get(33).ConfigurePumpWithParameters(components.get(22), components.get(19));
+        components.get(34).ConfigurePumpWithParameters(components.get(19), components.get(18));
+        components.get(35).ConfigurePumpWithParameters(components.get(20), components.get(13));
+        components.get(36).ConfigurePumpWithParameters(components.get(18), components.get(16));
+        components.get(43).ConfigurePumpWithParameters(components.get(24), components.get(11));
+        components.get(38).ConfigurePumpWithParameters(components.get(14), components.get(6));
+        components.get(37).ConfigurePumpWithParameters(components.get(16), components.get(4));
+        components.get(39).ConfigurePumpWithParameters(components.get(11), components.get(10));
+        components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
+        components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
     }
     public void AddPlayers(int numOfMechs, int numOfSaboteurs)
     {
