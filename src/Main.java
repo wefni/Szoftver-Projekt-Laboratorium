@@ -5,8 +5,10 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
 
         /* TESZTEKHEZ
         Igy deSerializálunk egy pályát a map.txt fájlból és rakunk ra karaktereket
@@ -31,7 +33,7 @@ public class Main {
 
 */
 
-        System.out.println("1. Játék kezdése\n2.Tesztek futtatása");
+        System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
         Scanner be = new Scanner(System.in);
         String valasz;
         boolean jo = false;
@@ -45,18 +47,29 @@ public class Main {
                 {
                     jo = true;
                     System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
-                    valasz = be.nextLine(); //bekér
-                    switch (valasz)
+                    boolean jol_valaszoltak = false;
+                    while(!jol_valaszoltak)
                     {
-                        case "be" -> //Random bekapcsolás
+                        valasz = be.nextLine(); //bekér
+                        switch (valasz)
                         {
+                            case "be" -> //Random bekapcsolás
+                            {
+                                jol_valaszoltak = true;
 
-                        }
-                        case "ki" -> //Random bekapcsolás
-                        {
+                            }
+                            case "ki" -> //Random bekapcsolás
+                            {
+                                jol_valaszoltak = true;
 
+                            }
+                            default ->
+                            {
+                                System.out.println("Érvénytelen bemenet. Add meg újra: ");
+                            }
                         }
                     }
+
 
                     //Jatekosok bekerese
                     boolean felvette_a_jatekosokat = false;
@@ -118,10 +131,6 @@ public class Main {
                     map.Game();
                 }
                 case "2" -> //Tesztek
-                {
-                    jo = true;
-                }
-                case "3" -> //Random ki/be
                 {
                     jo = true;
 
