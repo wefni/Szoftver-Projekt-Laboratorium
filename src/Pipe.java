@@ -163,8 +163,6 @@ public class Pipe extends Breakable {
 
                 }
             }
-
-
         }
     }
 
@@ -247,7 +245,6 @@ public class Pipe extends Breakable {
 
     public void Act(Player me, int type) {
 
-        System.out.println("Helye: " + this.id + "-n tartózkodik");
         System.out.println("Mit szeretnél cselekedni?");
         if(sticky==0)
         {

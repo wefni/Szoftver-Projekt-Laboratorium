@@ -16,10 +16,13 @@ public class Map implements Serializable{
     private ArrayList<Component> components;
     private ArrayList<Player> players;
 
+    protected static Map m;
+
     public Map(String file)
     {
         logger.info("Map@Map | Map létrejött \n");
 
+        if(m==null) m = this;
         round = 0;
         mechWater = 0;
         sabWater = 0;
@@ -29,10 +32,28 @@ public class Map implements Serializable{
         players=new ArrayList<>();
     }
 
+
+
+    public void setComp(Component c){
+        components.add(c);
+        System.out.println(c.id + "map xd");
+    }
+
+//    public void SpawnPipeControl(String ID,Cistern c,int spawnedPipes){
+//        System.out.println("asd");
+//        Pipe p = new Pipe("pipe-"+components.size());  // Itt az ID-t lehet valtoztatni kell
+//        logger.info(c.id + " @SpawnPipe | Létrejött egy új pumpa | ID: "+p.id+" | Eddig létrejött csövek száma: "+spawnedPipes+"\n");
+//        c.AddNeighbours(p);
+//        p.AddNeighbours(c);
+//        System.out.println(p.id + "cis xdd");
+//        components.add(p);
+//        System.out.println("xd");
+//    }
     public ArrayList<Component> getComponents()
     {
         return components;
     }
+
     public void Game()
     {
         logger.info("Map @Game | Játék elindítva\n");
@@ -44,6 +65,7 @@ public class Map implements Serializable{
             for (Player p : players)
             {
                 System.out.println(p.name);
+                System.out.println("Helye: " + p.where.id);
                 p.YourTurn();
                 source.FlowOut(null);
                 for(Component c : components) { c.Tick(); }

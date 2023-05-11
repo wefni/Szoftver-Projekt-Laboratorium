@@ -59,10 +59,15 @@ public class Cistern extends Component{
         logger.info(this.id + " @PickUpPump | "+me+" felvett egy pumpát \n");
     }
     public void SpawnPipe(){
-        Pipe p = new Pipe(""+spawnedPipes++);  // Itt az ID-t lehet valtoztatni kell
-        logger.info(this.id + " @SpawnPipe | Létrejött egy új pumpa | ID: "+p.id+" | Eddig létrejött csövek száma: "+spawnedPipes+"\n");
-        this.AddNeighbours(p);
-        p.AddNeighbours(this);
+//        System.out.println("asd");
+//        Pipe p = new Pipe("pipe-"+Map.m.getComponents().size());  // Itt az ID-t lehet valtoztatni kell
+//        logger.info(this.id + " @SpawnPipe | Létrejött egy új pumpa | ID: "+p.id+" | Eddig létrejött csövek száma: "+spawnedPipes+"\n");
+//        this.AddNeighbours(p);
+//        p.AddNeighbours(this);
+//        System.out.println(p.id + "cis xdd");
+//        Map.m.getComponents().add(p);
+//        System.out.println("xd");
+//        Map.m.SpawnPipeControl(this.id,this,spawnedPipes);
     }
 
     public int FlowOut(Component sender){
@@ -80,7 +85,6 @@ public class Cistern extends Component{
     public void Step(Player me){
         boolean t = true;
         while(t){
-            System.out.println("Helye: " + this.id + "-n tartózkodik");
             System.out.println("Melyik elemre szeretnél lépni?");
             Scanner be=new Scanner(System.in);
 
@@ -132,9 +136,9 @@ public class Cistern extends Component{
                 randomCount=rand.nextInt(5,10);
 
             if(!random)
-                randomCount=detrand.nextInt(5,10);
+                randomCount=detrand.nextInt(0,2);
 
-            SpawnPipe();
+            this.SpawnPipe();
         }
     }
     public void SetRandom(boolean a)

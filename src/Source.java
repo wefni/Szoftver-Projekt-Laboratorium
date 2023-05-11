@@ -14,7 +14,6 @@ public class Source extends Component {
     public void Act(Player me, int type){
        boolean t = false;
        while(!t){
-           System.out.println("Helye: " + this.id + "-n tartózkodik");
            System.out.println("Mit szeretnél cselekedni?\nStep");
            Scanner be=new Scanner(System.in);
            String valasz=be.nextLine();
