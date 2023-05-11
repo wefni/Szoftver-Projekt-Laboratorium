@@ -5,8 +5,10 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
 
         /* TESZTEKHEZ
         Igy deSerializálunk egy pályát a map.txt fájlból és rakunk ra karaktereket
@@ -129,11 +131,6 @@ public class Main {
                     map.Game();
                 }
                 case "2" -> //Tesztek
-                {
-                    jo = true;
-
-                }
-                case "3" -> //Random ki/be
                 {
                     jo = true;
 
