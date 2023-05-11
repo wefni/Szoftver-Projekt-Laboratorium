@@ -74,4 +74,9 @@ public abstract class Component implements Flow, Serializable {
         return
                 ;
     }
+
+    public  void ConfigurePumpWithParameters(Component in, Component out)
+    {
+
+    }
 }

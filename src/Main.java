@@ -1,9 +1,10 @@
 import org.apache.log4j.MDC;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         /* TESZTEKHEZ
         Igy deSerializálunk egy pályát a map.txt fájlból és rakunk ra karaktereket
@@ -31,8 +32,9 @@ public class Main {
         Map map = new Map(fileName);
         map.GenerateMap();
         map.AddSabToComponent(33);
-        map.AddPlayers(0, 1);
+        //map.AddPlayers(0, 1);
         map.Game();
+
 
 
     }
