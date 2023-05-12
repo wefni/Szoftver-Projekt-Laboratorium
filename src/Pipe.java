@@ -200,31 +200,7 @@ public class Pipe extends Breakable {
      */
     public void PlacePump()
     {
-        Pump new_pump = new Pump("1250", scanner); //ID?
-        Pipe new_pipe = new Pipe("1251", scanner); //ID?
-
-        ArrayList<Component> neighbours = this.ShowNeighbours();
-        Component[] szomszedok = new Component[2];
-        int k = 0;
-        for(Component i : neighbours)
-        {
-            szomszedok[k] = i;
-            k++;
-        }
-        new_pipe.AddNeighbours(new_pump);
-        new_pump.AddNeighbours(new_pipe);
-
-        szomszedok[1].RemoveNeighbours(this);
-        this.RemoveNeighbours(szomszedok[1]);
-
-        new_pump.AddNeighbours(this);
-        this.AddNeighbours(new_pump);
-
-        new_pipe.AddNeighbours(szomszedok[1]);
-        szomszedok[1].AddNeighbours(new_pipe);
-
-        logger.info(this.id+"@PlacePump | pumpa lehelyezve a "+this.id+"-ra/re | új pumpa ID: "+new_pump.id+"\n");
-        logger.info(this.id+"@PlacePump |"+new_pump+" szomszédai: "+new_pump.neighbours.get(0).id+", "+new_pump.neighbours.get(1).id+"\n");
+        Map.map.PlacePumpOnPipe(this);
     }
 
     //FlowOutot még logolni kell

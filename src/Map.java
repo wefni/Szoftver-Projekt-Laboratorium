@@ -376,4 +376,26 @@ public class Map implements Serializable{
             componentIterator.add(pipe);
         }
     }
+
+    public void PlacePumpOnPipe(Component pipe1) {
+        Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);
+        Pump pump = new Pump("pump-" + components.size(), scanner);
+
+        pipe2.AddNeighbours(pump);
+        if(pipe1.neighbours.size()>1)
+            pipe2.AddNeighbours(pipe1.neighbours.get(1));
+        pump.AddNeighbours(pipe2);
+        pump.AddNeighbours(pipe1);
+        pipe1.neighbours.get(1).AddNeighbours(pipe2);
+        pipe1.neighbours.get(1).RemoveNeighbours(pipe1);
+
+        pump.ConfigurePumpWithParameters(pipe1, pipe2);
+
+        components.add(pipe2);
+        components.add(pump);
+
+        logger.info(pipe1.id+"@PlacePump | pumpa lehelyezve a "+pipe1.id+"-ra/re | új pumpa ID: "+pump.id+"\n");
+        logger.info(pipe1.id+"@PlacePump |"+pump+" szomszédai: "+pump.neighbours.get(0).id+", "+pump.neighbours.get(1).id+"\n");
+
+    }
 }
