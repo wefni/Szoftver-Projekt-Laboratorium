@@ -1,13 +1,13 @@
-import org.apache.log4j.MDC;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main
 {
+    private static final Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) throws IOException
     {
 
@@ -48,6 +48,7 @@ public class Main
             {
                 case "1" -> //Jatek
                 {
+                    logger.info("Main@main | Játék elindítva | valasz: 1 \n");
                     jo = true;
                     System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
                     boolean jol_valaszoltak = false;
@@ -58,13 +59,14 @@ public class Main
                         {
                             case "be" -> //Random bekapcsolás
                             {
+                                logger.info("Main@main | Random bekapcsolva  | valasz: be\n");
                                 jol_valaszoltak = true;
                                 System.out.println("Random bekapcsolva.");
                             }
                             case "ki" -> //Random bekapcsolás
                             {
                                 jol_valaszoltak = true;
-
+                                logger.info("Main@main | Random kikapcsolva | valasz: ki\n");
                                 for (Component i: map.getComponents()) //mindegyiket kikapcsol
                                 {
                                     i.SetRandom(false);
@@ -74,6 +76,7 @@ public class Main
                             }
                             default ->
                             {
+                                logger.info("Main@main | Érvénytelen input a játék menüjében | valasz: "+valasz+"\n");
                                 System.out.println("Érvénytelen bemenet. Add meg újra: ");
                             }
                         }
@@ -97,10 +100,12 @@ public class Main
                             if(valasz.equals(""))
                             {
                                 System.out.print("A név nem lehet üres! Add meg újra:\nNév: ");
+                                logger.info("Main@main | "+i + ". játékos: " + karakterek[i % 2] + "\n üres nevet adott meg ");
                             }
                             else
                             {
                                 nem_ures = true;
+                                logger.info("Main@main | "+i + ". játékos: " + karakterek[i % 2] + "\n neve beállítva | valasz: "+valasz+"\n");
                             }
                         }
                         karakter_nevek.add(valasz);
@@ -116,14 +121,18 @@ public class Main
                                 {
                                     felvette_a_jatekosokat = true;
                                     jol_valaszolt = true;
+                                    logger.info("Main@main | Nem szeretne több játékost felvenni\n");
+                                    logger.info("Main@main | 4 játékossal indul a játék\n");
                                 }
                                 else if(valasz.equals("igen"))
                                 {
+                                    logger.info("Main@main | Szeretne még több játékost felvenni\n");
                                     jol_valaszolt = true;
                                 }
                                 else
                                 {
                                     System.out.println("Érvénytelen bemenet. Add meg újra: ");
+                                    logger.info("Main@main | Érvénytelen bemenet | valasz: "+valasz+"\n");
                                 }
                             }
                         }
@@ -146,9 +155,11 @@ public class Main
                 }
                 case "2" -> //Tesztek
                 {
+                    logger.info("Main@main | Tesztek elindítva | valasz: 2 \n");
                     jo = true;
                     System.out.println("Hány darab mechanicot és saboteurt szeretnél lerakni? Add meg vesszővel elválasztva: ");
                     valasz = DaFuckinScanner.nextLine();
+                    logger.info("Main@main | Mechanic és saboteur darabszáma: | valasz: "+valasz+"\n");
                     String[] karakterek_szama = valasz.split(",", 2);
                     System.out.println("Add meg a mechanic-ok spawnolási helyét: ");
                     for (int i = 0; i < Integer.parseInt(karakterek_szama[0]); i++)
@@ -168,6 +179,7 @@ public class Main
                 default ->
                 {
                     System.out.println("Érvénytelen bemenet. Add meg újra: ");
+                    logger.info("Main@main | Érvénytelen input a játék menüjében | valasz: "+valasz+"\n");
                 }
             }
         }

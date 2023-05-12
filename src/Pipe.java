@@ -11,11 +11,9 @@ public class Pipe extends Breakable {
     private Random detvel = new Random(42);
     private Random vel = new Random();
     private boolean random;
-    private double capacity;
     private int sticky;
     private int unBreakable;
     private int sloppy;
-    private int hasWater;
     private boolean hasWaterPartOne = false;
     private boolean hasWaterPartTwo = false;
 
@@ -203,7 +201,6 @@ public class Pipe extends Breakable {
         Map.map.PlacePumpOnPipe(this);
     }
 
-    //FlowOutot még logolni kell
     public int FlowOut(Component sender) {
         if(!hasWaterPartOne)
         {
@@ -290,6 +287,7 @@ public class Pipe extends Breakable {
                 case "RepairPipe" -> Repair();
                 case "PlacePump" -> PlacePump();
                 case "MakeSloppy" -> MakeSloppy();
+                case "exit" -> System.exit(10);
                 default -> {
                     jo=true;
                     System.out.println("Nem jó bemenet");
@@ -420,7 +418,7 @@ public class Pipe extends Breakable {
     public void SetRandom(boolean a)
     {
         random=a;
-        logger.info(this.id+"@SetRandom |"+this.id+" random értéke beállítva: "+random+"-ra/re\n");
+        logger.info(this.id+"@SetRandom |"+this.id+" random értéke beállítva: "+random+"-ra\n");
     }
     public void Repair()
     {
@@ -436,6 +434,14 @@ public class Pipe extends Breakable {
     public void Break()
     {
         if(unBreakable==0)
+        {
             broken=true;
+            logger.info(this.id+"@Break |"+this.id+" eltörve | broken: "+this.broken+"\n");
+        }
+        else
+        {
+            logger.info(this.id+"@Break |"+this.id+" nem lehetett eltörni | broken: "+this.broken+" unBreakable: "+unBreakable+"\n");
+        }
+
     }
 }

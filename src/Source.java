@@ -23,6 +23,9 @@ public class Source extends Component {
                Step(me);
                t = true;
            }
+           if(valasz.equals("exit")) {
+               System.exit(10);
+           }
            if(!t){
                System.out.println("Rossz input");
                logger.info(this.id+"@Act | "+me.name+" játékos nem jó bemenetet adott: "+valasz+"\n");
