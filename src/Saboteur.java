@@ -1,8 +1,5 @@
 import org.apache.log4j.Logger;
 
-import java.util.Objects;
-import java.util.Scanner;
-
 public class Saboteur extends Player{
     private static final Logger logger = Logger.getLogger(Saboteur.class);
 

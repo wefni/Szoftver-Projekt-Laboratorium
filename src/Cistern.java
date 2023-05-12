@@ -45,6 +45,9 @@ public class Cistern extends Component{
                     PickUpPump((Mechanic) me);
                     t = true;
                 }
+                case "exit" -> {
+                    System.exit(10);
+                }
             }
 
             if(!t){
@@ -64,6 +67,7 @@ public class Cistern extends Component{
     }
 
     public boolean Accept(){
+        logger.info(this.id+"@Accept | "+this.id+" ra/re ráléphetnek?  | igen\n");
         return true;
     }
     public int FlowOut(Component sender){
@@ -119,12 +123,13 @@ public class Cistern extends Component{
                 }
             }
             if(t) System.out.println("Rossz input!\n");
-            logger.info(this.id + " @Act | "+me+" rossz inputot ütött be \n");
+            logger.info(this.id + " @Act | "+me+" rossz inputot ütött be | bemenet: "+bemenet+"\n");
         }
     }
     public void Tick()
     {
         randomCount--;
+        logger.info(this.id+"@Tick | "+this.id+" randomCount értéke csökkentve 1-el  | randomCount: "+ randomCount+"\n");
         if(randomCount==0)
         {
             if(random)
@@ -132,12 +137,13 @@ public class Cistern extends Component{
 
             if(!random)
                 randomCount= detrand.nextInt(0,2);
-
+            logger.info(this.id+"@Tick | "+this.id+" randomCount új értéket kapott  | randomCount "+ randomCount+"\n");
             this.SpawnPipe();
         }
     }
     public void SetRandom(boolean a)
     {
         random=a;
+        logger.info(this.id+"@SetRandom | "+this.id+" random új értéket kapott  | random: "+ random+"\n");
     }
 }

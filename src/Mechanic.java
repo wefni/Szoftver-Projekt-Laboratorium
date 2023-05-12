@@ -1,8 +1,5 @@
 import org.apache.log4j.Logger;
 
-import java.util.Objects;
-import java.util.Scanner;
-
 public class Mechanic extends Player {
     private boolean havePump;
     private static final Logger logger = Logger.getLogger(Mechanic.class);

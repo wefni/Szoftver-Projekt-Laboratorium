@@ -298,109 +298,93 @@ pump-43@AddNeighbour | pipe-24 hozzáadva pump-43 szomszédjához | neighbours.c
 
 pump-43@AddNeighbour | pipe-26 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-26): true
 
-pipe-4@SetRandom |pipe-4 random értéke beállítva: false-ra/re
+pump-30@ConfigurePumpWithParameters |pump-30 bemenete beállítva: pipe-29-ra/re
 
-pipe-5@SetRandom |pipe-5 random értéke beállítva: false-ra/re
+pump-30@ConfigurePumpWithParameters |pump-30 kimenete beállítva: pipe-27-ra/re
 
-pipe-6@SetRandom |pipe-6 random értéke beállítva: false-ra/re
+pump-42@ConfigurePumpWithParameters |pump-42 bemenete beállítva: pipe-27-ra/re
 
-pipe-7@SetRandom |pipe-7 random értéke beállítva: false-ra/re
+pump-42@ConfigurePumpWithParameters |pump-42 kimenete beállítva: pipe-26-ra/re
 
-pipe-8@SetRandom |pipe-8 random értéke beállítva: false-ra/re
+pump-32@ConfigurePumpWithParameters |pump-32 bemenete beállítva: pipe-28-ra/re
 
-pipe-9@SetRandom |pipe-9 random értéke beállítva: false-ra/re
+pump-32@ConfigurePumpWithParameters |pump-32 kimenete beállítva: pipe-24-ra/re
 
-pipe-10@SetRandom |pipe-10 random értéke beállítva: false-ra/re
+pump-31@ConfigurePumpWithParameters |pump-31 bemenete beállítva: pipe-21-ra/re
 
-pipe-11@SetRandom |pipe-11 random értéke beállítva: false-ra/re
+pump-31@ConfigurePumpWithParameters |pump-31 kimenete beállítva: pipe-14-ra/re
 
-pipe-12@SetRandom |pipe-12 random értéke beállítva: false-ra/re
+pump-33@ConfigurePumpWithParameters |pump-33 bemenete beállítva: pipe-22-ra/re
 
-pipe-13@SetRandom |pipe-13 random értéke beállítva: false-ra/re
+pump-33@ConfigurePumpWithParameters |pump-33 kimenete beállítva: pipe-19-ra/re
 
-pipe-14@SetRandom |pipe-14 random értéke beállítva: false-ra/re
+pump-34@ConfigurePumpWithParameters |pump-34 bemenete beállítva: pipe-19-ra/re
 
-pipe-15@SetRandom |pipe-15 random értéke beállítva: false-ra/re
+pump-34@ConfigurePumpWithParameters |pump-34 kimenete beállítva: pipe-18-ra/re
 
-pipe-16@SetRandom |pipe-16 random értéke beállítva: false-ra/re
+pump-35@ConfigurePumpWithParameters |pump-35 bemenete beállítva: pipe-20-ra/re
 
-pipe-17@SetRandom |pipe-17 random értéke beállítva: false-ra/re
+pump-35@ConfigurePumpWithParameters |pump-35 kimenete beállítva: pipe-13-ra/re
 
-pipe-18@SetRandom |pipe-18 random értéke beállítva: false-ra/re
+pump-36@ConfigurePumpWithParameters |pump-36 bemenete beállítva: pipe-18-ra/re
 
-pipe-19@SetRandom |pipe-19 random értéke beállítva: false-ra/re
+pump-36@ConfigurePumpWithParameters |pump-36 kimenete beállítva: pipe-16-ra/re
 
-pipe-20@SetRandom |pipe-20 random értéke beállítva: false-ra/re
+pump-43@ConfigurePumpWithParameters |pump-43 bemenete beállítva: pipe-24-ra/re
 
-pipe-21@SetRandom |pipe-21 random értéke beállítva: false-ra/re
+pump-43@ConfigurePumpWithParameters |pump-43 kimenete beállítva: pipe-11-ra/re
 
-pipe-22@SetRandom |pipe-22 random értéke beállítva: false-ra/re
+pump-38@ConfigurePumpWithParameters |pump-38 bemenete beállítva: pipe-14-ra/re
 
-pipe-23@SetRandom |pipe-23 random értéke beállítva: false-ra/re
+pump-38@ConfigurePumpWithParameters |pump-38 kimenete beállítva: pipe-6-ra/re
 
-pipe-24@SetRandom |pipe-24 random értéke beállítva: false-ra/re
+pump-37@ConfigurePumpWithParameters |pump-37 bemenete beállítva: pipe-16-ra/re
 
-pipe-25@SetRandom |pipe-25 random értéke beállítva: false-ra/re
+pump-37@ConfigurePumpWithParameters |pump-37 kimenete beállítva: pipe-4-ra/re
 
-pipe-26@SetRandom |pipe-26 random értéke beállítva: false-ra/re
+pump-39@ConfigurePumpWithParameters |pump-39 bemenete beállítva: pipe-11-ra/re
 
-pipe-27@SetRandom |pipe-27 random értéke beállítva: false-ra/re
+pump-39@ConfigurePumpWithParameters |pump-39 kimenete beállítva: pipe-10-ra/re
 
-pipe-28@SetRandom |pipe-28 random értéke beállítva: false-ra/re
+pump-41@ConfigurePumpWithParameters |pump-41 bemenete beállítva: pipe-10-ra/re
 
-pipe-29@SetRandom |pipe-29 random értéke beállítva: false-ra/re
+pump-41@ConfigurePumpWithParameters |pump-41 kimenete beállítva: pipe-9-ra/re
 
-a: Mechanic@Mechanic | a: Mechanic létrejött 
+pump-40@ConfigurePumpWithParameters |pump-40 bemenete beállítva: pipe-9-ra/re
 
-a: Mechanic@ChangeWhere | a: Mechanic helyzete megváltoztatva a következőre: cistern-2
+pump-40@ConfigurePumpWithParameters |pump-40 kimenete beállítva: pipe-8-ra/re
 
-cistern-2@AddPlayer | a: Mechanic rálépett a cistern-2-ra/re | onComponent.contains(a: Mechanic): true
+Main@main | Tesztek elindítva | valasz: 2 
 
-Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: 2 | components.get(componentNumber).onComponent.contains(m): true
+Main@main | Mechanic és saboteur darabszáma: | valasz: 1,0
 
-b: Saboteur@Saboteur | b: Saboteur létrejött 
+teszt0Mech: Mechanic@Mechanic | teszt0Mech: Mechanic létrejött 
 
-b: Saboteur@ChangeWhere | b: Saboteur helyzete megváltoztatva a következőre: source-0
+teszt0Mech: Mechanic@ChangeWhere | teszt0Mech: Mechanic helyzete megváltoztatva a következőre: source-0
 
-source-0@AddPlayer | b: Saboteur rálépett a source-0-ra/re | onComponent.contains(b: Saboteur): true
+source-0@AddPlayer | teszt0Mech: Mechanic rálépett a source-0-ra/re | onComponent.contains(teszt0Mech: Mechanic): true
 
-Map @AddSabToComponent | saboteur elhelyezve a következő pályarészre: 0 | components.get(componentNumber).onComponent.contains(s): true
-
-c: Mechanic@Mechanic | c: Mechanic létrejött 
-
-c: Mechanic@ChangeWhere | c: Mechanic helyzete megváltoztatva a következőre: cistern-2
-
-cistern-2@AddPlayer | c: Mechanic rálépett a cistern-2-ra/re | onComponent.contains(c: Mechanic): true
-
-Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: 2 | components.get(componentNumber).onComponent.contains(m): true
-
-d: Saboteur@Saboteur | d: Saboteur létrejött 
-
-d: Saboteur@ChangeWhere | d: Saboteur helyzete megváltoztatva a következőre: source-0
-
-source-0@AddPlayer | d: Saboteur rálépett a source-0-ra/re | onComponent.contains(d: Saboteur): true
-
-Map @AddSabToComponent | saboteur elhelyezve a következő pályarészre: 0 | components.get(componentNumber).onComponent.contains(s): true
+Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: 0 | components.get(componentNumber).onComponent.contains(m): true
 
 Map @Game | Játék elindítva
 
-a: Mechanic@YourTurn | a: Mechanic következik 
+Map @Game | Aktuális kör:0
 
-cistern-2 @Act | a: Mechanic Step menüpontot választotta 
+teszt0Mech: Mechanic@YourTurn | teszt0Mech: Mechanic következik 
 
-pipe-6@Accept | pipe-6 ra/re ráléphetnek?  | onComponent.isEmpty(): true
+source-0@Act | teszt0Mech: Mechanic játékos a következő opciót választotta: Step
 
-pipe-6@IsSloppy | csúszósság lekérdezése | false
+pipe-22@Accept | pipe-22 ra/re ráléphetnek?  | onComponent.isEmpty(): true
 
-pipe-6@AddPlayer | a: Mechanic rálépett a pipe-6-ra/re | onComponent.contains(a: Mechanic): true
+pipe-22@IsSloppy | csúszósság lekérdezése | false
 
-cistern-2@RemovePlayer | a: Mechanic lelépett a cistern-2-ról/ről | onComponent.contains(a: Mechanic): false
+pipe-22@AddPlayer | teszt0Mech: Mechanic rálépett a pipe-22-ra/re | onComponent.contains(teszt0Mech: Mechanic): true
 
-a: Mechanic@ChangeWhere | a: Mechanic helyzete megváltoztatva a következőre: pipe-6
+source-0@RemovePlayer | teszt0Mech: Mechanic lelépett a source-0-ról/ről | onComponent.contains(teszt0Mech: Mechanic): false
 
-cistern-2@Step | Mechanic@6ea6d14e  játékos pipe-6-re szeretne lépni | rá tudott lépni 
+teszt0Mech: Mechanic@ChangeWhere | teszt0Mech: Mechanic helyzete megváltoztatva a következőre: pipe-22
 
-cistern-2 @Act | Mechanic@6ea6d14e rossz inputot ütött be 
+source-0@Step | teszt0Mech: Mechanic  játékos pipe-22-re szeretne lépni | rá tudott lépni 
 
 pipe-22@FlowOut | source-0-ból/ből víz érkezett a pipe-22 első részébe
 
@@ -414,33 +398,39 @@ pipe-29@FlowOut | source-0-ból/ből víz érkezett a pipe-29 első részébe
 
 source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
 
-pump-30@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+cistern-1@Tick | cistern-1 randomCount értéke csökkentve 1-el  | randomCount: 4
 
-pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+cistern-2@Tick | cistern-2 randomCount értéke csökkentve 1-el  | randomCount: 4
 
-pump-32@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+cistern-3@Tick | cistern-3 randomCount értéke csökkentve 1-el  | randomCount: 4
 
-pump-33@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-30@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-31@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-32@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-33@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-34@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-35@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-36@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-37@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-38@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-39@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
-pump-43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
+pump-40@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
+
+pump-41@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
+
+pump-42@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
+
+pump-43@Tick | didWaterFlow=false és a tank üres volt ezért marad didWaterFlow=false
 
 cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
 
@@ -542,748 +532,7 @@ Map @SetTeamStats | mechanic pontszáma: 0
 
 Map @SetTeamStats | saboteur pontszáma: 0
 
-b: Saboteur@YourTurn | b: Saboteur következik 
+Map @Game | Aktuális kör:1
 
-source-0@Act | b: Saboteur játékos a következő opciót választotta: Step
-
-pipe-22@Accept | pipe-22 ra/re ráléphetnek?  | onComponent.isEmpty(): true
-
-pipe-22@IsSloppy | csúszósság lekérdezése | false
-
-pipe-22@AddPlayer | b: Saboteur rálépett a pipe-22-ra/re | onComponent.contains(b: Saboteur): true
-
-source-0@RemovePlayer | b: Saboteur lelépett a source-0-ról/ről | onComponent.contains(b: Saboteur): false
-
-b: Saboteur@ChangeWhere | b: Saboteur helyzete megváltoztatva a következőre: pipe-22
-
-source-0@Step | b: Saboteur  játékos pipe-22-re szeretne lépni | rá tudott lépni 
-
-pipe-22@FlowOut | A víz tovább foly a pipe-22 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-22-ba/be
-
-pipe-28@FlowOut | A víz tovább foly a pipe-28 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-28-ba/be
-
-pipe-29@FlowOut | A víz tovább foly a pipe-29 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
-
-pump-30@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-32@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-33@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 6
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe-4@GetWater | A pipe-4-ben ennyi víz van: 0
-
-pipe-5@GetWater | A pipe-5-ben ennyi víz van: 0
-
-pipe-6@GetWater | A pipe-6-ben ennyi víz van: 0
-
-pipe-7@GetWater | A pipe-7-ben ennyi víz van: 0
-
-pipe-8@GetWater | A pipe-8-ben ennyi víz van: 0
-
-pipe-9@GetWater | A pipe-9-ben ennyi víz van: 0
-
-pipe-10@GetWater | A pipe-10-ben ennyi víz van: 0
-
-pipe-11@GetWater | A pipe-11-ben ennyi víz van: 0
-
-pipe-12@GetWater | A pipe-12-ben ennyi víz van: 0
-
-pipe-13@GetWater | A pipe-13-ben ennyi víz van: 0
-
-pipe-14@GetWater | A pipe-14-ben ennyi víz van: 0
-
-pipe-15@GetWater | A pipe-15-ben ennyi víz van: 0
-
-pipe-16@GetWater | A pipe-16-ben ennyi víz van: 0
-
-pipe-17@GetWater | A pipe-17-ben ennyi víz van: 0
-
-pipe-18@GetWater | A pipe-18-ben ennyi víz van: 0
-
-pipe-19@GetWater | A pipe-19-ben ennyi víz van: 0
-
-pipe-20@GetWater | A pipe-20-ben ennyi víz van: 0
-
-pipe-21@GetWater | A pipe-21-ben ennyi víz van: 0
-
-pipe-22@GetWater | A pipe-22-ben ennyi víz van: 2
-
-pipe-23@GetWater | A pipe-23-ben ennyi víz van: 0
-
-pipe-24@GetWater | A pipe-24-ben ennyi víz van: 0
-
-pipe-25@GetWater | A pipe-25-ben ennyi víz van: 0
-
-pipe-26@GetWater | A pipe-26-ben ennyi víz van: 0
-
-pipe-27@GetWater | A pipe-27-ben ennyi víz van: 0
-
-pipe-28@GetWater | A pipe-28-ben ennyi víz van: 2
-
-pipe-29@GetWater | A pipe-29-ben ennyi víz van: 2
-
-pump-30@GetWater | A pump-30-ben ennyi víz van: 0
-
-pump-31@GetWater | A pump-31-ben ennyi víz van: 0
-
-pump-32@GetWater | A pump-32-ben ennyi víz van: 0
-
-pump-33@GetWater | A pump-33-ben ennyi víz van: 0
-
-pump-34@GetWater | A pump-34-ben ennyi víz van: 0
-
-pump-35@GetWater | A pump-35-ben ennyi víz van: 0
-
-pump-36@GetWater | A pump-36-ben ennyi víz van: 0
-
-pump-37@GetWater | A pump-37-ben ennyi víz van: 0
-
-pump-38@GetWater | A pump-38-ben ennyi víz van: 0
-
-pump-39@GetWater | A pump-39-ben ennyi víz van: 0
-
-pump-40@GetWater | A pump-40-ben ennyi víz van: 0
-
-pump-41@GetWater | A pump-41-ben ennyi víz van: 0
-
-pump-42@GetWater | A pump-42-ben ennyi víz van: 0
-
-pump-43@GetWater | A pump-43-ben ennyi víz van: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 6
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-c: Mechanic@YourTurn | c: Mechanic következik 
-
-cistern-2 @Act | c: Mechanic Step menüpontot választotta 
-
-pipe-5@Accept | pipe-5 ra/re ráléphetnek?  | onComponent.isEmpty(): true
-
-pipe-5@IsSloppy | csúszósság lekérdezése | false
-
-pipe-5@AddPlayer | c: Mechanic rálépett a pipe-5-ra/re | onComponent.contains(c: Mechanic): true
-
-cistern-2@RemovePlayer | c: Mechanic lelépett a cistern-2-ról/ről | onComponent.contains(c: Mechanic): false
-
-c: Mechanic@ChangeWhere | c: Mechanic helyzete megváltoztatva a következőre: pipe-5
-
-cistern-2@Step | Mechanic@6ad5c04e  játékos pipe-5-re szeretne lépni | rá tudott lépni 
-
-cistern-2 @Act | Mechanic@6ad5c04e rossz inputot ütött be 
-
-pipe-22@FlowOut |pipe-22-ból/ből a víz tovább folyik a pump-33-ba/be
-
-pump-33@FlowOut | pump-33 tank tartalma növelve | tank: 1
-
-pump-33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-33@FlowOut | pump-33-ból/ből tovább folyt a víz
-
-pipe-19@FlowOut | pump-33-ból/ből víz érkezett a pipe-19 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-22-ba/be
-
-pipe-28@FlowOut |pipe-28-ból/ből a víz tovább folyik a pump-32-ba/be
-
-pump-32@FlowOut | pump-32 tank tartalma növelve | tank: 1
-
-pump-32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-32@FlowOut | pump-32-ból/ből tovább folyt a víz
-
-pipe-24@FlowOut | pump-32-ból/ből víz érkezett a pipe-24 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-28-ba/be
-
-pipe-29@FlowOut |pipe-29-ból/ből a víz tovább folyik a pump-30-ba/be
-
-pump-30@FlowOut | pump-30 tank tartalma növelve | tank: 1
-
-pump-30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-30@FlowOut | pump-30-ból/ből tovább folyt a víz
-
-pipe-27@FlowOut | pump-30-ból/ből víz érkezett a pipe-27 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
-
-pump-30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 9
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe-4@GetWater | A pipe-4-ben ennyi víz van: 0
-
-pipe-5@GetWater | A pipe-5-ben ennyi víz van: 0
-
-pipe-6@GetWater | A pipe-6-ben ennyi víz van: 0
-
-pipe-7@GetWater | A pipe-7-ben ennyi víz van: 0
-
-pipe-8@GetWater | A pipe-8-ben ennyi víz van: 0
-
-pipe-9@GetWater | A pipe-9-ben ennyi víz van: 0
-
-pipe-10@GetWater | A pipe-10-ben ennyi víz van: 0
-
-pipe-11@GetWater | A pipe-11-ben ennyi víz van: 0
-
-pipe-12@GetWater | A pipe-12-ben ennyi víz van: 0
-
-pipe-13@GetWater | A pipe-13-ben ennyi víz van: 0
-
-pipe-14@GetWater | A pipe-14-ben ennyi víz van: 0
-
-pipe-15@GetWater | A pipe-15-ben ennyi víz van: 0
-
-pipe-16@GetWater | A pipe-16-ben ennyi víz van: 0
-
-pipe-17@GetWater | A pipe-17-ben ennyi víz van: 0
-
-pipe-18@GetWater | A pipe-18-ben ennyi víz van: 0
-
-pipe-19@GetWater | A pipe-19-ben ennyi víz van: 1
-
-pipe-20@GetWater | A pipe-20-ben ennyi víz van: 0
-
-pipe-21@GetWater | A pipe-21-ben ennyi víz van: 0
-
-pipe-22@GetWater | A pipe-22-ben ennyi víz van: 2
-
-pipe-23@GetWater | A pipe-23-ben ennyi víz van: 0
-
-pipe-24@GetWater | A pipe-24-ben ennyi víz van: 1
-
-pipe-25@GetWater | A pipe-25-ben ennyi víz van: 0
-
-pipe-26@GetWater | A pipe-26-ben ennyi víz van: 0
-
-pipe-27@GetWater | A pipe-27-ben ennyi víz van: 1
-
-pipe-28@GetWater | A pipe-28-ben ennyi víz van: 2
-
-pipe-29@GetWater | A pipe-29-ben ennyi víz van: 2
-
-pump-30@GetWater | A pump-30-ben ennyi víz van: 0
-
-pump-31@GetWater | A pump-31-ben ennyi víz van: 0
-
-pump-32@GetWater | A pump-32-ben ennyi víz van: 0
-
-pump-33@GetWater | A pump-33-ben ennyi víz van: 0
-
-pump-34@GetWater | A pump-34-ben ennyi víz van: 0
-
-pump-35@GetWater | A pump-35-ben ennyi víz van: 0
-
-pump-36@GetWater | A pump-36-ben ennyi víz van: 0
-
-pump-37@GetWater | A pump-37-ben ennyi víz van: 0
-
-pump-38@GetWater | A pump-38-ben ennyi víz van: 0
-
-pump-39@GetWater | A pump-39-ben ennyi víz van: 0
-
-pump-40@GetWater | A pump-40-ben ennyi víz van: 0
-
-pump-41@GetWater | A pump-41-ben ennyi víz van: 0
-
-pump-42@GetWater | A pump-42-ben ennyi víz van: 0
-
-pump-43@GetWater | A pump-43-ben ennyi víz van: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 9
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-d: Saboteur@YourTurn | d: Saboteur következik 
-
-source-0@Act | d: Saboteur játékos a következő opciót választotta: Step
-
-pipe-28@Accept | pipe-28 ra/re ráléphetnek?  | onComponent.isEmpty(): true
-
-pipe-28@IsSloppy | csúszósság lekérdezése | false
-
-pipe-28@AddPlayer | d: Saboteur rálépett a pipe-28-ra/re | onComponent.contains(d: Saboteur): true
-
-source-0@RemovePlayer | d: Saboteur lelépett a source-0-ról/ről | onComponent.contains(d: Saboteur): false
-
-d: Saboteur@ChangeWhere | d: Saboteur helyzete megváltoztatva a következőre: pipe-28
-
-source-0@Step | d: Saboteur  játékos pipe-28-re szeretne lépni | rá tudott lépni 
-
-pipe-22@FlowOut |pipe-22-ból/ből a víz tovább folyik a pump-33-ba/be
-
-pump-33@FlowOut | pump-33 tank tartalma növelve | tank: 1
-
-pump-33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-33@FlowOut | pump-33-ból/ből tovább folyt a víz
-
-pipe-19@FlowOut | A víz tovább foly a pipe-19 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-22-ba/be
-
-pipe-28@FlowOut |pipe-28-ból/ből a víz tovább folyik a pump-32-ba/be
-
-pump-32@FlowOut | pump-32 tank tartalma növelve | tank: 1
-
-pump-32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-32@FlowOut | pump-32-ból/ből tovább folyt a víz
-
-pipe-24@FlowOut | A víz tovább foly a pipe-24 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-28-ba/be
-
-pipe-29@FlowOut |pipe-29-ból/ből a víz tovább folyik a pump-30-ba/be
-
-pump-30@FlowOut | pump-30 tank tartalma növelve | tank: 1
-
-pump-30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-30@FlowOut | pump-30-ból/ből tovább folyt a víz
-
-pipe-27@FlowOut | A víz tovább foly a pipe-27 második részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
-
-pump-30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-34@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-42@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-43@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 12
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe-4@GetWater | A pipe-4-ben ennyi víz van: 0
-
-pipe-5@GetWater | A pipe-5-ben ennyi víz van: 0
-
-pipe-6@GetWater | A pipe-6-ben ennyi víz van: 0
-
-pipe-7@GetWater | A pipe-7-ben ennyi víz van: 0
-
-pipe-8@GetWater | A pipe-8-ben ennyi víz van: 0
-
-pipe-9@GetWater | A pipe-9-ben ennyi víz van: 0
-
-pipe-10@GetWater | A pipe-10-ben ennyi víz van: 0
-
-pipe-11@GetWater | A pipe-11-ben ennyi víz van: 0
-
-pipe-12@GetWater | A pipe-12-ben ennyi víz van: 0
-
-pipe-13@GetWater | A pipe-13-ben ennyi víz van: 0
-
-pipe-14@GetWater | A pipe-14-ben ennyi víz van: 0
-
-pipe-15@GetWater | A pipe-15-ben ennyi víz van: 0
-
-pipe-16@GetWater | A pipe-16-ben ennyi víz van: 0
-
-pipe-17@GetWater | A pipe-17-ben ennyi víz van: 0
-
-pipe-18@GetWater | A pipe-18-ben ennyi víz van: 0
-
-pipe-19@GetWater | A pipe-19-ben ennyi víz van: 2
-
-pipe-20@GetWater | A pipe-20-ben ennyi víz van: 0
-
-pipe-21@GetWater | A pipe-21-ben ennyi víz van: 0
-
-pipe-22@GetWater | A pipe-22-ben ennyi víz van: 2
-
-pipe-23@GetWater | A pipe-23-ben ennyi víz van: 0
-
-pipe-24@GetWater | A pipe-24-ben ennyi víz van: 2
-
-pipe-25@GetWater | A pipe-25-ben ennyi víz van: 0
-
-pipe-26@GetWater | A pipe-26-ben ennyi víz van: 0
-
-pipe-27@GetWater | A pipe-27-ben ennyi víz van: 2
-
-pipe-28@GetWater | A pipe-28-ben ennyi víz van: 2
-
-pipe-29@GetWater | A pipe-29-ben ennyi víz van: 2
-
-pump-30@GetWater | A pump-30-ben ennyi víz van: 0
-
-pump-31@GetWater | A pump-31-ben ennyi víz van: 0
-
-pump-32@GetWater | A pump-32-ben ennyi víz van: 0
-
-pump-33@GetWater | A pump-33-ben ennyi víz van: 0
-
-pump-34@GetWater | A pump-34-ben ennyi víz van: 0
-
-pump-35@GetWater | A pump-35-ben ennyi víz van: 0
-
-pump-36@GetWater | A pump-36-ben ennyi víz van: 0
-
-pump-37@GetWater | A pump-37-ben ennyi víz van: 0
-
-pump-38@GetWater | A pump-38-ben ennyi víz van: 0
-
-pump-39@GetWater | A pump-39-ben ennyi víz van: 0
-
-pump-40@GetWater | A pump-40-ben ennyi víz van: 0
-
-pump-41@GetWater | A pump-41-ben ennyi víz van: 0
-
-pump-42@GetWater | A pump-42-ben ennyi víz van: 0
-
-pump-43@GetWater | A pump-43-ben ennyi víz van: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 12
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-a: Mechanic@YourTurn | a: Mechanic következik 
-
-pipe-6@MakeSticky | 7 körig ragadós lesz a pipe-6
-
-pipe-6@Act | a: Mechanic játékos a következő opciót választotta: MakeSticky
-
-pipe-22@FlowOut |pipe-22-ból/ből a víz tovább folyik a pump-33-ba/be
-
-pump-33@FlowOut | pump-33 tank tartalma növelve | tank: 1
-
-pump-33@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-33@FlowOut | pump-33-ból/ből tovább folyt a víz
-
-pipe-19@FlowOut |pipe-19-ból/ből a víz tovább folyik a pump-34-ba/be
-
-pump-34@FlowOut | pump-34 tank tartalma növelve | tank: 1
-
-pump-34@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-34@FlowOut | pump-34-ból/ből tovább folyt a víz
-
-pipe-18@FlowOut | pump-34-ból/ből víz érkezett a pipe-18 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-22-ba/be
-
-pipe-28@FlowOut |pipe-28-ból/ből a víz tovább folyik a pump-32-ba/be
-
-pump-32@FlowOut | pump-32 tank tartalma növelve | tank: 1
-
-pump-32@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-32@FlowOut | pump-32-ból/ből tovább folyt a víz
-
-pipe-24@FlowOut |pipe-24-ból/ből a víz tovább folyik a pump-43-ba/be
-
-pump-43@FlowOut | pump-43 tank tartalma növelve | tank: 1
-
-pump-43@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-43@FlowOut | pump-43-ból/ből tovább folyt a víz
-
-pipe-11@FlowOut | pump-43-ból/ből víz érkezett a pipe-11 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-28-ba/be
-
-pipe-29@FlowOut |pipe-29-ból/ből a víz tovább folyik a pump-30-ba/be
-
-pump-30@FlowOut | pump-30 tank tartalma növelve | tank: 1
-
-pump-30@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-30@FlowOut | pump-30-ból/ből tovább folyt a víz
-
-pipe-27@FlowOut |pipe-27-ból/ből a víz tovább folyik a pump-42-ba/be
-
-pump-42@FlowOut | pump-42 tank tartalma növelve | tank: 1
-
-pump-42@FlowOut | didWaterFlow=false volt, tehát indít tovább FlowOut()-ot.
-
-pump-42@FlowOut | pump-42-ból/ből tovább folyt a víz
-
-pipe-26@FlowOut | pump-42-ból/ből víz érkezett a pipe-26 első részébe
-
-source-0@FlowOut |source-0-ból/ből a víz tovább folyik a pipe-29-ba/be
-
-pipe-6@Tick | ragadósság időtartamának csökkentése | 7 --> 
-6
-
-pump-30@Tick | pump-30 véletlenszerűen elromlott | broken= true
-
-pump-30@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-31@Tick | pump-31 véletlenszerűen elromlott | broken= true
-
-pump-31@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-32@Tick | pump-32 véletlenszerűen elromlott | broken= true
-
-pump-32@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-33@Tick | pump-33 véletlenszerűen elromlott | broken= true
-
-pump-33@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-34@Tick | pump-34 véletlenszerűen elromlott | broken= true
-
-pump-34@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-35@Tick | pump-35 véletlenszerűen elromlott | broken= true
-
-pump-35@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-36@Tick | pump-36 véletlenszerűen elromlott | broken= true
-
-pump-36@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-37@Tick | pump-37 véletlenszerűen elromlott | broken= true
-
-pump-37@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-38@Tick | pump-38 véletlenszerűen elromlott | broken= true
-
-pump-38@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-39@Tick | pump-39 véletlenszerűen elromlott | broken= true
-
-pump-39@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-40@Tick | pump-40 véletlenszerűen elromlott | broken= true
-
-pump-40@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-41@Tick | pump-41 véletlenszerűen elromlott | broken= true
-
-pump-41@Tick | didWaterFlow=false és a tank üres volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-42@Tick | pump-42 véletlenszerűen elromlott | broken= true
-
-pump-42@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-pump-43@Tick | pump-43 véletlenszerűen elromlott | broken= true
-
-pump-43@Tick | didWaterFlow=false volt DE EZ NEM VÉGLEGES LOG MERT NEM TUDOM EZ MI
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 15
-
-cistern-1 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-2 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-cistern-3 @GetWater | Lekérdezték a víz mennyiségét | mennyisége: 0
-
-pipe-4@GetWater | A pipe-4-ben ennyi víz van: 0
-
-pipe-5@GetWater | A pipe-5-ben ennyi víz van: 0
-
-pipe-6@GetWater | A pipe-6-ben ennyi víz van: 0
-
-pipe-7@GetWater | A pipe-7-ben ennyi víz van: 0
-
-pipe-8@GetWater | A pipe-8-ben ennyi víz van: 0
-
-pipe-9@GetWater | A pipe-9-ben ennyi víz van: 0
-
-pipe-10@GetWater | A pipe-10-ben ennyi víz van: 0
-
-pipe-11@GetWater | A pipe-11-ben ennyi víz van: 1
-
-pipe-12@GetWater | A pipe-12-ben ennyi víz van: 0
-
-pipe-13@GetWater | A pipe-13-ben ennyi víz van: 0
-
-pipe-14@GetWater | A pipe-14-ben ennyi víz van: 0
-
-pipe-15@GetWater | A pipe-15-ben ennyi víz van: 0
-
-pipe-16@GetWater | A pipe-16-ben ennyi víz van: 0
-
-pipe-17@GetWater | A pipe-17-ben ennyi víz van: 0
-
-pipe-18@GetWater | A pipe-18-ben ennyi víz van: 1
-
-pipe-19@GetWater | A pipe-19-ben ennyi víz van: 2
-
-pipe-20@GetWater | A pipe-20-ben ennyi víz van: 0
-
-pipe-21@GetWater | A pipe-21-ben ennyi víz van: 0
-
-pipe-22@GetWater | A pipe-22-ben ennyi víz van: 2
-
-pipe-23@GetWater | A pipe-23-ben ennyi víz van: 0
-
-pipe-24@GetWater | A pipe-24-ben ennyi víz van: 2
-
-pipe-25@GetWater | A pipe-25-ben ennyi víz van: 0
-
-pipe-26@GetWater | A pipe-26-ben ennyi víz van: 1
-
-pipe-27@GetWater | A pipe-27-ben ennyi víz van: 2
-
-pipe-28@GetWater | A pipe-28-ben ennyi víz van: 2
-
-pipe-29@GetWater | A pipe-29-ben ennyi víz van: 2
-
-pump-30@GetWater | A pump-30-ben ennyi víz van: 0
-
-pump-31@GetWater | A pump-31-ben ennyi víz van: 0
-
-pump-32@GetWater | A pump-32-ben ennyi víz van: 0
-
-pump-33@GetWater | A pump-33-ben ennyi víz van: 0
-
-pump-34@GetWater | A pump-34-ben ennyi víz van: 0
-
-pump-35@GetWater | A pump-35-ben ennyi víz van: 0
-
-pump-36@GetWater | A pump-36-ben ennyi víz van: 0
-
-pump-37@GetWater | A pump-37-ben ennyi víz van: 0
-
-pump-38@GetWater | A pump-38-ben ennyi víz van: 0
-
-pump-39@GetWater | A pump-39-ben ennyi víz van: 0
-
-pump-40@GetWater | A pump-40-ben ennyi víz van: 0
-
-pump-41@GetWater | A pump-41-ben ennyi víz van: 0
-
-pump-42@GetWater | A pump-42-ben ennyi víz van: 0
-
-pump-43@GetWater | A pump-43-ben ennyi víz van: 0
-
-source-0@GetWater | A source-0-ból ennyi víz folyt ki: 15
-
-Map @SetTeamStats | mechanic pontszáma: 0
-
-Map @SetTeamStats | saboteur pontszáma: 0
-
-b: Saboteur@YourTurn | b: Saboteur következik 
+teszt0Mech: Mechanic@YourTurn | teszt0Mech: Mechanic következik 
 

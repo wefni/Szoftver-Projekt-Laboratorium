@@ -33,13 +33,6 @@ public class Map implements Serializable{
         players=new ArrayList<>();
     }
 
-
-
-    public void setComp(Component c){
-        components.add(c);
-        System.out.println(c.id + "map xd");
-    }
-
 //    public void SpawnPipeControl(String ID,Cistern c,int spawnedPipes){
 //        System.out.println("asd");
 //        Pipe p = new Pipe("pipe-"+components.size());  // Itt az ID-t lehet valtoztatni kell
@@ -61,7 +54,7 @@ public class Map implements Serializable{
         while (round < endRound)
         {
             System.out.println("Round: " + round);
-
+            logger.info("Map @Game | Aktuális kör:"+round+"\n");
             round++;
             for (Player p : players)
             {
@@ -278,23 +271,6 @@ public class Map implements Serializable{
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
     }
-    public void AddPlayers(int numOfMechs, int numOfSaboteurs)
-    {
-        logger.info("Map @GenerateMap | Játékosok hozzáadása \n");
-        for(int i=0; i < numOfMechs; i++){
-            Mechanic m = new Mechanic("Mechanic - " + i);
-            m.ChangeWhere(components.get(2));
-            players.add(m);
-            components.get(2).AddPlayer(m);
-        }
-
-        for(int i=0; i < numOfSaboteurs; i++){
-            Saboteur s = new Saboteur("Saboteur - " + i);
-            s.ChangeWhere(components.get(0));
-            players.add(s);
-            components.get(0).AddPlayer(s);
-        }
-    }
     public void AddMechToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
@@ -375,6 +351,7 @@ public class Map implements Serializable{
         if(componentIterator != null){
             componentIterator.add(pipe);
         }
+    logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
     }
 
     public void PlacePumpOnPipe(Component pipe1) {
@@ -394,8 +371,8 @@ public class Map implements Serializable{
         components.add(pipe2);
         components.add(pump);
 
-        logger.info(pipe1.id+"@PlacePump | pumpa lehelyezve a "+pipe1.id+"-ra/re | új pumpa ID: "+pump.id+"\n");
-        logger.info(pipe1.id+"@PlacePump |"+pump+" szomszédai: "+pump.neighbours.get(0).id+", "+pump.neighbours.get(1).id+"\n");
+        logger.info(pipe1.id+"@PlacePumpOnPipe | pumpa lehelyezve a "+pipe1.id+"-ra/re | új pumpa ID: "+pump.id+"\n");
+        logger.info(pipe1.id+"@PlacePumpOnPipe |"+pump+" szomszédai: "+pump.neighbours.get(0).id+", "+pump.neighbours.get(1).id+"\n");
 
     }
 }

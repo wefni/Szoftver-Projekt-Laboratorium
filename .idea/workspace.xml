@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Szoftver-Projekt-Laboratorium:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pumpák ki és bemenet beállítva">
-
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cistern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cistern.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mechanic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saboteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saboteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Source.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-
     <option name="totalTimeSeconds" value="15481" />
-
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -81,7 +88,6 @@
       <workItem from="1683565763375" duration="4758000" />
       <workItem from="1683619640974" duration="2682000" />
       <workItem from="1683622871407" duration="3162000" />
-
       <workItem from="1683642823983" duration="2987000" />
       <workItem from="1683653427237" duration="2250000" />
       <workItem from="1683724705915" duration="434000" />
@@ -90,9 +96,8 @@
       <workItem from="1683732613850" duration="15000" />
       <workItem from="1683735655281" duration="168000" />
       <workItem from="1683827751569" duration="973000" />
-
       <workItem from="1683829070628" duration="1390000" />
-
+      <workItem from="1683913221422" duration="5274000" />
     </task>
     <task id="LOCAL-00001" summary="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
       <created>1683565801929</created>
