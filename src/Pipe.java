@@ -41,40 +41,61 @@ public class Pipe extends Breakable {
         ArrayList<Component> neighboursside0 = new ArrayList<>();
         ArrayList<Component> neighboursside1 = new ArrayList<>();
 
-                tmp0.addAll(this.neighbours.get(0).ShowNeighbours());// az elso szomszed( a 0-as) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
+        if(this.neighbours.size()>0){
+            tmp0.addAll(this.neighbours.get(0).ShowNeighbours());// az elso szomszed( a 0-as) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
+        }
+        if(this.neighbours.size()>1){
+            tmp1.addAll(this.neighbours.get(1).ShowNeighbours());// az elso szomszed( a 1-es) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
+        }
 
-                tmp1.addAll(this.neighbours.get(1).ShowNeighbours());// az elso szomszed( a 1-es) Pipe(2. szomszed) szomszédai ami nem az amin álltunk
+
 
         for (Component i : tmp0){
-            if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                neighboursside0.add(i.neighbours.get(0));
+            if(i.neighbours.size()>0){
+                if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+                {
+                    neighboursside0.add(i.neighbours.get(0));
+                }
             }
-            if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                neighboursside0.add(i.neighbours.get(1));
+            if(i.neighbours.size()>1){
+                if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+                {
+                    neighboursside0.add(i.neighbours.get(1));
+                }
             }
+
         }
         for (Component i : tmp1){
-            if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                neighboursside1.add(i.neighbours.get(0));
+            if(i.neighbours.size()>0){
+                if (!i.neighbours.get(0).neighbours.contains(this) ) // ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+                {
+                    neighboursside1.add(i.neighbours.get(0));
+                }
             }
-            if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
-            {
-                neighboursside1.add(i.neighbours.get(1));
-            }
+           if(i.neighbours.size()>1) {
+               if (!i.neighbours.get(1).neighbours.contains(this))// ha a 2. szomszed szomszédai,de csak azok amik nem a 2. szomszéd és az eredeti Pipe közös Pump szomszédja
+               {
+                   neighboursside1.add(i.neighbours.get(1));
+               }
+           }
         }
 
         // a neighbourssode1 -ban vannak a 0 oldali szomszédok az 1 ben az 1 oldaliak
         boolean jo = true;
         int valasz=0;
-        while(jo) {
-            System.out.println("Hány véget akarsz áthelyezni?");
-             valasz = Integer.parseInt(scanner.nextLine());
-            if(valasz==1 || valasz == 2)
-                jo=false;
+        if(this.neighbours.size() == 1){
+            valasz = 1;
+            jo=false;
         }
+        while(jo) {
+            System.out.println("Hány véget akarsz áthelyezni? ");
+             valasz = Integer.parseInt(scanner.nextLine());
+            if((valasz==1 || valasz == 2))
+                jo=false;
+            else
+                System.out.println("Rossz input, írj újat!");
+        }
+        jo=true;
         if(valasz==1) // ha csak egy oldalt szeretne áthelyezni
         {
              // az input helyessegere
@@ -88,7 +109,6 @@ public class Pipe extends Breakable {
             jo = true;
             System.out.println("Melyik(ekre) szeretnéd rakni");
             while (jo) { // jo input biztositasa
-
                 if (oldal == 0) {
                     for (Component i : neighboursside0) {
                         System.out.println(i.id);
@@ -111,6 +131,8 @@ public class Pipe extends Breakable {
                     }
                 }
                 if (oldal == 1) {
+                    if(neighboursside1.size() == 0);
+                        neighboursside1 = neighboursside0;
                     for (Component i : neighboursside1) {
                         System.out.println(i.id);
                     }
@@ -137,7 +159,7 @@ public class Pipe extends Breakable {
         if(valasz==2) // ha mindkét végét át akarjuk állítani
         {
             while(jo) {
-                System.out.println("Melyik(ekre) szeretnéd rakni");
+                System.out.println("Melyik kettő pumpa közé szeretnéd áthelyezni, külön sorba írd le melyik kettőre." );
                 neighboursside0.addAll(neighboursside1); // egyberakjuk
                 for (Component i : neighboursside0) {
                     System.out.println(i.id);
@@ -147,18 +169,25 @@ public class Pipe extends Breakable {
                 bemenet[1] = scanner.nextLine(); // másik oldal
                 int j = 0;
                 for (Component i : neighboursside0) {
-                    if (Objects.equals(i.id, bemenet[j]))// megkeressük a kiválasztottat
+                    if (Objects.equals(i.id, bemenet[0]))// megkeressük a kiválasztottat
                     {
                         jo=false;
                         i.AddNeighbours(this); // átállítjuk a szomszédságot
                         this.AddNeighbours(i);
                         this.RemoveNeighbours(this.neighbours.get(j));
                         this.neighbours.get(j).RemoveNeighbours(this);
-                        j++;
-
                         //logolás
                         logger.info(this.id + "@ChangePipe | " + this.id + " egyik vége átkötve " + i.id + "-ra/re | " + this.id + " neighbours.contains(" + i + "): " + this.neighbours.contains(i) + "\n");
-
+                    }
+                    if (Objects.equals(i.id, bemenet[1]))// megkeressük a kiválasztottat
+                    {
+                        jo=false;
+                        i.AddNeighbours(this); // átállítjuk a szomszédságot
+                        this.AddNeighbours(i);
+                        this.RemoveNeighbours(this.neighbours.get(j));
+                        this.neighbours.get(j).RemoveNeighbours(this);
+                        //logolás
+                        logger.info(this.id + "@ChangePipe | " + this.id + " egyik vége átkötve " + i.id + "-ra/re | " + this.id + " neighbours.contains(" + i + "): " + this.neighbours.contains(i) + "\n");
                     }
 
                 }
