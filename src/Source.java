@@ -92,4 +92,8 @@ public class Source extends Component {
         logger.info(this.id + "@GetWater | A "+this.id+"-ból ennyi víz folyt ki: "+amountOfWater+"\n");
         return amountOfWater;
     }
+
+    public boolean Accept(){
+        return true;
+    }
 }

@@ -171,5 +171,6 @@ public class Main
                 }
             }
         }
+        DaFuckinScanner.close();
     }
 }

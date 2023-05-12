@@ -1,9 +1,7 @@
 import org.apache.log4j.*;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Map implements Serializable{
     private static  final Logger logger = Logger.getLogger(Map.class);
@@ -18,6 +16,7 @@ public class Map implements Serializable{
 
     protected static Map map;
     protected Scanner scanner;
+    ListIterator<Component> componentIterator;
 
 
     public Map(String file, Scanner _be)
@@ -70,7 +69,11 @@ public class Map implements Serializable{
                 System.out.println("Helye: " + p.where.id);
                 p.YourTurn();
                 source.FlowOut(null);
-                for(Component c : components) { c.Tick(); }
+
+                componentIterator = components.listIterator();
+                while(componentIterator.hasNext()) {
+                    componentIterator.next().Tick();
+                }
                 SetTeamStats();
             }
         }
@@ -354,6 +357,23 @@ public class Map implements Serializable{
             System.out.println("Map class not found");
             c.printStackTrace();
             return null;
+        }
+    }
+
+    public void SpawnPipeBetweenComponents(Component c1, Component c2)
+    {
+        Pipe pipe = new Pipe("pipe-" + components.size(), scanner);
+
+        if(c1 != null){
+            c1.AddNeighbours(pipe);
+            pipe.AddNeighbours(c1);
+        }
+        if(c2 != null){
+            c2.AddNeighbours(pipe);
+            pipe.AddNeighbours(c2);
+        }
+        if(componentIterator != null){
+            componentIterator.add(pipe);
         }
     }
 }
