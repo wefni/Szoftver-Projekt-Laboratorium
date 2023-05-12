@@ -1,2 +1,9 @@
-pipe-22
-exit
+2
+1,0
+2
+Step
+pipe-6
+Step
+pump-38
+Step
+pipe-6

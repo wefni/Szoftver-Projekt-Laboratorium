@@ -1,0 +1,300 @@
+Map@Map | Map létrejött 
+
+Map @GenerateMap | Pálya generálása 
+
+source-0@Source | source-0 létrejött 
+
+cistern-1 @Cistern | cistern-1 létrejött 
+
+cistern-2 @Cistern | cistern-2 létrejött 
+
+cistern-3 @Cistern | cistern-3 létrejött 
+
+pipe-4@Pipe | pipe-4 létrejött 
+
+pipe-5@Pipe | pipe-5 létrejött 
+
+pipe-6@Pipe | pipe-6 létrejött 
+
+pipe-7@Pipe | pipe-7 létrejött 
+
+pipe-8@Pipe | pipe-8 létrejött 
+
+pipe-9@Pipe | pipe-9 létrejött 
+
+pipe-10@Pipe | pipe-10 létrejött 
+
+pipe-11@Pipe | pipe-11 létrejött 
+
+pipe-12@Pipe | pipe-12 létrejött 
+
+pipe-13@Pipe | pipe-13 létrejött 
+
+pipe-14@Pipe | pipe-14 létrejött 
+
+pipe-15@Pipe | pipe-15 létrejött 
+
+pipe-16@Pipe | pipe-16 létrejött 
+
+pipe-17@Pipe | pipe-17 létrejött 
+
+pipe-18@Pipe | pipe-18 létrejött 
+
+pipe-19@Pipe | pipe-19 létrejött 
+
+pipe-20@Pipe | pipe-20 létrejött 
+
+pipe-21@Pipe | pipe-21 létrejött 
+
+pipe-22@Pipe | pipe-22 létrejött 
+
+pipe-23@Pipe | pipe-23 létrejött 
+
+pipe-24@Pipe | pipe-24 létrejött 
+
+pipe-25@Pipe | pipe-25 létrejött 
+
+pipe-26@Pipe | pipe-26 létrejött 
+
+pipe-27@Pipe | pipe-27 létrejött 
+
+pipe-28@Pipe | pipe-28 létrejött 
+
+pipe-29@Pipe | pipe-29 létrejött 
+
+pump-30@Pump | pump-30 létrejött 
+
+pump-31@Pump | pump-31 létrejött 
+
+pump-32@Pump | pump-32 létrejött 
+
+pump-33@Pump | pump-33 létrejött 
+
+pump-34@Pump | pump-34 létrejött 
+
+pump-35@Pump | pump-35 létrejött 
+
+pump-36@Pump | pump-36 létrejött 
+
+pump-37@Pump | pump-37 létrejött 
+
+pump-38@Pump | pump-38 létrejött 
+
+pump-39@Pump | pump-39 létrejött 
+
+pump-40@Pump | pump-40 létrejött 
+
+pump-41@Pump | pump-41 létrejött 
+
+pump-42@Pump | pump-42 létrejött 
+
+pump-43@Pump | pump-43 létrejött 
+
+source-0@AddNeighbour | pipe-22 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-22): true
+
+source-0@AddNeighbour | pipe-28 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-28): true
+
+source-0@AddNeighbour | pipe-29 hozzáadva source-0 szomszédjához | neighbours.contains(pipe-29): true
+
+cistern-1@AddNeighbour | pipe-7 hozzáadva cistern-1 szomszédjához | neighbours.contains(pipe-7): true
+
+cistern-1@AddNeighbour | pipe-8 hozzáadva cistern-1 szomszédjához | neighbours.contains(pipe-8): true
+
+cistern-2@AddNeighbour | pipe-6 hozzáadva cistern-2 szomszédjához | neighbours.contains(pipe-6): true
+
+cistern-2@AddNeighbour | pipe-5 hozzáadva cistern-2 szomszédjához | neighbours.contains(pipe-5): true
+
+cistern-3@AddNeighbour | pipe-4 hozzáadva cistern-3 szomszédjához | neighbours.contains(pipe-4): true
+
+pipe-4@AddNeighbour | cistern-3 hozzáadva pipe-4 szomszédjához | neighbours.contains(cistern-3): true
+
+pipe-4@AddNeighbour | pump-37 hozzáadva pipe-4 szomszédjához | neighbours.contains(pump-37): true
+
+pipe-5@AddNeighbour | cistern-2 hozzáadva pipe-5 szomszédjához | neighbours.contains(cistern-2): true
+
+pipe-5@AddNeighbour | pump-37 hozzáadva pipe-5 szomszédjához | neighbours.contains(pump-37): true
+
+pipe-6@AddNeighbour | cistern-2 hozzáadva pipe-6 szomszédjához | neighbours.contains(cistern-2): true
+
+pipe-6@AddNeighbour | pump-38 hozzáadva pipe-6 szomszédjához | neighbours.contains(pump-38): true
+
+pipe-7@AddNeighbour | cistern-1 hozzáadva pipe-7 szomszédjához | neighbours.contains(cistern-1): true
+
+pipe-7@AddNeighbour | pump-39 hozzáadva pipe-7 szomszédjához | neighbours.contains(pump-39): true
+
+pipe-8@AddNeighbour | cistern-1 hozzáadva pipe-8 szomszédjához | neighbours.contains(cistern-1): true
+
+pipe-8@AddNeighbour | pump-40 hozzáadva pipe-8 szomszédjához | neighbours.contains(pump-40): true
+
+pipe-9@AddNeighbour | pump-40 hozzáadva pipe-9 szomszédjához | neighbours.contains(pump-40): true
+
+pipe-9@AddNeighbour | pump-41 hozzáadva pipe-9 szomszédjához | neighbours.contains(pump-41): true
+
+pipe-10@AddNeighbour | pump-41 hozzáadva pipe-10 szomszédjához | neighbours.contains(pump-41): true
+
+pipe-10@AddNeighbour | pump-39 hozzáadva pipe-10 szomszédjához | neighbours.contains(pump-39): true
+
+pipe-11@AddNeighbour | pump-39 hozzáadva pipe-11 szomszédjához | neighbours.contains(pump-39): true
+
+pipe-11@AddNeighbour | pump-43 hozzáadva pipe-11 szomszédjához | neighbours.contains(pump-43): true
+
+pipe-12@AddNeighbour | pump-43 hozzáadva pipe-12 szomszédjához | neighbours.contains(pump-43): true
+
+pipe-12@AddNeighbour | pump-38 hozzáadva pipe-12 szomszédjához | neighbours.contains(pump-38): true
+
+pipe-13@AddNeighbour | pump-38 hozzáadva pipe-13 szomszédjához | neighbours.contains(pump-38): true
+
+pipe-13@AddNeighbour | pump-35 hozzáadva pipe-13 szomszédjához | neighbours.contains(pump-35): true
+
+pipe-14@AddNeighbour | pump-38 hozzáadva pipe-14 szomszédjához | neighbours.contains(pump-38): true
+
+pipe-14@AddNeighbour | pump-31 hozzáadva pipe-14 szomszédjához | neighbours.contains(pump-31): true
+
+pipe-15@AddNeighbour | pump-37 hozzáadva pipe-15 szomszédjához | neighbours.contains(pump-37): true
+
+pipe-15@AddNeighbour | pump-35 hozzáadva pipe-15 szomszédjához | neighbours.contains(pump-35): true
+
+pipe-16@AddNeighbour | pump-37 hozzáadva pipe-16 szomszédjához | neighbours.contains(pump-37): true
+
+pipe-16@AddNeighbour | pump-36 hozzáadva pipe-16 szomszédjához | neighbours.contains(pump-36): true
+
+pipe-17@AddNeighbour | pump-36 hozzáadva pipe-17 szomszédjához | neighbours.contains(pump-36): true
+
+pipe-17@AddNeighbour | pump-33 hozzáadva pipe-17 szomszédjához | neighbours.contains(pump-33): true
+
+pipe-18@AddNeighbour | pump-36 hozzáadva pipe-18 szomszédjához | neighbours.contains(pump-36): true
+
+pipe-18@AddNeighbour | pump-34 hozzáadva pipe-18 szomszédjához | neighbours.contains(pump-34): true
+
+pipe-19@AddNeighbour | pump-34 hozzáadva pipe-19 szomszédjához | neighbours.contains(pump-34): true
+
+pipe-19@AddNeighbour | pump-33 hozzáadva pipe-19 szomszédjához | neighbours.contains(pump-33): true
+
+pipe-20@AddNeighbour | pump-34 hozzáadva pipe-20 szomszédjához | neighbours.contains(pump-34): true
+
+pipe-20@AddNeighbour | pump-35 hozzáadva pipe-20 szomszédjához | neighbours.contains(pump-35): true
+
+pipe-21@AddNeighbour | pump-33 hozzáadva pipe-21 szomszédjához | neighbours.contains(pump-33): true
+
+pipe-21@AddNeighbour | pump-31 hozzáadva pipe-21 szomszédjához | neighbours.contains(pump-31): true
+
+pipe-22@AddNeighbour | source-0 hozzáadva pipe-22 szomszédjához | neighbours.contains(source-0): true
+
+pipe-22@AddNeighbour | pump-33 hozzáadva pipe-22 szomszédjához | neighbours.contains(pump-33): true
+
+pipe-23@AddNeighbour | pump-31 hozzáadva pipe-23 szomszédjához | neighbours.contains(pump-31): true
+
+pipe-23@AddNeighbour | pump-32 hozzáadva pipe-23 szomszédjához | neighbours.contains(pump-32): true
+
+pipe-24@AddNeighbour | pump-32 hozzáadva pipe-24 szomszédjához | neighbours.contains(pump-32): true
+
+pipe-24@AddNeighbour | pump-43 hozzáadva pipe-24 szomszédjához | neighbours.contains(pump-43): true
+
+pipe-25@AddNeighbour | pump-32 hozzáadva pipe-25 szomszédjához | neighbours.contains(pump-32): true
+
+pipe-25@AddNeighbour | pump-42 hozzáadva pipe-25 szomszédjához | neighbours.contains(pump-42): true
+
+pipe-26@AddNeighbour | pump-42 hozzáadva pipe-26 szomszédjához | neighbours.contains(pump-42): true
+
+pipe-26@AddNeighbour | pump-43 hozzáadva pipe-26 szomszédjához | neighbours.contains(pump-43): true
+
+pipe-27@AddNeighbour | pump-42 hozzáadva pipe-27 szomszédjához | neighbours.contains(pump-42): true
+
+pipe-27@AddNeighbour | pump-30 hozzáadva pipe-27 szomszédjához | neighbours.contains(pump-30): true
+
+pipe-28@AddNeighbour | source-0 hozzáadva pipe-28 szomszédjához | neighbours.contains(source-0): true
+
+pipe-28@AddNeighbour | pump-32 hozzáadva pipe-28 szomszédjához | neighbours.contains(pump-32): true
+
+pipe-29@AddNeighbour | source-0 hozzáadva pipe-29 szomszédjához | neighbours.contains(source-0): true
+
+pipe-29@AddNeighbour | pump-30 hozzáadva pipe-29 szomszédjához | neighbours.contains(pump-30): true
+
+pump-30@AddNeighbour | pipe-29 hozzáadva pump-30 szomszédjához | neighbours.contains(pipe-29): true
+
+pump-30@AddNeighbour | pipe-27 hozzáadva pump-30 szomszédjához | neighbours.contains(pipe-27): true
+
+pump-31@AddNeighbour | pipe-14 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-14): true
+
+pump-31@AddNeighbour | pipe-21 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-21): true
+
+pump-31@AddNeighbour | pipe-23 hozzáadva pump-31 szomszédjához | neighbours.contains(pipe-23): true
+
+pump-32@AddNeighbour | pipe-23 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-23): true
+
+pump-32@AddNeighbour | pipe-24 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-24): true
+
+pump-32@AddNeighbour | pipe-25 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-25): true
+
+pump-32@AddNeighbour | pipe-28 hozzáadva pump-32 szomszédjához | neighbours.contains(pipe-28): true
+
+pump-33@AddNeighbour | pipe-17 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-17): true
+
+pump-33@AddNeighbour | pipe-19 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-19): true
+
+pump-33@AddNeighbour | pipe-21 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-21): true
+
+pump-33@AddNeighbour | pipe-22 hozzáadva pump-33 szomszédjához | neighbours.contains(pipe-22): true
+
+pump-34@AddNeighbour | pipe-18 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-18): true
+
+pump-34@AddNeighbour | pipe-19 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-19): true
+
+pump-34@AddNeighbour | pipe-20 hozzáadva pump-34 szomszédjához | neighbours.contains(pipe-20): true
+
+pump-35@AddNeighbour | pipe-13 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-13): true
+
+pump-35@AddNeighbour | pipe-15 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-15): true
+
+pump-35@AddNeighbour | pipe-20 hozzáadva pump-35 szomszédjához | neighbours.contains(pipe-20): true
+
+pump-36@AddNeighbour | pipe-16 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-16): true
+
+pump-36@AddNeighbour | pipe-17 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-17): true
+
+pump-36@AddNeighbour | pipe-18 hozzáadva pump-36 szomszédjához | neighbours.contains(pipe-18): true
+
+pump-37@AddNeighbour | pipe-4 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-4): true
+
+pump-37@AddNeighbour | pipe-5 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-5): true
+
+pump-37@AddNeighbour | pipe-15 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-15): true
+
+pump-37@AddNeighbour | pipe-16 hozzáadva pump-37 szomszédjához | neighbours.contains(pipe-16): true
+
+pump-38@AddNeighbour | pipe-6 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-6): true
+
+pump-38@AddNeighbour | pipe-12 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-12): true
+
+pump-38@AddNeighbour | pipe-13 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-13): true
+
+pump-38@AddNeighbour | pipe-14 hozzáadva pump-38 szomszédjához | neighbours.contains(pipe-14): true
+
+pump-39@AddNeighbour | pipe-7 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-7): true
+
+pump-39@AddNeighbour | pipe-10 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-10): true
+
+pump-39@AddNeighbour | pipe-11 hozzáadva pump-39 szomszédjához | neighbours.contains(pipe-11): true
+
+pump-40@AddNeighbour | pipe-8 hozzáadva pump-40 szomszédjához | neighbours.contains(pipe-8): true
+
+pump-40@AddNeighbour | pipe-9 hozzáadva pump-40 szomszédjához | neighbours.contains(pipe-9): true
+
+pump-41@AddNeighbour | pipe-9 hozzáadva pump-41 szomszédjához | neighbours.contains(pipe-9): true
+
+pump-41@AddNeighbour | pipe-10 hozzáadva pump-41 szomszédjához | neighbours.contains(pipe-10): true
+
+pump-42@AddNeighbour | pipe-25 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-25): true
+
+pump-42@AddNeighbour | pipe-26 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-26): true
+
+pump-42@AddNeighbour | pipe-27 hozzáadva pump-42 szomszédjához | neighbours.contains(pipe-27): true
+
+pump-43@AddNeighbour | pipe-11 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-11): true
+
+pump-43@AddNeighbour | pipe-12 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-12): true
+
+pump-43@AddNeighbour | pipe-24 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-24): true
+
+pump-43@AddNeighbour | pipe-26 hozzáadva pump-43 szomszédjához | neighbours.contains(pipe-26): true
+

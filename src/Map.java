@@ -16,13 +16,15 @@ public class Map implements Serializable{
     private ArrayList<Component> components;
     private ArrayList<Player> players;
 
-    protected static Map m;
+    protected static Map map;
+    protected Scanner scanner;
 
-    public Map(String file)
+
+    public Map(String file, Scanner _be)
     {
         logger.info("Map@Map | Map létrejött \n");
-
-        if(m==null) m = this;
+        map = this;
+        scanner = _be;
         round = 0;
         mechWater = 0;
         sabWater = 0;
@@ -81,26 +83,26 @@ public class Map implements Serializable{
 
         //Initializing------------------------------------------
         //Source
-        Source source0 = new Source("source-0");
+        Source source0 = new Source("source-0", scanner);
         components.add(source0);
         source = source0;
 
         //Cisterns
         for(int i = 1; i<4; i++){
-            Cistern cistern = new Cistern("cistern-"+(i));
+            Cistern cistern = new Cistern("cistern-"+(i), scanner);
             components.add(cistern);
             cisterns.add(cistern);
         }
 
         //Pipes
         for(int i= 4; i < 30; i++){
-            Pipe pipe = new Pipe("pipe-"+(i));
+            Pipe pipe = new Pipe("pipe-"+(i), scanner);
             components.add(pipe);
         }
 
         //Pumps
         for(int i = 30; i < 44; i++){
-            Pump pump = new Pump("pump-"+(i));
+            Pump pump = new Pump("pump-"+(i), scanner);
             components.add(pump);
         }
 

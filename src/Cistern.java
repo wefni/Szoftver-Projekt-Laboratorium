@@ -13,8 +13,10 @@ public class Cistern extends Component{
     private int amountOfWater=0;
     private int spawnedPipes = 0;
 
-    public Cistern(String ID)  {
-        super(ID);
+
+    public Cistern(String ID, Scanner _be)  {
+        super(ID, _be);
+
 
         if(random)
             randomCount=rand.nextInt(5,10);
@@ -30,9 +32,7 @@ public class Cistern extends Component{
         while(!t){
             System.out.println("Mit szeretnél cselekedni?\nStep");
             if(type==0) System.out.println("PickUpPump");
-
-            Scanner be=new Scanner(System.in);
-            String valasz=be.nextLine();
+            String valasz=scanner.nextLine();
 
             switch (valasz) {
                 case "Step" -> {
@@ -86,14 +86,13 @@ public class Cistern extends Component{
         boolean t = true;
         while(t){
             System.out.println("Melyik elemre szeretnél lépni?");
-            Scanner be=new Scanner(System.in);
 
             for(Component i: this.neighbours)
             {
                 System.out.println(i.id);
             }
 
-            String bemenet = be.nextLine();
+            String bemenet = scanner.nextLine();
 
             for(Component j: this.neighbours)
             {

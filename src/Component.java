@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public abstract class Component implements Flow, Serializable {
 
@@ -11,9 +12,11 @@ public abstract class Component implements Flow, Serializable {
     protected String id;
     protected ArrayList<Player> onComponent=new ArrayList<>();
     protected ArrayList<Component> neighbours=new ArrayList<>();
+    protected Scanner scanner;
 
-    public Component(String ID) {
+    public Component(String ID, Scanner _be) {
         id = ID;
+        scanner=_be;
     }
 
     public boolean IsSloppy(){

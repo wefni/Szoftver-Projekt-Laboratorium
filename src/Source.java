@@ -1,3 +1,4 @@
+import java.io.InputStream;
 import java.util.Objects;
 import org.apache.log4j.Logger;
 import java.util.Scanner;
@@ -7,16 +8,15 @@ public class Source extends Component {
     private static final Logger logger = Logger.getLogger(Source.class);
     private int amountOfWater = 0;
 
-    public Source(String ID) {
-        super(ID);
+    public Source(String ID, Scanner _be) {
+        super(ID, _be);
         logger.info(this.id + "@Source | "+this.id+" létrejött \n");
     }
     public void Act(Player me, int type){
        boolean t = false;
        while(!t){
            System.out.println("Mit szeretnél cselekedni?\nStep");
-           Scanner be=new Scanner(System.in);
-           String valasz=be.nextLine();
+           String valasz=scanner.nextLine();
            logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
 
            if(valasz.equals("Step")) {
@@ -35,14 +35,13 @@ public class Source extends Component {
         boolean t = true;
         while(t){
             System.out.println("Melyik elemre szeretnél lépni?");
-            Scanner be=new Scanner(System.in);
 
             for(Component i: this.neighbours)
             {
                 System.out.println(i.id);
             }
 
-            String bemenet = be.nextLine();
+            String bemenet = scanner.nextLine();
 
             for(Component j: this.neighbours)
             {

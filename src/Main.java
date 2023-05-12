@@ -1,6 +1,7 @@
 import org.apache.log4j.MDC;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -31,18 +32,17 @@ public class Main
 
 
 
-*/
+*/      Scanner DaFuckinScanner = new Scanner(System.in);
         String fileName = "teszt";
-        Map map = new Map(fileName);
+        Map map = new Map(fileName, DaFuckinScanner);
         map.GenerateMap();
 
         System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
-        Scanner be = new Scanner(System.in);
         String valasz;
         boolean jo = false;
         while (!jo)
         {
-            valasz = be.nextLine(); //bekér
+            valasz = DaFuckinScanner.nextLine(); //bekér
             valasz = valasz.toLowerCase(); //kisbetűsít
             switch (valasz)
             {
@@ -53,7 +53,7 @@ public class Main
                     boolean jol_valaszoltak = false;
                     while(!jol_valaszoltak)
                     {
-                        valasz = be.nextLine(); //bekér
+                        valasz = DaFuckinScanner.nextLine(); //bekér
                         switch (valasz)
                         {
                             case "be" -> //Random bekapcsolás
@@ -93,7 +93,7 @@ public class Main
                         boolean nem_ures = false;
                         while(!nem_ures)
                         {
-                            valasz = be.nextLine();
+                            valasz = DaFuckinScanner.nextLine();
                             if(valasz.equals(""))
                             {
                                 System.out.print("A név nem lehet üres! Add meg újra:\nNév: ");
@@ -110,7 +110,7 @@ public class Main
                             while(!jol_valaszolt)
                             {
                                 System.out.println("Szeretnél még játékost felvenni? (igen/nem)");
-                                valasz = be.nextLine(); //bekér
+                                valasz = DaFuckinScanner.nextLine(); //bekér
                                 valasz = valasz.toLowerCase(); //kisbetűsít
                                 if(valasz.equals("nem"))
                                 {
@@ -148,19 +148,19 @@ public class Main
                 {
                     jo = true;
                     System.out.println("Hány darab mechanicot és saboteurt szeretnél lerakni? Add meg vesszővel elválasztva: ");
-                    valasz = be.nextLine();
+                    valasz = DaFuckinScanner.nextLine();
                     String[] karakterek_szama = valasz.split(",", 2);
                     System.out.println("Add meg a mechanic-ok spawnolási helyét: ");
                     for (int i = 0; i < Integer.parseInt(karakterek_szama[0]); i++)
                     {
                         System.out.println(i + ". " + "Mechanic spawn helye: ");
-                        valasz = be.nextLine();
+                        valasz = DaFuckinScanner.nextLine();
                         map.AddMechToComponent(Integer.parseInt(valasz), "teszt" + i + "Mech");
                     }
                     for (int i = 0; i < Integer.parseInt(karakterek_szama[1]); i++)
                     {
                         System.out.println(i + ". " + "Saboteur spawn helye: ");
-                        valasz = be.nextLine();
+                        valasz = DaFuckinScanner.nextLine();
                         map.AddMechToComponent(Integer.parseInt(valasz), "teszt" + i + "Sab");
                     }
                     map.Game();

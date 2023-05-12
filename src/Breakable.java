@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public abstract class Breakable extends Component{
 protected boolean broken;
 
-    public Breakable(String ID) {
-        super(ID);
+    public Breakable(String ID, Scanner _be) {
+        super(ID, _be);
     }
 
     public void Break()

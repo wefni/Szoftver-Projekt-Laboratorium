@@ -1,5 +1,6 @@
 import org.apache.log4j.Logger;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
@@ -18,8 +19,8 @@ public class Pipe extends Breakable {
     private boolean hasWaterPartOne = false;
     private boolean hasWaterPartTwo = false;
 
-    public Pipe(String ID) {
-        super(ID);
+    public Pipe(String ID, Scanner _be) {
+        super(ID, _be);
         logger.info(this.id + "@Pipe | "+this.id+" létrejött \n");
 
     }
@@ -67,11 +68,10 @@ public class Pipe extends Breakable {
 
         // a neighbourssode1 -ban vannak a 0 oldali szomszédok az 1 ben az 1 oldaliak
         boolean jo = true;
-        Scanner be = new Scanner(System.in);
         int valasz=0;
         while(jo) {
             System.out.println("Hány véget akarsz áthelyezni?");
-             valasz = Integer.parseInt(be.nextLine());
+             valasz = Integer.parseInt(scanner.nextLine());
             if(valasz==1 || valasz == 2)
                 jo=false;
         }
@@ -81,7 +81,7 @@ public class Pipe extends Breakable {
             int oldal = 0; // melyik odallal szeretnel foglalkozni
             while (jo) {
                 System.out.println("Melyik végét szeretnéd átrakni?");
-                oldal = Integer.parseInt(be.nextLine());
+                oldal = Integer.parseInt(scanner.nextLine());
                 if (oldal == 1 || oldal == 0)
                     jo = false;
             }
@@ -93,7 +93,7 @@ public class Pipe extends Breakable {
                     for (Component i : neighboursside0) {
                         System.out.println(i.id);
                     }
-                    String bemenet = be.nextLine();
+                    String bemenet = scanner.nextLine();
                     for (Component i : neighboursside0) {
                         if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
                         {
@@ -114,7 +114,7 @@ public class Pipe extends Breakable {
                     for (Component i : neighboursside1) {
                         System.out.println(i.id);
                     }
-                    String bemenet = be.nextLine();
+                    String bemenet = scanner.nextLine();
                     for (Component i : neighboursside1) {
                         if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
                         {
@@ -143,8 +143,8 @@ public class Pipe extends Breakable {
                     System.out.println(i.id);
                 }
                 String[] bemenet = new String[2];
-                bemenet[0] = be.nextLine(); // egyik oldal kiválasztása
-                bemenet[1] = be.nextLine(); // másik oldal
+                bemenet[0] = scanner.nextLine(); // egyik oldal kiválasztása
+                bemenet[1] = scanner.nextLine(); // másik oldal
                 int j = 0;
                 for (Component i : neighboursside0) {
                     if (Objects.equals(i.id, bemenet[j]))// megkeressük a kiválasztottat
@@ -171,8 +171,8 @@ public class Pipe extends Breakable {
      */
     public void PlacePump()
     {
-        Pump new_pump = new Pump("1250"); //ID?
-        Pipe new_pipe = new Pipe("1251"); //ID?
+        Pump new_pump = new Pump("1250", scanner); //ID?
+        Pipe new_pipe = new Pipe("1251", scanner); //ID?
 
         ArrayList<Component> neighbours = this.ShowNeighbours();
         Component[] szomszedok = new Component[2];
@@ -269,14 +269,13 @@ public class Pipe extends Breakable {
         {
             System.out.println("MakeSloppy");
         }
-        Scanner be=new Scanner(System.in);
 
         String valasz;
 
 
         boolean jo;
         do {
-            valasz=be.nextLine();
+            valasz=scanner.nextLine();
             jo=false;
             switch (valasz) {
                 case "Step" -> Step(me);
@@ -300,12 +299,13 @@ public class Pipe extends Breakable {
 
     public void Step( Player me) {
         System.out.println("Melyik elemre szeretnél lépni?");
-        Scanner be = new Scanner(System.in);
+        InputStream inputStream = System.in;
+        Scanner be = new Scanner(inputStream);
         for (Component i : this.neighbours) {
             System.out.println(i.id);
         }
 
-        String bemenet = be.nextLine();
+        String bemenet = scanner.nextLine();
         for (Component j : this.neighbours) {
             if (Objects.equals(j.id, bemenet)) {
                 if (j.Accept()) {

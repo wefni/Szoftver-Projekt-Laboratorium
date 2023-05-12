@@ -1,4 +1,6 @@
 import org.apache.log4j.Logger;
+
+import java.io.InputStream;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ import java.util.Scanner;
  * A Pump osztaly valositja meg a pumpat.
  * A RandomBreakable-ből örököl, mivel random idöközönként el tud törni.
  */
-public class Pump extends RandomBreakable
+public class Pump extends Breakable
 {
     private  boolean random=false;
     private Random rand = new Random();
@@ -24,9 +26,9 @@ public class Pump extends RandomBreakable
     private int randomBreakCounter;
     private boolean didWaterFlow;
 
-    public Pump(String ID)
+    public Pump(String ID, Scanner _be)
     {
-        super(ID);
+        super(ID, _be);
         if(random)
         randomBreakCounter=rand.nextInt(5,10);
 
@@ -49,12 +51,11 @@ public class Pump extends RandomBreakable
     public void ConfigurePump()
     {
         System.out.println("Kimenetet, bemenetet vagy mindkettőt szeretnéd állítani? (be/ki/mindketto)");
-        Scanner be = new Scanner(System.in);
         String valasz;
         boolean jo = false;
         while (!jo)
         {
-            valasz = be.nextLine(); //bekér
+            valasz = scanner.nextLine(); //bekér
             valasz = valasz.toLowerCase(); //kisbetűsít
             switch (valasz)
             {
@@ -75,7 +76,7 @@ public class Pump extends RandomBreakable
                         }
                     }
                     System.out.println("\nKérlek add meg a bemenetet!");
-                    String bemenet = be.nextLine();
+                    String bemenet = scanner.nextLine();
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, bemenet)) //megfelelot beallit
@@ -103,7 +104,7 @@ public class Pump extends RandomBreakable
                         }
                     }
                     System.out.println("\nKérlek add meg a kimenetet!");
-                    String kimenet = be.nextLine();
+                    String kimenet = scanner.nextLine();
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, kimenet)) //megfelelot beallit
@@ -126,7 +127,7 @@ public class Pump extends RandomBreakable
                             System.out.println(i.id); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
                     }
                     System.out.println("\nKérlek add meg a be- és kimenetet vesszővel elválasztva!");
-                    String mindketto = be.nextLine();
+                    String mindketto = scanner.nextLine();
                     String[] uj_bemenet = mindketto.split(",", 2);
                     for (Component i : neighbours)
                     {
@@ -166,12 +167,11 @@ public class Pump extends RandomBreakable
         System.out.println("ConfigurePump");
         System.out.println("Step");
 
-        Scanner be = new Scanner(System.in);
         String valasz;
         boolean jo = false;
         while (!jo)
         {
-            valasz = be.nextLine(); //bekér a választ
+            valasz = scanner.nextLine(); //bekér a választ
             valasz = valasz.toLowerCase(); //kisbetűsít
             logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
             switch (valasz)
@@ -215,13 +215,12 @@ public class Pump extends RandomBreakable
             System.out.println(i.id);
         }
 
-        Scanner be = new Scanner(System.in);
         String valasz;
         boolean jo = false;
         boolean ervenyes_bemenet = false;
         while(!jo)
         {
-            valasz = be.nextLine();
+            valasz = scanner.nextLine();
             for (Component j : this.neighbours)
             {
                 if (Objects.equals(j.id, valasz))
