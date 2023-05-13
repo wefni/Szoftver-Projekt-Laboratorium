@@ -63,7 +63,7 @@ public class Cistern extends Component{
     }
     public void SpawnPipe(){
         logger.info(this.id + " @SpawnPipe | random lett egy új pipe \n");
-        //Map.map.SpawnPipeBetweenComponents(this, null);
+        Map.map.SpawnPipeBetweenComponents(this, null);
     }
 
     public boolean Accept(){
