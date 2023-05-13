@@ -1,0 +1,6 @@
+2
+0,1
+6
+Step
+cistern-2
+exit
