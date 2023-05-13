@@ -172,7 +172,7 @@ public class Main
                     {
                         System.out.println(i + ". " + "Saboteur spawn helye: ");
                         valasz = DaFuckinScanner.nextLine();
-                        map.AddMechToComponent(Integer.parseInt(valasz), "teszt" + i + "Sab");
+                        map.AddSabToComponent(Integer.parseInt(valasz), "teszt" + i + "Sab");
                     }
                     map.Game();
                 }
