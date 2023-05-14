@@ -4,7 +4,7 @@
 FILE="log.log"
 
 cat ../Input/Mechanic_Lep_Ures_Forrasra.txt | java -jar ../*.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
-sleep 0.1
+sleep 0.4
 
 #Jelenlegi teszt
 echo "Teszt - Mechanic_Lep_Ures_Forrasra"
