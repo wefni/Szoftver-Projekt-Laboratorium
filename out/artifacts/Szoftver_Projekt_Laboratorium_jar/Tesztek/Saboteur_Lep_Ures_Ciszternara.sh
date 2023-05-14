@@ -3,8 +3,8 @@
 # Replace "path/to/file" with the path to the file you want to search
 FILE="log.log"
 
-cat ../Input/Saboteur_Lep_Ures_Ciszternara.txt | java -jar ../*.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
-sleep 0.4
+cat Input/Saboteur_Lep_Ures_Ciszternara.txt | java -jar *.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
+sleep 0.8
 
 #Jelenlegi teszt
 echo "Teszt - Saboteur_Lep_Ures_Ciszternara"
