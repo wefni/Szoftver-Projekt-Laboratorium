@@ -31,7 +31,7 @@ public class Pump extends Breakable
         randomBreakCounter=rand.nextInt(5,10);
 
         if(!random)
-            randomBreakCounter= detrand.nextInt(5,10);
+            randomBreakCounter= detrand.nextInt(11,13);
 
         logger.info(this.id + "@Pump | "+this.id+" létrejött \n");
 

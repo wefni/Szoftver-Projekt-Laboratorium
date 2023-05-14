@@ -1,0 +1,7 @@
+2
+1,0
+38
+ConfigurePump
+mindketto
+pipe-6,pipe-12
+exit

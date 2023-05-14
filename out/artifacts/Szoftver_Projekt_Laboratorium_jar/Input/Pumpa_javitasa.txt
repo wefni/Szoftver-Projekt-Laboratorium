@@ -13,5 +13,17 @@ Step
 pipe-6
 Step
 pump-38
+Step
+pipe-6
+Step
+pump-38
+Step
+pipe-6
+Step
+pump-38
+Step
+pipe-6
+Step
+pump-38
 RepairPump
 exit
