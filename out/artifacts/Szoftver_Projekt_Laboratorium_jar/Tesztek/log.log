@@ -360,11 +360,11 @@ Main@main | Mechanic és saboteur darabszáma: | valasz: 1,0
 
 teszt0Mech: Mechanic@Mechanic | teszt0Mech: Mechanic létrejött 
 
-teszt0Mech: Mechanic@ChangeWhere | teszt0Mech: Mechanic helyzete megváltoztatva a következőre: source-0
+teszt0Mech: Mechanic@ChangeWhere | teszt0Mech: Mechanic helyzete megváltoztatva a következőre: pump-38
 
-source-0@AddPlayer | teszt0Mech: Mechanic rálépett a source-0-ra/re | onComponent.contains(teszt0Mech: Mechanic): true
+pump-38@AddPlayer | teszt0Mech: Mechanic rálépett a pump-38-ra/re | onComponent.contains(teszt0Mech: Mechanic): true
 
-Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: 0 | components.get(componentNumber).onComponent.contains(m): true
+Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: 38 | components.get(componentNumber).onComponent.contains(m): true
 
 Map @Game | Játék elindítva
 
@@ -372,19 +372,9 @@ Map @Game | Aktuális kör:0
 
 teszt0Mech: Mechanic@YourTurn | teszt0Mech: Mechanic következik 
 
-source-0@Act | teszt0Mech: Mechanic játékos a következő opciót választotta: Step
+pump-38@Act | teszt0Mech: Mechanic játékos a következő opciót választotta: configurepump
 
-pipe-22@Accept | pipe-22 ra/re ráléphetnek?  | onComponent.isEmpty(): true
-
-pipe-22@IsSloppy | csúszósság lekérdezése | false
-
-pipe-22@AddPlayer | teszt0Mech: Mechanic rálépett a pipe-22-ra/re | onComponent.contains(teszt0Mech: Mechanic): true
-
-source-0@RemovePlayer | teszt0Mech: Mechanic lelépett a source-0-ról/ről | onComponent.contains(teszt0Mech: Mechanic): false
-
-teszt0Mech: Mechanic@ChangeWhere | teszt0Mech: Mechanic helyzete megváltoztatva a következőre: pipe-22
-
-source-0@Step | teszt0Mech: Mechanic  játékos pipe-22-re szeretne lépni | rá tudott lépni 
+pump-38@ConfigurePump |pump-38 kimenete beállítva: pipe-12-ra/re
 
 pipe-22@FlowOut | source-0-ból/ből víz érkezett a pipe-22 első részébe
 
@@ -535,4 +525,6 @@ Map @SetTeamStats | saboteur pontszáma: 0
 Map @Game | Aktuális kör:1
 
 teszt0Mech: Mechanic@YourTurn | teszt0Mech: Mechanic következik 
+
+pump-38@Act | teszt0Mech: Mechanic játékos a következő opciót választotta: exit
 

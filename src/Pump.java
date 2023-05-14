@@ -100,7 +100,7 @@ public class Pump extends Breakable
                         if(!Objects.equals(this.out.id, i.id)) //aktuálisat nem ír ki
                         {
                             System.out.println(i.id);
-                            logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
+
                         }
                     }
                     System.out.println("\nKérlek add meg a kimenetet!");
@@ -110,6 +110,7 @@ public class Pump extends Breakable
                         if (Objects.equals(i.id, kimenet)) //megfelelot beallit
                         {
                             this.out = (Pipe) i;
+                            logger.info(this.id+"@ConfigurePump |"+this.id+" kimenete beállítva: "+i.id+"-ra/re\n");
                         }
                     }
                 }

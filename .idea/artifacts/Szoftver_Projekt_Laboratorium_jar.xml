@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Szoftver-Projekt-Laboratorium:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Szoftver_Projekt_Laboratorium_jar</output-path>
+    <root id="archive" name="Szoftver-Projekt-Laboratorium.jar">
+      <element id="module-output" name="Szoftver-Projekt-Laboratorium" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/log4j-1.2.17.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
