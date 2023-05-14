@@ -4,6 +4,7 @@
 FILE="log.log"
 
 cat ../Input/Saboteur_Lep_Ures_Ciszternara.txt | java -jar ../*.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
+sleep 0.1
 
 #Jelenlegi teszt
 echo "Teszt - Saboteur_Lep_Ures_Ciszternara"
