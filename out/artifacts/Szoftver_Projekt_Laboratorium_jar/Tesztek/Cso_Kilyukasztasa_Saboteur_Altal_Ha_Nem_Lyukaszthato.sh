@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Replace "path/to/file" with the path to the file you want to search
-FILE="Tesztek/log.log"
+FILE="log.log"
 
-cat Input/Cso_Kilyukasztasa_Saboteur_Altal_Ha_Nem_Lyukaszthato.txt | java -jar ../*.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
+cat Input/Cso_Kilyukasztasa_Saboteur_Altal_Ha_Nem_Lyukaszthato.txt | java -jar *.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
 sleep 0.4
 
 #Jelenlegi teszt
