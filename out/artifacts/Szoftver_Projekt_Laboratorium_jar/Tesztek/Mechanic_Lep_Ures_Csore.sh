@@ -4,9 +4,10 @@
 FILE="log.log"
 
 cat ../Input/Mechanic_Lep_Ures_Csore.txt | java -jar ../*.jar > /dev/null 2>&1 & #txt végére mindig kell egy exit
+sleep 0.4
 
 #Jelenlegi teszt
-echo "Teszt - Mehanich_Lep_Ures_Csore"
+echo "Teszt - Mechanich_Lep_Ures_Csore"
 
 URES=$(grep -c "pipe-22 ra/re ráléphetnek?  | onComponent.isEmpty(): true" "$FILE")
 RALEPETT=$(grep -c "Mechanic rálépett a pipe-22-ra/re | onComponent.contains(teszt0Mech: Mechanic): true" "$FILE")
