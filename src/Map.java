@@ -351,7 +351,11 @@ public class Map implements Serializable{
         if(componentIterator != null){
             componentIterator.add(pipe);
         }
-    logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
+    //logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
+        if(c1 != null && c2 != null)
+        {
+            logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
+        }
     }
 
     public void PlacePumpOnPipe(Component pipe1) {

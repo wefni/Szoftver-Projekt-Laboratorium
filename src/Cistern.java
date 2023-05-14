@@ -19,7 +19,7 @@ public class Cistern extends Component{
 
 
         if(random)
-            randomCount=rand.nextInt(5,10);
+            randomCount=rand.nextInt(5,100);
 
         if(!random)
             randomCount=detrand.nextInt(5,10);
@@ -133,10 +133,10 @@ public class Cistern extends Component{
         if(randomCount==0)
         {
             if(random)
-                randomCount=rand.nextInt(5,10);
+                randomCount=rand.nextInt(5,100);
 
             if(!random)
-                randomCount= detrand.nextInt(0,2);
+                randomCount= detrand.nextInt(0,100);
             logger.info(this.id+"@Tick | "+this.id+" randomCount új értéket kapott  | randomCount "+ randomCount+"\n");
             this.SpawnPipe();
         }

@@ -16,6 +16,7 @@ public class Pipe extends Breakable {
     private int sloppy;
     private boolean hasWaterPartOne = false;
     private boolean hasWaterPartTwo = false;
+    private boolean stepable=false;
 
     public Pipe(String ID, Scanner _be) {
         super(ID, _be);
@@ -248,7 +249,7 @@ public class Pipe extends Breakable {
     public void Act(Player me, int type) {
 
         System.out.println("Mit szeretnél cselekedni?");
-        if(sticky==0)
+        if(sticky==0 || stepable)
         {
             System.out.println("Step");
         }
@@ -279,6 +280,16 @@ public class Pipe extends Breakable {
         do {
             valasz=scanner.nextLine();
             jo=false;
+            if(Objects.equals(valasz, "Step") && sticky>0 && stepable)
+            {
+                Step(me);
+                stepable=false;
+                break;
+            }
+            if(Objects.equals(valasz, "Step") && sticky>0)
+            {
+                break;
+            }
             switch (valasz) {
                 case "Step" -> Step(me);
                 case "BreakPipe" -> Break();
@@ -364,12 +375,14 @@ public class Pipe extends Breakable {
         if(sticky==0 && random)
         {
             sticky=vel.nextInt(2,10);
+            stepable=true;
             logger.info(this.id + "@MakeSticky | "+sticky+" körig ragadós lesz a "+this.id+"\n");
 
         }
         if(!random && sticky==0)
         {
             sticky=detvel.nextInt(2,10);
+            stepable=true;
             logger.info(this.id + "@MakeSticky | "+sticky+" körig ragadós lesz a "+this.id+"\n");
 
         }
