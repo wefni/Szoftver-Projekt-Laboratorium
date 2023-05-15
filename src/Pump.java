@@ -18,10 +18,30 @@ public class Pump extends Breakable
      * Pumpa bemeneti csöve
      */
     private Pipe in;
+    
+    /**
+     * Pumpa kimeneti csöve
+     */
     private Pipe out;
+    
+    /**
+     * A pumpa tartálya
+     */
     private int tank = 0;
+    
+    /**
+     * A pumpa tartályának maximális mérete
+     */
     private int maxTank = 10;
+    
+    /**
+     * A pumpa random elromlását segíti elő
+     */
     private int randomBreakCounter;
+    
+    /**
+     * A pumpa tartályának kiürülését teszi lehetővé
+     */
     private boolean didWaterFlow;
 
     public Pump(String ID, Scanner _be)
