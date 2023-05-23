@@ -1,5 +1,6 @@
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,6 +37,24 @@ public class Main
         String fileName = "teszt";
         Map map = new Map(fileName, DaFuckinScanner);
         map.GenerateMap();
+
+
+        ViewFrame frame = new ViewFrame();
+        frame.setVisible(true);
+
+        for(int i = 0; i< 100; i++){
+            frame.WriteQuestion("Helloka " + i);
+            String[] options = {"hello" + i , "off" + (100-i)};
+            if(i==4){
+                options = new String[]{"hello" + i, "off" + (100 - i), "woooow"};
+            }
+            frame.WriteOptions(options);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
         System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
         String valasz;
