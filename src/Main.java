@@ -39,7 +39,7 @@ public class Main
         map.GenerateMap();
 
 
-        ViewFrame frame = new ViewFrame();
+        /*ViewFrame frame = new ViewFrame();
         frame.setVisible(true);
 
         for(int i = 0; i< 100; i++){
@@ -54,7 +54,7 @@ public class Main
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
 
         System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
         String valasz;
@@ -170,6 +170,7 @@ public class Main
                             map.AddSabToComponent(0, karakter_nevek.get(k));
                         }
                     }
+                    map.AllPlayersAdded();
                     map.Game();
                 }
                 case "2" -> //Tesztek

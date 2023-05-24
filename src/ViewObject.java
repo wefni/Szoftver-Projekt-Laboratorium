@@ -7,5 +7,8 @@ public abstract class ViewObject extends JComponent {
         this.paintComponent(g);
     }
 
-
+    public void SetCoords(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 }

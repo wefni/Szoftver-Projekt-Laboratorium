@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+
 public class ViewFrame extends JFrame{
     private JLabel questionLabel;
     private JPanel buttonPanel;
@@ -7,14 +9,14 @@ public class ViewFrame extends JFrame{
     private ViewMap map;
     private JPanel rightPanel;
 
-    public ViewFrame() {
+    public ViewFrame(ArrayList<Component> components) {
         setTitle("Drukmákori Sivatag");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         setSize(1200, 800);
 
         // Left panel with PNG image
-        map = new ViewMap();
+        map = new ViewMap(components);
         map.setPreferredSize(new Dimension(900, 800));
 
         // Right panel with question and buttons
@@ -47,6 +49,9 @@ public class ViewFrame extends JFrame{
         repaint();
     }
 
+    public void AddPlayers(ArrayList<Player> players){
+        map.AddPlayers(players);
+    }
     public void WriteOptions(String[] options)
     {
         buttonPanel.removeAll();

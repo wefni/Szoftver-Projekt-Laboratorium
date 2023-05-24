@@ -1,21 +1,19 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class ViewPump extends ViewObject{
+public class ViewSaboteur extends ViewObject{
+    Saboteur pair;
 
-    private Pump pair;
-    public ViewPump(int _x, int _y, Pump _pair) {
+    public ViewSaboteur(int _x, int _y, Saboteur _pair) {
         this.x = _x;
         this.y = _y;
         this.pair = _pair;
     }
-
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
-
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -23,7 +21,7 @@ public class ViewPump extends ViewObject{
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
 
         // Load the image
-        Image image = new ImageIcon("src\\images\\basicpump.png").getImage();
+        Image image = new ImageIcon("src\\images\\saboteur.png").getImage();
         //set image size
         image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
 
@@ -31,7 +29,7 @@ public class ViewPump extends ViewObject{
         g2d.drawImage(image, x, y, this);
 
         // Add text below the image
-        String text = "Pump:" + x + ", " + y;
+        String text = "Sab:" + x + ", " + y;
         Font font = new Font("Arial", Font.PLAIN, 12);
         g2d.setFont(font);
         g2d.setColor(Color.BLACK);

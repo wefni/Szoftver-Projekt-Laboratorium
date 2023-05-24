@@ -18,6 +18,7 @@ public class Map implements Serializable{
     protected Scanner scanner;
     ListIterator<Component> componentIterator;
 
+    ViewFrame viewFrame;
 
     public Map(String file, Scanner _be)
     {
@@ -33,16 +34,6 @@ public class Map implements Serializable{
         players=new ArrayList<>();
     }
 
-//    public void SpawnPipeControl(String ID,Cistern c,int spawnedPipes){
-//        System.out.println("asd");
-//        Pipe p = new Pipe("pipe-"+components.size());  // Itt az ID-t lehet valtoztatni kell
-//        logger.info(c.id + " @SpawnPipe | Létrejött egy új pumpa | ID: "+p.id+" | Eddig létrejött csövek száma: "+spawnedPipes+"\n");
-//        c.AddNeighbours(p);
-//        p.AddNeighbours(c);
-//        System.out.println(p.id + "cis xdd");
-//        components.add(p);
-//        System.out.println("xd");
-//    }
     public ArrayList<Component> getComponents()
     {
         return components;
@@ -270,6 +261,8 @@ public class Map implements Serializable{
         components.get(39).ConfigurePumpWithParameters(components.get(11), components.get(10));
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
+
+        viewFrame = new ViewFrame(components);
     }
     public void AddMechToComponent(int componentNumber, String nev)
     {
@@ -358,6 +351,10 @@ public class Map implements Serializable{
         }
     }
 
+    public void AllPlayersAdded(){
+        viewFrame.AddPlayers(players);
+        viewFrame.setVisible(true);
+    }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);
         Pump pump = new Pump("pump-" + components.size(), scanner);
