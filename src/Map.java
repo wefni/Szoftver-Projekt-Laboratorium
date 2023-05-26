@@ -42,13 +42,16 @@ public class Map implements Serializable{
     public void Game()
     {
         logger.info("Map @Game | Játék elindítva\n");
+        int szamlalo = 0;
         while (round < endRound)
         {
             System.out.println("Round: " + round);
             logger.info("Map @Game | Aktuális kör:"+round+"\n");
             round++;
+
             for (Player p : players)
             {
+                viewFrame.UpdateUpPanel(mechWater,sabWater,p);
                 System.out.println(p.name);
                 System.out.println("Helye: " + p.where.id);
                 p.YourTurn();
@@ -61,6 +64,11 @@ public class Map implements Serializable{
                 SetTeamStats();
             }
         }
+    }
+
+    public int GetRound()
+    {
+        return round;
     }
 
     public void GenerateMap()
