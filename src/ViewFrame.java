@@ -17,7 +17,7 @@ public class ViewFrame extends JFrame{
     {
         setTitle("Drukmákori Sivatag");
         setLayout(new BorderLayout());
-        setSize(400, 400);
+        setSize(400, 300);
 
 
         //Panelek közötti váltás

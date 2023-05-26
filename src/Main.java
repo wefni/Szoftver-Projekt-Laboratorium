@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Main
 {
-    static ViewFrame viewFrame;
     private static final Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) throws IOException
     {
@@ -71,7 +70,6 @@ public class Main
                     logger.info("Main@main | Játék elindítva | valasz: 1 \n");
                     jo = true;
                     //System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
-                    //viewFrame = new ViewFrame();
                     boolean jol_valaszoltak = false;
                     while(!jol_valaszoltak)
                     {
