@@ -35,8 +35,6 @@ public class ViewFrame extends JFrame{
         JPanel palya = new ViewField(components);
         cardPanel.add(palya, "2");
 
-        //cardPanel.add(ranglista, "3");
-
         getContentPane().add(cardPanel, BorderLayout.CENTER);
         setVisible(true);
         //setResizable(false);
@@ -98,5 +96,22 @@ public class ViewFrame extends JFrame{
             currentCard = 20;
             cl.show(cardPanel, "" + (currentCard));
         }
+    }
+
+    static class Winner_Listener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            System.exit(10);
+        }
+    }
+
+    public void CreatWinnerCard(String gyoztes)
+    {
+        JPanel winner = new ViewWinner(gyoztes);
+        cardPanel.add(winner, "3");
+        currentCard = 3;
+        cl.show(cardPanel, "" + (currentCard));
     }
 }

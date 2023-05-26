@@ -29,7 +29,7 @@ public class Map implements Serializable{
         round = 0;
         mechWater = 0;
         sabWater = 0;
-        endRound = 200;
+        endRound = 1;
         cisterns=new ArrayList<>();
         components=new ArrayList<>();
         players=new ArrayList<>();
@@ -63,6 +63,20 @@ public class Map implements Serializable{
                 }
                 SetTeamStats();
             }
+        }
+
+        viewFrame.setSize(350,200);
+        if (sabWater < mechWater)
+        {
+            viewFrame.CreatWinnerCard("Szabotőrök nyertek");
+        }
+        else if(sabWater > mechWater)
+        {
+            viewFrame.CreatWinnerCard("Szerelők nyertek");
+        }
+        else
+        {
+            viewFrame.CreatWinnerCard("Döntetlen");
         }
     }
 
