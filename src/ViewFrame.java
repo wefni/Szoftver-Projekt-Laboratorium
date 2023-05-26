@@ -1,72 +1,77 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ViewFrame extends JFrame{
-    private JLabel questionLabel;
-    private JPanel buttonPanel;
-    private JButton[] buttons;
-    private ViewMap map;
-    private JPanel rightPanel;
+    private static int i = 1;
 
-    public ViewFrame(ArrayList<Component> components) {
+    private static int currentCard = 1;
+    private static CardLayout cl;
+    static JPanel cardPanel = new JPanel();
+
+    public ViewFrame(ArrayList<Component> components)
+    {
         setTitle("Drukmákori Sivatag");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setSize(1200, 800);
+        setSize(400, 400);
 
-        // Left panel with PNG image
-        map = new ViewMap(components);
-        map.setPreferredSize(new Dimension(900, 800));
 
-        // Right panel with question and buttons
-        rightPanel = new JPanel(new BorderLayout());
-        questionLabel = new JLabel("Üdv a Drukmákori Sivatagban!");
-        questionLabel.setFont(new Font("Arial", Font.PLAIN, 30));
-        rightPanel.add(questionLabel, BorderLayout.NORTH);
+        //Panelek közötti váltás
+        cl = new CardLayout();
+        cardPanel.setLayout(cl);
+        JPanel menu = new ViewMenu(i);
 
-        // Buttons
-        buttons = new JButton[100];
+        //Hozzáadja és beállítja a számát, amelyen meg fog jelenni
+        cardPanel.add(menu, "1");
+        JPanel palya = new ViewField(components);
+        cardPanel.add(palya, "2");
 
-        buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(10, 1));
-        for(int i = 0; i < 10; i++)
+        //cardPanel.add(ranglista, "3");
+
+        getContentPane().add(cardPanel, BorderLayout.CENTER);
+        setVisible(true);
+        //setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    /*public ViewFrame(ArrayList<Component> components)
+    {
+
+    }*/
+
+    static class Nev_Bekeres_Kesz_Listener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            buttons[i] = new JButton("Button " + i);
-            buttonPanel.add(buttons[i]);
+            String igen = "nem";
+            InputStream In = new ByteArrayInputStream(igen.getBytes());
+            System.setIn(In);
+
+            //Ha kész a névbekérés, akkor a kettes panel fog megjelenni vagyis a pálya
+            currentCard = 2;
+            cl.show(cardPanel, "" + (currentCard));
         }
-
-        rightPanel.add(buttonPanel, BorderLayout.CENTER);
-
-
-        // Add left and right panels to the frame
-        add(map, BorderLayout.WEST);
-        add(rightPanel, BorderLayout.CENTER);
     }
-    public void WriteQuestion(String question)
+    static class Nev_Bekeres_Ujra_Listener implements ActionListener
     {
-        questionLabel.setText(question);
-        repaint();
-    }
-
-    public void AddPlayers(ArrayList<Player> players){
-        map.AddPlayers(players);
-    }
-    public void WriteOptions(String[] options)
-    {
-        buttonPanel.removeAll();
-        buttonPanel.setLayout(new GridLayout(options.length, 1));
-        for(int i = 0; i < options.length; i++)
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            buttons[i].setText(options[i]);
-            //make buttons refresh on JFrame
+            String igen = "igen";
+            InputStream In = new ByteArrayInputStream(igen.getBytes());
+            System.setIn(In);
 
-            buttonPanel.add(buttons[i]);
+            i += 4;
+            JPanel bekeres_ujra = new ViewMenu(i);
+
+            cardPanel.add(bekeres_ujra, "20");
+            currentCard = 20;
+            cl.show(cardPanel, "" + (currentCard));
         }
-        repaint();
-    }
-    public void InitiatePainting()
-    {
-        map.repaint();
     }
 }
