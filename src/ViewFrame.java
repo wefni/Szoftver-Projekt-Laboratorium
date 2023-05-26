@@ -37,13 +37,14 @@ public class ViewFrame extends JFrame{
         //setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-    /*public ViewFrame(ArrayList<Component> components)
+    public void UpdateUpPanel(int mWater,int sWater,Player aktP)
     {
+        // Inicializáljuk a bal és jobb szövegeket
+        leftText.setText("Szabotőrök pontszáma: "+sWater+"  Szerelők pontszáma: "+mWater);
+        rightText.setText("Aktuális játékos: "+aktP.name);
 
-    }*/
-
-    static class Nev_Bekeres_Kesz_Listener implements ActionListener
+    }
+     static class Nev_Bekeres_Kesz_Listener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)

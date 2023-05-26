@@ -14,7 +14,7 @@ public class ViewMap extends JPanel {
         AddComponents(components);
         SetCoords();
 
-        //map picture is too big to fit in this frame, make is smaller
+        //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
     }
