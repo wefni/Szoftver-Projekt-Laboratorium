@@ -81,8 +81,11 @@ public class ViewMenu extends JPanel
                         //Karakterek neveinek beállítása
                         for (int j = 0; j < 4; j++)
                         {
+                            nevek[j] += "\n";
                             InputStream In = new ByteArrayInputStream(nevek[j].getBytes());
                             System.setIn(In);
+
+                           // System.out.println("Nev: " + nevek[j]);
 
                             if(j % 2 == 0)
                             {
@@ -123,7 +126,7 @@ public class ViewMenu extends JPanel
                             ures_nevek++;
                         }
                     }
-                    if(ures_nevek > 0)
+                    if(ures_nevek > -1)
                     {
                         if(abs(mech_szama - szab_szama) < 2) //ha megfelelo a szamuk: megjelennek a gombok es lerakjuk oket
                         {
@@ -152,7 +155,6 @@ public class ViewMenu extends JPanel
                         }
                     }
                 }
-
             });
 
             add(menu_panel);
