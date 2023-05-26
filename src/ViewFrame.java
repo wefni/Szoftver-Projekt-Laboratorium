@@ -13,6 +13,11 @@ public class ViewFrame extends JFrame{
     private static CardLayout cl;
     static JPanel cardPanel = new JPanel();
 
+    private JPanel upLeftPanel;
+    private JPanel upRightPanel;
+    private JLabel leftText;
+    private JLabel rightText;
+
     public ViewFrame(ArrayList<Component> components)
     {
         setTitle("Drukmákori Sivatag");
@@ -36,6 +41,25 @@ public class ViewFrame extends JFrame{
         setVisible(true);
         //setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //UpPanel with point and actual player
+        upLeftPanel = new JPanel();
+        upRightPanel = new JPanel();
+
+        leftText = new JLabel("");
+        rightText = new JLabel("");
+
+        // Hozzáadjuk a szövegeket az up panelhez
+        upLeftPanel.add(leftText);
+        upRightPanel.add(rightText);
+
+        upLeftPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        upRightPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
+        upLeftPanel.setSize(600,100);
+        upRightPanel.setSize(600,100);
+        add(upLeftPanel,BorderLayout.NORTH);
+        add(upRightPanel,BorderLayout.NORTH);
     }
     public void UpdateUpPanel(int mWater,int sWater,Player aktP)
     {
