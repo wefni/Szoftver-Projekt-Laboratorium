@@ -9,6 +9,11 @@ public class ViewFrame extends JFrame{
     private ViewMap map;
     private JPanel rightPanel;
 
+    private JPanel upLeftPanel;
+    private JPanel upRightPanel;
+    private JLabel leftText;
+    private JLabel rightText;
+
     public ViewFrame(ArrayList<Component> components) {
         setTitle("Drukmákori Sivatag");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,11 +47,38 @@ public class ViewFrame extends JFrame{
         // Add left and right panels to the frame
         add(map, BorderLayout.WEST);
         add(rightPanel, BorderLayout.CENTER);
+
+        //UpPanel with point and actual player
+        upLeftPanel = new JPanel();
+        upRightPanel = new JPanel();
+
+        leftText = new JLabel("");
+        rightText = new JLabel("");
+
+        // Hozzáadjuk a szövegeket az up panelhez
+        upLeftPanel.add(leftText);
+        upRightPanel.add(rightText);
+
+        upLeftPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        upRightPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
+        upLeftPanel.setSize(600,100);
+        upRightPanel.setSize(600,100);
+        add(upLeftPanel,BorderLayout.NORTH);
+        add(upRightPanel,BorderLayout.NORTH);
     }
     public void WriteQuestion(String question)
     {
         questionLabel.setText(question);
         repaint();
+    }
+
+    public void UpdateUpPanel(int mWater,int sWater,Player aktP)
+    {
+        // Inicializáljuk a bal és jobb szövegeket
+        leftText.setText("Szabotőrök pontszáma: "+sWater+"  Szerelők pontszáma: "+mWater);
+        rightText.setText("Aktuális játékos: "+aktP.name);
+
     }
 
     public void AddPlayers(ArrayList<Player> players){
