@@ -1,78 +1,42 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ViewFrame extends JFrame{
-    private JLabel questionLabel;
-    private JPanel buttonPanel;
-    private JButton[] buttons;
-    private ViewMap map;
-    private JPanel rightPanel;
+    private static int i = 1;
 
-    private JPanel upLeftPanel;
-    private JPanel upRightPanel;
-    private JLabel leftText;
-    private JLabel rightText;
+    private static int currentCard = 1;
+    private static CardLayout cl;
+    static JPanel cardPanel = new JPanel();
 
-    public ViewFrame(ArrayList<Component> components) {
-        setTitle("Drukmákori Sivatag");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
-        setSize(1200, 800);
-
-        // Left panel with PNG image
-        map = new ViewMap(components);
-        map.setPreferredSize(new Dimension(900, 800));
-
-        // Right panel with question and buttons
-        rightPanel = new JPanel(new BorderLayout());
-        questionLabel = new JLabel("Üdv a Drukmákori Sivatagban!");
-        questionLabel.setFont(new Font("Arial", Font.PLAIN, 30));
-        rightPanel.add(questionLabel, BorderLayout.NORTH);
-
-        // Buttons
-        buttons = new JButton[100];
-
-        buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(10, 1));
-        for(int i = 0; i < 10; i++)
-        {
-            buttons[i] = new JButton("Button " + i);
-            buttonPanel.add(buttons[i]);
-        }
-
-        rightPanel.add(buttonPanel, BorderLayout.CENTER);
-
-
-        // Add left and right panels to the frame
-        add(map, BorderLayout.WEST);
-        add(rightPanel, BorderLayout.CENTER);
-
-        //UpPanel with point and actual player
-        upLeftPanel = new JPanel();
-        upRightPanel = new JPanel();
-
-        leftText = new JLabel("");
-        rightText = new JLabel("");
-
-        // Hozzáadjuk a szövegeket az up panelhez
-        upLeftPanel.add(leftText);
-        upRightPanel.add(rightText);
-
-        upLeftPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        upRightPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-
-        upLeftPanel.setSize(600,100);
-        upRightPanel.setSize(600,100);
-        add(upLeftPanel,BorderLayout.NORTH);
-        add(upRightPanel,BorderLayout.NORTH);
-    }
-    public void WriteQuestion(String question)
+    public ViewFrame(ArrayList<Component> components)
     {
-        questionLabel.setText(question);
-        repaint();
-    }
+        setTitle("Drukmákori Sivatag");
+        setLayout(new BorderLayout());
+        setSize(400, 300);
 
+
+        //Panelek közötti váltás
+        cl = new CardLayout();
+        cardPanel.setLayout(cl);
+        JPanel menu = new ViewMenu(i);
+
+        //Hozzáadja és beállítja a számát, amelyen meg fog jelenni
+        cardPanel.add(menu, "1");
+        JPanel palya = new ViewField(components);
+        cardPanel.add(palya, "2");
+
+        //cardPanel.add(ranglista, "3");
+
+        getContentPane().add(cardPanel, BorderLayout.CENTER);
+        setVisible(true);
+        //setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
     public void UpdateUpPanel(int mWater,int sWater,Player aktP)
     {
         // Inicializáljuk a bal és jobb szövegeket
@@ -80,25 +44,35 @@ public class ViewFrame extends JFrame{
         rightText.setText("Aktuális játékos: "+aktP.name);
 
     }
-
-    public void AddPlayers(ArrayList<Player> players){
-        map.AddPlayers(players);
-    }
-    public void WriteOptions(String[] options)
+     static class Nev_Bekeres_Kesz_Listener implements ActionListener
     {
-        buttonPanel.removeAll();
-        buttonPanel.setLayout(new GridLayout(options.length, 1));
-        for(int i = 0; i < options.length; i++)
+        @Override
+        public void actionPerformed(ActionEvent e)
         {
-            buttons[i].setText(options[i]);
-            //make buttons refresh on JFrame
+            String igen = "nem";
+            InputStream In = new ByteArrayInputStream(igen.getBytes());
+            System.setIn(In);
 
-            buttonPanel.add(buttons[i]);
+            //Ha kész a névbekérés, akkor a kettes panel fog megjelenni vagyis a pálya
+            currentCard = 2;
+            cl.show(cardPanel, "" + (currentCard));
         }
-        repaint();
     }
-    public void InitiatePainting()
+    static class Nev_Bekeres_Ujra_Listener implements ActionListener
     {
-        map.repaint();
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            String igen = "igen";
+            InputStream In = new ByteArrayInputStream(igen.getBytes());
+            System.setIn(In);
+
+            i += 4;
+            JPanel bekeres_ujra = new ViewMenu(i);
+
+            cardPanel.add(bekeres_ujra, "20");
+            currentCard = 20;
+            cl.show(cardPanel, "" + (currentCard));
+        }
     }
 }

@@ -19,6 +19,7 @@ public class Map implements Serializable{
     ListIterator<Component> componentIterator;
 
     ViewFrame viewFrame;
+    ViewField viewField;
 
     public Map(String file, Scanner _be)
     {
@@ -42,7 +43,6 @@ public class Map implements Serializable{
     public void Game()
     {
         logger.info("Map @Game | Játék elindítva\n");
-        int szamlalo = 0;
         while (round < endRound)
         {
             System.out.println("Round: " + round);
@@ -270,6 +270,7 @@ public class Map implements Serializable{
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
 
+        viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
     }
     public void AddMechToComponent(int componentNumber, String nev)
@@ -359,9 +360,11 @@ public class Map implements Serializable{
         }
     }
 
-    public void AllPlayersAdded(){
-        viewFrame.AddPlayers(players);
-        viewFrame.setVisible(true);
+    public void AllPlayersAdded()
+    {
+        viewFrame.setSize(1500, 800);
+        viewField.AddPlayers(players);
+        //viewFrame.setVisible(true);
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);

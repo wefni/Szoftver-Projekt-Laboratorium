@@ -8,6 +8,7 @@ import java.util.Map;
 public class ViewMap extends JPanel {
 
     private HashMap<Object, ViewObject> objects;
+    private ArrayList<Player> players;
     public ViewMap(ArrayList<Component> components) {
         objects = new HashMap<>();
         AddComponents(components);
@@ -16,6 +17,11 @@ public class ViewMap extends JPanel {
         //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
+    }
+
+    public void SetPlayer(Player player)
+    {
+       players.add(player);
     }
 
     public void AddComponents(ArrayList<Component> components) {
