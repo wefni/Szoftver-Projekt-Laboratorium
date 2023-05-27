@@ -57,6 +57,10 @@ public class Pump extends Breakable
 
     }
 
+    public Pipe getOut() {
+        return out;
+    }
+
     public void ConfigurePumpWithParameters(Component _in, Component _out)
     {
         in = (Pipe) _in;
