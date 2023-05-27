@@ -1,12 +1,19 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Line2D;
+import java.awt.geom.Path2D;
 import java.text.MessageFormat;
 import java.util.HashMap;
 
+import static java.lang.Math.abs;
+
 public class ViewPipe extends ViewObject{
     Pipe pair;
-    public int dirx;
-    int diry;
+    int n0x;
+    int n0y;
+    int n1x;
+    int n1y;
     public ViewPipe(int _x, int _y, Pipe _pair) {
         this.x = _x;
         this.y = _y;
@@ -16,13 +23,11 @@ public class ViewPipe extends ViewObject{
     void Direction()
     {
         // az iranyhoz kell
-        System.out.println(ViewMap.viewmap.getObjects(pair.neighbours.get(1)));
-        int n0x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x;// masodik szomszed x-je
-        int n0y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y;// masodik szomszed y-je
-        int n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x; // elso szomszed x-je
-        int n1y=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).y; // elso szomszed y-je
-        int dirx=n1x-n0x;
-        int diry=n1y-n0y;
+        //System.out.println(ViewMap.viewmap.getObjects(pair.neighbours.get(1)));
+         n0x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x;// masodik szomszed x-je
+         n0y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y;// masodik szomszed y-je
+         n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x; // elso szomszed x-je
+         n1y=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).y; // elso szomszed y-je
     }
     @Override
     public void Repaint(Graphics g) {
@@ -34,47 +39,26 @@ public class ViewPipe extends ViewObject{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
-        if(pair.broken && pair.IsSloppy() && pair.getSticky()>0 && pair.isHasWaterPartOne() && pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // minden hatas rajta kiveve torhetetlen full viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(pair.broken && pair.IsSloppy() && pair.getSticky()>0 && pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // minden hatas kiveve torhetetlen es csak az elsoben viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(pair.broken && pair.IsSloppy() && pair.getSticky()>0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // minden hatas kiveve torhetetlen es nincs viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(pair.broken && pair.IsSloppy() && pair.getSticky()==0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // sloppy es tört nincs viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(pair.broken && !pair.IsSloppy() && pair.getSticky()==0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // csak tört nincs viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(!pair.broken && !pair.IsSloppy() && pair.getSticky()==0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()==0) // semmilyen hatas nincs viz
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-        if(!pair.broken && !pair.IsSloppy() && pair.getSticky()==0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()>0) // csak törhetettlen hatas
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
-
-        if(!pair.broken && !pair.IsSloppy() && pair.getSticky()==0 && !pair.isHasWaterPartOne() && !pair.isHasWaterPartTwo() && pair.getUnBreakable()>0) 
-        {
-            Image image = new ImageIcon("src\\images\\pipe.png").getImage();
-        }
         // Load the image
-        Image image = new ImageIcon("src\\images\\pipe.png").getImage();
+        //Image image = new ImageIcon("src\\images\\pipe.png").getImage();
         //set image size
-        image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
-        //g2d.rotate(100);
+        //image = new ImageIcon(image.getScaledInstance(50, 50, Image.SCALE_DEFAULT)).getImage();
         // Draw the image at (x, y)
-        g2d.drawImage(image, x, y, this);
+        AffineTransform trans = new AffineTransform();
+        trans.translate(x,y);
+        //double degree=dirx*x+diry*(y+1);
+        //System.out.println(degree);
+        //trans.rotate(Math.toRadians(degree));
+        //g2d.drawImage(image, trans, this);
+        g2d.draw(new Line2D.Double(n0x,n0y,n1x,n1y));
 
+
+        if(pair.broken)
+        {
+            Image imagebroken = new ImageIcon("src\\images\\pipe.png").getImage(); // broken kep
+            //g2d.drawImage(image, x, y, this);
+
+        }
 
 
         // Add text below the image
@@ -83,8 +67,8 @@ public class ViewPipe extends ViewObject{
         g2d.setFont(font);
         g2d.setColor(Color.BLACK);
         int textX = x;
-        int textY = y + image.getHeight(this) + 15; // Adjust the distance as needed
-        g2d.drawString(text, textX, textY);
+        //int textY = y + image.getHeight(this) + 15; // Adjust the distance as needed
+        //g2d.drawString(text, textX, textY);
     }
 
 }

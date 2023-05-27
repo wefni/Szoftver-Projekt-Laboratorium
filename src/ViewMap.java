@@ -14,7 +14,15 @@ public class ViewMap extends JPanel {
         AddComponents(components);
 
         SetCoords();
-
+// az iranyhoz kell
+        for (Component i: components)
+        {
+            if(i.getClass() == Pipe.class)
+            {
+                ViewPipe p=(ViewPipe) objects.get(i);
+                p.Direction();
+            }
+        }
         //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
@@ -49,15 +57,7 @@ public class ViewMap extends JPanel {
                 objects.put(components.get(i), viewSource);
             }
         }
-        // az iranyhoz kell
-        for (Component i: components)
-        {
-            if(i.getClass() == Pipe.class)
-            {
-                ViewPipe p=(ViewPipe) objects.get(i);
-                p.Direction();
-            }
-        }
+
     }
 
         public void AddPlayers(ArrayList<Player> players)
@@ -170,7 +170,7 @@ public class ViewMap extends JPanel {
         pair.getValue().SetCoords(100,400); // Pump-42
         pair = it.next();
         pair.getValue().SetCoords(300,450); // Pump-43
-        
+
 
     }
 
