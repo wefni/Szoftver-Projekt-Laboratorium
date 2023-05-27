@@ -14,8 +14,8 @@ public class Cistern extends Component{
     private int spawnedPipes = 0;
 
 
-    public Cistern(String ID, Scanner _be)  {
-        super(ID, _be);
+    public Cistern(String ID)  {
+        super(ID);
 
 
         if(random)
@@ -30,9 +30,12 @@ public class Cistern extends Component{
     public void Act(Player me, int type){
         boolean t = false;
         while(!t){
-            System.out.println("Mit szeretnél cselekedni?\nStep");
-            if(type==0) System.out.println("PickUpPump");
-            String valasz=scanner.nextLine();
+            String options[];
+            String valasz;
+            ViewField.instance.WriteQuestion("Mit szeretnél cselekedni?");
+            if(type==1) options = new String[]{"Step"};
+            else options = new String[]{"Step", "PickUpPump"};
+            valasz = ViewField.instance.WriteOptions(options);
 
             switch (valasz) {
                 case "Step" -> {
@@ -85,14 +88,17 @@ public class Cistern extends Component{
     public void Step(Player me){
         boolean t = true;
         while(t){
-            System.out.println("Melyik elemre szeretnél lépni?");
 
-            for(Component i: this.neighbours)
+
+
+            String options[] = new String[neighbours.size()];
+            String bemenet;
+            ViewField.instance.WriteQuestion("Melyik elemre szeretnél lépni?");
+            for(int i = 0; i < neighbours.size(); i++)
             {
-                System.out.println(i.id);
+                options[i] = neighbours.get(i).id;
             }
-
-            String bemenet = scanner.nextLine();
+            bemenet = ViewField.instance.WriteOptions(options);
 
             for(Component j: this.neighbours)
             {

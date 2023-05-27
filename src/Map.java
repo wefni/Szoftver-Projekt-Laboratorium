@@ -15,7 +15,6 @@ public class Map implements Serializable{
     private ArrayList<Player> players;
 
     protected static Map map;
-    protected Scanner scanner;
     ListIterator<Component> componentIterator;
 
     private boolean indul = false;
@@ -23,15 +22,14 @@ public class Map implements Serializable{
     ViewFrame viewFrame;
     ViewField viewField;
 
-    public Map(String file, Scanner _be)
+    public Map(String file)
     {
         logger.info("Map@Map | Map létrejött \n");
         map = this;
-        scanner = _be;
         round = 0;
         mechWater = 0;
         sabWater = 0;
-        endRound = 1;
+        endRound = 25;
         cisterns=new ArrayList<>();
         components=new ArrayList<>();
         players=new ArrayList<>();
@@ -104,26 +102,26 @@ public class Map implements Serializable{
 
         //Initializing------------------------------------------
         //Source
-        Source source0 = new Source("source-0", scanner);
+        Source source0 = new Source("source-0");
         components.add(source0);
         source = source0;
 
         //Cisterns
         for(int i = 1; i<4; i++){
-            Cistern cistern = new Cistern("cistern-"+(i), scanner);
+            Cistern cistern = new Cistern("cistern-"+(i));
             components.add(cistern);
             cisterns.add(cistern);
         }
 
         //Pipes
         for(int i= 4; i < 30; i++){
-            Pipe pipe = new Pipe("pipe-"+(i), scanner);
+            Pipe pipe = new Pipe("pipe-"+(i));
             components.add(pipe);
         }
 
         //Pumps
         for(int i = 30; i < 44; i++){
-            Pump pump = new Pump("pump-"+(i), scanner);
+            Pump pump = new Pump("pump-"+(i));
             components.add(pump);
         }
 
@@ -394,7 +392,7 @@ public class Map implements Serializable{
 
     public void SpawnPipeBetweenComponents(Component c1, Component c2)
     {
-        Pipe pipe = new Pipe("pipe-" + components.size(), scanner);
+        Pipe pipe = new Pipe("pipe-" + components.size());
 
         if(c1 != null){
             c1.AddNeighbours(pipe);
@@ -422,8 +420,8 @@ public class Map implements Serializable{
         map.Karakter_sab_hozzadasa();
     }
     public void PlacePumpOnPipe(Component pipe1) {
-        Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);
-        Pump pump = new Pump("pump-" + components.size(), scanner);
+        Pipe pipe2 = new Pipe("pipe-" + components.size());
+        Pump pump = new Pump("pump-" + components.size());
 
         pipe2.AddNeighbours(pump);
         if(pipe1.neighbours.size()>1)

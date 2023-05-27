@@ -1,5 +1,6 @@
 import org.apache.log4j.Logger;
 
+import javax.swing.text.View;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public class Pipe extends Breakable {
     private boolean hasWaterPartTwo = false;
     private boolean stepable=false;
 
-    public Pipe(String ID, Scanner _be) {
-        super(ID, _be);
+    public Pipe(String ID) {
+        super(ID);
         logger.info(this.id + "@Pipe | "+this.id+" létrejött \n");
 
     }
@@ -103,8 +104,8 @@ public class Pipe extends Breakable {
             jo=false;
         }
         while(jo) {
-            System.out.println("Hány véget akarsz áthelyezni? ");
-             valasz = Integer.parseInt(scanner.nextLine());
+            ViewField.instance.WriteQuestion("Hány véget akarsz áthelyezni?");
+             valasz = Integer.parseInt(ViewField.instance.WriteOptions(new String[]{"1", "2"}));
             if((valasz==1 || valasz == 2))
                 jo=false;
             else
@@ -116,19 +117,23 @@ public class Pipe extends Breakable {
              // az input helyessegere
             int oldal = 0; // melyik odallal szeretnel foglalkozni
             while (jo) {
-                System.out.println("Melyik végét szeretnéd átrakni?");
-                oldal = Integer.parseInt(scanner.nextLine());
+                ViewField.instance.WriteQuestion("Melyik végét szeretnéd átrakni?");
+                oldal = Integer.parseInt(ViewField.instance.WriteOptions(new String[]{"0", "1"}));
                 if (oldal == 1 || oldal == 0)
                     jo = false;
             }
             jo = true;
-            System.out.println("Melyik(ekre) szeretnéd rakni");
+            ViewField.instance.WriteQuestion("Melyik(ekre) szeretnéd rakni");
             while (jo) { // jo input biztositasa
                 if (oldal == 0) {
                     for (Component i : neighboursside0) {
                         System.out.println(i.id);
                     }
-                    String bemenet = scanner.nextLine();
+                    String options[] = new String[neighboursside0.size()];
+                    for (int i = 0; i < neighboursside0.size(); i++) {
+                        options[i] = neighboursside0.get(i).id;
+                    }
+                    String bemenet = ViewField.instance.WriteOptions(options);
                     for (Component i : neighboursside0) {
                         if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
                         {
@@ -151,7 +156,11 @@ public class Pipe extends Breakable {
                     for (Component i : neighboursside1) {
                         System.out.println(i.id);
                     }
-                    String bemenet = scanner.nextLine();
+                    String options[] = new String[neighboursside1.size()];
+                    for (int i = 0; i < neighboursside1.size(); i++) {
+                        options[i] = neighboursside1.get(i).id;
+                    }
+                    String bemenet = ViewField.instance.WriteOptions(options);
                     for (Component i : neighboursside1) {
                         if (Objects.equals(i.id, bemenet))// megkeressük a kiválasztottat
                         {
@@ -174,14 +183,16 @@ public class Pipe extends Breakable {
         if(valasz==2) // ha mindkét végét át akarjuk állítani
         {
             while(jo) {
-                System.out.println("Melyik kettő pumpa közé szeretnéd áthelyezni, külön sorba írd le melyik kettőre." );
                 neighboursside0.addAll(neighboursside1); // egyberakjuk
-                for (Component i : neighboursside0) {
-                    System.out.println(i.id);
-                }
                 String[] bemenet = new String[2];
-                bemenet[0] = scanner.nextLine(); // egyik oldal kiválasztása
-                bemenet[1] = scanner.nextLine(); // másik oldal
+                String options[] = new String[neighboursside0.size()];
+                for (int i = 0; i < neighboursside0.size(); i++) {
+                    options[i] = neighboursside0.get(i).id;
+                }
+                ViewField.instance.WriteQuestion("Melyik az egyik pumpa, ahova szeretnéd a cső egyik végét?");
+                bemenet[0] = ViewField.instance.WriteOptions(options); // egyik oldal kiválasztása
+                ViewField.instance.WriteQuestion("Melyik a másik pumpa, ahova szeretnéd a cső másik végét? (ne ugyanazt válaszd pls)");
+                bemenet[1] = ViewField.instance.WriteOptions(options); // másik oldal
                 int j = 0;
                 for (Component i : neighboursside0) {
                     if (Objects.equals(i.id, bemenet[0]))// megkeressük a kiválasztottat
@@ -263,30 +274,33 @@ public class Pipe extends Breakable {
     }
 
     public void Act(Player me, int type) {
-
-        System.out.println("Mit szeretnél cselekedni?");
+        ViewField.instance.WriteQuestion("Mit szeretnél cselekedni?");
+        String options[] = new String[8];
         if(sticky==0 || stepable)
         {
-            System.out.println("Step");
+            options[0]="Step";
         }
         if(unBreakable==0 && !broken) {
-            System.out.println("BreakPipe");
+            options[1] = "BreakPipe";
         }
-
-
-        System.out.println("ChangePipe");
-        System.out.println("MakeSticky");
+        options[2]="ChangePipe";
+        if(sticky==0)
+        {
+            options[3]="MakeSticky";
+        }
         if(type==0) {
             if(broken)
             {
-                System.out.println("RepairPipe");
+                options[4]="RepairPipe";
             }
-            if(me.GetPump()) System.out.println("PlacePump");
+            if(me.GetPump()) {
+                options[5] = "PlacePump";
+            }
 
         }
         else
         {
-            System.out.println("MakeSloppy");
+            options[6]="MakeSloppy";
         }
 
         String valasz;
@@ -294,7 +308,7 @@ public class Pipe extends Breakable {
 
         boolean jo;
         do {
-            valasz=scanner.nextLine();
+            valasz=ViewField.instance.WriteOptions(options);
             jo=false;
             if(Objects.equals(valasz, "Step") && sticky>0 && stepable)
             {
@@ -328,14 +342,14 @@ public class Pipe extends Breakable {
 
 
     public void Step( Player me) {
-        System.out.println("Melyik elemre szeretnél lépni?");
-        InputStream inputStream = System.in;
-        Scanner be = new Scanner(inputStream);
-        for (Component i : this.neighbours) {
-            System.out.println(i.id);
-        }
+        ViewField.instance.WriteQuestion("Melyik elemre szeretnél lépni?");
 
-        String bemenet = scanner.nextLine();
+        String options[] = new String[this.neighbours.size()];
+        for (int i = 0; i < this.neighbours.size(); i++) {
+            options[i] = this.neighbours.get(i).id;
+        }
+        String bemenet;
+        bemenet = ViewField.instance.WriteOptions(options);
         for (Component j : this.neighbours) {
             if (Objects.equals(j.id, bemenet)) {
                 if (j.Accept()) {

@@ -44,9 +44,9 @@ public class Pump extends Breakable
      */
     private boolean didWaterFlow;
 
-    public Pump(String ID, Scanner _be)
+    public Pump(String ID)
     {
-        super(ID, _be);
+        super(ID);
         if(random)
         randomBreakCounter=rand.nextInt(5,10);
 
@@ -70,12 +70,12 @@ public class Pump extends Breakable
      */
     public void ConfigurePump()
     {
-        System.out.println("Kimenetet, bemenetet vagy mindkettőt szeretnéd állítani? (be/ki/mindketto)");
-        String valasz;
+        ViewField.instance.WriteQuestion("Mit szeretnél állítani?");
+        String options[] = new String[]{"Bemenet", "Kimenet", "Mindkettő"};
+        String valasz = ViewField.instance.WriteOptions(options);
         boolean jo = false;
         while (!jo)
         {
-            valasz = scanner.nextLine(); //bekér
             valasz = valasz.toLowerCase(); //kisbetűsít
             switch (valasz)
             {
@@ -96,7 +96,13 @@ public class Pump extends Breakable
                         }
                     }
                     System.out.println("\nKérlek add meg a bemenetet!");
-                    String bemenet = scanner.nextLine();
+                    ViewField.instance.WriteQuestion("Kérlek add meg a bemenetet!");
+                    String options2[] = new String[neighbours.size()];
+                    for(int i=0;i<neighbours.size();i++)
+                    {
+                        options2[i]=neighbours.get(i).id;
+                    }
+                    String bemenet = ViewField.instance.WriteOptions(options2);
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, bemenet)) //megfelelot beallit
@@ -123,8 +129,13 @@ public class Pump extends Breakable
 
                         }
                     }
-                    System.out.println("\nKérlek add meg a kimenetet!");
-                    String kimenet = scanner.nextLine();
+                    ViewField.instance.WriteQuestion("Kérlek add meg a kimenetet!");
+                    String options3[] = new String[neighbours.size()];
+                    for(int i=0;i<neighbours.size();i++)
+                    {
+                        options3[i]=neighbours.get(i).id;
+                    }
+                    String kimenet = ViewField.instance.WriteOptions(options3);
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, kimenet)) //megfelelot beallit
@@ -148,8 +159,17 @@ public class Pump extends Breakable
                             System.out.println(i.id); //mindegyiket kiir, mivel akar meg is cserelheti a kettot
                     }
                     System.out.println("\nKérlek add meg a be- és kimenetet vesszővel elválasztva!");
-                    String mindketto = scanner.nextLine();
-                    String[] uj_bemenet = mindketto.split(",", 2);
+                    ViewField.instance.WriteQuestion("Kérlek add meg a bemenetet");
+                    String options4[] = new String[neighbours.size()];
+                    for(int i=0;i<neighbours.size();i++)
+                    {
+                        options4[i]=neighbours.get(i).id;
+                    }
+                    String[] uj_bemenet = new String[2];
+                    uj_bemenet[0] = ViewField.instance.WriteOptions(options4);
+                    ViewField.instance.WriteQuestion("Kérlek add meg a kimenetet. (Ne ugyanazt pls");
+                    uj_bemenet[1] = ViewField.instance.WriteOptions(options4);
+
                     for (Component i : neighbours)
                     {
                         if (Objects.equals(i.id, uj_bemenet[0])) //megfelelot beallit
@@ -181,18 +201,22 @@ public class Pump extends Breakable
     public void Act(Player me, int type)
     {
         System.out.println("Mit szeretnél cselekedni?");
+        ViewField.instance.WriteQuestion("Mit szeretnél cselekedni?");
+        String options[] = new String[3];
         if(broken && type == 0)
         {
-            System.out.println("RepairPump");
+            options[0] = "repairpump";
         }
         System.out.println("ConfigurePump");
+        options[1] = "configurepump";
         System.out.println("Step");
+        options[2] = "step";
 
         String valasz;
         boolean jo = false;
         while (!jo)
         {
-            valasz = scanner.nextLine(); //bekér a választ
+            valasz = ViewField.instance.WriteOptions(options);
             valasz = valasz.toLowerCase(); //kisbetűsít
             logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
             switch (valasz)
@@ -235,9 +259,11 @@ public class Pump extends Breakable
     public void Step(Player me)
     {
         System.out.println("Melyik elemre szeretnél lépni?");
-        for (Component i : this.neighbours)
+        ViewField.instance.WriteQuestion("Melyik elemre szeretnél lépni?");
+        String options[] = new String[neighbours.size()];
+        for(int i=0;i<neighbours.size();i++)
         {
-            System.out.println(i.id);
+            options[i]=neighbours.get(i).id;
         }
 
         String valasz;
@@ -245,7 +271,7 @@ public class Pump extends Breakable
         boolean ervenyes_bemenet = false;
         while(!jo)
         {
-            valasz = scanner.nextLine();
+            valasz = ViewField.instance.WriteOptions(options);
             for (Component j : this.neighbours)
             {
                 if (Objects.equals(j.id, valasz))

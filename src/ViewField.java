@@ -6,7 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class ViewField extends JPanel
+public class ViewField extends JPanel implements ActionListener
 {
     private JLabel questionLabel;
     private JPanel buttonPanel;
@@ -14,9 +14,13 @@ public class ViewField extends JPanel
     private ViewMap map;
     private JPanel rightPanel;
     private static int i = 1;
+    private final Object lock = new Object();
+    private int buttonPressed = -1;
+    public static ViewField instance = null;
 
     public ViewField(ArrayList<Component> components) {
 
+        instance = this;
 
         // Left panel with PNG image
         map = new ViewMap(components);
@@ -56,18 +60,47 @@ public class ViewField extends JPanel
     {
         map.AddPlayers(players);
     }
-    public void WriteOptions(String[] options)
+    public String WriteOptions(String[] options)
     {
         buttonPanel.removeAll();
         buttonPanel.setLayout(new GridLayout(options.length, 1));
+        int j = 0;
         for(int i = 0; i < options.length; i++)
         {
-            buttons[i].setText(options[i]);
-            //make buttons refresh on JFrame
-
-            buttonPanel.add(buttons[i]);
+            if(options[i] != null && options[i] != "") {
+                buttons[j].setText(options[i]);
+                buttons[j].addActionListener(this);
+                buttonPanel.add(buttons[j++]);
+            }
         }
         repaint();
+        synchronized (lock)
+        {
+            try
+            {
+                lock.wait();
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return buttons[buttonPressed].getText();
+    }
+
+    public void actionPerformed(ActionEvent e)
+    {
+        for(int i = 0; i < buttons.length; i++)
+        {
+            if(e.getSource() == buttons[i])
+            {
+                buttonPressed = i;
+                synchronized (lock)
+                {
+                    lock.notify();
+                }
+            }
+        }
     }
     public void InitiatePainting()
     {
