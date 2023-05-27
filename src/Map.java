@@ -72,6 +72,7 @@ public class Map implements Serializable{
                     componentIterator.next().Tick();
                 }
                 SetTeamStats();
+                ViewField.instance.InitiatePainting();
             }
         }
 
