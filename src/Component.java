@@ -12,11 +12,9 @@ public abstract class Component implements Flow, Serializable {
     protected String id;
     protected ArrayList<Player> onComponent=new ArrayList<>();
     protected ArrayList<Component> neighbours=new ArrayList<>();
-    protected Scanner scanner;
 
-    public Component(String ID, Scanner _be) {
+    public Component(String ID) {
         id = ID;
-        scanner=_be;
     }
 
     public boolean IsSloppy(){

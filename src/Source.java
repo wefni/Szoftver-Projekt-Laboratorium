@@ -8,15 +8,17 @@ public class Source extends Component {
     private static final Logger logger = Logger.getLogger(Source.class);
     private int amountOfWater = 0;
 
-    public Source(String ID, Scanner _be) {
-        super(ID, _be);
+    public Source(String ID) {
+        super(ID);
         logger.info(this.id + "@Source | "+this.id+" létrejött \n");
     }
     public void Act(Player me, int type){
        boolean t = false;
        while(!t){
            System.out.println("Mit szeretnél cselekedni?\nStep");
-           String valasz=scanner.nextLine();
+           ViewField.instance.WriteQuestion("Mit szeretnél cselekedni?");
+
+           String valasz= ViewField.instance.WriteOptions(new String[]{"Step"});
            logger.info(this.id+"@Act | "+me.name+" játékos a következő opciót választotta: "+valasz+"\n");
 
            if(valasz.equals("Step")) {
@@ -38,13 +40,13 @@ public class Source extends Component {
         boolean t = true;
         while(t){
             System.out.println("Melyik elemre szeretnél lépni?");
-
-            for(Component i: this.neighbours)
-            {
-                System.out.println(i.id);
+            ViewField.instance.WriteQuestion("Melyik elemre szeretnél lépni?");
+            String options[] = new String[this.neighbours.size()];
+            for(int i = 0; i < this.neighbours.size(); i++){
+                options[i] = this.neighbours.get(i).id;
             }
 
-            String bemenet = scanner.nextLine();
+            String bemenet = ViewField.instance.WriteOptions(options);
 
             for(Component j: this.neighbours)
             {
