@@ -18,6 +18,8 @@ public class Map implements Serializable{
     protected Scanner scanner;
     ListIterator<Component> componentIterator;
 
+    private boolean indul = false;
+
     ViewFrame viewFrame;
     ViewField viewField;
 
@@ -33,6 +35,16 @@ public class Map implements Serializable{
         cisterns=new ArrayList<>();
         components=new ArrayList<>();
         players=new ArrayList<>();
+    }
+
+    public boolean GetIndul()
+    {
+        return indul;
+    }
+
+    public void SetIndul(boolean _indul)
+    {
+        indul = _indul;
     }
 
     public ArrayList<Component> getComponents()
@@ -288,6 +300,33 @@ public class Map implements Serializable{
         viewFrame = new ViewFrame(components);
         viewFrame.setVisible(true);
     }
+
+    public void Karakter_mech_hozzadasa()
+    {
+        String[] mech_nevek = viewFrame.Get_Mech_Names_From_Menu();
+        for (int i = 0; i < mech_nevek.length; i++)
+        {
+            if(mech_nevek[i] != null)
+            {
+                map.AddMechToComponent(i % 3 + 1, mech_nevek[i]);
+                //System.out.println("Map @Karakter_mech_hozzadasa | mech elhelyezve a következő pályarészre: " + (i % 3 + 1) + " " + mech_nevek[i]);
+            }
+        }
+    }
+
+    public void Karakter_sab_hozzadasa()
+    {
+        String[] sab_nevek = viewFrame.Get_Sab_Names_From_Menu();
+        for (int i = 0; i < sab_nevek.length; i++)
+        {
+            if(sab_nevek[i] != null)
+            {
+                map.AddSabToComponent(0, sab_nevek[i]);
+            }
+        }
+        indul = true;
+    }
+
     public void AddMechToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
@@ -377,9 +416,10 @@ public class Map implements Serializable{
 
     public void AllPlayersAdded()
     {
-        viewFrame.setSize(1500, 800);
+        viewFrame.setSize(1200, 800);
         viewField.AddPlayers(players);
-        //viewFrame.setVisible(true);
+        map.Karakter_mech_hozzadasa();
+        map.Karakter_sab_hozzadasa();
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);

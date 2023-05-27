@@ -1,11 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.ArrayList;
 
 import static java.lang.Math.abs;
 
 public class ViewMenu extends JPanel
 {
+    String[] mechanic_nevei = new String[50];
+    String[] saboteur_nevei = new String[50];
+    int mechanincok_szama = 0;
+    int saboteurok_szama = 0;
     public ViewMenu(int i)
     {
             //Nevek bekérése
@@ -81,20 +86,13 @@ public class ViewMenu extends JPanel
                         //Karakterek neveinek beállítása
                         for (int j = 0; j < 4; j++)
                         {
-                            nevek[j] += "\n";
-                            InputStream In = new ByteArrayInputStream(nevek[j].getBytes());
-                            System.setIn(In);
-
-                           // System.out.println("Nev: " + nevek[j]);
-
                             if(j % 2 == 0)
                             {
-                                //SetPlayer(nevek[j]);
+                                mechanic_nevei[mechanincok_szama++] = nevek[j];
                             }
                             else
                             {
-//                            ViewFrame.jatekosok[j].setNev(nevek[j]);
-//                            ViewFrame.jatekosok[j].setKarakter("Saboteur");
+                                saboteur_nevei[saboteurok_szama++] = nevek[j];
                             }
                         }
                     }
@@ -137,18 +135,15 @@ public class ViewMenu extends JPanel
                             //lerakas
                             for (int j = 0; j < 4; j++)
                             {
-                                InputStream In = new ByteArrayInputStream(nevek[j].getBytes());
-                                System.setIn(In);
                                 if(!nevek[j].equals(""))
                                 {
                                     if(j % 2 == 0)
                                     {
-                                        //SetPlayer(nevek[j]);
+                                        mechanic_nevei[mechanincok_szama++] = nevek[j];
                                     }
                                     else
                                     {
-        //                            ViewFrame.jatekosok[j].setNev(nevek[j]);
-        //                            ViewFrame.jatekosok[j].setKarakter("Saboteur");
+                                        saboteur_nevei[saboteurok_szama++] = nevek[j];
                                     }
                                 }
                             }
@@ -161,4 +156,15 @@ public class ViewMenu extends JPanel
             igen_gomb.addActionListener(new ViewFrame.Nev_Bekeres_Ujra_Listener());
             nem_gomb.addActionListener(new ViewFrame.Nev_Bekeres_Kesz_Listener());
     }
+
+    public String[] Share_Mech_Names()
+    {
+        return mechanic_nevei;
+    }
+
+    public String[] Share_Sab_Names()
+    {
+        return saboteur_nevei;
+    }
+
 }

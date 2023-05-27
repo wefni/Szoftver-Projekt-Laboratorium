@@ -56,18 +56,32 @@ public class Main
             }
         }*/
 
-        System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
+        //System.out.println("1. Játék kezdése\n2. Tesztek futtatása");
         String valasz;
         boolean jo = false;
-        while (!jo)
+        /*while (!jo)
+        {*/
+            //valasz = DaFuckinScanner.nextLine(); //bekér
+            //valasz = valasz.toLowerCase(); //kisbetűsít
+
+
+
+        while (true)
         {
-            valasz = DaFuckinScanner.nextLine(); //bekér
-            valasz = valasz.toLowerCase(); //kisbetűsít
-            switch (valasz)
+            System.out.println("Várakozás a név bekérésre");
+            if(map.GetIndul())
+            {
+                break;
+            }
+        }
+        map.AllPlayersAdded();
+            map.Game();
+
+            /*switch (valasz)
             {
                 case "1" -> //Jatek
-                {
-                    logger.info("Main@main | Játék elindítva | valasz: 1 \n");
+                {*/
+                   /* logger.info("Main@main | Játék elindítva | valasz: 1 \n");
                     jo = true;
                     //System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
                     boolean jol_valaszoltak = false;
@@ -169,11 +183,10 @@ public class Main
                         {
                             map.AddSabToComponent(0, karakter_nevek.get(k));
                         }
-                    }
-                    map.AllPlayersAdded();
-                    map.Game();
-                }
-                case "2" -> //Tesztek
+                    }*/
+
+               // }
+                /*case "2" -> //Tesztek
                 {
                     logger.info("Main@main | Tesztek elindítva | valasz: 2 \n");
                     jo = true;
@@ -200,9 +213,9 @@ public class Main
                 {
                     System.out.println("Érvénytelen bemenet. Add meg újra: ");
                     logger.info("Main@main | Érvénytelen input a játék menüjében | valasz: "+valasz+"\n");
-                }
+                }*/
             }
         }
-        DaFuckinScanner.close();
-    }
-}
+       // DaFuckinScanner.close();
+    //}
+//}

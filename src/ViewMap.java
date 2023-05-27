@@ -62,7 +62,8 @@ public class ViewMap extends JPanel {
         }
     }
 
-        public void AddPlayers(ArrayList<Player> players){
+        public void AddPlayers(ArrayList<Player> players)
+        {
             for(int i = 0; i< players.size(); i++){
                 if(players.get(i).getClass() == Saboteur.class){
                     //Saboteur-t a Source-ra kell rakni!
