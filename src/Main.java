@@ -68,7 +68,7 @@ public class Main
 
         while (true)
         {
-            System.out.println("Várakozás a név bekérésre");
+            System.out.print("");
             if(map.GetIndul())
             {
                 break;
