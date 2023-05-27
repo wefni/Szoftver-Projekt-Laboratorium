@@ -405,6 +405,7 @@ public class Map implements Serializable{
         if(componentIterator != null){
             componentIterator.add(pipe);
         }
+        ViewMap.viewmap.AddPipe(pipe);
     //logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
         if(c1 != null && c2 != null)
         {
@@ -419,7 +420,7 @@ public class Map implements Serializable{
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
     }
-    public void PlacePumpOnPipe(Component pipe1) {
+    public void PlacePumpOnPipe(Component pipe1, Component neighbour1, Component neighbour2) {
         Pipe pipe2 = new Pipe("pipe-" + components.size());
         Pump pump = new Pump("pump-" + components.size());
 
@@ -432,6 +433,9 @@ public class Map implements Serializable{
         pipe1.neighbours.get(1).RemoveNeighbours(pipe1);
 
         pump.ConfigurePumpWithParameters(pipe1, pipe2);
+
+        ViewMap.viewmap.AddPipe(pipe2);
+        ViewMap.viewmap.AddPump(pump, neighbour1, neighbour2);
 
         components.add(pipe2);
         components.add(pump);

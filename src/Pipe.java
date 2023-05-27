@@ -226,7 +226,13 @@ public class Pipe extends Breakable {
      */
     public void PlacePump()
     {
-        Map.map.PlacePumpOnPipe(this);
+        if(neighbours.size()==1){
+            Map.map.PlacePumpOnPipe(this, neighbours.get(0), null);
+        }
+        else{
+            Map.map.PlacePumpOnPipe(this, neighbours.get(0), neighbours.get(1));
+        }
+
     }
 
     public int FlowOut(Component sender) {

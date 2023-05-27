@@ -59,6 +59,30 @@ public class ViewMap extends JPanel {
             }
         }
     }
+    public void AddPipe(Pipe pipe) {
+        ViewPipe viewPipe = new ViewPipe(0, 0, pipe);
+        objects.put(pipe, viewPipe);
+    }
+
+    public void AddPump(Pump pump, Component neighbour1, Component neighbour2) {
+        int x = 0, y=0;
+        x += objects.get(neighbour1).getX();
+        y += objects.get(neighbour1).getY();
+        if(neighbour2 != null){
+            x += objects.get(neighbour2).getX();
+            y += objects.get(neighbour2).getY();
+        }
+        else {
+            //random sivatagi koordinatak
+            x += 600;
+            y += 555;
+        }
+
+        x = (int)x/2;
+        y = (int)y/2;
+        ViewPump viewPump = new ViewPump(x, y, pump);
+        objects.put(pump, viewPump);
+    }
 
         public void AddPlayers(ArrayList<Player> players)
         {
