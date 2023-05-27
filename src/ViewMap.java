@@ -21,19 +21,19 @@ public class ViewMap extends JPanel {
     public void AddComponents(ArrayList<Component> components) {
         for (int i = 0; i < components.size(); i++) {
             if (components.get(i).getClass() == Pump.class) {
-                ViewPump viewPump = new ViewPump(i * 10, i * 10, (Pump) components.get(i));
+                ViewPump viewPump = new ViewPump(0, 0, (Pump) components.get(i));
                 objects.put(components.get(i), viewPump);
             }
             if (components.get(i).getClass() == Pipe.class) {
-                ViewPipe viewPipe = new ViewPipe(i * 10, i * 10, (Pipe) components.get(i));
+                ViewPipe viewPipe = new ViewPipe(0, 0, (Pipe) components.get(i));
                 objects.put(components.get(i), viewPipe);
             }
             if (components.get(i).getClass() == Cistern.class) {
-                ViewCistern viewCistern = new ViewCistern(i *10, i * 10, (Cistern) components.get(i));
+                ViewCistern viewCistern = new ViewCistern(0, 0, (Cistern) components.get(i));
                 objects.put(components.get(i), viewCistern);
             }
             if (components.get(i).getClass() == Source.class) {
-                ViewSource viewSource = new ViewSource(i * 10, i * 10, (Source) components.get(i));
+                ViewSource viewSource = new ViewSource(0, 0, (Source) components.get(i));
                 objects.put(components.get(i), viewSource);
             }
         }
@@ -60,100 +60,94 @@ public class ViewMap extends JPanel {
     private void SetCoords(){
         Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
         Map.Entry<Object, ViewObject> pair = it.next();
-        //first is the Source
-        pair.getValue().SetCoords(20, 200);
-        //there are 3 Cisterns
+
+        pair.getValue().SetCoords(50,200); // Pump-30
         pair = it.next();
-        pair.getValue().SetCoords(400, 500);
+        pair.getValue().SetCoords(650,600); // Cistern-2
         pair = it.next();
-        pair.getValue().SetCoords(350, 500);
+        pair.getValue().SetCoords(50,500); // Pump-41
         pair = it.next();
-        pair.getValue().SetCoords(300, 500);
-        //from here on there are the Pipes
+        pair.getValue().SetCoords(300,325); // Pipe-24
         pair = it.next();
-        pair.getValue().SetCoords(200, 500);
+        pair.getValue().SetCoords(700,250); // Pipe-18
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(200,400); // Pipe-26
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(800,200); // Pipe-17
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(650,250); // Pipe-20
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(800,500); // Pump-37
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(300,450); // Pump-43
         pair = it.next();
-        //10th done!
-        pair.getValue().SetCoords(150, 500);
+        pair.getValue().SetCoords(700,450); // Pipe-15
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(200,50); // Pipe-22
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(600,375); // Pump-35
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(600,450); // Pipe-13
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(650,150); // Pipe-19
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(100,600); // Pipe-9
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(200,150); // Pipe-28
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(550,500); // Pump-38
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(575,550); // Pipe-6
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(275,550); // Pump-39
         pair = it.next();
-        //20th done!
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(75,300); // Pipe-27
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(200,525); // Pipe-10
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(450,300); // Pipe-14
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(450,100); // Pipe-21
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(300,500); // Pipe-11
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(75,100); // Pipe-29
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(100,400); // Pump-42
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(200,300); // Pipe-25
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(400,650); // Pipe-8
         pair = it.next();
-        //Pump from here
-        pair.getValue().SetCoords(120, 90);
+        pair.getValue().SetCoords(100,50); // Source-0
         pair = it.next();
-        //30th
-        pair.getValue().SetCoords(500, 34);
+        pair.getValue().SetCoords(400,600); // Pipe-7
         pair = it.next();
-        pair.getValue().SetCoords(400, 80);
+        pair.getValue().SetCoords(300,250); // Pump-32
         pair = it.next();
-        pair.getValue().SetCoords(60, 450);
+        pair.getValue().SetCoords(800,300); // Pump-36
         pair = it.next();
-        pair.getValue().SetCoords(98, 300);
+        pair.getValue().SetCoords(450,50); // Pump-33
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(450,500); // Pipe-12
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(700,550); // Pipe-5
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(325,200); // Pipe-23
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(150,650); // Pipe-40
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(700,200); // Pump-34
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(800,400); // Pipe-16
         pair = it.next();
-        //40th
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(400,150); // Pump-31
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(550,650); // Cistern-1
         pair = it.next();
-        pair.getValue().SetCoords(0, 0);
+        pair.getValue().SetCoords(800,550); // Pipe-4
         pair = it.next();
+        pair.getValue().SetCoords(800,600); // Cistern-3
     }
 
     @Override

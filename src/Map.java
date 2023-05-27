@@ -263,6 +263,7 @@ public class Map implements Serializable{
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
 
         viewFrame = new ViewFrame(components);
+        viewFrame.setVisible(true);
     }
     public void AddMechToComponent(int componentNumber, String nev)
     {
