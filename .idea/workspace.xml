@@ -12,14 +12,33 @@
     <list default="true" id="0c4fd997-5feb-4ad3-ad13-6b04896b5e1c" name="Changes" comment="Pumpák ki és bemenet beállítva">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cistern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cistern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Breakable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Breakable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Cistern.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Cistern.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Flow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Flow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Mechanic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Mechanic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Pipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Pipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Saboteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Saboteur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Source.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Source.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewCistern.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewCistern.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMechanic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMechanic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSaboteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSaboteur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mechanic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Saboteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saboteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewCistern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewCistern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewPipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewPipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewPump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewPump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +117,11 @@
       <workItem from="1683827751569" duration="973000" />
       <workItem from="1683829070628" duration="1390000" />
       <workItem from="1683913221422" duration="5274000" />
+      <workItem from="1685114376395" duration="3354000" />
+      <workItem from="1685118530762" duration="656000" />
+      <workItem from="1685119569335" duration="1031000" />
+      <workItem from="1685120624473" duration="317000" />
+      <workItem from="1685120960470" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="log4j re átírtam a logolást, egyelőre az nincs megoldva, hogy hogyan lehetne különböző nevű log fájlokba logolni.">
       <created>1683565801929</created>

@@ -286,6 +286,7 @@ public class Map implements Serializable{
 
         viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
+        viewFrame.setVisible(true);
     }
     public void AddMechToComponent(int componentNumber, String nev)
     {

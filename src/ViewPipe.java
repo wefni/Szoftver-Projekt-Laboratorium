@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.text.MessageFormat;
 import java.util.HashMap;
 
 public class ViewPipe extends ViewObject{
@@ -77,7 +78,7 @@ public class ViewPipe extends ViewObject{
 
 
         // Add text below the image
-        String text = "Pipe:" + x + ", " + y;
+        String text = MessageFormat.format("{0}: {1}, {2}",pair.id,x,y);
         Font font = new Font("Arial", Font.PLAIN, 12);
         g2d.setFont(font);
         g2d.setColor(Color.BLACK);
