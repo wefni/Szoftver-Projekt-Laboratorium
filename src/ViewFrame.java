@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ViewFrame extends JFrame{
-    private static int i = 1;
+    private static int jatekosok_sorszama = 1;
 
     private static int currentCard = 1;
     private static CardLayout cl;
@@ -30,7 +30,7 @@ public class ViewFrame extends JFrame{
         //Panelek közötti váltás
         cl = new CardLayout();
         cardPanel.setLayout(cl);
-        menu = new ViewMenu(i);
+        menu = new ViewMenu(jatekosok_sorszama);
 
         //Hozzáadja és beállítja a számát, amelyen meg fog jelenni
         cardPanel.add(menu, "1");
@@ -83,8 +83,8 @@ public class ViewFrame extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            i += 4;
-            JPanel bekeres_ujra = new ViewMenu(i);
+            jatekosok_sorszama += 4;
+            JPanel bekeres_ujra = new ViewMenu(jatekosok_sorszama);
 
             cardPanel.add(bekeres_ujra, "20");
             currentCard = 20;
