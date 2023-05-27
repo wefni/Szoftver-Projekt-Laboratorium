@@ -9,14 +9,18 @@ public class ViewMap extends JPanel {
 
     private HashMap<Object, ViewObject> objects;
     private ArrayList<Player> players;
+    protected static ViewMap viewmap;
     public ViewMap(ArrayList<Component> components) {
-        objects = new HashMap<>();
+        viewmap=this;
+        objects=new HashMap<>();
         AddComponents(components);
+
         SetCoords();
 
         //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
+
     }
 
     public void SetPlayer(Player player)
@@ -24,11 +28,15 @@ public class ViewMap extends JPanel {
        players.add(player);
     }
 
+    public ViewObject getObjects(Component c) {
+        return objects.get(c);
+    }
     public void AddComponents(ArrayList<Component> components) {
         for (int i = 0; i < components.size(); i++) {
             if (components.get(i).getClass() == Pump.class) {
                 ViewPump viewPump = new ViewPump(i * 10, i * 10, (Pump) components.get(i));
                 objects.put(components.get(i), viewPump);
+                System.out.println(components.get(i).id);
             }
             if (components.get(i).getClass() == Pipe.class) {
                 ViewPipe viewPipe = new ViewPipe(i * 10, i * 10, (Pipe) components.get(i));
@@ -41,6 +49,15 @@ public class ViewMap extends JPanel {
             if (components.get(i).getClass() == Source.class) {
                 ViewSource viewSource = new ViewSource(i * 10, i * 10, (Source) components.get(i));
                 objects.put(components.get(i), viewSource);
+            }
+        }
+        // az iranyhoz kell
+        for (Component i: components)
+        {
+            if(i.getClass() == Pipe.class)
+            {
+                ViewPipe p=(ViewPipe) objects.get(i);
+                p.Direction();
             }
         }
     }
@@ -67,7 +84,7 @@ public class ViewMap extends JPanel {
         Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
         Map.Entry<Object, ViewObject> pair = it.next();
         //first is the Source
-        pair.getValue().SetCoords(20, 200);
+      /*  pair.getValue().SetCoords(20, 200);
         //there are 3 Cisterns
         pair = it.next();
         pair.getValue().SetCoords(400, 500);
@@ -75,7 +92,7 @@ public class ViewMap extends JPanel {
         pair.getValue().SetCoords(350, 500);
         pair = it.next();
         pair.getValue().SetCoords(300, 500);
-        //from here on there are the Pipes
+       */ //from here on there are the Pipes
         pair = it.next();
         pair.getValue().SetCoords(200, 500);
         pair = it.next();
@@ -89,7 +106,7 @@ public class ViewMap extends JPanel {
         pair = it.next();
         pair.getValue().SetCoords(0, 0);
         pair = it.next();
-        //10th done!
+     /*   //10th done!
         pair.getValue().SetCoords(150, 500);
         pair = it.next();
         pair.getValue().SetCoords(0, 0);
@@ -159,7 +176,7 @@ public class ViewMap extends JPanel {
         pair.getValue().SetCoords(0, 0);
         pair = it.next();
         pair.getValue().SetCoords(0, 0);
-        pair = it.next();
+        pair = it.next();*/
     }
 
     @Override
