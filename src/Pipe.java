@@ -24,6 +24,22 @@ public class Pipe extends Breakable {
 
     }
 
+    public int getSticky() {
+        return sticky;
+    }
+
+    public boolean isHasWaterPartOne() {
+        return hasWaterPartOne;
+    }
+
+    public boolean isHasWaterPartTwo() {
+        return hasWaterPartTwo;
+    }
+
+    public int getUnBreakable() {
+        return unBreakable;
+    }
+
     public boolean Accept() {
 
         //logolás

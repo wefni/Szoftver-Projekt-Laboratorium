@@ -69,11 +69,12 @@ public class Main
                 {
                     logger.info("Main@main | Játék elindítva | valasz: 1 \n");
                     jo = true;
-                    System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
+                    //System.out.println("Random legyen ki- vagy bekapcsolva? (ki/be)");
                     boolean jol_valaszoltak = false;
                     while(!jol_valaszoltak)
                     {
-                        valasz = DaFuckinScanner.nextLine(); //bekér
+                        jol_valaszoltak = true;
+                        //valasz = DaFuckinScanner.nextLine(); //bekér
                         switch (valasz)
                         {
                             case "be" -> //Random bekapcsolás
@@ -95,8 +96,8 @@ public class Main
                             }
                             default ->
                             {
-                                logger.info("Main@main | Érvénytelen input a játék menüjében | valasz: "+valasz+"\n");
-                                System.out.println("Érvénytelen bemenet. Add meg újra: ");
+                                //logger.info("Main@main | Érvénytelen input a játék menüjében | valasz: "+valasz+"\n");
+                                //System.out.println("Érvénytelen bemenet. Add meg újra: ");
                             }
                         }
                     }
@@ -157,7 +158,6 @@ public class Main
                         }
                         i++;
                     }
-
                     //Jatekosok map-ra lerakása
                     for (int k = 0; k < i - 1; k++)
                     {

@@ -19,6 +19,7 @@ public class Map implements Serializable{
     ListIterator<Component> componentIterator;
 
     ViewFrame viewFrame;
+    ViewField viewField;
 
     public Map(String file, Scanner _be)
     {
@@ -28,7 +29,7 @@ public class Map implements Serializable{
         round = 0;
         mechWater = 0;
         sabWater = 0;
-        endRound = 200;
+        endRound = 1;
         cisterns=new ArrayList<>();
         components=new ArrayList<>();
         players=new ArrayList<>();
@@ -47,8 +48,10 @@ public class Map implements Serializable{
             System.out.println("Round: " + round);
             logger.info("Map @Game | Aktuális kör:"+round+"\n");
             round++;
+
             for (Player p : players)
             {
+                viewFrame.UpdateUpPanel(mechWater,sabWater,p);
                 System.out.println(p.name);
                 System.out.println("Helye: " + p.where.id);
                 p.YourTurn();
@@ -61,6 +64,25 @@ public class Map implements Serializable{
                 SetTeamStats();
             }
         }
+
+        viewFrame.setSize(350,200);
+        if (sabWater < mechWater)
+        {
+            viewFrame.CreatWinnerCard("Szabotőrök nyertek");
+        }
+        else if(sabWater > mechWater)
+        {
+            viewFrame.CreatWinnerCard("Szerelők nyertek");
+        }
+        else
+        {
+            viewFrame.CreatWinnerCard("Döntetlen");
+        }
+    }
+
+    public int GetRound()
+    {
+        return round;
     }
 
     public void GenerateMap()
@@ -262,6 +284,7 @@ public class Map implements Serializable{
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
 
+        viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
         viewFrame.setVisible(true);
     }
@@ -352,9 +375,11 @@ public class Map implements Serializable{
         }
     }
 
-    public void AllPlayersAdded(){
-        viewFrame.AddPlayers(players);
-        viewFrame.setVisible(true);
+    public void AllPlayersAdded()
+    {
+        viewFrame.setSize(1500, 800);
+        viewField.AddPlayers(players);
+        //viewFrame.setVisible(true);
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size(), scanner);

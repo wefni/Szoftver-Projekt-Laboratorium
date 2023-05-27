@@ -8,21 +8,35 @@ import java.util.Map;
 public class ViewMap extends JPanel {
 
     private HashMap<Object, ViewObject> objects;
+    private ArrayList<Player> players;
+    protected static ViewMap viewmap;
     public ViewMap(ArrayList<Component> components) {
-        objects = new HashMap<>();
+        viewmap=this;
+        objects=new HashMap<>();
         AddComponents(components);
+
         SetCoords();
 
-        //map picture is too big to fit in this frame, make is smaller
+        //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
+
     }
 
+    public void SetPlayer(Player player)
+    {
+       players.add(player);
+    }
+
+    public ViewObject getObjects(Component c) {
+        return objects.get(c);
+    }
     public void AddComponents(ArrayList<Component> components) {
         for (int i = 0; i < components.size(); i++) {
             if (components.get(i).getClass() == Pump.class) {
                 ViewPump viewPump = new ViewPump(0, 0, (Pump) components.get(i));
                 objects.put(components.get(i), viewPump);
+                System.out.println(components.get(i).id);
             }
             if (components.get(i).getClass() == Pipe.class) {
                 ViewPipe viewPipe = new ViewPipe(0, 0, (Pipe) components.get(i));
@@ -35,6 +49,15 @@ public class ViewMap extends JPanel {
             if (components.get(i).getClass() == Source.class) {
                 ViewSource viewSource = new ViewSource(0, 0, (Source) components.get(i));
                 objects.put(components.get(i), viewSource);
+            }
+        }
+        // az iranyhoz kell
+        for (Component i: components)
+        {
+            if(i.getClass() == Pipe.class)
+            {
+                ViewPipe p=(ViewPipe) objects.get(i);
+                p.Direction();
             }
         }
     }
