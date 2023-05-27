@@ -416,7 +416,7 @@ public class Map implements Serializable{
 
     public void AllPlayersAdded()
     {
-        viewFrame.setSize(1200, 800);
+        viewFrame.setSize(1400, 800);
         viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
