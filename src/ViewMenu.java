@@ -1,16 +1,37 @@
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
-import java.util.ArrayList;
-
 import static java.lang.Math.abs;
 
+/**
+ * A menu megjelenítéséért felelős osztály, JPanelből származik le.
+ */
 public class ViewMenu extends JPanel
 {
+    /**
+     * A mechanic játékosok neveit tároló tömb.
+     */
     String[] mechanic_nevei = new String[50];
+
+    /**
+     * A saboteur játékosok neveit tároló tömb.
+     */
     String[] saboteur_nevei = new String[50];
+
+    /**
+     * A mechanic játékosok számát tároló változó.
+     */
     int mechanincok_szama = 0;
+
+    /**
+     * A saboteur játékosok számát tároló változó.
+     */
     int saboteurok_szama = 0;
+
+    /**
+     * A konstruktorban beállításra kerrülnek a nevet bekérő mezők, a nevek rögzítésére szolgáló gomb, valamint
+     * a "Szeretnél még játékost felvenni?" kérdés és a "Igen" és "Nem" gombok.
+     * @param i A játékosok számát tároló változó.
+     */
     public ViewMenu(int i)
     {
             //Nevek bekérése
@@ -157,11 +178,19 @@ public class ViewMenu extends JPanel
             nem_gomb.addActionListener(new ViewFrame.Nev_Bekeres_Kesz_Listener());
     }
 
+    /**
+     * A mechanic jatekosok neveinek lekerdezese
+     * @return a mechanic jatekosok nevei
+     */
     public String[] Share_Mech_Names()
     {
         return mechanic_nevei;
     }
 
+    /**
+     * A saboteur jatekosok neveinek lekerdezese
+     * @return a saboteur jatekosok nevei
+     */
     public String[] Share_Sab_Names()
     {
         return saboteur_nevei;
