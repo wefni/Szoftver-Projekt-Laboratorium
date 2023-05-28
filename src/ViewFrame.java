@@ -20,6 +20,8 @@ public class ViewFrame extends JFrame{
 
     private ViewMenu menu;
 
+    private ViewField field;
+
     public ViewFrame(ArrayList<Component> components)
     {
         setTitle("Drukmákori Sivatag");
@@ -34,8 +36,8 @@ public class ViewFrame extends JFrame{
 
         //Hozzáadja és beállítja a számát, amelyen meg fog jelenni
         cardPanel.add(menu, "1");
-        JPanel palya = new ViewField(components);
-        cardPanel.add(palya, "2");
+        field = new ViewField(components);
+        cardPanel.add(field, "2");
 
         getContentPane().add(cardPanel, BorderLayout.CENTER);
         setVisible(true);
@@ -67,7 +69,13 @@ public class ViewFrame extends JFrame{
         leftText.setText("Szabotőrök pontszáma: "+sWater+"  Szerelők pontszáma: "+mWater);
         rightText.setText("Aktuális játékos: "+aktP.name);
     }
-     static class Nev_Bekeres_Kesz_Listener implements ActionListener
+
+    public void AddPlayers(ArrayList<Player> players)
+    {
+        field.SetPlayers(players);
+    }
+
+    static class Nev_Bekeres_Kesz_Listener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)

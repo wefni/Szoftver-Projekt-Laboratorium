@@ -74,8 +74,8 @@ public class ViewMap extends JPanel {
                     objects.put(players.get(i), viewMechanic);
                 }
         }
-        this.setPreferredSize(new Dimension(600, 800));
-        this.setBackground(Color.WHITE);
+        //this.setPreferredSize(new Dimension(600, 800));
+        //this.setBackground(Color.WHITE);
     }
 
     //itt kellene a koordinátákat bele hardCode-olni a pályába, eleg fájdalmas
