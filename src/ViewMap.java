@@ -12,8 +12,8 @@ public class ViewMap extends JPanel {
         viewmap=this;
         objects=new LinkedHashMap<>();
         AddComponents(components);
-
         SetCoords();
+
 // az iranyhoz kell
         for (Component i: components)
         {
