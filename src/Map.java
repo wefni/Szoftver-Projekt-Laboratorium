@@ -72,6 +72,7 @@ public class Map implements Serializable{
                     componentIterator.next().Tick();
                 }
                 SetTeamStats();
+
             }
         }
 
@@ -294,7 +295,7 @@ public class Map implements Serializable{
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
 
-        viewField = new ViewField(components);
+        //viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
         viewFrame.setVisible(true);
     }
@@ -415,9 +416,10 @@ public class Map implements Serializable{
     public void AllPlayersAdded()
     {
         viewFrame.setSize(1400, 800);
-        viewField.AddPlayers(players);
+        //viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
+        viewFrame.AddPlayers(players);
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size());

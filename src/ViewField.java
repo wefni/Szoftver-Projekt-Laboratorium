@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ViewField extends JPanel implements ActionListener
@@ -11,7 +9,7 @@ public class ViewField extends JPanel implements ActionListener
     private JLabel questionLabel;
     private JPanel buttonPanel;
     private JButton[] buttons;
-    private ViewMap map;
+    private ViewMap viewmap;
     private JPanel rightPanel;
     private static int i = 1;
     private final Object lock = new Object();
@@ -23,8 +21,8 @@ public class ViewField extends JPanel implements ActionListener
         instance = this;
 
         // Left panel with PNG image
-        map = new ViewMap(components);
-        map.setPreferredSize(new Dimension(900, 800));
+        viewmap = new ViewMap(components);
+        viewmap.setPreferredSize(new Dimension(900, 800));
 
         // Right panel with question and buttons
         rightPanel = new JPanel(new BorderLayout());
@@ -47,7 +45,7 @@ public class ViewField extends JPanel implements ActionListener
 
 
         // Add left and right panels to the frame
-        add(map, BorderLayout.WEST);
+        add(viewmap, BorderLayout.WEST);
         add(rightPanel, BorderLayout.CENTER);
     }
     public void WriteQuestion(String question)
@@ -58,7 +56,7 @@ public class ViewField extends JPanel implements ActionListener
 
     public void AddPlayers(ArrayList<Player> players)
     {
-        map.AddPlayers(players);
+        viewmap.AddPlayers(players);
     }
     public String WriteOptions(String[] options)
     {
@@ -104,6 +102,12 @@ public class ViewField extends JPanel implements ActionListener
     }
     public void InitiatePainting()
     {
-        map.repaint();
+        viewmap.repaint();
+    }
+
+
+    public void SetPlayers(ArrayList<Player> players)
+    {
+        //viewmap.AddPlayers(players);
     }
 }
