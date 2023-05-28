@@ -23,7 +23,9 @@ public class ViewField extends JPanel implements ActionListener
         instance = this;
 
         // Left panel with PNG image
+
         map = new ViewMap(components);
+
         map.setPreferredSize(new Dimension(900, 800));
 
         // Right panel with question and buttons

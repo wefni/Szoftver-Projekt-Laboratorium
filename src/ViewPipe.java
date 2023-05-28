@@ -24,7 +24,6 @@ public class ViewPipe extends ViewObject{
     void Direction()
     {
         // az iranyhoz kell
-        //System.out.println(ViewMap.viewmap.getObjects(pair.neighbours.get(1)));
          n0x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x;// masodik szomszed x-je
          n0y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y;// masodik szomszed y-je
          n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x; // elso szomszed x-je
@@ -46,34 +45,7 @@ public class ViewPipe extends ViewObject{
         image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
         // Draw the image at (x, y)
         AffineTransform trans = new AffineTransform();
-       // int px=30;
-        /*int py=30;
-        int dirx;
-        int diry;
-        if(n0y>n1y) {
-            dirx = n0x - n1x;
-            diry = n0y - n1y;
 
-        }
-        else
-        {
-             dirx = n1x - n0x;
-             diry = n1y - n0y;
-        }
-        trans.translate(x,y);
-       /* double dirlenght= sqrt(dirx*dirx+diry*diry);
-        double pipedirlenght= sqrt(30*30+30*30);
-        double normx=dirx*(1/dirlenght);
-        double normy=diry*(1/dirlenght);
-        double normpipex=px*(1/pipedirlenght);
-        double normpipey=py*(1/pipedirlenght);
-        double degree=normx*normpipex+normy*normpipey;*/
-        //System.out.println(degree);
-       // trans.rotate(Math.toRadians(degree),15,15);
-        //trans.translate(n0x+10,n0y+10);
-        //g2d.drawImage(image, trans, this);
-        //g2d.drawLine(n0x,n0y,n1x,n1y);
-        //g2d.fillRect(n0x,n0y,n1x,n1y);
         if(pair.getUnBreakable()>0)
         {
             g2d.setStroke(new BasicStroke(5));
@@ -88,6 +60,8 @@ public class ViewPipe extends ViewObject{
         double dirlenght= sqrt(dirx*dirx+diry*diry);
         double normx=dirx*(1/dirlenght);
         double normy=diry*(1/dirlenght);
+        x=(int)(n0x + normx * (dirlenght / 2) + 15);
+        y=(int)(n0y + normy * (dirlenght / 2) + 15);
         if(pair.neighbours.get(0).getClass()== Pump.class) { // ha pumpa akkor az outpot fele nyomja a vizet
             Pump p = (Pump) pair.neighbours.get(0);
 
@@ -128,7 +102,7 @@ public class ViewPipe extends ViewObject{
                 }
             }
         }
-        if(pair.broken)
+        if(pair.broken) // ha torott pirosra szinezi
         {
             g2d.setColor(Color.RED);
 

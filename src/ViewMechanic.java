@@ -17,6 +17,8 @@ public class ViewMechanic extends ViewObject{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+         x=ViewMap.viewmap.getObjects(pair.where).x;// ahol all
+         y=ViewMap.viewmap.getObjects(pair.where).y;// ahol all
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
 
         // Load the image
