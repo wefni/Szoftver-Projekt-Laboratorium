@@ -6,23 +6,18 @@ import java.util.Map;
 public class ViewMap extends JPanel {
 
     private HashMap<Object, ViewObject> objects;
+    private ArrayList<Component> components;
     private ArrayList<Player> players;
     protected static ViewMap viewmap;
-    public ViewMap(ArrayList<Component> components) {
+    private Component pumpaddedpipe;
+    public ViewMap(ArrayList<Component> components1) {
         viewmap=this;
+        components=components1;
         objects=new LinkedHashMap<>();
         AddComponents(components);
         SetCoords();
 
-// az iranyhoz kell
-        for (Component i: components)
-        {
-            if(i.getClass() == Pipe.class)
-            {
-                ViewPipe p=(ViewPipe) objects.get(i);
-                p.Direction();
-            }
-        }
+
         //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
         this.setBackground(Color.WHITE);
@@ -173,10 +168,31 @@ public class ViewMap extends JPanel {
 
 
     }
+    public void Pumpadded(Component pipe) // pumpa hozzaadasa
+    {
+        pumpaddedpipe= pipe;
+        for(Component i: components)
+        {
+            if(objects.get(i)==null)
+            {
+                if(i.getClass()==Pump.class) {
+                    objects.put(i, new ViewPump(objects.get(pumpaddedpipe).x,objects.get(pumpaddedpipe).y,(Pump) i));
+                }
+                else
+                {
+                    objects.put(i, new ViewPipe(0,0,(Pipe) i));
+                }
+            }
+        }
+
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+
+
         //iterate through the hashmap and repaint every object
         Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
         while(it.hasNext()) {

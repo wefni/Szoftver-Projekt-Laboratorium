@@ -129,4 +129,8 @@ public class ViewFrame extends JFrame{
         String[] sab_names = menu.Share_Sab_Names();
         return sab_names;
     }
+    public void Pumpeadded(Component pipe)
+    {
+        field.Pumpadded(pipe);
+    }
 }

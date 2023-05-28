@@ -38,6 +38,9 @@ public class ViewPipe extends ViewObject{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        if(pair.neighbours.size()==2)
+            Direction();
+
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
         // Load the image
         Image image = new ImageIcon("src\\images\\pipe.png").getImage();

@@ -428,15 +428,18 @@ public class Map implements Serializable{
         pipe2.AddNeighbours(pump);
         if(pipe1.neighbours.size()>1)
             pipe2.AddNeighbours(pipe1.neighbours.get(1));
+
         pump.AddNeighbours(pipe2);
         pump.AddNeighbours(pipe1);
         pipe1.neighbours.get(1).AddNeighbours(pipe2);
         pipe1.neighbours.get(1).RemoveNeighbours(pipe1);
-
+        pipe1.RemoveNeighbours(pipe1.neighbours.get(1));
+        pipe1.AddNeighbours(pump);
         pump.ConfigurePumpWithParameters(pipe1, pipe2);
 
         components.add(pipe2);
         components.add(pump);
+        viewFrame.Pumpeadded(pipe1);
 
         logger.info(pipe1.id+"@PlacePumpOnPipe | pumpa lehelyezve a "+pipe1.id+"-ra/re | új pumpa ID: "+pump.id+"\n");
         logger.info(pipe1.id+"@PlacePumpOnPipe |"+pump+" szomszédai: "+pump.neighbours.get(0).id+", "+pump.neighbours.get(1).id+"\n");

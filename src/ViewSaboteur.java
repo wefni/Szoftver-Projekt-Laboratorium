@@ -19,7 +19,8 @@ public class ViewSaboteur extends ViewObject{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
-
+        x=ViewMap.viewmap.getObjects(pair.where).x-15;// ahol all
+        y=ViewMap.viewmap.getObjects(pair.where).y-15;// ahol all
         // Load the image
         Image image = new ImageIcon("src\\images\\saboteur.png").getImage();
         //set image size

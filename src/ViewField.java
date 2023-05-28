@@ -57,10 +57,7 @@ public class ViewField extends JPanel implements ActionListener
         repaint();
     }
 
-    public void AddPlayers(ArrayList<Player> players)
-    {
-        viewmap.AddPlayers(players);
-    }
+
     public String WriteOptions(String[] options)
     {
         buttonPanel.removeAll();
@@ -111,6 +108,10 @@ public class ViewField extends JPanel implements ActionListener
 
     public void SetPlayers(ArrayList<Player> players)
     {
-        //viewmap.AddPlayers(players);
+        viewmap.AddPlayers(players);
+    }
+    public void Pumpadded(Component pipe1)
+    {
+        viewmap.Pumpadded(pipe1);
     }
 }
