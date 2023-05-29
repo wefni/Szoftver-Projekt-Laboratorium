@@ -14,14 +14,16 @@ public class ViewMap extends JPanel {
         viewmap=this;
         components=components1;
         objects=new LinkedHashMap<>();
+
+
+
         AddComponents(components);
         SetCoords();
 
 
         //map picture is too big to fit in this frame, make it smaller
         this.setPreferredSize(new Dimension(600, 800));
-        this.setBackground(Color.WHITE);
-
+        //this.setBackground(Color.WHITE);
     }
 
     public void SetPlayer(Player player)
@@ -190,6 +192,8 @@ public class ViewMap extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        ImageIcon im = new ImageIcon("src\\images\\sand4.jpg");
+        Image i = im.getImage();
 
         //iterate through the hashmap and repaint every object
         try {

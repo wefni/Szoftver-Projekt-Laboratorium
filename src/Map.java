@@ -1,5 +1,7 @@
 import org.apache.log4j.*;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -15,6 +17,8 @@ public class Map implements Serializable{
     private ArrayList<Player> players;
 
     protected static Map map;
+
+    private final Object lock = new Object();
     ListIterator<Component> componentIterator;
 
     private boolean indul = false;
@@ -299,7 +303,6 @@ public class Map implements Serializable{
         viewFrame = new ViewFrame(components);
         //viewFrame.setVisible(true);
     }
-
     public void Karakter_mech_hozzadasa()
     {
         String[] mech_nevek = viewFrame.Get_Mech_Names_From_Menu();
@@ -308,7 +311,6 @@ public class Map implements Serializable{
             if(mech_nevek[i] != null)
             {
                 map.AddMechToComponent(i % 3 + 1, mech_nevek[i]);
-                //System.out.println("Map @Karakter_mech_hozzadasa | mech elhelyezve a következő pályarészre: " + (i % 3 + 1) + " " + mech_nevek[i]);
             }
         }
     }
@@ -323,7 +325,6 @@ public class Map implements Serializable{
                 map.AddSabToComponent(0, sab_nevek[i]);
             }
         }
-        indul = true;
     }
 
     public void AddMechToComponent(int componentNumber, String nev)
@@ -415,11 +416,17 @@ public class Map implements Serializable{
 
     public void AllPlayersAdded()
     {
-        viewFrame.setSize(1400, 800);
+        do
+        {
+            System.out.print("");
+        }
+        while (!map.GetIndul());
+        viewFrame.setSize(1600, 800);
         //viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
         viewFrame.AddPlayers(players);
+        indul = true;
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size());
