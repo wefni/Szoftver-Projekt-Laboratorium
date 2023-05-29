@@ -43,6 +43,6 @@ public class ViewSource extends ViewObject{
         image2 = new ImageIcon(image2.getScaledInstance(270, 180, Image.SCALE_DEFAULT)).getImage();
 
         // Draw the image at (x, y)
-        g2d.drawImage(image2, 645, 570, this);
+        g2d.drawImage(image2, 645, 560, this);
     }
 }

@@ -192,8 +192,16 @@ public class ViewMap extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
+
         ImageIcon im = new ImageIcon("src\\images\\sand4.jpg");
-        Image i = im.getImage();
+        Image image = im.getImage();
+
+        //set image size
+        image = new ImageIcon(image.getScaledInstance(900, 800, Image.SCALE_DEFAULT)).getImage();
+
+        // Draw the image at (x, y)
+        g2d.drawImage(image,0, 0, this);
 
         //iterate through the hashmap and repaint every object
         try {
