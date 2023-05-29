@@ -15,6 +15,8 @@ public class Map implements Serializable{
     private ArrayList<Player> players;
 
     protected static Map map;
+
+    private final Object lock = new Object();
     ListIterator<Component> componentIterator;
 
     private boolean indul = false;
@@ -323,7 +325,7 @@ public class Map implements Serializable{
                 map.AddSabToComponent(0, sab_nevek[i]);
             }
         }
-        indul = true;
+
     }
 
     public void AddMechToComponent(int componentNumber, String nev)
@@ -415,11 +417,17 @@ public class Map implements Serializable{
 
     public void AllPlayersAdded()
     {
+        do
+        {
+            System.out.print("");
+        }
+        while (!map.GetIndul());
         viewFrame.setSize(1400, 800);
         //viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
         viewFrame.AddPlayers(players);
+        indul = true;
     }
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size());
