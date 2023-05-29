@@ -7,7 +7,7 @@ public class Cistern extends Component{
 
     private Random rand=new Random();
     private Random detrand=new Random(42);
-    private boolean random=false;
+    private boolean random=true;
     private int randomCount;
     private static final Logger logger = Logger.getLogger(Cistern.class);
     private int amountOfWater=0;

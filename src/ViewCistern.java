@@ -26,15 +26,15 @@ public class ViewCistern extends ViewObject{
         image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
 
         // Draw the image at (x, y)
-        g2d.drawImage(image, x, y, this);
+        g2d.drawImage(image, x+8, y+11, this);
 
         // Add text below the image
-        String text = MessageFormat.format("{0}: {1}, {2}",pair.id,x,y);
+        String text = MessageFormat.format("{0}",pair.id);
         Font font = new Font("Arial", Font.PLAIN, 12);
         g2d.setFont(font);
         g2d.setColor(Color.BLACK);
         int textX = x;
-        int textY = y + image.getHeight(this) + 15; // Adjust the distance as needed
+        int textY = y + image.getHeight(this) + 19; // Adjust the distance as needed
         g2d.drawString(text, textX, textY);
     }
 }
