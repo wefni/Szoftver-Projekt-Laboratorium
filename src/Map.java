@@ -301,7 +301,6 @@ public class Map implements Serializable{
         viewFrame = new ViewFrame(components);
         viewFrame.setVisible(true);
     }
-
     public void Karakter_mech_hozzadasa()
     {
         String[] mech_nevek = viewFrame.Get_Mech_Names_From_Menu();
@@ -310,7 +309,6 @@ public class Map implements Serializable{
             if(mech_nevek[i] != null)
             {
                 map.AddMechToComponent(i % 3 + 1, mech_nevek[i]);
-                //System.out.println("Map @Karakter_mech_hozzadasa | mech elhelyezve a következő pályarészre: " + (i % 3 + 1) + " " + mech_nevek[i]);
             }
         }
     }
@@ -325,7 +323,6 @@ public class Map implements Serializable{
                 map.AddSabToComponent(0, sab_nevek[i]);
             }
         }
-
     }
 
     public void AddMechToComponent(int componentNumber, String nev)
@@ -422,7 +419,7 @@ public class Map implements Serializable{
             System.out.print("");
         }
         while (!map.GetIndul());
-        viewFrame.setSize(1400, 800);
+        viewFrame.setSize(1600, 800);
         //viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();

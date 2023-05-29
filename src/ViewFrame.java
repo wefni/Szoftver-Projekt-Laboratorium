@@ -55,12 +55,32 @@ public class ViewFrame extends JFrame
     /**
      * A menü.
      */
-    private ViewMenu menu;
+    private static ViewMenu menu;
 
     /**
      * A játékmező.
      */
     private ViewField field;
+
+    /**
+     * A mechanic játékosok neveinek tömbje.
+     */
+    static String[] mech_names = new String[50];
+
+    /**
+     * A mechanic játékosok indexe.
+     */
+    static int mech_index = 0;
+
+    /**
+     * A saboteur játékosok neveinek tömbje.
+     */
+    static String[] sab_names = new String[50];
+
+    /**
+     * A saboteur játékosok indexe.
+     */
+    static int sab_index = 0;
 
     /**
      * A konstrukorban beállításra kerülnek a szükséges paraméterek,
@@ -110,7 +130,7 @@ public class ViewFrame extends JFrame
     }
 
     /**
-     *
+     * Panel frissítése.
      * @param mWater
      * @param sWater
      * @param aktP
@@ -140,6 +160,23 @@ public class ViewFrame extends JFrame
         @Override
         public void actionPerformed(ActionEvent e)
         {
+            for (int i = 0; i < menu.Share_Mech_Names().length; i++)
+            {
+                if(menu.Share_Mech_Names()[i] != null)
+                {
+                    mech_names[mech_index++] = menu.Share_Mech_Names()[i];
+                }
+
+            }
+
+            for (int i = 0; i < menu.Share_Sab_Names().length; i++)
+            {
+                if(menu.Share_Sab_Names()[i] != null)
+                {
+                    sab_names[sab_index++] = menu.Share_Sab_Names()[i];
+                }
+            }
+
             //Ha kész a névbekérés, akkor a kettes panel fog megjelenni vagyis a pálya
             currentCard = 2;
             cl.show(cardPanel, "" + (currentCard));
@@ -157,9 +194,25 @@ public class ViewFrame extends JFrame
         public void actionPerformed(ActionEvent e)
         {
             jatekosok_sorszama += 4;
-            JPanel bekeres_ujra = new ViewMenu(jatekosok_sorszama);
 
-            cardPanel.add(bekeres_ujra, "20");
+            for (int i = 0; i < menu.Share_Mech_Names().length; i++)
+            {
+                if(menu.Share_Mech_Names()[i] != null)
+                {
+                    mech_names[mech_index++] = menu.Share_Mech_Names()[i];
+                }
+            }
+
+            for (int i = 0; i < menu.Share_Sab_Names().length; i++)
+            {
+                if(menu.Share_Sab_Names()[i] != null)
+                {
+                    sab_names[sab_index++] = menu.Share_Sab_Names()[i];
+                }
+            }
+
+            menu = new ViewMenu(jatekosok_sorszama);
+            cardPanel.add(menu, "20");
             currentCard = 20;
             cl.show(cardPanel, "" + (currentCard));
         }
@@ -195,9 +248,9 @@ public class ViewFrame extends JFrame
      * A mechanic játékosok neveit adja vissza.
      * @return mechanic játékosok nevei.
      */
+
     public String[] Get_Mech_Names_From_Menu()
     {
-        String[] mech_names = menu.Share_Mech_Names();
         return mech_names;
     }
 
@@ -207,7 +260,6 @@ public class ViewFrame extends JFrame
      */
     public String[] Get_Sab_Names_From_Menu()
     {
-        String[] sab_names = menu.Share_Sab_Names();
         return sab_names;
     }
     public void Pumpeadded(Component pipe)
