@@ -25,20 +25,21 @@
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Saboteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Saboteur.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Source.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/Source.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewCistern.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewCistern.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Nev_Bekeres_Kesz_Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Nev_Bekeres_Kesz_Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Nev_Bekeres_Ujra_Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Nev_Bekeres_Ujra_Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Winner_Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame$Winner_Listener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMechanic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMechanic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPipe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewPump.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSaboteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSaboteur.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewCistern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewCistern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewWinner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Szoftver-Projekt-Laboratorium/ViewWinner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewPipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewPipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewPump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewPump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
