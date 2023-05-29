@@ -125,6 +125,7 @@ public class ViewFrame extends JFrame
 
         upLeftPanel.setSize(600,100);
         upRightPanel.setSize(600,100);
+
         add(upLeftPanel,BorderLayout.NORTH);
         add(upRightPanel,BorderLayout.NORTH);
     }
