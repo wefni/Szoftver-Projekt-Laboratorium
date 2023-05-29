@@ -50,7 +50,19 @@ public class ViewPipe extends ViewObject{
         image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
         // Draw the image at (x, y)
         AffineTransform trans = new AffineTransform();
-
+        if(pair.getSticky()>0) // ragadós
+        {
+            g2d.setStroke(new BasicStroke(7));
+            g2d.setColor(Color.white);
+            g2d.draw(new Line2D.Double(n0x+15,n0y+15,n1x+15,n1y+15));
+        }
+        if(pair.IsSloppy()) // made by Bűn János
+        {
+            g2d.setStroke(new BasicStroke(6));
+            g2d.setColor(Color.green);
+            g2d.draw(new Line2D.Double(n0x+15,n0y+15,n1x+15,n1y+15));
+        }
+        // átszinezi ha törhetettlen
         if(pair.getUnBreakable()>0)
         {
             g2d.setStroke(new BasicStroke(5));
@@ -87,26 +99,36 @@ public class ViewPipe extends ViewObject{
                     g2d.draw(new Line2D.Double(n0x + 15, n0y + 15, n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15));
                 }
             }
-        }else // a sourcnal csak leefle mehet es a ciszternel meg csak fentrol johet
+        }else if(pair.neighbours.get(0).getClass()== Source.class)// a sourcnal csak leefle mehet es a ciszternel meg csak fentrol johet
         {
             if (pair.isHasWaterPartOne()) {
                 g2d.setColor(Color.blue);
 
-                if (n0y<=n1y) {
                     g2d.draw(new Line2D.Double(n0x + 15, n0y + 15, n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15));
-                } else {
-                    g2d.draw(new Line2D.Double(n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15, n1x + 15, n1y + 15));
-                }
+
             }
             if (pair.isHasWaterPartTwo()) {
                 g2d.setColor(Color.blue);
-                if (n0y<=n1y) {
+
                     g2d.draw(new Line2D.Double(n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15, n1x + 15, n1y + 15));
-                } else {
-                    g2d.draw(new Line2D.Double(n0x + 15, n0y + 15, n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15));
-                }
+
+            }
+        }else
+        {
+            if (pair.isHasWaterPartOne()) {
+                g2d.setColor(Color.blue);
+
+
+                g2d.draw(new Line2D.Double(n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15, n1x + 15, n1y + 15));
+            }
+            if (pair.isHasWaterPartTwo()) {
+                g2d.setColor(Color.blue);
+
+                g2d.draw(new Line2D.Double(n0x + 15, n0y + 15, n0x + normx * (dirlenght / 2) + 15, n0y + normy * (dirlenght / 2) + 15));
+
             }
         }
+
         if(pair.broken) // ha torott pirosra szinezi
         {
             g2d.setColor(Color.RED);
@@ -114,6 +136,8 @@ public class ViewPipe extends ViewObject{
             g2d.draw(new Line2D.Double(n0x+15,n0y+15,n1x+15,n1y+15));
 
         }
+
+
 
 
 
