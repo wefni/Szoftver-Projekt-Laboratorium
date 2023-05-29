@@ -78,13 +78,13 @@ public class ViewMap extends JPanel {
         Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
         Map.Entry<Object, ViewObject> pair = it.next();
 
-        pair.getValue().SetCoords(100,50); // Source-0
+        pair.getValue().SetCoords(180,90); // Source-0
         pair = it.next();
         pair.getValue().SetCoords(550,650); // Cistern-1
         pair = it.next();
-        pair.getValue().SetCoords(650,600); // Cistern-2
+        pair.getValue().SetCoords(640,585); // Cistern-2
         pair = it.next();
-        pair.getValue().SetCoords(800,600); // Cistern-3
+        pair.getValue().SetCoords(830,565); // Cistern-3
         pair = it.next();
         pair.getValue().SetCoords(800,550); // Pipe-4
         pair = it.next();
@@ -191,13 +191,17 @@ public class ViewMap extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-
-
         //iterate through the hashmap and repaint every object
-        Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
-        while(it.hasNext()) {
-            Map.Entry<Object, ViewObject> pair = it.next();
-            pair.getValue().Repaint(g);
+        try {
+            Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry<Object, ViewObject> pair = it.next();
+                pair.getValue().Repaint(g);
+            }
+        }
+        catch (Exception e) {
+            System.out.println("");
+            return;
         }
     }
 }

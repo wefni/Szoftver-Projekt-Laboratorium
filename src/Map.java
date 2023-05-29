@@ -297,7 +297,7 @@ public class Map implements Serializable{
 
         //viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
-        viewFrame.setVisible(true);
+        //viewFrame.setVisible(true);
     }
 
     public void Karakter_mech_hozzadasa()

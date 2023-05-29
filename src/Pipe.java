@@ -11,7 +11,7 @@ public class Pipe extends Breakable {
     private static final Logger logger = Logger.getLogger(Pipe.class);
     private Random detvel = new Random(42);
     private Random vel = new Random();
-    private boolean random;
+    private boolean random = true;
     private int sticky;
     private int unBreakable;
     private int sloppy;

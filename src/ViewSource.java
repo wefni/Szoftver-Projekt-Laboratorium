@@ -24,18 +24,25 @@ public class ViewSource extends ViewObject{
         // Load the image
         Image image = new ImageIcon("src\\images\\source.png").getImage();
         //set image size
-        image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
+        image = new ImageIcon(image.getScaledInstance(240, 180, Image.SCALE_DEFAULT)).getImage();
 
         // Draw the image at (x, y)
-        g2d.drawImage(image, x, y, this);
+        g2d.drawImage(image, x-183, y-104, this);
 
         // Add text below the image
-        String text = MessageFormat.format("{0}: {1}, {2}",pair.id,x,y);
+        String text = MessageFormat.format("{0}",pair.id);
         Font font = new Font("Arial", Font.PLAIN, 12);
         g2d.setFont(font);
         g2d.setColor(Color.BLACK);
-        int textX = x;
-        int textY = y + image.getHeight(this) + 15; // Adjust the distance as needed
+        int textX = x - 120;
+        int textY = y + 40 ; // Adjust the distance as needed
         g2d.drawString(text, textX, textY);
+
+        Image image2 = new ImageIcon("src\\images\\varos.png").getImage();
+        //set image size
+        image2 = new ImageIcon(image2.getScaledInstance(270, 180, Image.SCALE_DEFAULT)).getImage();
+
+        // Draw the image at (x, y)
+        g2d.drawImage(image2, 645, 570, this);
     }
 }

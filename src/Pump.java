@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Pump extends Breakable
 {
-    private  boolean random=false;
+    private  boolean random=true;
     private Random rand = new Random();
     private Random detrand= new Random(42);
     private static final Logger logger = Logger.getLogger(Pump.class);
@@ -32,7 +32,7 @@ public class Pump extends Breakable
     /**
      * A pumpa tartályának maximális mérete
      */
-    private int maxTank = 10;
+    private int maxTank = 3;
     
     /**
      * A pumpa random elromlását segíti elő
@@ -48,7 +48,7 @@ public class Pump extends Breakable
     {
         super(ID);
         if(random)
-        randomBreakCounter=rand.nextInt(5,10);
+        randomBreakCounter=rand.nextInt(13,100);
 
         if(!random)
             randomBreakCounter= detrand.nextInt(11,13);
@@ -83,7 +83,7 @@ public class Pump extends Breakable
             valasz = valasz.toLowerCase(); //kisbetűsít
             switch (valasz)
             {
-                case "be" ->
+                case "bemenet" ->
                 {
                     jo = true;
                     //kiir aktualisat
@@ -116,7 +116,7 @@ public class Pump extends Breakable
                         }
                     }
                 }
-                case "ki" ->
+                case "kimenet" ->
                 {
                     jo = true;
                     //kiir aktualisat
@@ -149,7 +149,7 @@ public class Pump extends Breakable
                         }
                     }
                 }
-                case "mindketto" ->
+                case "mindkettő" ->
                 {
                     jo = true;
                     //kiir aktualisat
