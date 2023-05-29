@@ -42,6 +42,8 @@ public class ViewPipe extends ViewObject{
             Direction();
 
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
+        if(pair.neighbours.size()==2)
+            Direction();
         // Load the image
         Image image = new ImageIcon("src\\images\\pipe.png").getImage();
         //set image size
