@@ -22,7 +22,7 @@ public class ViewSaboteur extends ViewObject{
         x=ViewMap.viewmap.getObjects(pair.where).x-15;// ahol all
         y=ViewMap.viewmap.getObjects(pair.where).y-15;// ahol all
         // Load the image
-        Image image = new ImageIcon("src\\images\\saboteur.png").getImage();
+        Image image = new ImageIcon("src\\images\\sab2.png").getImage();
         //set image size
         image = new ImageIcon(image.getScaledInstance(60, 65, Image.SCALE_DEFAULT)).getImage();
 
