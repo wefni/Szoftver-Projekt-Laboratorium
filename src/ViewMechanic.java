@@ -32,7 +32,7 @@ public class ViewMechanic extends ViewObject{
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
 
         // Load the image
-        Image image = new ImageIcon("src\\images\\asd.png").getImage();
+        Image image = new ImageIcon("src\\images\\mechanic.png").getImage();
         //set image size
         image = new ImageIcon(image.getScaledInstance(45, 55, Image.SCALE_DEFAULT)).getImage();
 
