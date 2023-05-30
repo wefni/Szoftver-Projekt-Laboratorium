@@ -5,8 +5,19 @@ import java.util.Map;
 
 public class ViewMap extends JPanel {
 
+    /**
+     * A játékban szereplő objektumokat tartalmazó lista.
+     */
     private HashMap<Object, ViewObject> objects;
+
+    /**
+     * A játékban szereplő komponenseket tartalmazó lista.
+     */
     private ArrayList<Component> components;
+
+    /**
+     * A játékban szereplő játékosokat tartalmazó lista.
+     */
     private ArrayList<Player> players;
     protected static ViewMap viewmap;
     private Component pumpaddedpipe;
@@ -26,11 +37,11 @@ public class ViewMap extends JPanel {
         //this.setBackground(Color.WHITE);
     }
 
-    public void SetPlayer(Player player)
-    {
-       players.add(player);
-    }
-
+    /**
+     * A komponens kérdezése.
+     * @param c A komponens.
+     * @return A komponenshez tartozó objektum.
+     */
     public ViewObject getObjects(Component c) {
         return objects.get(c);
     }
@@ -57,6 +68,10 @@ public class ViewMap extends JPanel {
 
     }
 
+    /**
+     * A játékosok hozzáadása a pályához.
+     * @param players A játékosok listája.
+     */
         public void AddPlayers(ArrayList<Player> players)
         {
             for(int i = 0; i< players.size(); i++){
@@ -75,7 +90,9 @@ public class ViewMap extends JPanel {
         //this.setBackground(Color.WHITE);
     }
 
-    //itt kellene a koordinátákat bele hardCode-olni a pályába, eleg fájdalmas
+    /**
+     * A pályán megjeelelő objektumok koordináátinak beállítása.
+     */
     private void SetCoords(){
         Iterator<Map.Entry<Object, ViewObject>> it = objects.entrySet().iterator();
         Map.Entry<Object, ViewObject> pair = it.next();
@@ -170,6 +187,11 @@ public class ViewMap extends JPanel {
 
 
     }
+
+    /**
+     * A pumpa hozzáadása a pályához.
+     * @param pipe Cső
+     */
     public void Pumpadded(Component pipe) // pumpa hozzaadasa
     {
         pumpaddedpipe= pipe;
@@ -189,6 +211,10 @@ public class ViewMap extends JPanel {
 
     }
 
+    /**
+     * Kirajzolás.
+     * @param g Grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
