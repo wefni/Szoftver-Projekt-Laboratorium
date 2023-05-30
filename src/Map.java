@@ -6,25 +6,71 @@ import java.io.*;
 import java.util.*;
 
 public class Map implements Serializable{
+
+    /**
+     * Logoláshoz használt objektum.
+     */
     private static  final Logger logger = Logger.getLogger(Map.class);
+
+    /**
+     * A körök száma.
+     */
     private int round;
+
+    /**
+     * A játék vége.
+     */
     private int endRound;
+
+    /**
+     * A saboteur vízének mennyisége.
+     */
     private int sabWater;
+
+    /**
+     * A mechanic vízének mennyisége.
+     */
     private int mechWater;
+
+    /**
+     * A forrás.
+     */
     private Source source;
+
+    /**
+     * A cisternák.
+     */
     private ArrayList<Cistern> cisterns;
+
+    /**
+     * A pályán lévő komponensek.
+     */
     private ArrayList<Component> components;
+
+    /**
+     * A játékosok.
+     */
     private ArrayList<Player> players;
 
+    /**
+     * A pálya.
+     */
     protected static Map map;
 
-    private final Object lock = new Object();
+    /**
+     * A pályán lévő komponensek listájának iterátora.
+     */
     ListIterator<Component> componentIterator;
 
+    /**
+     * A játék indításához szükséges.
+     */
     private boolean indul = false;
 
+    /**
+     * A játék grafikus felületének főablaka.
+     */
     ViewFrame viewFrame;
-    ViewField viewField;
 
     public Map(String file)
     {
@@ -39,11 +85,19 @@ public class Map implements Serializable{
         players=new ArrayList<>();
     }
 
+    /**
+     * Az indítást figyelő függvény.
+     * @return boolean indel-e a játék
+     */
     public boolean GetIndul()
     {
         return indul;
     }
 
+    /**
+     * A játék indítását figyelő függvény.
+     * @param _indul boolean indel-e a játék
+     */
     public void SetIndul(boolean _indul)
     {
         indul = _indul;
@@ -54,6 +108,9 @@ public class Map implements Serializable{
         return components;
     }
 
+    /**
+     * A játék köreit kezelő függvény.
+     */
     public void Game()
     {
         logger.info("Map @Game | Játék elindítva\n");
@@ -100,6 +157,9 @@ public class Map implements Serializable{
         return round;
     }
 
+    /**
+     * A játék térképének generálását végző függvény.
+     */
     public void GenerateMap()
     {
         logger.info("Map @GenerateMap | Pálya generálása \n");
@@ -299,10 +359,12 @@ public class Map implements Serializable{
         components.get(41).ConfigurePumpWithParameters(components.get(10), components.get(9));
         components.get(40).ConfigurePumpWithParameters(components.get(9), components.get(8));
 
-        //viewField = new ViewField(components);
         viewFrame = new ViewFrame(components);
-        //viewFrame.setVisible(true);
     }
+
+    /**
+     * A mechanic karakterek hozzáadása a pályához.
+     */
     public void Karakter_mech_hozzadasa()
     {
         String[] mech_nevek = viewFrame.Get_Mech_Names_From_Menu();
@@ -315,6 +377,9 @@ public class Map implements Serializable{
         }
     }
 
+    /**
+     * A saboteur karakterek hozzáadása a pályához.
+     */
     public void Karakter_sab_hozzadasa()
     {
         String[] sab_nevek = viewFrame.Get_Sab_Names_From_Menu();
@@ -325,8 +390,14 @@ public class Map implements Serializable{
                 map.AddSabToComponent(0, sab_nevek[i]);
             }
         }
+        indul = true;
     }
 
+    /**
+     * A játékosok hozzáadása egy componenthez.
+     * @param componentNumber komponens száma
+     * @param nev játékos neve
+     */
     public void AddMechToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
@@ -339,6 +410,11 @@ public class Map implements Serializable{
         logger.info("Map @AddMechToComponent | mechanic elhelyezve a következő pályarészre: "+componentNumber+" | components.get(componentNumber).onComponent.contains(m): "+components.get(componentNumber).onComponent.contains(m)+"\n");
     }
 
+    /**
+     * A játékosok hozzáadása egy componenthez.
+     * @param componentNumber komponens száma
+     * @param nev játékos neve
+     */
     public void AddSabToComponent(int componentNumber, String nev)
     {
         if(componentNumber < 0 || componentNumber >= components.size())
@@ -392,6 +468,11 @@ public class Map implements Serializable{
         }
     }
 
+    /**
+     * Pipe lerakása komponensek közé.
+     * @param c1 komponens 1
+     * @param c2 komponens 2
+     */
     public void SpawnPipeBetweenComponents(Component c1, Component c2)
     {
         Pipe pipe = new Pipe("pipe-" + components.size());
@@ -414,6 +495,9 @@ public class Map implements Serializable{
         }
     }
 
+    /**
+     * A játékosok hozzáadása a pályához.
+     */
     public void AllPlayersAdded()
     {
         do
@@ -426,8 +510,12 @@ public class Map implements Serializable{
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
         viewFrame.AddPlayers(players);
-        indul = true;
     }
+
+    /**
+     * Pumpa lerakása a csőre.
+     * @param pipe1 a pumpa
+     */
     public void PlacePumpOnPipe(Component pipe1) {
         Pipe pipe2 = new Pipe("pipe-" + components.size());
         Pump pump = new Pump("pump-" + components.size());

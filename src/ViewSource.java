@@ -10,12 +10,21 @@ public class ViewSource extends ViewObject{
         this.y = _y;
         this.pair = _pair;
     }
+
+    /**
+     * A forrás újrarajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
 
+    /**
+     * A forrás kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -9,12 +9,21 @@ public class ViewSaboteur extends ViewObject{
         this.y = _y;
         this.pair = _pair;
     }
+
+    /**
+     * A saboteur újrarajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
 
+    /**
+     * A saboteur kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
