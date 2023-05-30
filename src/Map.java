@@ -412,6 +412,8 @@ public class Map implements Serializable{
         {
             logger.info("Map @SpawnPipeBetWeenComponents | "+pipe.id+" létrehozva "+c1.id+" és "+c2.id+" között\n");
         }
+
+        viewFrame.PipeSpawned(pipe);
     }
 
     public void AllPlayersAdded()
@@ -421,7 +423,7 @@ public class Map implements Serializable{
             System.out.print("");
         }
         while (!map.GetIndul());
-        viewFrame.setSize(1600, 800);
+        viewFrame.setSize(1900, 1000 );
         //viewField.AddPlayers(players);
         map.Karakter_mech_hozzadasa();
         map.Karakter_sab_hozzadasa();
@@ -450,6 +452,10 @@ public class Map implements Serializable{
 
         logger.info(pipe1.id+"@PlacePumpOnPipe | pumpa lehelyezve a "+pipe1.id+"-ra/re | új pumpa ID: "+pump.id+"\n");
         logger.info(pipe1.id+"@PlacePumpOnPipe |"+pump+" szomszédai: "+pump.neighbours.get(0).id+", "+pump.neighbours.get(1).id+"\n");
+    }
+
+    public void PipeSpawned(Component p)
+    {
 
     }
 }

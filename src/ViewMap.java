@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 import java.util.*;
 import java.util.Map;
 
@@ -10,6 +11,8 @@ public class ViewMap extends JPanel {
     private ArrayList<Player> players;
     protected static ViewMap viewmap;
     private Component pumpaddedpipe;
+
+    private Component spawnedPipe;
     public ViewMap(ArrayList<Component> components1) {
         viewmap=this;
         components=components1;
@@ -187,6 +190,37 @@ public class ViewMap extends JPanel {
             }
         }
 
+    }
+
+    public void PipeSpawned(Component pipe) // pipe spwanolása ciszternánál
+    {
+        spawnedPipe = pipe;
+        for(Component i: components)
+        {
+            if(objects.get(i)==null)
+            {
+                if(i.getClass()==Pipe.class) {
+                    if(pipe.neighbours.get(0) == null)
+                            objects.put(i, new ViewPipe(getObjects(pipe.neighbours.get(1)).x-100,getObjects(pipe.neighbours.get(1)).y, (Pipe) i));
+                    else
+                        objects.put(i, new ViewPipe(getObjects(pipe.neighbours.get(0)).x-100,getObjects(pipe.neighbours.get(0)).y, (Pipe) i));
+                }
+            }
+        }
+
+//        if(pair.neighbours.get(0).getClass()== Cistern.class)
+//        {
+//            g2d.setStroke(new BasicStroke(3));
+//            g2d.setColor(Color.black);
+//            g2d.draw(new Line2D.Double(ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x,ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y,60,60));
+//        }
+//        else
+//        if(pair.neighbours.get(1).getClass()== Cistern.class)
+//        {
+//            g2d.setStroke(new BasicStroke(3));
+//            g2d.setColor(Color.black);
+//            g2d.draw(new Line2D.Double(ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x,ViewMap.viewmap.getObjects(pair.neighbours.get(1)).y,60,60));
+//        }
     }
 
     @Override
