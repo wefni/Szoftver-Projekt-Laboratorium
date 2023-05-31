@@ -11,13 +11,20 @@ public class ViewPump extends ViewObject{
         this.pair = _pair;
     }
 
+    /**
+     * A pumpa kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
 
-
+    /**
+     * A pumpa kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

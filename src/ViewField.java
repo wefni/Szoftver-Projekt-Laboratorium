@@ -6,13 +6,36 @@ import java.util.ArrayList;
 
 public class ViewField extends JPanel implements ActionListener
 {
+    /**
+     * A kérdés labelje.
+     */
     private JLabel questionLabel;
+
+    /**
+     * A gombok panelje.
+     */
     private JPanel buttonPanel;
+
+    /**
+     * A gombok.
+     */
     private JButton[] buttons;
+
+    /**
+     * A Viewmap.
+     */
     private ViewMap viewmap;
+
+    /**
+     * A jobb oldali panel.
+     */
     private JPanel rightPanel;
     private static int i = 1;
     private final Object lock = new Object();
+
+    /**
+     * A gombok megnyomását figyelő observer.
+     */
     private int buttonPressed = -1;
     public static ViewField instance = null;
 
@@ -49,6 +72,11 @@ public class ViewField extends JPanel implements ActionListener
         add(viewmap, BorderLayout.WEST);
         add(rightPanel, BorderLayout.CENTER);
     }
+
+    /**
+     * A kérdés kiírása.
+     * @param question kérdés
+     */
     public void WriteQuestion(String question)
     {
         questionLabel.setText(question);
@@ -56,6 +84,11 @@ public class ViewField extends JPanel implements ActionListener
     }
 
 
+    /**
+     * A lehetőségek kiírása.
+     * @param options lehetőségek
+     * @return amit a felhasználó választott
+     */
     public String WriteOptions(String[] options)
     {
         buttonPanel.removeAll();
@@ -84,6 +117,10 @@ public class ViewField extends JPanel implements ActionListener
         return buttons[buttonPressed].getText();
     }
 
+    /**
+     * A gombok megnyomásának figyelése.
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e)
     {
         for(int i = 0; i < buttons.length; i++)
@@ -103,11 +140,19 @@ public class ViewField extends JPanel implements ActionListener
         viewmap.repaint();
     }
 
-
+    /**
+     * A játékosok hozzáadása a maphez.
+     * @param players játékosok
+     */
     public void SetPlayers(ArrayList<Player> players)
     {
         viewmap.AddPlayers(players);
     }
+
+    /**
+     * A pumpa hozzáadása.
+     * @param pipe1 a cső
+     */
     public void Pumpadded(Component pipe1)
     {
         viewmap.Pumpadded(pipe1);

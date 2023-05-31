@@ -9,11 +9,21 @@ public class ViewMechanic extends ViewObject{
         this.y = _y;
         this.pair = _pair;
     }
+
+    /**
+     * Újrarajzolja az objektumot
+     * @param g a grafikus objektum
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
+
+    /**
+     * Kirajzolja az objektumot
+     * @param g a grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -22,7 +32,7 @@ public class ViewMechanic extends ViewObject{
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
 
         // Load the image
-        Image image = new ImageIcon("src\\images\\asd.png").getImage();
+        Image image = new ImageIcon("src\\images\\mechanic.png").getImage();
         //set image size
         image = new ImageIcon(image.getScaledInstance(45, 55, Image.SCALE_DEFAULT)).getImage();
 

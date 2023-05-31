@@ -10,11 +10,21 @@ public class ViewCistern extends ViewObject{
         this.y = _y;
         this.pair = _pair;
     }
+
+    /**
+     * Repaints the object
+     * @param g the graphics object
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
+
+    /**
+     * Paints the object
+     * @param g the graphics object
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

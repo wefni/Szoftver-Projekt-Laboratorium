@@ -21,6 +21,10 @@ public class ViewPipe extends ViewObject{
         this.pair = _pair;
 
     }
+
+    /**
+     * A cső irányát adja meg.
+     */
     void Direction()
     {
         // az iranyhoz kell
@@ -40,12 +44,21 @@ public class ViewPipe extends ViewObject{
         }
 
     }
+
+    /**
+     * A cső kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     public void Repaint(Graphics g) {
         super.Repaint(g);
         this.paintComponent(g);
     }
 
+    /**
+     * A cső kirajzolása.
+     * @param g a grafikus objektum
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

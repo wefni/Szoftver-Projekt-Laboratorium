@@ -3,6 +3,10 @@ import java.awt.*;
 import java.io.*;
 public class ViewWinner extends JPanel
 {
+    /**
+     * A győztes csapatot kiíró panel.
+     * @param gyoztes a győztes csapat neve
+     */
     public ViewWinner (String gyoztes)
     {
         JLabel nyertes_csapat = new JLabel(gyoztes);
