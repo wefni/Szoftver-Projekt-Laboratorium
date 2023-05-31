@@ -267,4 +267,9 @@ public class ViewFrame extends JFrame
     {
         field.Pumpadded(pipe);
     }
+
+    public void PipeSpawned(Component pipe)
+    {
+        field.PipeSpawned(pipe);
+    }
 }

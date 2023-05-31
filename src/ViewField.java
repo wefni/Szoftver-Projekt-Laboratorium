@@ -157,4 +157,9 @@ public class ViewField extends JPanel implements ActionListener
     {
         viewmap.Pumpadded(pipe1);
     }
+
+    public void PipeSpawned(Component p)
+    {
+        viewmap.PipeSpawned(p);
+    }
 }

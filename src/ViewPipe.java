@@ -28,10 +28,21 @@ public class ViewPipe extends ViewObject{
     void Direction()
     {
         // az iranyhoz kell
-         n0x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x;// masodik szomszed x-je
-         n0y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y;// masodik szomszed y-je
-         n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x; // elso szomszed x-je
-         n1y=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).y; // elso szomszed y-je
+        if(pair.neighbours.size()==1)
+        {
+            n0x=650;// masodik szomszed x-je
+            n0y=700;// masodik szomszed y-je
+            n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x; // elso szomszed x-je
+            n1y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y; // elso szomszed y-je
+        }
+        else
+        {
+            n0x=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).x;// masodik szomszed x-je
+            n0y=ViewMap.viewmap.getObjects(pair.neighbours.get(0)).y;// masodik szomszed y-je
+            n1x=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).x; // elso szomszed x-je
+            n1y=ViewMap.viewmap.getObjects(pair.neighbours.get(1)).y; // elso szomszed y-je
+        }
+
     }
 
     /**
@@ -51,18 +62,16 @@ public class ViewPipe extends ViewObject{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if(pair.neighbours.size()==2)
-            Direction();
+
+        Direction();
 
         Graphics2D g2d = (Graphics2D) g; // cast to get 2D drawing methods
-        if(pair.neighbours.size()==2)
-            Direction();
         // Load the image
         Image image = new ImageIcon("src\\images\\pipe.png").getImage();
         //set image size
         image = new ImageIcon(image.getScaledInstance(30, 30, Image.SCALE_DEFAULT)).getImage();
         // Draw the image at (x, y)
-        AffineTransform trans = new AffineTransform();
+
         if(pair.getSticky()>0) // ragadós
         {
             g2d.setStroke(new BasicStroke(7));
@@ -149,7 +158,6 @@ public class ViewPipe extends ViewObject{
             g2d.draw(new Line2D.Double(n0x+15,n0y+15,n1x+15,n1y+15));
 
         }
-
 
 
 

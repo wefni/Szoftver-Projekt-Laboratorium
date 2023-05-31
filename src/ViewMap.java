@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 import java.util.*;
 import java.util.Map;
 
@@ -21,6 +22,8 @@ public class ViewMap extends JPanel {
     private ArrayList<Player> players;
     protected static ViewMap viewmap;
     private Component pumpaddedpipe;
+
+    private Component spawnedPipe;
     public ViewMap(ArrayList<Component> components1) {
         viewmap=this;
         components=components1;
@@ -210,7 +213,22 @@ public class ViewMap extends JPanel {
         }
 
     }
-
+    public void PipeSpawned(Component pipe) // pipe spwanolása ciszternánál
+    {
+        spawnedPipe = pipe;
+        for(Component i: components)
+        {
+            if(objects.get(i)==null)
+            {
+                if(i.getClass()==Pipe.class) {
+                    if(pipe.neighbours.get(0) == null)
+                            objects.put(i, new ViewPipe(getObjects(pipe.neighbours.get(1)).x-100,getObjects(pipe.neighbours.get(1)).y, (Pipe) i));
+                    else
+                        objects.put(i, new ViewPipe(getObjects(pipe.neighbours.get(0)).x-100,getObjects(pipe.neighbours.get(0)).y, (Pipe) i));
+                }
+            }
+        }
+    }
     /**
      * Kirajzolás.
      * @param g Grafikus objektum
